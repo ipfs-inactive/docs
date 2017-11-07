@@ -1,7 +1,7 @@
 +++
-title = "Getting Started"
-description = "Setting up IPFS and beginning usage"
-weight = 2
+title = "Basic usage"
+description = "Learn the basics"
+weight = 3
 +++
 
 If you haven't done so, [install IPFS](../installation).
@@ -10,13 +10,15 @@ If you haven't done so, [install IPFS](../installation).
 
 During this tutorial, if you have any questions, feel free to ask them in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
 
+The steps described here should be roughly the same for JS-IPFS, though keep in mind that this guide was written for the Go implementation.
+
 ## init the repo
 
-`ipfs` uses a global local object repository, added to `~/.ipfs`:
+`ipfs` uses a global local object repository, located at `~/.ipfs`. It needs to be initialized before it can be used.
 
 ```sh
 > ipfs init
-initializing ipfs node at /Users/jbenet/.go-ipfs
+initializing ipfs node at /Users/username/.go-ipfs
 generating 2048-bit RSA keypair...done
 peer identity: Qmcpo2iLBikrdf1d6QU6vXuNb6P7hwrbNPW9kLAH8eG67z
 to get started, enter:
@@ -140,6 +142,8 @@ I <3 IPFS -<your username>
 
 By default, your gateway is not exposed to the world, it only works locally.
 
+[[TODO: Section on IPNS?]]
+
 ## Fancy Web Console
 
 We also have a web console you can use to check the state of your node.
@@ -150,9 +154,3 @@ On your favorite web browser, go to:
 This should bring up a console like this:
 
 <img class="screenshot" alt="Web console connection view" src="/images/webui-connection.png">
-
-Now, you're ready:
-
-<a class="button button-primary" href="/examples" role="button">
-  Onward to more Examples &nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
-</a>

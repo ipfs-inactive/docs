@@ -1,8 +1,10 @@
 ---
 title: "Examples"
 description: ""
-weight: "2"
+weight: "1000"
 ---
+
+[[TODO: Remove/merge into here (really, this should be turned into proper docs)]]
 
 These are a few simple examples for the first steps exploring IPFS.
 This list will [grow over time](https://github.com/protocol/ipfs-examples).
