@@ -1,8 +1,31 @@
----
-title: "Installation"
-description: "How to install IPFS on your computer"
-weight: 1
----
++++
+title = "Installation"
+description = "Install IPFS!"
+weight = 2
++++
+
+There are currently two main IPFS paskages - go-ipfs and js-ipfs, each has it's unique features
+
+Go-IPFS:
+
+* Reference implementation
+* Written in Go
+* Scales well
+* Best uses:
+  * Accessing and serving interplanetary Web
+  * Archiving data
+  * [[TODO: Add more]]
+
+js-ipfs:
+
+* Written in JavaScript
+* Easy to embed in JS-based apps
+* Best uses:
+  * Application development
+  * In-browser uses
+  * [[TODO: Add more]]
+
+## Go-IPFS
 
 We recommend installing IPFS from a prebuilt package:
 
@@ -10,7 +33,7 @@ We recommend installing IPFS from a prebuilt package:
   Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
 </a>
 
-## Index
+#### Installation methods
 
 * [Installing from a Prebuilt Package](#installing-from-a-prebuilt-package)
 * [Installing with ipfs-update](#installing-with-ipfs-update)
@@ -20,9 +43,9 @@ We recommend installing IPFS from a prebuilt package:
 
 ---
 
-## Installing from a Prebuilt Package
+### Installing from a Prebuilt Package
 
-### Mac OS X and Linux
+#### Mac OS X and Linux
 
 After downloading, untar the archive, and move the `ipfs` binary somewhere in your executables `$PATH`:
 
@@ -43,11 +66,11 @@ USAGE:
 
 Congratulations! You now have a working IPFS installation on your computer.
 
-<a class="button button-primary" href="../getting-started" role="button">
+<a class="button button-primary" href="../basic-usage" role="button">
   Getting Started with IPFS &nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
 </a>
 
-### Windows
+#### Windows
 
 After downloading, unzip the archive, and move `ipfs.exe`  somewhere in your `%PATH%`.
 
@@ -61,28 +84,18 @@ USAGE:
 ...
 ```
 
-Congratulations! You now have a working IPFS installation on your computer.
-
-<a class="button button-primary" href="../getting-started" role="button">
-  Getting Started with IPFS &nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
-</a>
-
-
----
-
-## Installing with ipfs-update
+### Installing with ipfs-update
 
 `ipfs-update` is a command-line tool to install and upgrade the `ipfs` binary.
 
-### Getting ipfs-update
+#### Getting ipfs-update
 
-`ipfs-update` can be downloaded for your platform at: https://dist.ipfs.io/#ipfs-update
-
-If you have a working Go environment (>=1.8), you can also install it with: `go get -u github.com/ipfs/ipfs-update`.
+`ipfs-update` can be downloaded for your platform at https://dist.ipfs.io/#ipfs-update,
+if you have a working Go environment (>=1.8), you can also install it with: `go get -u github.com/ipfs/ipfs-update`.
 
 When installing new versions of `ipfs` or upgrading make sure you are using the latest version of `ipfs-update`.
 
-### Installing ipfs with ipfs-update
+#### Installing ipfs with ipfs-update
 
 `ipfs-update versions` lists all the available `ipfs` versions which are available for download:
 
@@ -112,7 +125,7 @@ v0.4.7-rc1
 
 ```
 $ ipfs-update install latest
-fetching go-ipfs version v0.4.7-rc1
+fetching go-ipfs version v0.4.11
 binary downloaded, verifying...
 success!
 stashing old binary
@@ -123,11 +136,11 @@ Installation complete!
 
 Note that the latest available version may not be stable (i.e. release candidates
 in the form `vX.X.X-rcX`). So it is recommended to specify the version you want
-to install, for example: `ipfs-update install v0.4.6`.
+to install, for example: `ipfs-update install v0.4.11`.
 
 ---
 
-## Building from Source
+### Building from Source
 
 <div class="message mb">
   <strong>Warning:</strong> In the past you could install IPFS using <code>go get</code>. This
@@ -140,12 +153,12 @@ If you are on Windows take a look at [this document](https://github.com/ipfs/go-
 
 ---
 
-## Upgrading IPFS
+### Upgrading IPFS
 
 `ipfs` upgrades (and downgrades) may involve a repository upgrade process performed by the
 [fs-repo-migrations](https://dist.ipfs.io/#fs-repo-migrations) tool.
 
-### Upgrading using ipfs-update
+#### Using ipfs-update
 
 `ipfs-update install` will download and run `fs-repo-migrations` when needed, during the installation of
 a newer or older `ipfs` version (as explained above). This is the easiest way of upgrading.
@@ -154,8 +167,7 @@ a newer or older `ipfs` version (as explained above). This is the easiest way of
   <strong>Warning:</strong> Make sure that the ipfs daemon is not running during an upgrade
 </div>
 
-
-### Upgrading manually
+#### Manually
 
 In order to perform a manual upgrade of `ipfs`, you will need to manually run any repository migrations. The
 procedure is as follows:
@@ -172,31 +184,3 @@ flag.
 Migrations can be also run manually by downloading the latest version of `fs-repo-migrations`
 from [https://dist.ipfs.io/#fs-repo-migrations](https://dist.ipfs.io/#fs-repo-migrations) and
 [following these instructions](https://github.com/ipfs/fs-repo-migrations/blob/master/run.md).
-
----
-
-## Troubleshooting
-
-### Help!
-
-If you have any problems, come get live help at
-[#ipfs](../#community) or via [the mailing list](../#community).
-
-### Check Go Version
-
-IPFS works with Go 1.7.0 or later.
-To check what go version you have installed, type `go version`.
-Here's what I get:
-
-```sh
-> go version
-go version go1.7 linux/amd64
-```
-
-If you need to update, it is recommended to install from the
-[canonical Go packages](https://golang.org/doc/install/).
-Package managers often contain out-of-date Go packages.
-
-### Install FUSE
-
-For more details on setting up FUSE (so that you can mount the filesystem), see [github.com/ipfs/go-ipfs/blob/master/docs/fuse.md](https://github.com/ipfs/go-ipfs/blob/master/docs/fuse.md)
