@@ -8,7 +8,7 @@ theme = "docdock"
 
 [params]
 editURL = "https://github.com/ipfs/docs/tree/master/content/"
-showVisitedLinks = true # default is false
+showVisitedLinks = false # default is false
 themeStyle = "original" # "original" or "flex" # default "original"
 themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
 ordersectionsby = "weight" # ordersectionsby = "title"

@@ -2,6 +2,7 @@
 title: "Working with IPFS"
 description: "Common uses"
 weight: "5"
+alwaysopen: true
 ---
 
 {{%children style="h2" description="true"%}}

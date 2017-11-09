@@ -4,4 +4,4 @@ description = "The standard ipfs commands"
 weight = 1
 +++
 
-[[TODO: Generate, possibly a separate file per command family]]
+The latest version of the CLI documentation can be located [here](https://github.com/ipfs/website/blob/master/content/docs/commands.md).
