@@ -1,6 +1,6 @@
 +++
 title = "JS-IPFS"
-description = "JS-IPFS specific configuration"
+description = "JS-IPFS configuration"
 weight = 2
 +++
 

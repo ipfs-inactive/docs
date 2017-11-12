@@ -1,6 +1,6 @@
 +++
 title = "LibP2P"
-description = ""
+description = "Interplanetary networking"
 weight = 7
 +++
 

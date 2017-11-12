@@ -1,6 +1,6 @@
 +++
 title = "BitSwap"
-description = ""
+description = "The IPFS data exchange protocol"
 weight = 6
 +++
 
