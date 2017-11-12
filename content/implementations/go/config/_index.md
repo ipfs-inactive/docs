@@ -1,10 +1,8 @@
 +++
-title = "Go-IPFS"
-description = "Go-IPFS configuration"
+title = "Configutation"
+description = "Node configuration"
 weight = 1
 +++
-
-# The go-ipfs config file
 
 The go-ipfs config file is a json document. It is read once at node instantiation,
 either for an offline command, or when starting the daemon. Commands that execute
