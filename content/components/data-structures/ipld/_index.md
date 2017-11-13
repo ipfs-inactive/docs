@@ -2,6 +2,7 @@
 title = "IPLD"
 description = "InterPlanetary Linked Data"
 weight = 4
+alwaysopen = true
 +++
 
 [[TODO: Description]]

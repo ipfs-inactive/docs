@@ -1,7 +1,7 @@
 +++
-title = "Configuration"
-description = "Configure your node"
-weight = 4
+title = "Go-IPFS"
+description = "Go-IPFS documentation"
+weight = 1
 alwaysopen = true
 +++
 

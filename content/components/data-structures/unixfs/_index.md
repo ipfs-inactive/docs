@@ -1,7 +1,7 @@
 +++
 title = "UnixFS"
 description = ""
-weight = 5
+weight = 6
 +++
 
 UnixFS an IPFS specific merkle tree foramt based on Git.
