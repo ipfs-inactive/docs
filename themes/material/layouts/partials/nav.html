@@ -1,0 +1,75 @@
+<nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    {{ .Site.Title }}
+  </label>
+  <ul class="md-nav__list" data-md-scrollfix>
+{{- $currentNode := . }}
+
+{{- if eq .Site.Params.ordersectionsby "title"}}
+  {{- range .Site.Home.Sections.ByTitle}}
+  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0 "index" 0}}
+  {{- end}}
+{{- else}}
+  {{- range .Site.Home.Sections.ByWeight}}
+  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0 "index" 0}}
+  {{- end}}
+{{- end}}
+
+<!-- templates -->
+{{- define "section-tree-nav" }}
+{{- $currentNode := .currentnode }}
+{{- $level := add .level 1}}
+{{- $index := .index}}
+ {{- with .sect}}
+ {{- $active := or (eq .URL $currentNode.URL) (.IsAncestor $currentNode) }}
+  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+    {{- safeHTML .Params.head}}
+    <li class="md-nav__item md-nav__item--nested{{ if $active}} md-nav__item--active{{end}}">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-{{ $index }}" type="checkbox" id="nav-{{ $index }}"{{- if $active}} checked{{end -}}>
+      <label class="md-nav__link" for="nav-{{ $index }}">
+        {{ .Title }}
+      </label>
+      <nav class="md-nav" data-md-component="collapsible" data-md-level="{{ $level }}">
+        <label class="md-nav__title" for="nav-{{ $index }}">
+          {{ .Title }}
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          {{- .Scratch.Set "pages" .Pages }}
+          {{- if .Sections}}
+          {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+          {{- end}}
+          {{- $pages := (.Scratch.Get "pages") }}
+
+          {{- if eq .Site.Params.ordersectionsby "title"}}
+            {{- range $pages.ByTitle }}
+              {{- $index := add $index 1}}
+              {{- if and .Params.hidden (not $.showhidden) }}
+              {{- else}}
+              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "index" $index }}
+              {{- end}}
+            {{- end}}
+          {{- else}}
+            {{- range $pages.ByWeight }}
+              {{- $index := add $index 1}}
+              {{- if and .Params.hidden (not $.showhidden) }}
+              {{- else}}
+              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "index" $index}}
+              {{- end}}
+            {{- end}}
+          {{- end}}
+        </ul>
+      </nav>
+    </li>
+  {{- else}}
+    {{- if not .Params.Hidden }}
+    <li class="md-nav__item{{ if $active}} md-nav__item--active{{end}}">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+      <label class="md-nav__link{{ if $active}} md-nav__link--active{{end}}" for="toc">{{ .Title }}</label>
+      <a href="{{ .URL }}" title="{{ .Title }}" class="md-nav__link{{ if $active}} md-nav__link--active{{end}}">{{ .Title }}</a>
+    </li>
+    {{- end}}
+  {{- end}}
+ {{- end}}
+{{- end}}
+  </ul>
+</nav>

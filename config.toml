@@ -1,0 +1,14 @@
+baseURL = "https://docs.ipfs.io"
+relativeURLs = true
+languageCode = "en"
+DefaultContentLanguage = "en"
+
+title = "IPFS Documentation"
+theme = "material"
+
+[params]
+editURL = "https://github.com/ipfs/docs/tree/master/content/"
+ordersectionsby = "weight" # ordersectionsby = "title"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
