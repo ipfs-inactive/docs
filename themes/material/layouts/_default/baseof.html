@@ -16,9 +16,9 @@
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
     <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/application.5d3fffba.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/application-palette.fbd935c7.css">
-    <script src="{{ .Site.BaseURL }}assets/modernizr.1aa3b519.js"></script>
+    <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/application.5d3fffba.css">
+    <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/application-palette.fbd935c7.css">
+    <script src="{{ relURL .Site.BaseURL }}assets/modernizr.1aa3b519.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
     <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -47,7 +47,7 @@
       </main>
       {{ partial "footer" . }}
     </div>
-    <script src="{{ .Site.BaseURL }}assets/application.6cdc17f0.js"></script>
+    <script src="{{ relURL .Site.BaseURL }}assets/application.6cdc17f0.js"></script>
     <script>app.initialize({version:"0.17.2",url:{base:"{{ .Site.BaseURL }}"}})</script>
   </body>
 </html>
