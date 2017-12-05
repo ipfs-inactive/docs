@@ -1,38 +1,41 @@
 <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    {{ .Site.Title }}
-  </label>
   <ul class="md-nav__list" data-md-scrollfix>
 {{- $currentNode := . }}
-
-{{- if eq .Site.Params.ordersectionsby "title"}}
-  {{- range .Site.Home.Sections.ByTitle}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0 "index" 0}}
-  {{- end}}
-{{- else}}
-  {{- range .Site.Home.Sections.ByWeight}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0 "index" 0}}
-  {{- end}}
+{{- $.Scratch.Set "index" 0 }}
+{{- $.Scratch.Set "indent" 0 }}
+{{- range .Site.Home.Sections.ByTitle}}
+{{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0 "scratch" $.Scratch }}
 {{- end}}
+
+  </ul>
+</nav>
+
 
 <!-- templates -->
 {{- define "section-tree-nav" }}
 {{- $currentNode := .currentnode }}
 {{- $level := add .level 1}}
-{{- $index := .index}}
- {{- with .sect}}
- {{- $active := or (eq .URL $currentNode.URL) (.IsAncestor $currentNode) }}
-  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+{{- $scratch := .scratch }}
+{{- $scratch.Add "index" 1 }}
+{{- $index := $scratch.Get "index" }}
+{{- with .sect}}
+  {{- $active := or (eq .URL $currentNode.URL) (.IsAncestor $currentNode) }}
+  {{- if .IsSection }}
     {{- safeHTML .Params.head}}
     <li class="md-nav__item md-nav__item--nested{{ if $active}} md-nav__item--active{{end}}">
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-{{ $index }}" type="checkbox" id="nav-{{ $index }}"{{- if $active}} checked{{end -}}>
-      <label class="md-nav__link" for="nav-{{ $index }}">
-        {{ .Title }}
-      </label>
-      <nav class="md-nav" data-md-component="collapsible" data-md-level="{{ $level }}">
-        <label class="md-nav__title" for="nav-{{ $index }}">
+      {{ if gt $level 1 }}
+        <input class="md-toggle md-nav__toggle" data-md-toggle="nav-{{ $index }}" type="checkbox" id="nav-{{ $index }}"{{- if or $active .Params.opened}} checked{{end -}}>
+        <label class="md-nav__link" for="nav-{{ $index }}">
           {{ .Title }}
         </label>
+        <nav class="md-nav" data-md-component="collapsible" data-md-level="{{ $level }}">
+      {{ else }}
+        <label class="md-nav__title">
+          {{ .Title }}
+        </label>
+        <nav class="md-nav" data-md-level="{{ $level }}">
+      {{ end }}
+
         <ul class="md-nav__list" data-md-scrollfix>
           {{- .Scratch.Set "pages" .Pages }}
           {{- if .Sections}}
@@ -40,36 +43,80 @@
           {{- end}}
           {{- $pages := (.Scratch.Get "pages") }}
 
-          {{- if eq .Site.Params.ordersectionsby "title"}}
-            {{- range $pages.ByTitle }}
-              {{- $index := add $index 1}}
-              {{- if and .Params.hidden (not $.showhidden) }}
-              {{- else}}
-              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "index" $index }}
-              {{- end}}
-            {{- end}}
-          {{- else}}
-            {{- range $pages.ByWeight }}
-              {{- $index := add $index 1}}
-              {{- if and .Params.hidden (not $.showhidden) }}
-              {{- else}}
-              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "index" $index}}
-              {{- end}}
-            {{- end}}
+          {{- range $pages.ByTitle }}
+            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
           {{- end}}
         </ul>
       </nav>
     </li>
   {{- else}}
-    {{- if not .Params.Hidden }}
     <li class="md-nav__item{{ if $active}} md-nav__item--active{{end}}">
-      <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-      <label class="md-nav__link{{ if $active}} md-nav__link--active{{end}}" for="toc">{{ .Title }}</label>
-      <a href="{{ .URL }}" title="{{ .Title }}" class="md-nav__link{{ if $active}} md-nav__link--active{{end}}">{{ .Title }}</a>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-{{ $index }}" type="checkbox" id="nav-{{ $index }}"{{- if or $active .Params.opened}} checked{{end -}}>
+      <a href="{{ relURL .URL }}" title="{{ .Title }}" class="md-nav__link{{ if $active}} md-nav__link--active{{end}}">{{ .Title }}</a>
+      {{ if $active }}
+        {{ $scratch.Set "indent" 0 }}
+        {{ template "table-of-contents" dict "content" $currentNode.Content "baselevel" $level "scratch" $scratch }}
+      {{- end}}
     </li>
-    {{- end}}
   {{- end}}
  {{- end}}
 {{- end}}
-  </ul>
-</nav>
+
+{{- define "table-of-contents" }}
+  {{/* ignore empty links with + */}}
+  {{ $headers := findRE "<h[2-6].*?>(.|\n])+?</h[2-6]>" .content }}
+  {{/* at least one header to link to */}}
+  {{ $has_headers := ge (len $headers) 1 }}
+  {{/* a post can explicitly disable Table of Contents with toc: false */}}
+  {{ $show_toc := not (eq $.Params.toc false) }}
+
+  {{ $baselevel := .baselevel }}
+  {{ $scratch := .scratch }}
+
+  {{ if and $has_headers $show_toc }}
+
+    <nav class="md-nav" data-md-level="{{ $baselevel  }}">
+      <ul class="md-nav__list">
+
+    {{ range $i, $header := $headers }}
+      {{ $anchorId := ($header | plainify | urlize) }}
+      <li class="md-nav__item">
+        <a class="md-nav__link" href="#{{ $anchorId }}" title="{{ $header | plainify | htmlEscape }}">
+          {{ $header | plainify | safeHTML }}
+        </a>
+
+      {{ $level := int (index (findRE "[2-6]" $header 1) 0) }}
+      {{ $next_level := int (index (findRE "[2-6]" (index $headers (add $i 1)) 1) 0) }}
+
+      {{ if lt $level $next_level }}
+        {{ range seq 1 (sub $next_level $level) }}
+          {{ $scratch.Add "indent" 1 }}
+        <nav class="md-nav" data-md-level="{{ add $baselevel $level }}">
+          <ul class="md-nav__list">
+        {{  end }}
+      {{ else }}
+        </li>
+      {{ end }}
+      {{ if and (gt $level $next_level) (gt $next_level 0) }}
+        {{ range seq 1 (sub $level $next_level) }}
+          {{ $scratch.Add "indent" -1 }}
+            </ul>
+          </nav>
+        </li>
+        {{ end }}
+      {{end}}
+
+    {{end}}
+
+    {{ if gt ($scratch.Get "indent") 0 }}
+    {{ range seq 1 (int ($scratch.Get "indent")) }}
+          </ul>
+        </nav>
+      </li>
+    {{ end }}
+    {{ end }}
+
+      </ul>
+    </nav>
+  {{ end }}
+{{- end}}
