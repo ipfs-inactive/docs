@@ -1,2 +1,4 @@
-/public/*
-!/public/.gitkeep
+public/
+tmp/
+themes/material/original/
+content/reference/pkg/*/

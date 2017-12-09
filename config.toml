@@ -1,40 +1,14 @@
 baseURL = "https://docs.ipfs.io"
 relativeURLs = true
-languageCode = "en-us"
+languageCode = "en"
 DefaultContentLanguage = "en"
 
-title = "IPFS Docs Portal"
-theme = "docdock"
+title = "IPFS Documentation"
+theme = "material"
 
 [params]
 editURL = "https://github.com/ipfs/docs/tree/master/content/"
-showVisitedLinks = false # default is false
-themeStyle = "original" # "original" or "flex" # default "original"
-themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
 ordersectionsby = "weight" # ordersectionsby = "title"
-disableHomeIcon = false # default is false
-disableSearch = false # default is false
-disableNavChevron = true # set true to hide next/prev chevron, default is false
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
-
-[[menu.shortcuts]]
-pre = "<h3>More</h3>"
-name = "<i class='fa fa-github'></i> Go IPFS repo"
-identifier = "ds"
-url = "https://github.com/ipfs/go-ipfs"
-weight = 10
-
-[[menu.shortcuts]]
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-camera'></i> Showcases"
-url = "/showcase"
-weight = 11
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-bullhorn'></i> Link Goes Here"
-url = "/link"
-weight = 30

@@ -1,0 +1,32 @@
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="{{ relURL .Site.BaseURL }}" title="{{ .Site.Title }}" class="md-header-nav__button md-logo">
+          <img src="{{ relURL .Site.BaseURL }}assets/logo.png" width="24" height="24">
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          {{ if .IsHome }}
+          {{ .Site.Title }}
+          {{ else }}
+          <span class="md-header-nav__topic">
+            {{ .Site.Title }}
+          </span>
+          <span class="md-header-nav__topic">
+            {{ .Page.Title }}
+          </span>
+          {{ end }}
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+        {{ partial "search" . }}
+      </div>
+    </div>
+  </nav>
+</header>

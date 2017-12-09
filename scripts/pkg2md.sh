@@ -7,18 +7,20 @@ set -e
 # - go get -u github.com/davecheney/godoc2md
 
 usage() {
-  echo "Usage: scripts/pkg2md.sh github.com/some-org/some-repo v1.2.3 path/to/destination/"
+  echo "Usage: scripts/pkg2md.sh github.com/some-org/some-repo v1.2.3 path/to/basedir baseurl"
   exit 1
 }
 
 [ "$1" ] || usage
 [ "$2" ] || usage
 [ "$3" ] || usage
+[ "$4" ] || usage
 
 repo="$(echo "$1" | sed -e 's/^https:\/\///' -e 's/git:\/\///' -e 's/git@github.com:/github.com\//' -e 's/\.git$//')"
 name="$(echo "$repo" | sed -e 's/.*\///')"
 ref="$2"
-dest="$3"
+basedir="$3"
+baseurl="$4"
 
 if echo "$name" | grep -P '^go-' > /dev/null; then
 
@@ -26,17 +28,18 @@ if echo "$name" | grep -P '^go-' > /dev/null; then
   #
   # TODO also render subdirectories
   export GOPATH="$(pwd)/tmp/gopath"
-  go get -d -u -v "$repo"
-  (cd "$GOPATH/src/$repo" && git reset --hard HEAD && git fetch && git checkout "$ref")
-  mkdir -vp "$dest/$name"
-  cat <<EOF > "$dest/$name/index.md"
+  go get -d "$repo"
+  (cd "$GOPATH/src/$repo" && git clean -fdx && git fetch && git reset --hard "$ref")
+  mkdir -vp "$basedir/$name"
+  cat <<EOF > "$basedir/$name/index.md"
 +++
 title = "$name"
-description = "$name module reference"
+description = "$name package reference"
+url = "$baseurl/$name"
 +++
 
 EOF
-  godoc2md -v "$repo" >> "$dest/$name/index.md"
+  godoc2md -v -template scripts/go-pkg.md "$repo" >> "$basedir/$name/index.md"
 else
 
   # JS: clone repo, npm install, run aegir docs
@@ -45,19 +48,20 @@ else
   if [ ! -d "$tmpdir/$name" ]; then
     git clone -q "https://$repo" "$tmpdir/$name"
   else
-    (cd "$tmpdir/$name" && git reset --hard HEAD && git fetch && git checkout "$ref")
+    (cd "$tmpdir/$name" && git clean -fdx && git fetch && git reset --hard "$ref")
   fi
 
   cd "$tmpdir/$name"
-  aegir docs -m
+  aegir docs -d md
   cd -
-  mkdir -vp "$dest/$name"
-  cat <<EOF > "$dest/$name/index.md"
+  mkdir -vp "$basedir/$name"
+  cat <<EOF > "$basedir/$name/index.md"
 +++
 title = "$name"
 description = "$name module reference"
+url = "$baseurl/$name"
 +++
 
 EOF
-  cat "$tmpdir/$name/docs/index.md" | sed -e 's/^<!--.*$//' >> "$dest/$name/index.md"
+  cat "$tmpdir/$name/docs/index.md" | sed -e 's/^<!--.*$//' >> "$basedir/$name/index.md"
 fi
