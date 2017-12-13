@@ -42,10 +42,6 @@ deploy:
 		echo "- ipfs pin add -r /ipfs/$$hash"; \
 		echo "- make publish-to-domain"
 
-publish-to-domain: versions/current
-	DNSIMPLE_TOKEN="$(shell if [ -f auth.token ]; then cat auth.token; else cat $HOME/.protocol/dnsimple.ipfs.io.token; fi)" \
-	./dnslink.sh $(DOMAIN) $(shell cat versions/current)
-
 clean:
 	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
