@@ -30,7 +30,7 @@ if echo "$name" | grep -P '^go-' > /dev/null; then
   #
   # TODO also render subdirectories
   export GOPATH="$(pwd)/tmp/gopath"
-  go get -d "$repo"
+  go get "$repo" |& grep -v 'unrecognized import path' || true
   (cd "$GOPATH/src/$repo" && git clean -fdxq && git fetch -q && git reset -q --hard "$ref")
   mkdir -p "$basedir/$name"
   cat <<EOF > "$basedir/$name/index.md"
