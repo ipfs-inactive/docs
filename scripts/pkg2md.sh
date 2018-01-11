@@ -17,12 +17,12 @@ usage() {
 [ "$4" ] || usage
 
 repo="$(echo "$1" | sed -e 's/^https:\/\///' -e 's/git:\/\///' -e 's/git@github.com:/github.com\//' -e 's/\.git$//')"
-name="$(echo "$repo" | sed -e 's/.*\///')"
+name="$(echo "$repo" | sed -e 's/^github.com\/[^/]*\///')" # strips github.com/myorg/
 ref="$2"
 basedir="$3"
 baseurl="$4"
 
-echo "--- building package $name to $basedir"
+echo "--- building package $name ($basedir/$name)"
 
 if echo "$name" | grep -P '^go-' > /dev/null; then
 
