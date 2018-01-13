@@ -20,7 +20,7 @@ packages:
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface master $(PKGDIR) pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi master $(PKGDIR) pkg
 
 build: clean packages
 	$(PREPEND)hugo && \
@@ -45,7 +45,7 @@ deploy:
 		echo "- make publish-to-domain"
 
 clean:
-	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rvf $(OUTPUTDIR)
-	$(PREPEND)[ ! -d $(PKGDIR) ] || rm -rvf $(PKGDIR)/*/
+	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	$(PREPEND)[ ! -d $(PKGDIR) ] || rm -rf $(PKGDIR)/*/
 
 .PHONY: packages build help deploy publish-to-domain clean
