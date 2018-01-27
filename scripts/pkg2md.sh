@@ -22,7 +22,7 @@ ref="$2"
 basedir="$3"
 baseurl="$4"
 
-echo "--- building package $name ($basedir/$name)"
+echo "--- building docs for $name ($basedir/$name)"
 
 if echo "$name" | grep -P '^go-' > /dev/null; then
 
