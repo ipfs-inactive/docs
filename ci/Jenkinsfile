@@ -1,13 +1,1 @@
-pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps { node(label: 'linux') {
-        ansiColor('xterm') {
-          checkout scm
-          sh 'docker run -i -v `pwd`:/site ipfs/ci-websites make -C /site build'
-        }
-      }}
-    }
-  }
-}
+website([website: 'docs.ipfs.io', record: '_.dnslink.beta'])
