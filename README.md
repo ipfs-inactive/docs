@@ -41,3 +41,5 @@ TODO
 
 
 ## License
+
+Copyright (c) 2017-2018 Protocol Labs, Inc. under the **MIT license**. See [LICENSE file](./LICENSE) for details.
