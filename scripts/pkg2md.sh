@@ -24,13 +24,13 @@ baseurl="$4"
 
 echo "--- building docs for $name ($basedir/$name)"
 
-if echo "$name" | grep -P '^go-' > /dev/null; then
+if echo "$name" | grep '^go-' > /dev/null; then
 
   # Go: get the source, run godoc2md
   #
   # TODO also render subdirectories
   export GOPATH="$(pwd)/tmp/gopath"
-  go get "$repo" |& grep -v 'unrecognized import path' || true
+  go get "$repo" 2>&1 | grep -v 'unrecognized import path' || true
   (cd "$GOPATH/src/$repo" && git clean -fdxq && git fetch -q && git reset -q --hard "$ref")
   mkdir -p "$basedir/$name"
   cat <<EOF > "$basedir/$name/index.md"
@@ -42,7 +42,7 @@ url = "$baseurl/$name"
 
 EOF
   godoc2md -v -template scripts/go-pkg.md "$repo" >> "$basedir/$name/index.md"
-elif echo "$name" | grep -P '^js-' >/dev/null; then
+elif echo "$name" | grep '^js-' >/dev/null; then
 
   # JS: clone repo, npm install, run aegir docs
   tmpdir="tmp/js"
