@@ -44,6 +44,6 @@ TODO
 
 All software code is copyright (c) Protocol Labs, Inc. under the **MIT license**.
 
-Other written documentation and content (c) Protocol Labs, Inc under the [**Creative Commons Attribution-Share-Alike License**](https://creativecommons.org/licenses/by-sa/4.0/).
+Other written documentation and content (c) Protocol Labs, Inc. under the [**Creative Commons Attribution-Share-Alike License**](https://creativecommons.org/licenses/by/4.0/).
 
 See [LICENSE file](./LICENSE) for details.
