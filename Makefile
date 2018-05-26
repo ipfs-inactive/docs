@@ -19,8 +19,8 @@ endif
 packages:
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi master $(PKGDIR) pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v1.2.1 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.15 $(PKGDIR) go/pkg
 
 build: clean packages
 	$(PREPEND)hugo && \

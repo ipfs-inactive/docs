@@ -18,7 +18,9 @@ usage() {
 
 repo="$(echo "$1" | sed -e 's/^https:\/\///' -e 's/git:\/\///' -e 's/git@github.com:/github.com\//' -e 's/\.git$//')"
 name="$(echo "$repo" | sed -e 's/^github.com\/[^/]*\///')" # strips github.com/myorg/
+github_url="$(echo "$1" | sed -E 's/^github.com\/([^/]+\/[^/]+)\/?.*/https:\/\/github.com\/\1\//')"
 ref="$2"
+version="$(echo "$2" | sed -E -e 's/^master/Latest Dev/' -e 's/^v([0-9])/\1/')"
 basedir="$3"
 baseurl="$4"
 
@@ -39,6 +41,10 @@ title = "$name"
 description = "$name package reference"
 url = "$baseurl/$name"
 +++
+
+**Version: $version**
+
+Source: [$github_url]($github_url#readme)
 
 EOF
   godoc2md -v -template scripts/go-pkg.md "$repo" >> "$basedir/$name/index.md"
@@ -63,6 +69,8 @@ title = "$name"
 description = "$name module reference"
 url = "$baseurl/$name"
 +++
+
+Source: [$github_url]($github_url#readme)
 
 EOF
   cat "$tmpdir/$name/docs/index.md" | sed -e 's/^<!--.*$//' >> "$basedir/$name/index.md"
