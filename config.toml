@@ -6,9 +6,265 @@ DefaultContentLanguage = "en"
 title = "IPFS Documentation"
 theme = "material"
 
+[blackfriday]
+hrefTargetBlank = true
+
 [params]
 editURL = "https://github.com/ipfs/docs/tree/master/content/"
 ordersectionsby = "weight" # ordersectionsby = "title"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
+
+[menu]
+
+[[menu.docs]]
+# identifier = "section:[name]" Causes the whole section with its children to
+# be rendered in the menu
+identifier = "section:start"
+name = "Getting Started"
+weight = 1
+[[menu.docs]]
+parent = "section:start"
+name = "FAQ"
+url = "https://discuss.ipfs.io/c/help/Old-FAQ"
+weight = 100
+
+[[menu.docs]]
+identifier = "api"
+name = "Commands & API"
+weight = 2
+[[menu.docs]]
+parent = "api"
+name = "CLI Commands"
+url = "/api/cli"
+weight = 10
+[[menu.docs]]
+parent = "api"
+name = "HTTP API"
+url = "/api/http"
+weight = 20
+[[menu.docs]]
+parent = "api"
+name = "JS & Go Libraries"
+url = "https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"
+weight = 30
+
+[[menu.docs]]
+identifier = "go_implementation"
+name = "Go Implementation"
+weight = 3
+[[menu.docs]]
+parent = "go_implementation"
+name = "go-ipfs Core Reference"
+url = "/go/pkg/go-ipfs/core/coreapi"
+weight = 10
+[[menu.docs]]
+parent = "go_implementation"
+name = "go-ipfs-api Reference"
+url = "/go/pkg/go-ipfs-api"
+weight = 30
+
+[[menu.docs]]
+identifier = "js_implementation"
+name = "JS Implementation"
+weight = 3
+[[menu.docs]]
+parent = "js_implementation"
+name = "js-ipfs"
+url = "https://github.com/ipfs/js-ipfs"
+weight = 10
+[[menu.docs]]
+parent = "js_implementation"
+name = "js-ipfs-api"
+url = "https://github.com/ipfs/js-ipfs-api"
+weight = 20
+
+[[menu.docs]]
+identifier = "specs"
+name = "Specifications & Planning"
+weight = 5
+[[menu.docs]]
+parent = "specs"
+name = "IPFS Whitepaper"
+url = "https://github.com/ipfs/ipfs/blob/master/papers/ipfs-cap2pfs/ipfs-p2p-file-system.pdf"
+weight = 10
+[[menu.docs]]
+parent = "specs"
+name = "IPFS Specifications"
+url = "https://github.com/ipfs/specs"
+weight = 20
+[[menu.docs]]
+parent = "specs"
+name = "Roadmap to 1.0.0"
+url = "https://github.com/ipfs/ipfs/blob/master/ROADMAP-TO-1.0.0.md"
+weight = 30
+[[menu.docs]]
+parent = "specs"
+name = "Implementation Status"
+url = "https://github.com/ipfs/ipfs/blob/master/IMPLEMENTATION_STATUS.md"
+weight = 40
+[[menu.docs]]
+parent = "specs"
+name = "RFC List"
+title = "“Requests for Changes” (RFC) are proposals for major modifications to protocols, library interfaces, and community processes."
+url = "https://github.com/ipfs/rfcs"
+weight = 50
+
+[[menu.docs]]
+identifier = "guides"
+name = "Guides"
+weight = 4
+[[menu.docs]]
+parent = "guides"
+name = "Replicating Large Datasets"
+url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
+[[menu.docs]]
+parent = "guides"
+name = "Transferring a File"
+url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
+[[menu.docs]]
+parent = "guides"
+name = "js-ipfs Examples"
+url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
+
+[[menu.docs]]
+identifier = "applications"
+name = "Applications"
+weight = 6
+[[menu.docs]]
+parent = "applications"
+name = "IPFS Cluster"
+title = "Manage a cluster of IPFS nodes across several machines to pool storage resources."
+url = "http://cluster.ipfs.io"
+weight = 10
+[[menu.docs]]
+parent = "applications"
+name = "IPFS Desktop"
+title = "A cross-platform GUI application for running an IPFS node."
+url = "https://github.com/ipfs-shipyard/ipfs-desktop"
+weight = 20
+[[menu.docs]]
+parent = "applications"
+name = "IPFS Companion"
+title = "A browser extension that makes IPFS resources securly available to web pages."
+url = "https://github.com/ipfs-shipyard/ipfs-companion"
+weight = 30
+[[menu.docs]]
+parent = "applications"
+name = "IPFS Pack"
+title = "Package large data collections into a standard format that works well on IPFS."
+url = "https://github.com/ipfs/ipfs-pack"
+weight = 40
+
+[[menu.docs]]
+identifier = "community"
+name = "Community"
+weight = 7
+[[menu.docs]]
+parent = "community"
+name = "Discussion/Support Forum"
+url = "https://discuss.ipfs.io/"
+weight = 10
+[[menu.docs]]
+parent = "community"
+name = "IRC"
+url = "/community/irc/"
+weight = 20
+[[menu.docs]]
+parent = "community"
+name = "Events Calendar"
+url = "https://calendar.google.com/calendar/embed?src=ipfs.io_eal36ugu5e75s207gfjcu0ae84@group.calendar.google.com"
+weight = 25
+[[menu.docs]]
+parent = "community"
+name = "Community Tools"
+url = "https://github.com/ipfs/community/"
+weight = 30
+[[menu.docs]]
+parent = "community"
+name = "Project Management"
+url = "https://github.com/ipfs/pm/"
+weight = 40
+[[menu.docs]]
+parent = "community"
+name = "Blog"
+url = "https://ipfs.io/blog/"
+weight = 50
+[[menu.docs]]
+parent = "community"
+name = "Youtube"
+url = "https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew"
+weight = 60
+[[menu.docs]]
+parent = "community"
+name = "Twitter (@IPFSbot)"
+url = "https://twitter.com/IPFSbot"
+weight = 70
+[[menu.docs]]
+parent = "community"
+name = "Awesome IPFS"
+url = "https://github.com/ipfs/awesome-ipfs"
+[[menu.docs]]
+parent = "community"
+name = "Public Archives on IPFS"
+title = "A community project to host archives of valuable public data."
+url = "https://archives.ipfs.io"
+[[menu.docs]]
+parent="community"
+name = "FAQ"
+url = "https://discuss.ipfs.io/c/help/Old-FAQ"
+
+[[menu.docs]]
+identifier = "contribute"
+name = "Get Involved"
+weight = 8
+[[menu.docs]]
+parent = "contribute"
+name = "GitHub"
+url = "https://github.com/ipfs/ipfs"
+weight = 5
+[[menu.docs]]
+parent = "contribute"
+name = "Contribution Guidelines"
+url = "https://github.com/ipfs/community/blob/master/contributing.md"
+weight = 10
+[[menu.docs]]
+parent = "contribute"
+name = "Contribution Guidelines 2"
+url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING-2.md"
+weight = 20
+[[menu.docs]]
+parent = "contribute"
+name = "Code of Conduct"
+url = "https://github.com/ipfs/community/blob/master/code-of-conduct.md"
+weight = 30
+[[menu.docs]]
+parent = "contribute"
+name = "Go Style Guide"
+url = "https://github.com/ipfs/community/blob/master/go-code-guidelines.md"
+weight = 40
+[[menu.docs]]
+parent = "contribute"
+name = "JS Style Guide"
+url = "https://github.com/ipfs/community/blob/master/js-code-guidelines.md"
+weight = 50
+
+[[menu.docs]]
+identifier = "related"
+name = "Related Projects"
+[[menu.docs]]
+parent = "related"
+name = "Libp2p"
+url = "http://libp2p.io"
+weight = 1
+[[menu.docs]]
+parent = "related"
+name = "Multiformats"
+url = "https://multiformats.io"
+weight = 2
+[[menu.docs]]
+parent = "related"
+name = "IPLD"
+url = "https://ipld.io"
+weight = 3

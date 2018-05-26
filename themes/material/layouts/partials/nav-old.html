@@ -10,12 +10,12 @@
       <!-- Otherwise treat it as a normal menu with hierarchical children -->
       <!-- TODO: support recursion for arbitrary hierarchies -->
       {{ else }}
-        {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}
-        <li class="md-nav__item {{ if $active }}md-nav__item--active{{ end }}">
+        <li class="md-nav__item {{ if $currentPage.HasMenuCurrent "docs" . }}md-nav__item--active{{ end }} {{ if $currentPage.IsMenuCurrent "docs" . }}is-active{{ end }}">
           {{ if .URL }}
-            {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post "classes" "md-nav__title"}}
+            {{- $active := ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}
+            {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post }}
           {{ else }}
-            <span class="md-nav__title">
+            <span class="md-nav__title {{ if or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}md-nav__link--active{{ end }}">
               {{ .Pre }}
               <span>{{ .Name }}</span>
               {{ .Post }}
@@ -25,15 +25,9 @@
           {{ if .HasChildren }}
             <ul class="sub-menu md-nav__list">
               {{ range .Children }}
-                {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) (hasPrefix (absURL $currentPage.URL) (absURL .URL)) }}
-                <li class="md-nav__item{{ if $active }} md-nav__item--active{{ end }}">
+                {{- $active := ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}
+                <li class="md-nav__item{{ if $currentPage.HasMenuCurrent "docs" . }} md-nav__item--active{{ end }} {{ if $currentPage.IsMenuCurrent "docs" . }}is-active{{ end }}">
                   {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post }}
-
-                  {{ if $active }}
-                    {{- $.Scratch.Set "indent" 0 }}
-                    {{- $.Scratch.Add "index" 1 }}
-                    {{- template "table-of-contents" dict "content" $currentPage.Content "baselevel" 1 "scratch" $.Scratch }}
-                  {{ end }}
                 </li>
               {{ end }}
             </ul>
@@ -41,6 +35,15 @@
         </li>
       {{ end }}
     {{ end }}
+
+    {{/* Old, content-based automatic menus
+    {{- $currentNode := . }}
+    {{- $.Scratch.Set "index" 0 }}
+    {{- $.Scratch.Set "indent" 0 }}
+    {{- range .Site.Home.Sections.ByTitle}}
+      {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0 "scratch" $.Scratch }}
+    {{- end}}
+    */}}
   </ul>
 </nav>
 
@@ -57,36 +60,49 @@
     {{- if .IsSection }}
       {{- safeHTML .Params.head}}
       <li class="md-nav__item md-nav__item--nested{{ if $active}} md-nav__item--active{{end}}">
-        <span class="md-nav__title">
-          {{ .Title }}
-        </span>
+        {{ if gt $level 1 }}
+          <input class="md-toggle md-nav__toggle" data-md-toggle="nav-{{ $index }}" type="checkbox" id="nav-{{ $index }}"{{- if or $active .Params.opened}} checked{{end -}}>
+          <label class="md-nav__link" for="nav-{{ $index }}">
+            {{ .Title }}
+          </label>
+          <nav class="md-nav" data-md-component="collapsible" data-md-level="{{ $level }}">
+        {{ else }}
+          <label class="md-nav__title">
+            {{ .Title }}
+          </label>
+          <nav class="md-nav" data-md-level="{{ $level }}">
+        {{ end }}
 
-        <ul class="sub-menu md-nav__list" data-md-scrollfix>
-          {{- .Scratch.Set "pages" .Pages }}
-          {{- if .Sections}}
-          {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
-          {{- end}}
-          {{- $pages := (.Scratch.Get "pages") }}
+          <ul class="md-nav__list" data-md-scrollfix>
+            {{- .Scratch.Set "pages" .Pages }}
+            {{- if .Sections}}
+            {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+            {{- end}}
+            {{- $pages := (.Scratch.Get "pages") }}
 
-          {{- range $pages.ByWeight }}
-            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
-          {{- end}}
-        </ul>
+            {{- range $pages.ByWeight }}
+              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
+            {{- end}}
+          </ul>
+        </nav>
       </li>
     {{- else}}
       <li class="md-nav__item{{ if $active}} md-nav__item--active{{end}}">
+        <input class="md-toggle md-nav__toggle" data-md-toggle="nav-{{ $index }}" type="checkbox" id="nav-{{ $index }}"{{- if or $active .Params.opened}} checked{{end -}}>
+
         {{- template "page-item-menu-link" dict "page" . "active" $active }}
 
+        {{/* Disable TOC for now; it’s a little unwieldy
         {{ if $active }}
           {{ $scratch.Set "indent" 0 }}
           {{ template "table-of-contents" dict "content" $currentNode.Content "baselevel" $level "scratch" $scratch }}
         {{- end}}
+        */}}
       </li>
     {{- end}}
   {{- end}}
 {{- end}}
 
-<!-- TODO: consider building the TOC at runtime with JS. More flexible and possibly easier to work on. -->
 {{- define "table-of-contents" }}
   {{/* ignore empty links with + */}}
   {{ $headers := findRE "<h[2-6].*?>(.|\n])+?</h[2-6]>" .content }}
@@ -100,7 +116,7 @@
 
   {{ if and $has_headers $show_toc }}
 
-    <div class="md-nav table-of-contents" data-md-level="{{ $baselevel  }}">
+    <nav class="md-nav table-of-contents" data-md-level="{{ $baselevel  }}">
       <ul class="md-nav__list">
 
     {{ range $i, $header := $headers }}
@@ -120,7 +136,7 @@
       {{ if lt $level $next_level }}
         {{ range seq 1 (sub $next_level $level) }}
           {{ $scratch.Add "indent" 1 }}
-        <div class="md-nav" data-md-level="{{ add $baselevel $level }}">
+        <nav class="md-nav" data-md-level="{{ add $baselevel $level }}">
           <ul class="md-nav__list">
         {{  end }}
       {{ else }}
@@ -130,7 +146,7 @@
         {{ range seq 1 (sub $level $next_level) }}
           {{ $scratch.Add "indent" -1 }}
             </ul>
-          </div>
+          </nav>
         </li>
         {{ end }}
       {{end}}
@@ -140,13 +156,13 @@
     {{ if gt ($scratch.Get "indent") 0 }}
     {{ range seq 1 (int ($scratch.Get "indent")) }}
           </ul>
-        </div>
+        </nav>
       </li>
     {{ end }}
     {{ end }}
 
       </ul>
-    </div>
+    </nav>
   {{ end }}
 {{- end}}
 
@@ -168,7 +184,7 @@
     href="{{ relURL .url }}"
     title="{{ .title }}"
     {{ if $external }}target="_blank"{{ end }}
-    class="md-nav__link {{ if .active }}md-nav__link--active{{ end }}{{ if $external }} external-link{{ end }}{{ with .classes }} {{ . }}{{ end }}"
+    class="md-nav__link {{ if .active }}md-nav__link--active{{ end }}{{ if $external }} external-link{{ end }}"
   >
     {{ .pre }}
     <span>{{ .text }}</span>

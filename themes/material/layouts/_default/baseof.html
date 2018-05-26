@@ -23,10 +23,62 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
     <style>
-      .md-sidebar { position: fixed; top: 7.8rem; }
+      /*.md-sidebar { position: fixed; top: 7.8rem; }*/
       .md-sidebar[data-md-state="lock"] { position: fixed; top: 7.8rem; }
       .table-of-contents li { font-size: 1.2rem; }
       .md-typeset { font-size: 1.4rem; }
+      .md-header {
+        background: linear-gradient(to bottom, #041727 0, #062b3f 100%);
+      }
+      .fa-external-link-alt,
+      .fa-external-link-square-alt {
+        margin-left: 0.25em;
+        opacity: 0.5;
+      }
+
+      /** FIXME: none of the following should really be here; we need to re-do the CSS **/
+
+      /* Make a clear visual break between menu sections */
+      .sub-menu {
+        margin-bottom: 1em;
+      }
+      .md-nav__link {
+        margin-top: 0.25em;
+      }
+
+      /* Nudge the small-screen menu into shape */
+      .md-nav__title:before {
+        content: none;
+      }
+      .md-nav__item .md-nav__item .md-nav__item {
+        padding-left: 1.2rem;
+      }
+      @media only screen and (max-width: 76.1875em) {
+        html .md-nav--primary .md-nav__title {
+          height: auto;
+          padding-top: 0.4rem;
+        }
+        .md-nav--primary .md-nav {
+          position: static;
+        }
+      }
+
+      /* Quick and dirty bootstrap-style "alert" box from old website */
+      .alert {
+        border: 1px solid #f3f3f3;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+        margin: 1em 0;
+        padding: 1em;
+      }
+      /* The alert's padding handles margins for the first and last item */
+      .alert > *:first-child { margin-top: 0; }
+      .alert > *:last-child { margin-bottom: 0; }
+      .alert-info {
+        border-left: 4px solid #a8d9df;
+      }
+      .alert-warning {
+        border-left: 4px solid #f9b377;
+      }
     </style>
   </head>
   <body data-md-color-primary="indigo" data-md-color-accent="indigo">
@@ -53,6 +105,8 @@
       </main>
       {{ partial "footer" . }}
     </div>
+    <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome.min.js"></script>
+    <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome-all.min.js"></script>
     <script src="{{ relURL .Site.BaseURL }}assets/application.6cdc17f0.js"></script>
     <script>app.initialize({version:"0.17.2",url:{base:"{{ .Site.BaseURL }}"}})</script>
   </body>
