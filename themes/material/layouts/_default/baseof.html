@@ -18,6 +18,7 @@
     <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
     <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/application.5d3fffba.css">
     <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/application-palette.fbd935c7.css">
+    <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/main.css">
     <script src="{{ relURL .Site.BaseURL }}assets/modernizr.1aa3b519.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -34,50 +35,6 @@
       .fa-external-link-square-alt {
         margin-left: 0.25em;
         opacity: 0.5;
-      }
-
-      /** FIXME: none of the following should really be here; we need to re-do the CSS **/
-
-      /* Make a clear visual break between menu sections */
-      .sub-menu {
-        margin-bottom: 1em;
-      }
-      .md-nav__link {
-        margin-top: 0.25em;
-      }
-
-      /* Nudge the small-screen menu into shape */
-      .md-nav__title:before {
-        content: none;
-      }
-      .md-nav__item .md-nav__item .md-nav__item {
-        padding-left: 1.2rem;
-      }
-      @media only screen and (max-width: 76.1875em) {
-        html .md-nav--primary .md-nav__title {
-          height: auto;
-          padding-top: 0.4rem;
-        }
-        .md-nav--primary .md-nav {
-          position: static;
-        }
-      }
-
-      /* Quick and dirty bootstrap-style "alert" box from old website */
-      .alert {
-        border: 1px solid #f3f3f3;
-        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-        margin: 1em 0;
-        padding: 1em;
-      }
-      /* The alert's padding handles margins for the first and last item */
-      .alert > *:first-child { margin-top: 0; }
-      .alert > *:last-child { margin-bottom: 0; }
-      .alert-info {
-        border-left: 4px solid #a8d9df;
-      }
-      .alert-warning {
-        border-left: 4px solid #f9b377;
       }
     </style>
   </head>
