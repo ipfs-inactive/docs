@@ -33,7 +33,7 @@ weight = 100
 [[menu.docs]]
 identifier = "api"
 name = "Commands & API"
-weight = 2
+weight = 4
 [[menu.docs]]
 parent = "api"
 name = "CLI Commands"
@@ -53,7 +53,7 @@ weight = 30
 [[menu.docs]]
 identifier = "go_implementation"
 name = "Go Implementation"
-weight = 3
+weight = 5
 [[menu.docs]]
 parent = "go_implementation"
 name = "go-ipfs Core Reference"
@@ -68,7 +68,7 @@ weight = 30
 [[menu.docs]]
 identifier = "js_implementation"
 name = "JS Implementation"
-weight = 3
+weight = 5
 [[menu.docs]]
 parent = "js_implementation"
 name = "js-ipfs"
@@ -83,7 +83,7 @@ weight = 20
 [[menu.docs]]
 identifier = "specs"
 name = "Specifications & Planning"
-weight = 5
+weight = 6
 [[menu.docs]]
 parent = "specs"
 name = "IPFS Whitepaper"
@@ -114,7 +114,7 @@ weight = 50
 [[menu.docs]]
 identifier = "guides"
 name = "Guides"
-weight = 4
+weight = 3
 [[menu.docs]]
 parent = "guides"
 name = "Replicating Large Datasets"
@@ -131,7 +131,7 @@ url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
 [[menu.docs]]
 identifier = "applications"
 name = "Applications"
-weight = 6
+weight = 8
 [[menu.docs]]
 parent = "applications"
 name = "IPFS Cluster"
@@ -160,7 +160,7 @@ weight = 40
 [[menu.docs]]
 identifier = "community"
 name = "Community"
-weight = 7
+weight = 9
 [[menu.docs]]
 parent = "community"
 name = "Discussion/Support Forum"
@@ -218,7 +218,7 @@ url = "https://discuss.ipfs.io/c/help/Old-FAQ"
 [[menu.docs]]
 identifier = "contribute"
 name = "Get Involved"
-weight = 8
+weight = 10
 [[menu.docs]]
 parent = "contribute"
 name = "GitHub"
