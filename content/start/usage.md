@@ -162,6 +162,6 @@ This should bring up a console like this:
 
 Now, you're ready:
 
-<a class="button button-primary" href="../examples" role="button">
+<a class="button button-primary" href="{{< ref "/guides/examples" >}}" role="button">
   Onward to more Examples &nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
 </a>
