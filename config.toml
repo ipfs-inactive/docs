@@ -177,34 +177,39 @@ url = "/community/irc/"
 weight = 20
 [[menu.community]]
 parent = "community"
+name = "Research Discussion"
+url = "https://github.com/ipfs/notes"
+weight = 30
+[[menu.community]]
+parent = "community"
 name = "Events Calendar"
 url = "https://calendar.google.com/calendar/embed?src=ipfs.io_eal36ugu5e75s207gfjcu0ae84@group.calendar.google.com"
-weight = 25
+weight = 40
 [[menu.community]]
 parent = "community"
 name = "Community Tools"
 url = "https://github.com/ipfs/community/"
-weight = 30
+weight = 50
 [[menu.community]]
 parent = "community"
 name = "Project Management"
 url = "https://github.com/ipfs/pm/"
-weight = 40
+weight = 60
 [[menu.community]]
 parent = "community"
 name = "Blog"
 url = "https://ipfs.io/blog/"
-weight = 50
+weight = 70
 [[menu.community]]
 parent = "community"
 name = "Youtube"
 url = "https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew"
-weight = 60
+weight = 80
 [[menu.community]]
 parent = "community"
 name = "Twitter (@IPFSbot)"
 url = "https://twitter.com/IPFSbot"
-weight = 70
+weight = 90
 [[menu.community]]
 parent = "community"
 name = "Awesome IPFS"
