@@ -26,8 +26,9 @@ ipfs-theme:
 	$(PREPEND)node scripts/ipfs-css-constants.js $(APPEND)
 
 packages:
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
+	# The JS packages don't actually generate useful docs right now, so skip them
+	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
+	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v1.2.1 $(PKGDIR) go/pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.15 $(PKGDIR) go/pkg
 
@@ -41,7 +42,7 @@ css:
 	$(PREPEND)$(NPMBIN)/lessc --autoprefix src/styles/main.less static-build/assets/main.css && \
 	$(NPMBIN)/lessc --clean-css static-build/assets/main.css static-build/assets/main.css $(APPEND)
 
-build: clean packages css
+build: clean install css
 	$(PREPEND)hugo && \
 	echo "" && \
 	echo "Site built out to ./$(OUTPUTDIR)"
