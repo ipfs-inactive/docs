@@ -6,6 +6,8 @@ DefaultContentLanguage = "en"
 title = "IPFS Documentation"
 theme = "material"
 
+staticDir = ["static", "static-build"]
+
 [blackfriday]
 hrefTargetBlank = true
 

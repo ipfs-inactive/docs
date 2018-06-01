@@ -7,6 +7,7 @@ NPM=npm
 NPMBIN=./node_modules/.bin
 OUTPUTDIR=public
 PKGDIR=content/reference/pkg
+PORT=1313
 
 ifeq ($(DEBUG), true)
 	PREPEND=
@@ -20,8 +21,8 @@ node_modules:
 	$(PREPEND)$(NPM) install $(APPEND)
 
 ipfs-theme:
-	$(PREPEND)[ -d static/assets/fonts ] || mkdir -p static/assets/fonts
-	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Montserrat* ./static/assets/fonts/ $(APPEND)
+	$(PREPEND)[ -d static-build/assets/fonts ] || mkdir -p static-build/assets/fonts
+	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Montserrat* ./static-build/assets/fonts/ $(APPEND)
 	$(PREPEND)node scripts/ipfs-css-constants.js $(APPEND)
 
 packages:
@@ -37,8 +38,8 @@ install: node_modules resources
 css:
 	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
 	# https://github.com/less/less.js/issues/3187
-	$(PREPEND)$(NPMBIN)/lessc --autoprefix src/styles/main.less static/assets/main.css && \
-	$(NPMBIN)/lessc --clean-css static/assets/main.css static/assets/main.css $(APPEND)
+	$(PREPEND)$(NPMBIN)/lessc --autoprefix src/styles/main.less static-build/assets/main.css && \
+	$(NPMBIN)/lessc --clean-css static-build/assets/main.css static-build/assets/main.css $(APPEND)
 
 build: clean packages css
 	$(PREPEND)hugo && \
@@ -47,8 +48,8 @@ build: clean packages css
 
 dev: css
 	$(PREPEND)( \
-		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc --autoprefix src/styles/main.less static/assets/main.css && $(NPMBIN)/lessc --clean-css static/assets/main.css static/assets/main.css" & \
-		hugo server -w \
+		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc --autoprefix src/styles/main.less static-build/assets/main.css && $(NPMBIN)/lessc --clean-css static-build/assets/main.css static-build/assets/main.css" & \
+		hugo server -w --port $(PORT) \
 	)
 
 serve:
@@ -68,6 +69,6 @@ deploy:
 clean:
 	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 	$(PREPEND)[ ! -d $(PKGDIR) ] || rm -rf $(PKGDIR)/*/
-	$(PREPEND)[ ! -d static/assets ] || rm -rf static/assets/*
+	$(PREPEND)[ ! -d static-build/assets ] || rm -rf static-build/assets/*
 
 .PHONY: packages build help deploy publish-to-domain clean
