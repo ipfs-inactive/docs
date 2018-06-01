@@ -7,9 +7,9 @@ If you haven't done so, [install IPFS](../install).
 
 During this tutorial, if you have any questions, feel free to ask them in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
 
-## Init the repo
+## Initialize the repository
 
-`ipfs` uses a global local object repository, added to `~/.ipfs`:
+`ipfs` stores all its settings and internal data in a directory called the *repository.* Before using IPFS for the first time, you’ll need to initialize the repository with the `ipfs init` command:
 
 ```sh
 > ipfs init
@@ -22,20 +22,24 @@ to get started, enter:
 
 ```
 
-<div class="alert alert-info">
-Note the hash there may differ. If it does, use the one you got.
-</div>
-
-<div class="alert alert-info">
+<div class="alert alert-warning">
     <p>
-        If you are running on a server in a data center, make sure you set the `server` profile. This will prevent IPFS from creating all sorts of data center-internal traffic trying to discover local nodes:
+        If you are running on a server in a data center, you should initialize IPFS with the <code>server</code> profile. This will prevent IPFS from creating a lot of data center-internal traffic trying to discover local nodes:
     </p>
 
     <pre><code class="language-sh">&gt; ipfs init --profile server</code></pre>
 
     <p>
-    There are a whole host of other configuration options you may want to set — check <a href="https://github.com/ipfs/go-ipfs/blob/v0.4.15/docs/config.md">the full reference</a> for more.
+        There are a whole host of other configuration options you may want to set — check <a href="https://github.com/ipfs/go-ipfs/blob/v0.4.15/docs/config.md">the full reference</a> for more.
     </p>
+</div>
+
+<div class="alert alert-info">
+    The hash after <code>peer identity: </code> is your node’s ID and will be different from the one shown in the above output. Other nodes on the network use it to find and connect to you. You can run <code>ipfs id</code> at any time to get it again if you need it.
+</div>
+
+<div class="alert alert-info">
+    The <code>HASH</code> in the <code>ipfs cat /ipfs/HASH/readme</code> line above may differ from the <code>HASH</code> in your output. If it does, use the one you got in the following instructions. Be sure not to confuse these hashes with your peer identity hash; <code>ipfs cat /ipfs/PEER_ID/readme</code> won't work.
 </div>
 
 Now, try running:
@@ -137,7 +141,7 @@ the DHT, found your machine, requested the file, your machine sent it to the
 gateway, and the gateway sent it to your browser.
 
 <div class="alert alert-warning">
-Note: depending on the state of the network, the `curl` may take a while. The public gateways may be overloaded or having a hard time reaching you.
+    Note: depending on the state of the network, <code>curl</code> may take a while. The public gateways may be overloaded or having a hard time reaching you.
 </div>
 
 You can also check it out at your own local gateway:
