@@ -1,7 +1,7 @@
 ---
 title: "UnixFS"
 menu:
-    docs:
+    guides:
         parent: concepts
 ---
 

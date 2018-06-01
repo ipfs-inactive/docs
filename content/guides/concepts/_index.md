@@ -1,7 +1,7 @@
 ---
 title: "Concepts"
 menu:
-    docs:
+    guides:
         identifier: concepts
         weight: 2
 ---

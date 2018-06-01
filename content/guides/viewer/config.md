@@ -2,7 +2,7 @@
 title: Configuring Your Node
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

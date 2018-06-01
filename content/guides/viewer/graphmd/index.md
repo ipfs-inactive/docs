@@ -2,7 +2,7 @@
 title: Visualizing objects with graphmd
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

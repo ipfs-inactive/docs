@@ -1,52 +1,98 @@
+{{ $currentPage := . }}
 <nav class="md-nav md-nav--primary" data-md-level="0">
-  <ul class="md-nav__list" data-md-scrollfix>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.docs }}
-      <!-- If the menu identifier is `section:<section name>`, render all the documents of the section into the menu -->
-      {{ if hasPrefix .Identifier "section:" }}
-        {{ $section := $currentPage.Site.GetPage "section" (strings.TrimPrefix "section:" .Identifier) }}
-        {{- template "section-tree-nav" dict "sect" $section "currentnode" $currentPage "level" 0 "scratch" $.Scratch }}
-
-      <!-- Otherwise treat it as a normal menu with hierarchical children -->
-      <!-- TODO: support recursion for arbitrary hierarchies -->
-      {{ else }}
-        {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}
-        <li class="md-nav__item {{ if $active }}md-nav__item--active{{ end }}">
-          {{ if .URL }}
-            {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post "classes" "md-nav__title"}}
-          {{ else }}
-            <span class="md-nav__title">
-              {{ .Pre }}
-              <span>{{ .Name }}</span>
-              {{ .Post }}
-            </span>
-          {{ end }}
-
-          {{ if .HasChildren }}
-            <ul class="sub-menu md-nav__list">
-              {{ range .Children }}
-                {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) (hasPrefix (absURL $currentPage.URL) (absURL .URL)) }}
-                <li class="md-nav__item{{ if $active }} md-nav__item--active{{ end }}">
-                  {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post }}
-
-                  {{ if $active }}
-                    {{- $.Scratch.Set "indent" 0 }}
-                    {{- $.Scratch.Add "index" 1 }}
-                    {{- template "table-of-contents" dict "content" $currentPage.Content "baselevel" 1 "scratch" $.Scratch }}
-                  {{ end }}
-                </li>
-              {{ end }}
-            </ul>
-          {{ end }}
-        </li>
-      {{ end }}
+  <ol class="md-nav__list" data-md-scrollfix>
+    {{ range .Site.Menus.main }}
+      <li class="md-nav__item md-nav__main-item">
+        {{ .Pre }}
+        <span class="md-nav__title">{{ .Name }}</span>
+        {{- template "section-menu" dict "page" $currentPage "section" .Identifier }}
+        {{ .Post }}
+      </li>
     {{ end }}
-  </ul>
+  </ol>
 </nav>
 
 
-<!-- templates -->
-{{- define "section-tree-nav" }}
+
+<!-- Renders the menu for a single section -->
+{{- define "section-menu" }}
+  {{/* Args: .page, .section */}}
+  {{- $menu := index .page.Site.Menus .section }}
+  {{ if $menu }}
+    {{- template "section-menu-standard" . }}
+  {{ else }}
+    {{ $section := .page.Site.GetPage "section" .section }}
+    {{- template "section-menu-enumerated" dict "sect" $section "currentnode" .page "level" 0 "scratch" .page.Scratch }}
+  {{ end }}
+{{- end }}
+
+<!-- Renders a normal Hugo menu named after a section -->
+{{- define "section-menu-standard" }}
+  {{/* Args: .page, .section */}}
+  {{- $currentPage := .page }}
+  {{- $scratch := .page.Scratch }}
+  {{- $menu := index .page.Site.Menus .section }}
+  {{- $external := hasPrefix .url "http" }}
+
+  <ol class="section-menu sub-menu md-nav__list">
+    {{ range $menu }}
+      {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}
+      <li class="md-nav__{{ if .HasChildren }}section{{ else }}item{{ end }} {{ if $active }}md-nav__item--active{{ end }}">
+        {{ if .URL }}
+          {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post "classes" "md-nav__title"}}
+        {{ else }}
+          <span class="md-nav__title">
+            {{ .Pre }}
+            {{ .Name }}
+            {{ .Post }}
+          </span>
+        {{ end }}
+
+        {{ if .HasChildren }}
+          <ul class="sub-menu md-nav__list">
+            {{ range .Children }}
+              {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) (hasPrefix (absURL $currentPage.URL) (absURL .URL)) }}
+              <li class="md-nav__item{{ if $active }} md-nav__item--active{{ end }}">
+                {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post }}
+
+                {{ if $active }}
+                  {{- $scratch.Set "indent" 0 }}
+                  {{- $scratch.Add "index" 1 }}
+                  {{- template "table-of-contents" dict "content" $currentPage.Content "baselevel" 1 "scratch" $scratch }}
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ol>
+{{- end }}
+
+<!-- Enumerates all the pages in a section and renders them as a menu -->
+{{- define "section-menu-enumerated" }}
+  {{- $currentNode := .currentnode }}
+  {{- $level := add .level 1}}
+  {{- $scratch := .scratch }}
+  {{- $scratch.Add "index" 1 }}
+  {{- $index := $scratch.Get "index" }}
+  {{- with .sect}}
+    <ol class="sub-menu md-nav__list" data-md-scrollfix>
+      {{- .Scratch.Set "pages" .Pages }}
+      {{- if .Sections}}
+      {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+      {{- end}}
+      {{- $pages := (.Scratch.Get "pages") }}
+
+      {{- range $pages.ByWeight }}
+        {{- template "section-tree-item" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
+      {{- end}}
+    </ol>
+  {{- end }}
+{{- end }}
+
+<!-- Render a menu item corresponding to a page or subsection -->
+{{- define "section-tree-item" }}
   {{- $currentNode := .currentnode }}
   {{- $level := add .level 1}}
   {{- $scratch := .scratch }}
@@ -61,17 +107,7 @@
           {{ .Title }}
         </span>
 
-        <ul class="sub-menu md-nav__list" data-md-scrollfix>
-          {{- .Scratch.Set "pages" .Pages }}
-          {{- if .Sections}}
-          {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
-          {{- end}}
-          {{- $pages := (.Scratch.Get "pages") }}
-
-          {{- range $pages.ByWeight }}
-            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
-          {{- end}}
-        </ul>
+        {{- template "section-menu-enumerated" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
       </li>
     {{- else}}
       <li class="md-nav__item{{ if $active}} md-nav__item--active{{end}}">
@@ -100,51 +136,49 @@
 
   {{ if and $has_headers $show_toc }}
 
-    <div class="md-nav table-of-contents" data-md-level="{{ $baselevel  }}">
+    <div class="md-nav table-of-contents" data-md-level="{{ $baselevel }}">
       <ul class="md-nav__list">
 
-    {{ range $i, $header := $headers }}
-      {{ $scratch.Set "anchorId" ($header | plainify | urlize) }}
-      {{ $customId := findRE "id=\"(.+)\"" $header }}
-      {{ if ge (len $customId) 1 }}
-        {{ $scratch.Set "anchorId" (replaceRE "id=\"(.+)\"" "$1" (index $customId 0)) }}
-      {{ end }}
-      <li class="md-nav__item">
-        <a class="md-nav__link" href="#{{ $scratch.Get "anchorId" }}">
-          {{ $header | plainify | safeHTML }}
-        </a>
+        {{ range $i, $header := $headers }}
+          {{ $scratch.Set "anchorId" ($header | plainify | urlize) }}
+          {{ $customId := findRE "id=\"(.+)\"" $header }}
+          {{ if ge (len $customId) 1 }}
+            {{ $scratch.Set "anchorId" (replaceRE "id=\"(.+)\"" "$1" (index $customId 0)) }}
+          {{ end }}
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="#{{ $scratch.Get "anchorId" }}">
+              {{ $header | plainify | safeHTML }}
+            </a>
 
-      {{ $level := int (index (findRE "[2-6]" $header 1) 0) }}
-      {{ $next_level := int (index (findRE "[2-6]" (index $headers (add $i 1)) 1) 0) }}
+            {{ $level := int (index (findRE "[2-6]" $header 1) 0) }}
+            {{ $next_level := int (index (findRE "[2-6]" (index $headers (add $i 1)) 1) 0) }}
 
-      {{ if lt $level $next_level }}
-        {{ range seq 1 (sub $next_level $level) }}
-          {{ $scratch.Add "indent" 1 }}
-        <div class="md-nav" data-md-level="{{ add $baselevel $level }}">
-          <ul class="md-nav__list">
-        {{  end }}
-      {{ else }}
-        </li>
-      {{ end }}
-      {{ if and (gt $level $next_level) (gt $next_level 0) }}
-        {{ range seq 1 (sub $level $next_level) }}
-          {{ $scratch.Add "indent" -1 }}
-            </ul>
-          </div>
-        </li>
+            {{ if lt $level $next_level }}
+              {{ range seq 1 (sub $next_level $level) }}
+                {{ $scratch.Add "indent" 1 }}
+            <div class="md-nav" data-md-level="{{ add $baselevel $level }}">
+              <ul class="md-nav__list">
+              {{ end }}
+            {{ else if and (gt $level $next_level) (gt $next_level 0) }}
+              {{ range seq 1 (sub $level $next_level) }}
+                {{ $scratch.Add "indent" -1 }}
+                </li>
+              </ul>
+            </div>
+          </li>
+              {{ end }}
+            {{ else }}
+          </li>
+            {{ end }}
+        {{end}}
+
+        {{ if gt ($scratch.Get "indent") 0 }}
+          {{ range seq 1 (int ($scratch.Get "indent")) }}
+              </ul>
+            </div>
+          </li>
+          {{ end }}
         {{ end }}
-      {{end}}
-
-    {{end}}
-
-    {{ if gt ($scratch.Get "indent") 0 }}
-    {{ range seq 1 (int ($scratch.Get "indent")) }}
-          </ul>
-        </div>
-      </li>
-    {{ end }}
-    {{ end }}
-
       </ul>
     </div>
   {{ end }}
@@ -159,7 +193,6 @@
   {{- $url := or .page.Params.external .page.URL }}
   {{- template "menu-item-link" dict "url" $url "text" .page.Title "title" .page.Title "active" .active }}
 {{- end }}
-
 
 {{- define "menu-item-link" }}
   {{/* Args: .url, .text, .title, .active, .classes, .pre, .post */}}

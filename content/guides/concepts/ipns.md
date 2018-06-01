@@ -1,7 +1,7 @@
 ---
 title: "IPNS"
 menu:
-    docs:
+    guides:
         parent: concepts
 ---
 

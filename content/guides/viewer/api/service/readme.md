@@ -2,7 +2,7 @@
 title: Making Your Own IPFS Service
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

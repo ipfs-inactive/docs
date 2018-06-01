@@ -1,7 +1,7 @@
 ---
 title: "How to Help"
 menu:
-    docs:
+    community:
         parent: contribute
         weight: 1
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Working with IPFS in JS"
 menu:
-    docs:
+    reference:
         parent: js_implementation
         weight: 1
 ---

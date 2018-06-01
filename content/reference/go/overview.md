@@ -1,7 +1,7 @@
 ---
 title: "Working with Go IPFS"
 menu:
-    docs:
+    reference:
         parent: go_implementation
         weight: 1
 ---

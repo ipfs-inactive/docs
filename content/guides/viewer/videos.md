@@ -2,7 +2,7 @@
 title: Playing Videos
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

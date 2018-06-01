@@ -2,7 +2,7 @@
 title: IPFS for Websites
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

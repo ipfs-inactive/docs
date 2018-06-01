@@ -2,7 +2,7 @@
 title: Dealing with Blocks
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

@@ -2,7 +2,7 @@
 title: Pinning
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

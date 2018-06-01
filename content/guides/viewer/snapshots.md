@@ -2,7 +2,7 @@
 title: Snapshots
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

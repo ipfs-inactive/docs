@@ -1,7 +1,7 @@
 ---
 title: "Content Identifiers (CIDs)"
 menu:
-    docs:
+    guides:
         parent: concepts
 ---
 

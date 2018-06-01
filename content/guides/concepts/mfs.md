@@ -1,7 +1,7 @@
 ---
 title: "Mutable File System (MFS)"
 menu:
-    docs:
+    guides:
         parent: concepts
 ---
 

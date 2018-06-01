@@ -1,5 +1,9 @@
 ---
 title: "HTTP API"
+weight: 20
+menu:
+    reference:
+        parent: api
 ---
 
 <!-- TODO: Describe how to change ports and configure the API server -->

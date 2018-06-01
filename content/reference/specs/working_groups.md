@@ -2,7 +2,7 @@
 title: Working Groups
 draft: true
 menu:
-    docs:
+    reference:
         parent: specs
 ---
 

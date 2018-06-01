@@ -2,7 +2,7 @@
 title: Playing with the Network
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

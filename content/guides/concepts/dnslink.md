@@ -1,7 +1,7 @@
 ---
 title: "DNSLink"
 menu:
-    docs:
+    guides:
         parent: concepts
 ---
 

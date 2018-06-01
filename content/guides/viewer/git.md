@@ -2,7 +2,7 @@
 title: Git, Even More Distributed
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

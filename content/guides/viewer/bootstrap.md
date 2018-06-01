@@ -2,7 +2,7 @@
 title: Bootstrap
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

@@ -1,6 +1,10 @@
 ---
 title: "CLI Commands"
 identifier: clicommands
+weight: 10
+menu:
+    reference:
+        parent: api
 ---
 
 <!-- TODO: Remove index since it's handled by the TOC in the menu? -->

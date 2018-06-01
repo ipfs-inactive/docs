@@ -2,7 +2,7 @@
 title: The Inter-Planetary Naming System
 draft: true
 menu:
-    docs:
+    guides:
         parent: guides
 ---
 

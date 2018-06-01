@@ -1,8 +1,8 @@
 ---
 title: Basic Examples
 menu:
-    docs:
-        parent: guides
+    guides:
+        parent: examples
         weight: 2
 ---
 
