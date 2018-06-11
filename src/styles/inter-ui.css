@@ -1,0 +1,55 @@
+/**
+ * From: ipfs-css/src/fonts/inter-ui.css
+ *
+ * Unfortunately, this is not directly extractable from the installed module
+ * (it doesn’t get included in the distributed package), so we keep a full copy.
+ *
+ * TODO: make it possible to pull this from the installed ipfs-css module
+ */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: local('Inter UI'), local('InterUI-Regular'), url("fonts/Inter-UI-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 400;
+  src: local('Inter UI Italic'), local('InterUI-Italic'), url("fonts/Inter-UI-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 500;
+  src: local('Inter UI Medium'), local('InterUI-Medium'), url("fonts/Inter-UI-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 500;
+  src: local('Inter UI Medium Italic'), local('InterUI-MediumItalic'), url("fonts/Inter-UI-MediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 700;
+  src: local('Inter UI Bold'), local('InterUI-Bold'), url("fonts/Inter-UI-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 700;
+  src: local('Inter UI Bold Italic'), local('InterUI-BoldItalic'), url("fonts/Inter-UI-BoldItalic.woff2") format("woff2");
+}

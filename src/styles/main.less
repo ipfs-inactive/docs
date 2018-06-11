@@ -1,19 +1,26 @@
 @import (inline) "./montserrat.css";
+@import (inline) "./inter-ui.css";
 @import "./constants";
 
 body,
 body .md-typeset {
-  font-family: @fonts-montserrat;
+  font-family: @fonts-sans-serif;
 }
 
 h1, h2,
 .md-typeset h1, .md-typeset h2 {
+  font-family: @fonts-montserrat;
   font-weight: 700;
 }
 
 h3, h4, h5, h6,
 .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+  font-family: @fonts-montserrat;
   font-weight: 600;
+}
+
+code, kbd, pre, samp, var {
+  font-family: @fonts-monospace;
 }
 
 
