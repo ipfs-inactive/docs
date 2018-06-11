@@ -56,9 +56,19 @@ name = "Go Implementation"
 weight = 5
 [[menu.reference]]
 parent = "go_implementation"
-name = "go-ipfs Core Reference"
+name = "go-ipfs Core API"
 url = "/go/pkg/go-ipfs/core/coreapi"
 weight = 10
+[[menu.reference]]
+parent = "go_implementation"
+name = "go-ipfs Coreiface API"
+url = "/go/pkg/go-ipfs/core/coreapi/interface"
+weight = 11
+[[menu.reference]]
+parent = "go_implementation"
+name = "go-ipfs Core options API"
+url = "/go/pkg/go-ipfs/core/coreapi/interface/options"
+weight = 12
 [[menu.reference]]
 parent = "go_implementation"
 name = "go-ipfs-api Reference"

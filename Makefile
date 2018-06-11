@@ -23,6 +23,7 @@ node_modules:
 ipfs-theme:
 	$(PREPEND)[ -d static-build/assets/fonts ] || mkdir -p static-build/assets/fonts
 	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Montserrat* ./static-build/assets/fonts/ $(APPEND)
+	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Inter-UI* ./static-build/assets/fonts/ $(APPEND)
 	$(PREPEND)node scripts/ipfs-css-constants.js $(APPEND)
 
 packages:
@@ -31,6 +32,8 @@ packages:
 	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v1.2.1 $(PKGDIR) go/pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.15 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.15 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.15 $(PKGDIR) go/pkg
 
 resources: ipfs-theme packages
 
