@@ -1,5 +1,11 @@
+.vscode
+
 node_modules/
 public/
 tmp/
 themes/material/original/
+
+# Generated source files
 content/reference/pkg/*/
+src/styles/constants.less
+static-build

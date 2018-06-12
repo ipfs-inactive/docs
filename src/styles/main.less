@@ -1,0 +1,61 @@
+@import (inline) "./montserrat.css";
+@import (inline) "./inter-ui.css";
+@import "./constants";
+
+body,
+body .md-typeset {
+  font-family: @fonts-sans-serif;
+}
+
+h1, h2,
+.md-typeset h1, .md-typeset h2 {
+  font-family: @fonts-montserrat;
+  font-weight: 700;
+}
+
+h3, h4, h5, h6,
+.md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+  font-family: @fonts-montserrat;
+  font-weight: 600;
+}
+
+code, kbd, pre, samp, var {
+  font-family: @fonts-monospace;
+}
+
+
+// Overrides for existing styles from mkdocs
+// FIXME: none of the following should really be here; we need to re-do the CSS
+
+.md-nav__main-item > .md-nav__title {
+  text-transform: uppercase;
+  color: @colors-navy-muted;
+  letter-spacing: 0.1em;
+}
+
+/* Make a clear visual break between menu sections */
+.sub-menu {
+  margin-bottom: 1em;
+}
+.md-nav__link {
+  margin-top: 0.25em;
+}
+
+/* Nudge the small-screen menu into shape */
+.md-nav__title:before {
+  content: none;
+}
+.md-nav__item .md-nav__item .md-nav__item {
+  padding-left: 1.2rem;
+}
+@media only screen and (max-width: 76.1875em) {
+  html .md-nav--primary .md-nav__title {
+    height: auto;
+    padding-top: 0.4rem;
+  }
+  .md-nav--primary .md-nav {
+    position: static;
+  }
+}
+
+@import "./components/alert";

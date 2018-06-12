@@ -18,15 +18,22 @@
     <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
     <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/application.5d3fffba.css">
     <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/application-palette.fbd935c7.css">
+    <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/main.css">
     <script src="{{ relURL .Site.BaseURL }}assets/modernizr.1aa3b519.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
     <style>
-      .md-sidebar { position: fixed; top: 7.8rem; }
+      /*.md-sidebar { position: fixed; top: 7.8rem; }*/
       .md-sidebar[data-md-state="lock"] { position: fixed; top: 7.8rem; }
       .table-of-contents li { font-size: 1.2rem; }
       .md-typeset { font-size: 1.4rem; }
+      .md-header {
+        background: linear-gradient(to bottom, #041727 0, #062b3f 100%);
+      }
+      .fa-external-link-alt,
+      .fa-external-link-square-alt {
+        margin-left: 0.25em;
+        opacity: 0.5;
+      }
     </style>
   </head>
   <body data-md-color-primary="indigo" data-md-color-accent="indigo">
@@ -53,6 +60,8 @@
       </main>
       {{ partial "footer" . }}
     </div>
+    <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome.min.js"></script>
+    <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome-all.min.js"></script>
     <script src="{{ relURL .Site.BaseURL }}assets/application.6cdc17f0.js"></script>
     <script>app.initialize({version:"0.17.2",url:{base:"{{ .Site.BaseURL }}"}})</script>
   </body>

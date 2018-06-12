@@ -7,6 +7,7 @@ NPM=npm
 NPMBIN=./node_modules/.bin
 OUTPUTDIR=public
 PKGDIR=content/reference/pkg
+PORT=1313
 
 ifeq ($(DEBUG), true)
 	PREPEND=
@@ -16,22 +17,46 @@ else
 	APPEND=1>/dev/null
 endif
 
-packages:
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi master $(PKGDIR) pkg
+node_modules:
+	$(PREPEND)$(NPM) install $(APPEND)
 
-build: clean packages
+ipfs-theme:
+	$(PREPEND)[ -d static-build/assets/fonts ] || mkdir -p static-build/assets/fonts
+	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Montserrat* ./static-build/assets/fonts/ $(APPEND)
+	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Inter-UI* ./static-build/assets/fonts/ $(APPEND)
+	$(PREPEND)node scripts/ipfs-css-constants.js $(APPEND)
+
+packages:
+	# The JS packages don't actually generate useful docs right now, so skip them
+	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
+	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v1.2.1 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.15 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.15 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.15 $(PKGDIR) go/pkg
+
+resources: ipfs-theme packages
+
+install: node_modules resources
+
+css:
+	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
+	# https://github.com/less/less.js/issues/3187
+	$(PREPEND)$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less static-build/assets/main.css $(APPEND)
+
+build: clean install css
 	$(PREPEND)hugo && \
 	echo "" && \
 	echo "Site built out to ./$(OUTPUTDIR)"
 
+dev: css
+	$(PREPEND)( \
+		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less static-build/assets/main.css" & \
+		hugo server -w --port $(PORT) \
+	)
+
 serve:
 	$(PREPEND)hugo server
-
-node_modules:
-	$(PREPEND)$(NPM) i $(APPEND)
 
 deploy:
 	export hash=`ipfs add -r -Q $(OUTPUTDIR)`; \
@@ -47,5 +72,6 @@ deploy:
 clean:
 	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 	$(PREPEND)[ ! -d $(PKGDIR) ] || rm -rf $(PKGDIR)/*/
+	$(PREPEND)[ ! -d static-build/assets ] || rm -rf static-build/assets/*
 
 .PHONY: packages build help deploy publish-to-domain clean
