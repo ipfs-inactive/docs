@@ -8,4 +8,4 @@ themes/material/original/
 # Generated source files
 content/reference/pkg/*/
 src/styles/constants.less
-static-build
+build

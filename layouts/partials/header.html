@@ -1,0 +1,17 @@
+<header class="page-header">
+  <a href="{{ relURL .Site.BaseURL }}" title="{{ .Site.Title }}" class="page-logo">
+    <img src="{{ relURL .Site.BaseURL }}assets/logo.svg">
+  </a>
+  <div class="page-title">
+    {{ if .IsHome }}
+    {{ .Site.Title }}
+    {{ else }}
+    <span class="page-title__site">
+      {{ .Site.Title }}
+    </span>
+    <span class="page-title__topic">
+      {{ .Page.Title }}
+    </span>
+    {{ end }}
+  </div>
+</header>

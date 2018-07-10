@@ -2,9 +2,14 @@
 @import (inline) "./inter-ui.css";
 @import "./constants";
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 body .md-typeset {
   font-family: @fonts-sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2,
@@ -21,6 +26,19 @@ h3, h4, h5, h6,
 
 code, kbd, pre, samp, var {
   font-family: @fonts-monospace;
+}
+
+
+// Overrides that used to be right in the HTML
+// FIXME: put these where they should actually be
+/*.md-sidebar { position: fixed; top: 7.8rem; }*/
+.md-sidebar[data-md-state="lock"] { position: fixed; top: 7.8rem; }
+.table-of-contents li { font-size: 1.2rem; }
+.md-typeset { font-size: 1.4rem; }
+.fa-external-link-alt,
+.fa-external-link-square-alt {
+  margin-left: 0.25em;
+  opacity: 0.5;
 }
 
 
@@ -58,4 +76,7 @@ code, kbd, pre, samp, var {
   }
 }
 
+@import "./components/layout";
+@import "./components/header";
+@import "./components/sidebar";
 @import "./components/alert";
