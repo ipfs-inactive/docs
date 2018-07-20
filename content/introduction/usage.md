@@ -162,7 +162,7 @@ On your favorite web browser, go to:
 
 This should bring up a console like this:
 
-<img class="screenshot" alt="Web console connection view" src="../webui-connection.png"">
+<img class="screenshot" alt="Web console connection view" src="../webui-connection.png">
 
 Now, you're ready:
 
