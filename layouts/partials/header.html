@@ -4,14 +4,14 @@
   </a>
   <div class="page-title">
     {{ if .IsHome }}
-    {{ .Site.Title }}
-    {{ else }}
-    <span class="page-title__site">
       {{ .Site.Title }}
-    </span>
-    <span class="page-title__topic">
-      {{ .Page.Title }}
-    </span>
+    {{ else }}
+      <span class="page-title__site">
+        {{ .Site.Title }}
+      </span>
+      <span class="page-title__topic">
+        - {{ .Page.Title }}
+      </span>
     {{ end }}
   </div>
 </header>
