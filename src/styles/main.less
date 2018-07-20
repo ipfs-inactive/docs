@@ -10,8 +10,8 @@
   box-sizing: border-box;
 }
 
-body,
-body .md-typeset {
+body {
+  color: #333;
   font-family: @fonts-sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -49,7 +49,6 @@ a, button, input, label {
 
 // Overrides that used to be right in the HTML
 // FIXME: put these where they should actually be
-.md-typeset { font-size: 1.4rem; }
 .fa-external-link-alt,
 .fa-external-link-square-alt {
   margin-left: 0.25em;
@@ -81,4 +80,5 @@ a, button, input, label {
 @import "./components/header";
 @import "./components/footer";
 @import "./components/sidebar";
+@import "./components/article";
 @import "./components/alert";
