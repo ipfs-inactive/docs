@@ -1,21 +1,22 @@
 html,
 body {
+  height: 100%;
   margin: 0;
+}
+
+main {
+  overflow: auto;
+  padding: 0 2em;
 }
 
 .wrapper {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 16rem auto
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 16rem auto;
+  height: 100%;
 }
 
 .page-header {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-
-.page-footer {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-

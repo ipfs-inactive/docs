@@ -2,6 +2,10 @@
 @import (inline) "./inter-ui.css";
 @import "./constants";
 
+// TODO: figure out a good standard color for this?
+@link-color: #3f51b5;
+@link-highlight-color: #536dfe;
+
 * {
   box-sizing: border-box;
 }
@@ -28,12 +32,23 @@ code, kbd, pre, samp, var {
   font-family: @fonts-monospace;
 }
 
+a {
+  color: @link-color;
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects;
+
+  &:hover {
+    color: @link-highlight-color;
+  }
+}
+
+a, button, input, label {
+  -webkit-tap-highlight-color: transparent;
+}
+
 
 // Overrides that used to be right in the HTML
 // FIXME: put these where they should actually be
-/*.md-sidebar { position: fixed; top: 7.8rem; }*/
-.md-sidebar[data-md-state="lock"] { position: fixed; top: 7.8rem; }
-.table-of-contents li { font-size: 1.2rem; }
 .md-typeset { font-size: 1.4rem; }
 .fa-external-link-alt,
 .fa-external-link-square-alt {
@@ -44,20 +59,6 @@ code, kbd, pre, samp, var {
 
 // Overrides for existing styles from mkdocs
 // FIXME: none of the following should really be here; we need to re-do the CSS
-
-.md-nav__main-item > .md-nav__title {
-  text-transform: uppercase;
-  color: @colors-navy-muted;
-  letter-spacing: 0.1em;
-}
-
-/* Make a clear visual break between menu sections */
-.sub-menu {
-  margin-bottom: 1em;
-}
-.md-nav__link {
-  margin-top: 0.25em;
-}
 
 /* Nudge the small-screen menu into shape */
 .md-nav__title:before {
