@@ -26,8 +26,8 @@
       </div>
       <main>
         {{ block "main" . }}{{end}}
+        {{ partial "footer" . }}
       </main>
-      {{ partial "footer" . }}
     </div>
     <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome.min.js"></script>
     <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome-all.min.js"></script>
