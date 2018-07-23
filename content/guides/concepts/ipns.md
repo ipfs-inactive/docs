@@ -17,4 +17,4 @@ When looking up an IPNS address, use the `/ipns/` prefix:
 
 <!-- TODO: more description of creating and publishing a name -->
 
-IPNS is not the only to create mutable addresses on IPFS. You can also use [DNSLink](/concepts/dnslink) (which is currently much faster than IPNS and also uses more readable names). Other community members are exploring ways to use blockchains to store common name records.
+IPNS is not the only to create mutable addresses on IPFS. You can also use [DNSLink](/guides/concepts/dnslink) (which is currently much faster than IPNS and also uses more readable names). Other community members are exploring ways to use blockchains to store common name records.
