@@ -21,14 +21,13 @@
   <body data-md-color-primary="indigo" data-md-color-accent="indigo">
     <div class="wrapper">
       {{ partial "header" . }}
-      <div class="sidebar">
-        {{ partial "nav" . }}
-      </div>
+      {{ partial "nav" . }}
       <main class="article">
         {{ block "main" . }}{{end}}
         {{ partial "footer" . }}
       </main>
     </div>
+    <script src="{{ relURL .Site.BaseURL }}assets/main.js"></script>
     <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome.min.js"></script>
     <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome-all.min.js"></script>
   </body>

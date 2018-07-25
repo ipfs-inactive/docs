@@ -44,7 +44,16 @@ css:
 	# https://github.com/less/less.js/issues/3187
 	$(PREPEND)$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css $(APPEND)
 
-build: clean install css
+js:
+	$(PREPEND)$(NPMBIN)/browserify src/js/main.js -o build/assets/main.js --debug $(APPEND)
+
+minify-js: js
+	$(PREPEND)$(NPMBIN)/uglifyjs --compress --output build/assets/main.js -- build/assets/main.js $(APPEND)
+
+lint:
+	$(NPMBIN)/standard src/js/**/*.js
+
+build: clean install lint css js minify-js
 	$(PREPEND)hugo && \
 	echo "" && \
 	echo "Site built out to ./$(OUTPUTDIR)"
@@ -52,7 +61,8 @@ build: clean install css
 dev: css
 	$(PREPEND)( \
 		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css" & \
-		hugo server -w --port $(PORT) \
+		$(NPMBIN)/watchify src/js/main.js -o build/assets/main.js --debug & \
+		hugo server -w --port $(PORT) --bind 0.0.0.0 \
 	)
 
 serve:

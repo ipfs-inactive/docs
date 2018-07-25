@@ -6,6 +6,9 @@
 @link-color: #3f51b5;
 @link-highlight-color: #536dfe;
 
+@minimum-layout-width: 50rem;
+@narrow-layout-width: (@minimum-layout-width - 0.001rem);
+
 * {
   box-sizing: border-box;
 }
@@ -16,14 +19,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2,
-.md-typeset h1, .md-typeset h2 {
+h1, h2 {
   font-family: @fonts-montserrat;
   font-weight: 700;
 }
 
-h3, h4, h5, h6,
-.md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+h3, h4, h5, h6 {
   font-family: @fonts-montserrat;
   font-weight: 600;
 }
@@ -46,34 +47,15 @@ a, button, input, label {
   -webkit-tap-highlight-color: transparent;
 }
 
-
-// Overrides that used to be right in the HTML
-// FIXME: put these where they should actually be
-.fa-external-link-alt,
-.fa-external-link-square-alt {
-  margin-left: 0.25em;
-  opacity: 0.5;
-}
-
-
-// Overrides for existing styles from mkdocs
-// FIXME: none of the following should really be here; we need to re-do the CSS
-
-/* Nudge the small-screen menu into shape */
-.md-nav__title:before {
-  content: none;
-}
-.md-nav__item .md-nav__item .md-nav__item {
-  padding-left: 1.2rem;
-}
-@media only screen and (max-width: 76.1875em) {
-  html .md-nav--primary .md-nav__title {
-    height: auto;
-    padding-top: 0.4rem;
-  }
-  .md-nav--primary .md-nav {
-    position: static;
-  }
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 @import "./components/layout";

@@ -1,5 +1,11 @@
 {{ $currentPage := . }}
-<nav class="sidebar-nav primary" data-md-level="0">
+<nav class="sidebar-nav primary" data-md-level="0" aria-labelledby="sidebar-nav-title">
+  <h1 id="sidebar-nav-title" class="sr-only">Menu</h1>
+  <button class="close-button">
+    <span class="sr-only">Close Menu (<kbd>esc</kbd>)</span>
+    <i class="fas fa-times"></i>
+  </button>
+
   <ol class="sidebar-nav--list" data-md-scrollfix>
     {{ range .Site.Menus.main }}
       <li class="sidebar-nav--item sidebar-nav--main-item">
