@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+}
+
+main {
+  outline: none;  // hide focus ring (probably OK in this *particular* case)
+  padding: 0 1em;
+}
+
+html .page-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+@media (min-width: @minimum-layout-width) {
+  html,
+  body {
+    height: 100%;
+  }
+
+  main {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 2em;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 16rem auto;
+    height: 100%;
+  }
+
+  .page-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

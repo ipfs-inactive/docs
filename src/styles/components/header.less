@@ -1,0 +1,51 @@
+.page-header {
+  background: linear-gradient(to bottom, #041727 0, #062b3f 100%);
+  box-shadow: 0 0 0.4rem rgba(0,0,0,.1), 0 0.4rem 0.8rem rgba(0,0,0,.2);
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  justify-content: start;
+  padding: 0.5em 2.5em 0.5em 1em;
+  position: relative;
+
+  .page-logo {
+    display: inline-block;
+    margin-right: 0.5em;
+
+    img {
+      width: 32px;
+    }
+  }
+
+  .page-title {
+    color: #fff;
+    display: inline-block;
+    flex: 1 1 auto;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
+
+@media (max-width: @narrow-layout-width) {
+  .interactive .page-header .menu-button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

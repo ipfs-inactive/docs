@@ -4,9 +4,8 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 
 title = "IPFS Documentation"
-theme = "material"
 
-staticDir = ["static", "static-build"]
+staticDir = ["static", "build"]
 
 [blackfriday]
 hrefTargetBlank = true

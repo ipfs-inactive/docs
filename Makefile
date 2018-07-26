@@ -21,9 +21,9 @@ node_modules:
 	$(PREPEND)$(NPM) install $(APPEND)
 
 ipfs-theme:
-	$(PREPEND)[ -d static-build/assets/fonts ] || mkdir -p static-build/assets/fonts
-	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Montserrat* ./static-build/assets/fonts/ $(APPEND)
-	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Inter-UI* ./static-build/assets/fonts/ $(APPEND)
+	$(PREPEND)[ -d build/assets/fonts ] || mkdir -p build/assets/fonts
+	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Montserrat* ./build/assets/fonts/ $(APPEND)
+	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Inter-UI* ./build/assets/fonts/ $(APPEND)
 	$(PREPEND)node scripts/ipfs-css-constants.js $(APPEND)
 
 packages:
@@ -42,17 +42,27 @@ install: node_modules resources
 css:
 	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
 	# https://github.com/less/less.js/issues/3187
-	$(PREPEND)$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less static-build/assets/main.css $(APPEND)
+	$(PREPEND)$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css $(APPEND)
 
-build: clean install css
+js:
+	$(PREPEND)$(NPMBIN)/browserify src/js/main.js -o build/assets/main.js --debug $(APPEND)
+
+minify-js: js
+	$(PREPEND)$(NPMBIN)/uglifyjs --compress --output build/assets/main.js -- build/assets/main.js $(APPEND)
+
+lint:
+	$(NPMBIN)/standard src/js/**/*.js
+
+build: clean install lint css js minify-js
 	$(PREPEND)hugo && \
 	echo "" && \
 	echo "Site built out to ./$(OUTPUTDIR)"
 
 dev: css
 	$(PREPEND)( \
-		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less static-build/assets/main.css" & \
-		hugo server -w --port $(PORT) \
+		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css" & \
+		$(NPMBIN)/watchify src/js/main.js -o build/assets/main.js --debug & \
+		hugo server -w --port $(PORT) --bind 0.0.0.0 \
 	)
 
 serve:
@@ -72,6 +82,6 @@ deploy:
 clean:
 	$(PREPEND)[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 	$(PREPEND)[ ! -d $(PKGDIR) ] || rm -rf $(PKGDIR)/*/
-	$(PREPEND)[ ! -d static-build/assets ] || rm -rf static-build/assets/*
+	$(PREPEND)[ ! -d build/assets ] || rm -rf build/assets/*
 
 .PHONY: packages build help deploy publish-to-domain clean

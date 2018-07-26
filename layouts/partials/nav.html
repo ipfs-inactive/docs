@@ -1,10 +1,16 @@
 {{ $currentPage := . }}
-<nav class="md-nav md-nav--primary" data-md-level="0">
-  <ol class="md-nav__list" data-md-scrollfix>
+<nav class="sidebar-nav primary" data-md-level="0" aria-labelledby="sidebar-nav-title">
+  <h1 id="sidebar-nav-title" class="sr-only">Menu</h1>
+  <button class="close-button">
+    <span class="sr-only">Close Menu (<kbd>esc</kbd>)</span>
+    <i class="fas fa-times"></i>
+  </button>
+
+  <ol class="sidebar-nav--list" data-md-scrollfix>
     {{ range .Site.Menus.main }}
-      <li class="md-nav__item md-nav__main-item">
+      <li class="sidebar-nav--item sidebar-nav--main-item">
         {{ .Pre }}
-        <span class="md-nav__title">{{ .Name }}</span>
+        <span class="sidebar-nav--title">{{ .Name }}</span>
         {{- template "section-menu" dict "page" $currentPage "section" .Identifier }}
         {{ .Post }}
       </li>
@@ -34,14 +40,14 @@
   {{- $menu := index .page.Site.Menus .section }}
   {{- $external := hasPrefix .url "http" }}
 
-  <ol class="section-menu sub-menu md-nav__list">
+  <ol class="section-menu sub-menu sidebar-nav--list">
     {{ range $menu }}
       {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) }}
-      <li class="md-nav__{{ if .HasChildren }}section{{ else }}item{{ end }} {{ if $active }}md-nav__item--active{{ end }}">
+      <li class="sidebar-nav--{{ if .HasChildren }}section{{ else }}item{{ end }} {{ if $active }}active{{ end }}">
         {{ if .URL }}
-          {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post "classes" "md-nav__title"}}
+          {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post "classes" "sidebar-nav--title"}}
         {{ else }}
-          <span class="md-nav__title">
+          <span class="sidebar-nav--title">
             {{ .Pre }}
             {{ .Name }}
             {{ .Post }}
@@ -49,10 +55,10 @@
         {{ end }}
 
         {{ if .HasChildren }}
-          <ul class="sub-menu md-nav__list">
+          <ul class="sub-menu sidebar-nav--list">
             {{ range .Children }}
               {{- $active := or ($currentPage.HasMenuCurrent "docs" .) ($currentPage.IsMenuCurrent "docs" .) (hasPrefix (absURL $currentPage.URL) (absURL .URL)) }}
-              <li class="md-nav__item{{ if $active }} md-nav__item--active{{ end }}">
+              <li class="sidebar-nav--item{{ if $active }} active{{ end }}">
                 {{- template "menu-item-link" dict "url" .URL "text" .Name "title" .Title "active" $active "pre" .Pre "post" .Post }}
 
                 {{ if $active }}
@@ -77,7 +83,7 @@
   {{- $scratch.Add "index" 1 }}
   {{- $index := $scratch.Get "index" }}
   {{- with .sect}}
-    <ol class="sub-menu md-nav__list" data-md-scrollfix>
+    <ol class="sub-menu sidebar-nav--list" data-md-scrollfix>
       {{- .Scratch.Set "pages" .Pages }}
       {{- if .Sections}}
       {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
@@ -102,15 +108,15 @@
     {{- $active := or (eq .URL $currentNode.URL) (.IsAncestor $currentNode) }}
     {{- if .IsSection }}
       {{- safeHTML .Params.head}}
-      <li class="md-nav__item md-nav__item--nested{{ if $active}} md-nav__item--active{{end}}">
-        <span class="md-nav__title">
+      <li class="sidebar-nav--item nested{{ if $active}} active{{end}}">
+        <span class="sidebar-nav--title">
           {{ .Title }}
         </span>
 
         {{- template "section-menu-enumerated" dict "sect" . "currentnode" $currentNode "level" $level "scratch" $scratch }}
       </li>
     {{- else}}
-      <li class="md-nav__item{{ if $active}} md-nav__item--active{{end}}">
+      <li class="sidebar-nav--item{{ if $active}} active{{end}}">
         {{- template "page-item-menu-link" dict "page" . "active" $active }}
 
         {{ if $active }}
@@ -136,8 +142,8 @@
 
   {{ if and $has_headers $show_toc }}
 
-    <div class="md-nav table-of-contents" data-md-level="{{ $baselevel }}">
-      <ul class="md-nav__list">
+    <div class="table-of-contents" data-md-level="{{ $baselevel }}">
+      <ul class="sidebar-nav--list">
 
         {{ range $i, $header := $headers }}
           {{ $scratch.Set "anchorId" ($header | plainify | urlize) }}
@@ -145,8 +151,8 @@
           {{ if ge (len $customId) 1 }}
             {{ $scratch.Set "anchorId" (replaceRE "id=\"(.+)\"" "$1" (index $customId 0)) }}
           {{ end }}
-          <li class="md-nav__item">
-            <a class="md-nav__link" href="#{{ $scratch.Get "anchorId" }}">
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#{{ $scratch.Get "anchorId" }}">
               {{ $header | plainify | safeHTML }}
             </a>
 
@@ -156,8 +162,8 @@
             {{ if lt $level $next_level }}
               {{ range seq 1 (sub $next_level $level) }}
                 {{ $scratch.Add "indent" 1 }}
-            <div class="md-nav" data-md-level="{{ add $baselevel $level }}">
-              <ul class="md-nav__list">
+            <div class="" data-md-level="{{ add $baselevel $level }}">
+              <ul class="sidebar-nav--list">
               {{ end }}
             {{ else if and (gt $level $next_level) (gt $next_level 0) }}
               {{ range seq 1 (sub $level $next_level) }}
@@ -201,7 +207,7 @@
     href="{{ relURL .url }}"
     title="{{ .title }}"
     {{ if $external }}target="_blank"{{ end }}
-    class="md-nav__link {{ if .active }}md-nav__link--active{{ end }}{{ if $external }} external-link{{ end }}{{ with .classes }} {{ . }}{{ end }}"
+    class="sidebar-nav--link {{ if .active }}active{{ end }}{{ if $external }} external-link{{ end }}{{ with .classes }} {{ . }}{{ end }}"
   >
     {{ .pre }}
     <span>{{ .text }}</span>

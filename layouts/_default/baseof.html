@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }} class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ .Title }}{{ if not .IsHome }} &ndash; {{ .Site.Title }}{{ end }}</title>
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ with .Site.Title }}<meta property="og:title" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.logo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+    {{ with .Site.Title }}<meta name="apple-mobile-web-app-title" content="{{ . }}">{{ end }}
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
+    <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
+    <link rel="stylesheet" href="{{ relURL .Site.BaseURL }}assets/main.css">
+  </head>
+  <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <div class="wrapper">
+      {{ partial "header" . }}
+      {{ partial "nav" . }}
+      <main class="article">
+        {{ block "main" . }}{{end}}
+        {{ partial "footer" . }}
+      </main>
+    </div>
+    <script src="{{ relURL .Site.BaseURL }}assets/main.js"></script>
+    <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome.min.js"></script>
+    <script src="{{ relURL .Site.BaseURL }}fontawesome/fontawesome-all.min.js"></script>
+  </body>
+</html>

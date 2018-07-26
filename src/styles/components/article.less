@@ -1,0 +1,90 @@
+.article {
+  line-height: 1.4;
+
+  & > * {
+    max-width: 50em;
+  }
+
+  // Allow certain types of content to extend past normal text bounds
+  // TODO: consider using a script to manage the width of code blocks so they
+  // only extend to the right if they have extra content (reduce the visual
+  // striping effect they can currently have on a wide screen)
+  & > pre,
+  & > img,
+  & > figure {
+    max-width: none;
+  }
+
+  ol,
+  ul {
+    li {
+      margin-bottom: 0.5em;
+      margin-left: 1.875em;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px dotted rgba(0,0,0,.26);
+    margin: 2em 0;
+  }
+
+  pre {
+    position: relative;
+    margin: 1em 0;
+    border-radius: .2rem;
+    line-height: 1.4;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  code,
+  pre {
+    background-color: hsla(0, 0%, 93%, 0.5);
+    // TODO: standardize this color
+    color: #37474f;
+    font-size: 0.85em;
+  }
+
+  code {
+    margin: 0 .3em;
+    padding: 0.1em 0;
+    border-radius: 0.25rem;
+    // TODO: figure out if this is the best way to extend the edges of the box.
+    // It's from the old theme and I am not quite sture why it's done this way.
+    box-shadow: 0.3em 0 0 hsla(0, 0%, 93%, 0.5), -0.3em 0 0 hsla(0, 0%, 93%, 0.5);
+    word-break: break-word;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  pre > code {
+    display: block;
+    margin: 0;
+    padding: 0.85rem 1.05rem;
+    background-color: transparent;
+    font-size: inherit;
+    box-shadow: none;
+    -webkit-box-decoration-break: none;
+    box-decoration-break: none;
+    overflow: auto;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figure > img,
+  p > img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: @narrow-layout-width) {
+  .article {
+    ol,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
