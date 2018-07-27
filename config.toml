@@ -222,7 +222,7 @@ weight = 90
 [[menu.community]]
 parent = "community"
 name = "Awesome IPFS"
-url = "https://github.com/ipfs/awesome-ipfs"
+url = "https://awesome.ipfs.io/"
 [[menu.community]]
 parent = "community"
 name = "Public Archives on IPFS"
