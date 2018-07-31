@@ -17,6 +17,24 @@ else
 	APPEND=1>/dev/null
 endif
 
+# Where Hugo should be installed locally
+HUGO_LOCAL=./bin/hugo
+# Path to Hugo binary to use when building the site
+HUGO_BINARY=$(HUGO_LOCAL)
+HUGO_VERSION=0.45.1
+PLATFORM:=$(shell uname)
+ifeq ('$(PLATFORM)', 'Darwin')
+	PLATFORM=macOS
+endif
+MACH:=$(shell uname -m)
+ifeq ('$(MACH)', 'x86_64')
+	MACH=64bit
+else
+	MACH=32bit
+endif
+HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_$(PLATFORM)-$(MACH).tar.gz"
+
+
 node_modules:
 	$(PREPEND)$(NPM) install $(APPEND)
 
@@ -35,9 +53,15 @@ packages:
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.15 $(PKGDIR) go/pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.15 $(PKGDIR) go/pkg
 
+bin/hugo:
+	@echo "Installing Hugo to $(HUGO_LOCAL)..."
+	$(PREPEND)mkdir -p tmp_hugo $(APPEND)
+	$(PREPEND)curl --location "$(HUGO_URL)" | tar -xzf - -C tmp_hugo && chmod +x tmp_hugo/hugo && mv tmp_hugo/hugo $(HUGO_LOCAL) $(APPEND)
+	$(PREPEND)rm -rf tmp_hugo $(APPEND)
+
 resources: ipfs-theme packages
 
-install: node_modules resources
+install: bin/hugo node_modules resources
 
 css:
 	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
@@ -54,7 +78,7 @@ lint:
 	$(NPMBIN)/standard src/js/**/*.js
 
 build: clean install lint css js minify-js
-	$(PREPEND)hugo && \
+	$(PREPEND)$(HUGO_BINARY) && \
 	echo "" && \
 	echo "Site built out to ./$(OUTPUTDIR)"
 
@@ -62,11 +86,11 @@ dev: css
 	$(PREPEND)( \
 		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css" & \
 		$(NPMBIN)/watchify src/js/main.js -o build/assets/main.js --debug & \
-		hugo server -w --port $(PORT) --bind 0.0.0.0 \
+		$(HUGO_BINARY) server -w --port $(PORT) --bind 0.0.0.0 \
 	)
 
 serve:
-	$(PREPEND)hugo server
+	$(PREPEND)$(HUGO_BINARY) server
 
 deploy:
 	export hash=`ipfs add -r -Q $(OUTPUTDIR)`; \

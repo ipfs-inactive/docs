@@ -1,9 +1,10 @@
 .vscode
 
+bin/*
+!bin/.gitkeep
 node_modules/
 public/
 tmp/
-themes/material/original/
 
 # Generated source files
 content/reference/pkg/*/
