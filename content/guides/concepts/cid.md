@@ -7,7 +7,12 @@ menu:
 
 A *content identifier*, or CID, is a label used as a standardized way of pointing to material in IPFS. It doesn't indicate _where_ the content is stored, but it forms a kind of address out of the content itself.  CIDs are consistently compact, regardless of the size of underlying content.
 
-CIDs are based on the content's [cryptographic hash](concepts/hashes).  As a result, any difference in content will produce a different CID.  Any IPFS node having the content will be able to match the hash and be able to retrieve the original content.  
+
+
+CIDs are based on the content's [cryptographic hash](concepts/hashes). That means:
+
+* Any difference in content will produce a different CID and
+* The same piece of content added to two different IPFS nodes using the same settings will produce _exactly the same CID_.
 
 ## CID formats
 
