@@ -5,18 +5,36 @@ menu:
         parent: concepts
 ---
 
-A *content identifier* is a value that addresses a single piece of content in IPFS. It is mainly a cryptographic hash of the content, but is encoded as a [multihash](https://github.com/multiformats/multihash) and [multicodec](https://github.com/multiformats/multicodec). (Note: older CIDs have a different design — see [version 0](#version-0) below.)
+A *content identifier*, or CID, is a label used to point to material in IPFS. It doesn't indicate _where_ the content is stored, but it forms a kind of address based on the content itself. CIDs are short, regardless of the size of their underlying content.
 
-<!-- TODO: explain more of the details of how CID v1 is composed here. -->
+CIDs are based on the content’s [cryptographic hash]({{< relref "./hashes.md" >}}). That means:
 
-You can read up on the details in the [CID spec](https://github.com/ipld/cid). You might also want to check out the [CID inspector](http://cid-utils.ipfs.team/#zb2rhiVd5G2DSpnbYtty8NhYHeDvNkPxjSqA7YbDPuhdihj9L) for an interactive breakdown of CIDs.
+* Any difference in content will produce a different CID and
+* The same piece of content added to two different IPFS nodes using the same settings will produce _exactly the same CID_.
 
-## Version 1
+## CID formats
 
-Version 1 is the latest version of CID. It is used by default for `files` ([MFS](/concepts/mfs)) and `object` operations.
+CIDs can take a few different forms with different encoding bases or CID versions. Many of the existing IPFS tools still generate v0 CIDs, although the `files` ([MFS]({{< relref "./mfs.md" >}})) and `object` operations now use CIDv1 by default.
 
-## Version 0
+### Version 0
 
-When IPFS was first designed, we used base 58-encoded multihashes as the content identifiers. (This is simpler, but much less flexible than newer CIDs.) It is still used by default when adding files and blocks to IPFS, so you should generally try to support them.
+When IPFS was first designed, we used base 58-encoded multihashes as the content identifiers (This is simpler, but much less flexible than newer CIDs). CIDv0 is still used by default for many IPFS operations, so you should generally try to support v0.
 
-The CID specification includes a [decoding algorithm](https://github.com/ipld/cid/blob/ef1b2002394b15b1e6c26c30545fd485f2c4c138/README.md#decoding-algorithm) you can use to distinguish CID v0 from newer versions.
+If a CID is 46 characters starting with "Qm", it's a CIDv0 (for more details, check the [decoding algorithm](https://github.com/ipld/cid/blob/ef1b2002394b15b1e6c26c30545fd485f2c4c138/README.md#decoding-algorithm) in the CID specification).
+
+### Version 1
+
+CID v1 contains some leading identifiers that clarify exactly which representation is used, along with the content-hash itself. These include:
+
+* A [multibase](https://github.com/multiformats/multibase) prefix, specifying the encoding used for the remainder of the CID
+* A CID version identifer, which indicates which version of CID this is
+* A [multicodec](https://github.com/multiformats/multicodec) identifier, indicating the format of the target content — it helps people and software to know how to interpret that content after the content is fetched
+
+These leading identifiers also provide forward-compatibility, supporting different formats to be used in future versions of CID.
+
+You can use the first few bytes of the CID to interpret the remainder of the content address and know how to decode the content after it's fetched from IPFS. For more details, check out the [CID specification](https://github.com/ipld/cid). It includes a [decoding algorithm](https://github.com/ipld/cid/blob/ef1b2002394b15b1e6c26c30545fd485f2c4c138/README.md#decoding-algorithm) and links to existing software implementations for decoding CIDs.
+
+You might also want to check out the [CID inspector](http://cid-utils.ipfs.team/#zb2rhiVd5G2DSpnbYtty8NhYHeDvNkPxjSqA7YbDPuhdihj9L) for an interactive breakdown of differently-formatted CIDs.
+
+
+
