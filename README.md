@@ -29,9 +29,19 @@ The documentation site contains several different kinds of content:
 
 2. **Guides, examples, and tutorials.** Most examples currently live in other repos, like [js-ipfs examples](https://github.com/ipfs/js-ipfs/tree/master/examples). If you have thoughts on how to better integrate them, please file an issue here. If you have feedback on individual examples or want to add a new one, please file an issue or PR on the relevant repo. If you have ideas for guides or tutorials, they belong here! Please propose them in an issue here before creating a PR.
 
-3. **Reference Documentation.** Please see the issues in this repo for current activity around reference/API documentation.
+3. **Concept guides.** These are a special category in the *guides* section listed above. Concept guides are intended to present a brief overview IPFS-related concepts that might be new to people. They live in the `content/guides/concepts` folder and should strive to answer:
 
-4. **Community.** If there are important missing community links, file an issue or PR here!
+    1. **What** is this?
+    2. How does it **relate** to the rest of IPFS?
+    3. How can (or should?) you **use** it? (Note: sometimes the answer is that you should understand it, but *not* use it. *Bitswap* is probably a good example.)
+    4. **Where** do you go to learn more?
+    5. What is the **current state** of affairs?
+
+    You can see a list of concepts we need help documenting by [checking the issues](https://github.com/ipfs/docs/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Acontent+concept) or reading through [issue #56](https://github.com/ipfs/docs/issues/56)
+
+4. **Reference Documentation.** Please see the issues in this repo for current activity around reference/API documentation.
+
+5. **Community.** If there are important missing community links, file an issue or PR here!
 
 Before posting a PR with documentation changes, please also check [our styleguide](https://github.com/ipfs/community/blob/master/docs-styleguide.md).
 
