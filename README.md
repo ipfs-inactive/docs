@@ -43,7 +43,7 @@ The documentation site contains several different kinds of content:
 
 5. **Community.** If there are important missing community links, file an issue or PR here!
 
-Before posting a PR with documentation changes, please also check [our styleguide](https://github.com/ipfs/community/blob/master/docs-styleguide.md).
+Before posting a PR with documentation changes, please also check [our styleguide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md).
 
 
 ## Developing the site
