@@ -2,8 +2,8 @@
 
 This repo is used to:
 
-1. Organize documentation work across the IPFS project
-2. Host a documentation website for IPFS meant to replace what is currently at https://ipfs.io/docs
+1. Organize documentation work across the IPFS project.
+2. Host the documentation website for IPFS. It gets published to https://docs.ipfs.io/.
 
 Read the Captain's Log or check the [issues](https://github.com/ipfs/docs/issues) for updates: [ipfs/docs#47](https://github.com/ipfs/docs/issues/47)
 
@@ -19,6 +19,10 @@ IPFS documentation currently has several acute problems:
 - **Hunting through GitHub is hard.** (Which repos have docs? Where in the repo are they? Which projects are important and how do they relate to the others? Which repos and docs are up-to-date?)
 
 We aim to solve some of these problems through a documentation site (the source of which is in this repo) and others through organizing work, conventions, and practices across project repos (managed in the issues here).
+
+Check the near-term roadmap for this work in [issue #58](https://github.com/ipfs/docs/issues/58).
+
+*Read a more detailed summary of research on documentation problems in [issue #52](https://github.com/ipfs/docs/issues/52) or at [/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html](https://ipfs.io/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html/).*
 
 
 ## Contributing content
