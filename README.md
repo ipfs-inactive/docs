@@ -22,7 +22,7 @@ We aim to solve some of these problems through a documentation site (the source 
 
 Check the near-term roadmap for this work in [issue #58](https://github.com/ipfs/docs/issues/58).
 
-*Read a more detailed summary of research on documentation problems in [issue #52](https://github.com/ipfs/docs/issues/52) or at [/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html](https://ipfs.io/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html/).*
+*Read a more detailed summary of our research on documentation problems in [issue #52](https://github.com/ipfs/docs/issues/52) or at [/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html](https://ipfs.io/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html/).*
 
 
 ## Contributing content
@@ -41,13 +41,13 @@ The documentation site contains several different kinds of content. We’d love 
     4. **Where** do you go to learn more?
     5. What is the **current state** of affairs?
 
-    You can see a list of concepts we need help documenting by [checking the issues](https://github.com/ipfs/docs/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Acontent+concept) or reading through [issue #56](https://github.com/ipfs/docs/issues/56)
+    See a list of concepts we need help with by [checking the issues](https://github.com/ipfs/docs/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Acontent+concept) or reading through [issue #56](https://github.com/ipfs/docs/issues/56)
 
 4. **Reference Documentation.** Please see the issues in this repo for current activity around reference/API documentation.
 
 5. **Community.** If there are important missing community links, file an issue or PR here!
 
-This repo is also a website, which means we could also use your help with design and technical features (interactive widgets and examples, better syntax highlighting, scripts to pull in content from other repos, etc.) in addition to writing. To get a sense of what we could use help on, pleae check the [the issues](https://github.com/ipfs/docs/issues). And if you decide to work on one, please post to the issue to let use know!
+This repo is also a website, which means we could also use your help with design and technical features (interactive examples, better syntax highlighting, scripts to pull in content from other repos, etc.) in addition to writing. To get a sense of what we could use help on, check the [the issues](https://github.com/ipfs/docs/issues). If you decide to work on one, please post to the issue to let us know!
 
 Before posting a PR with your changes, please check [our styleguide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and [contributing guide](https://github.com/ipfs/community/blob/master/contributing.md).
 
@@ -60,14 +60,13 @@ Finally, let’s work together to keep this a respectful and friendly space. Ple
 
 ### One-Time Setup
 
-1. [Install Hugo](https://gohugo.io/)
-2. Install [AEgir](https://www.npmjs.com/package/aegir)
+1. Install [AEgir](https://www.npmjs.com/package/aegir)
 
     ```sh
     npm install -g aegir
     ```
 
-3. Download IPFS libraries and tools (e.g. go-ipfs, js-ipfs) and generate their documentation:
+2. Download dependencies and IPFS libraries (e.g. go-ipfs, js-ipfs) and generate their documentation:
 
     ```sh
     make install
@@ -75,7 +74,7 @@ Finally, let’s work together to keep this a respectful and friendly space. Ple
 
     This installs dependencies and generates source files from other projects (e.g. API documentation; theme resources from the `ipfs-css`, etc).
 
-    When dependencies or external packages (like `go-ipfs`) have new releases, regenerate files based on them by running `make resources`.
+    When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
 
 
 ### Build and Run the Site
