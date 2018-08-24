@@ -27,7 +27,7 @@ Check the near-term roadmap for this work in [issue #58](https://github.com/ipfs
 
 ## Contributing content
 
-The documentation site contains several different kinds of content:
+The documentation site contains several different kinds of content. We’d love ❤️ **your** help with any of it:
 
 1. **Introductory overviews.** This lives in `content/introduction`. If you spot a problem or have improvements, please post an issue or PR. Please also take a look at [#60](https://github.com/ipfs/docs/issues/60) for planning and ongoing work in this area.
 
@@ -47,10 +47,16 @@ The documentation site contains several different kinds of content:
 
 5. **Community.** If there are important missing community links, file an issue or PR here!
 
-Before posting a PR with documentation changes, please also check [our styleguide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md).
+This repo is also a website, which means we could also use your help with design and technical features (interactive widgets and examples, better syntax highlighting, scripts to pull in content from other repos, etc.) in addition to writing. To get a sense of what we could use help on, pleae check the [the issues](https://github.com/ipfs/docs/issues). And if you decide to work on one, please post to the issue to let use know!
+
+Before posting a PR with your changes, please check [our styleguide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and [contributing guide](https://github.com/ipfs/community/blob/master/contributing.md).
+
+Finally, let’s work together to keep this a respectful and friendly space. Please make sure to follow [our code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+
+[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
 
 
-## Developing the site
+## Building the Docs Site
 
 ### One-Time Setup
 
