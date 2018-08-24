@@ -1,9 +1,5 @@
 ---
 title: Making Your Own IPFS Service
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 ipfs has a few default services that it runs by default, such as the dht,
@@ -13,6 +9,7 @@ handler on the ipfs PeerHost, and listens on it for new connections.  The
 try building an easy demo service to try this out!
 
 Lets start by building the service host:
+
 ```
 package main
 

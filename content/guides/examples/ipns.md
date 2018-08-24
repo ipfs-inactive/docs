@@ -1,9 +1,5 @@
 ---
 title: The Inter-Planetary Naming System
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 ipns is a way to add a small amount of mutability to the permanent immutability

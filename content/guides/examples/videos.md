@@ -1,9 +1,5 @@
 ---
 title: Playing Videos
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 ipfs can be used to store and play videos. Suppose we add a video:

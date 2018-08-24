@@ -1,9 +1,5 @@
 ---
 title: IPFS for Websites
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 ### A short guide to hosting your site on ipfs

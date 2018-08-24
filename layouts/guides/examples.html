@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <!--
+    This is a custom list template for the examples section. We don’t want big
+    summaries here, so we have a short, custom front-matter field named
+    `description` instead.
+  -->
+  <h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+  {{ .Content }}
+
+  <ul>
+  {{ range .Paginator.Pages.ByWeight }}
+    <li>
+      <a href="{{ .URL }}">{{ .Title }}</a>
+      {{ with .Params.Description }}
+        <p class="example-description">{{ . }}</p>
+      {{ end }}
+    </li>
+  {{ end }}
+  </ul>
+{{ end }}

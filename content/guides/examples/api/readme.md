@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 ## Basic API usage
 using ipfs within your code is really quite simple!
 

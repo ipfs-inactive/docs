@@ -1,9 +1,5 @@
 ---
 title: Configuring Your Node
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 ipfs is configured through a json formatted text file, located by default at

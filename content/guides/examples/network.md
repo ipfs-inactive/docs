@@ -1,9 +1,5 @@
 ---
 title: Playing with the Network
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 IPFS is all about networking! Included are a useful set of commands

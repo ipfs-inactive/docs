@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 ## Random Ipfs Objects
 During the development, ive frequently found the need to just get a hash of some
 random ipfs object. At first, I would just ask in irc "can someone give me a
