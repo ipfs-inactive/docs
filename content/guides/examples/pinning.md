@@ -1,9 +1,5 @@
 ---
-title: Pinning
-draft: true
-menu:
-    guides:
-        parent: guides
+title: Pinning Files
 ---
 
 Pinning is a very important concept in ipfs. ipfs semantics try

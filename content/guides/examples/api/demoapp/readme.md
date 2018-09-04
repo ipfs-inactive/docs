@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 ## Ipfs Demo Application
 Lets take a look at making an application that uses ipfs. Lets say that our
 fictional application needs to read in a file, and count all the letters in

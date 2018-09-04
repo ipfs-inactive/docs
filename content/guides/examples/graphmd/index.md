@@ -1,18 +1,14 @@
 ---
 title: Visualizing objects with graphmd
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
-![](/ipfs/QmbefthRKDReojALJi8nGPwvUVPqe1aXdoD9ysX44aUfvG/graph.png)
+![](output/graph.png)
 
 When using ipfs for storing files, or writing more complex datastructures,
 it is often very useful to visualize the merkledag being created. For this,
 I wrote a simple tool called `graphmd` (graph merkle dag).
 
-`graphmd` is a very short shell script ([source](./graphmd)). It uses the
+`graphmd` is a very short shell script ([source](https://ipfs.io/ipfs/QmfT4cEw9zezKaV6wF9aELFtpuovxFCR8CXSkUb6enAgw8/graphmd)). It uses the
 `ipfs refs --format` flag to produce `dot` output.
 
 ## Install graphmd
@@ -39,7 +35,7 @@ use it with dot:
 
 ## Example
 
-Given this [demo](/ipfs/QmRCJXG7HSmprrYwDrK1GctXHgbV7EYpVcJPQPwevoQuqF) directory:
+Given this [demo](https://ipfs.io/ipfs/QmRCJXG7HSmprrYwDrK1GctXHgbV7EYpVcJPQPwevoQuqF) directory:
 
 ```sh
 > tree demo
@@ -99,7 +95,7 @@ digraph {
 }
 ```
 
-Pipe it to `dot` to produce `svg`, `pdf`, `png` or [whatever](http://www.graphviz.org/Documentation/dotguide.pdf)
+Pipe it to `dot` to produce `svg`, `pdf`, `png` or [whatever](https://web.archive.org/web/20180216175016/http://www.graphviz.org/pdf/dotguide.pdf)
 
 ```
 graphmd QmRCJXG7HSmprrYwDrK1GctXHgbV7EYpVcJPQPwevoQuqF | dot -Tsvg >output/graph.svg
@@ -107,9 +103,9 @@ graphmd QmRCJXG7HSmprrYwDrK1GctXHgbV7EYpVcJPQPwevoQuqF | dot -Tpdf >output/graph
 graphmd QmRCJXG7HSmprrYwDrK1GctXHgbV7EYpVcJPQPwevoQuqF | dot -Tpng >output/graph.png
 ```
 
-Et voilà: [svg](/ipfs/QmbefthRKDReojALJi8nGPwvUVPqe1aXdoD9ysX44aUfvG/graph.svg), [pdf](/ipfs/QmbefthRKDReojALJi8nGPwvUVPqe1aXdoD9ysX44aUfvG/graph.pdf), [png](/ipfs/QmbefthRKDReojALJi8nGPwvUVPqe1aXdoD9ysX44aUfvG/graph.png)
+Et voilà: [svg](output/graph.svg), [pdf](output/graph.pdf), [png](output/graph.png)
 
-![](/ipfs/QmbefthRKDReojALJi8nGPwvUVPqe1aXdoD9ysX44aUfvG/graph.png)
+![](output/graph.png)
 
 ## File blocks
 
@@ -117,10 +113,10 @@ Et voilà: [svg](/ipfs/QmbefthRKDReojALJi8nGPwvUVPqe1aXdoD9ysX44aUfvG/graph.svg)
 For example, here is what the `ipfs` binary looks like with the default
 semi-balanced indirect block chunking:
 
-- [dot output](/ipfs/QmQ8yWC1SGn73P1SPSw8iqSBGEscve1N6sQpzd1xzD5EV1/graph.dot)
-- [svg render](/ipfs/QmQ8yWC1SGn73P1SPSw8iqSBGEscve1N6sQpzd1xzD5EV1/graph.svg)
-- [pdf render](/ipfs/QmQ8yWC1SGn73P1SPSw8iqSBGEscve1N6sQpzd1xzD5EV1/graph.pdf)
+- [dot output](ipfsbin/graph.dot)
+- [svg render](ipfsbin/graph.svg)
+- [pdf render](ipfsbin/graph.pdf)
 
-![](/ipfs/QmQ8yWC1SGn73P1SPSw8iqSBGEscve1N6sQpzd1xzD5EV1/graph.svg)
+![](ipfsbin/graph.svg)
 
 by [Juan Benet](https://github.com/jbenet)

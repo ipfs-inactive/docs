@@ -1,9 +1,5 @@
 ---
 title: Snapshots
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 Lets take a quick look at how ipfs can be used to take basic snapshots.

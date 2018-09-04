@@ -1,9 +1,5 @@
 ---
 title: Dealing with Blocks
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 The `ipfs add` command will create a Merkle DAG out of the data in the files you

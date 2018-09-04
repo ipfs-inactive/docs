@@ -1,9 +1,5 @@
 ---
 title: Git, Even More Distributed
-draft: true
-menu:
-    guides:
-        parent: guides
 ---
 
 Have you ever said to yourself: "Man, my git server isn't distributed enough" or
