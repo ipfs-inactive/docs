@@ -73,7 +73,7 @@ We do most support via the forum we have at: https://discuss.ipfs.io/
 
 ### Testing
 
-We’re continously improving IPFS every day, but mistakes can happen and we
+We’re continuously improving IPFS every day, but mistakes can happen and we
 could release something that doesn’t work as well as it should — or simply doesn't
 work at all! If you like to dig into edge-cases or write testing scenarios,
 wrangling our testing infrastructure could be the job for you.
@@ -115,7 +115,7 @@ make the existing ones more regular.
 
 IPFS is designed for others to build applications around it! Building
 applications and services using IPFS is an excellent way to find use cases
-where IPFS doesn’t yet do a perfect job or uncover bugs and inefficiences.
+where IPFS doesn’t yet do a perfect job or uncover bugs and inefficiencies.
 
 Get started by looking at our awesome-ipfs list. Build anything you think is
 missing! If you're unsure about something, please create an issue to get help
