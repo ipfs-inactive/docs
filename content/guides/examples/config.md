@@ -28,7 +28,7 @@ firewalls blocking the ports you specify.
 #### API
 The API address is the address that the daemon will serve the http API from.
 This API is used to control the daemon through the command line, or simply
-via curl if youre feeling adventurous. You should ensure that this address
+via curl if you're feeling adventurous. You should ensure that this address
 is not dialable from outside of your machine, or other potentially malicious
 parties may be able to send commands to your ipfs daemon.
 
@@ -40,8 +40,8 @@ machine, thats entirely up to you. The gateway address is optional, if you
 leave it blank, the gateway server will not start.
 
 ### Mounts
-The mounts config values specifies the default mountpoints for the ipfs and
-ipns virtual filesystems, if no other directories are specified by the
+The mounts config values specifies the default mount points for the ipfs and
+ipns virtual file systems, if no other directories are specified by the
 `ipfs mount` command. These folders should exist, and have permissions for your
 user to be able to mount to them via fuse.
 
