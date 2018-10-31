@@ -36,7 +36,7 @@ You can also try this on the gateway at `http://gateway.ipfs.io/ipns/your.domain
 Next, you might be asking "well what if i want to change my website, DNS is slow!"
 Well let me tell you about this little thing called Ipns (note the 'n'). Ipns is
 the Interplanetary Naming System, you might have noticed the above link has
-`/ipns/` instead of `/ipfs/`.  Ipns is used for mutable content in the ipfs
+`/ipns/` instead of `/ipfs/`. Ipns is used for mutable content in the ipfs
 network, it's relatively easy to use, and will allow you to change your website
 without updating the dns record every time! So how do you use it?
 
