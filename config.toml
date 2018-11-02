@@ -249,11 +249,6 @@ url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING.md"
 weight = 10
 [[menu.community]]
 parent = "contribute"
-name = "Contribution Guidelines 2"
-url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING-2.md"
-weight = 20
-[[menu.community]]
-parent = "contribute"
 name = "Code of Conduct"
 url = "https://github.com/ipfs/community/blob/master/code-of-conduct.md"
 weight = 30
