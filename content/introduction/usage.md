@@ -38,15 +38,7 @@ to get started, enter:
     The hash after <code>peer identity: </code> is your node’s ID and will be different from the one shown in the above output. Other nodes on the network use it to find and connect to you. You can run <code>ipfs id</code> at any time to get it again if you need it.
 </div>
 
-<div class="alert alert-info">
-    The <code>HASH</code> in the <code>ipfs cat /ipfs/HASH/readme</code> line above may differ from the <code>HASH</code> in your output. If it does, use the one you got in the following instructions. Be sure not to confuse these hashes with your peer identity hash; <code>ipfs cat /ipfs/PEER_ID/readme</code> won't work.
-</div>
-
-Now, try running:
-
-```sh
-ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme
-```
+Now, try running the command suggested to you in the output of ipfs init. The one that looks like `ipfs cat /ipfs/<HASH>/readme`.
 
 You should see something like this:
 
