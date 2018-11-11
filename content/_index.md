@@ -26,7 +26,7 @@ If you are using IPFS via the [command line](/reference/api/cli) or [interacting
 
 ### Go & JavaScript Implementations
 
-IPFS is fundamentally a set of protocols for communicating about a distributed system of files, but those protocols are informed by reference implementations in both [Go](/reference/go/overview) and [JavaScript](/reference/js/overview). The Go implemntation is more mature and implements more of the IPFS protocols, but the JS implementation can be used in a broader variety of requirements (including in web browsers).
+IPFS is fundamentally a set of protocols for communicating about a distributed system of files, but those protocols are informed by reference implementations in both [Go](/reference/go/overview) and [JavaScript](/reference/js/overview). The Go implementation is more mature and implements more of the IPFS protocols, but the JS implementation can be used in a broader variety of requirements (including in web browsers).
 
 
 ### Specifications & Planning
