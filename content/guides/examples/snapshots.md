@@ -42,7 +42,7 @@ $ cd /ipfs/$hash/
 $ ls
 ```
 
-Through the fuse interface, youll be able to access your files exactly as
+Through the fuse interface, you'll be able to access your files exactly as
 they were when you took the snapshot.
 
 By [whyrusleeping](http://github.com/whyrusleeping)

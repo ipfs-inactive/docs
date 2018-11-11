@@ -9,14 +9,14 @@ no more, I have the solution for you!
 In this article, I will be discussing how to serve a git repository through the
 ipfs network. The end result will be a `git clone`able url served through ipfs!
 
-To start, select a git repo you want to host, and do a bare clone of it:
+To start, select a git repository you want to host, and do a bare clone of it:
 ```
 $ git clone --bare git@myhost.io/myrepo
 ```
 
-For those who aren't super git savvy, a bare repo means that it doesn't have
+For those who aren't super git savvy, a bare repository means that it doesn't have
 a working tree, and can be used as a server. They have a slightly different
-format than your normal git repo.
+format than your normal git repository.
 
 Now, to get it ready to be cloned, you need to do the following:
 ```
@@ -35,7 +35,7 @@ Doing this breaks up gits large packfile into all of its individual objects.
 This will allow ipfs to deduplicate objects if you add multiple versions of
 this git repository.
 
-Once youve done that, that repo is ready to be served. All thats left to do, is
+Once you've done that, that repository is ready to be served. All thats left to do, is
 to add it to ipfs:
 ```
 $ pwd
@@ -55,8 +55,8 @@ $ git clone http://localhost:8080/ipfs/QmX679gmfyaRkKMvPA4WGNWXj9PtpvKWGPgtXaF18
 
 Note: make sure to change out that hash for yours.
 
-Now, you may be asking "well what good is a git repo that I can't change anything on?"
-Well let me tell you an awesome usecase! I tend to program in a language called Go,
+Now, you may be asking "well what good is a git repository that I can't change anything on?"
+Well let me tell you an awesome use case! I tend to program in a language called Go,
 for those who don't know go uses version control paths for its imports, i.e:
 ```go
 import (
@@ -76,7 +76,7 @@ import (
 
 And you will be guaranteed to have the same code every time!
 
-Note: Since go doesnt allow the usage of localhost for import paths, we use the
+Note: Since go doesn't allow the usage of localhost for import paths, we use the
 public http gateways. This provides no security guarantees as a man in the
 middle attack could ship you bad code. You could use a domain name that redirects
 to the localhost instead to avoid the issue.
