@@ -14,7 +14,7 @@ Head over to the [introduction](/introduction) section for an introduction to th
 
 The guides section has an overview of major concepts in IPFS, guides, and example projects demonstrating various ways to use IPFS.
 
-In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed filesystes.
+In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed file systems.
 
 
 ## Reference
@@ -31,7 +31,7 @@ IPFS is fundamentally a set of protocols for communicating about a distributed s
 
 ### Specifications & Planning
 
-While IPFS has two reference implementations (in Go and JavaScript), it is fundamentally a set of protocols for formatting and communicating about distributed filesystems. You can find specifications for those protocols, whitepapers, and information about our RFC (Request for Change) process in the “specifications & planning” section.
+While IPFS has two reference implementations (in Go and JavaScript), it is fundamentally a set of protocols for formatting and communicating about distributed file systems. You can find specifications for those protocols, whitepapers, and information about our RFC (Request for Change) process in the “specifications & planning” section.
 
 
 ## Community
