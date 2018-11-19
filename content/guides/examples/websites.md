@@ -43,7 +43,7 @@ Those hashes are difficult to remember. Let's look at some ways to get rid of th
 Assume you have the domain name `your.domain` and can access your registrar's
 control panel to manage DNS entries for it. 
 
-Create a DNS TXT record, with the key `your.domain.` and the value
+Create a DNS TXT record ([DNSLink](https://docs.ipfs.io/guides/concepts/dnslink/)), with the key `your.domain.` and the value
 `dnslink=/ipfs/$SITE_CID` where `$SITE_CID` is the value from the section above.
 
 Once you've created that record, and it has propagated you should be able to find it.
