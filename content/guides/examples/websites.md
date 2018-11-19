@@ -87,7 +87,7 @@ to propagate, and then try the urls  `http://localhost:8080/ipns/your.domain`
 and `http://gateway.ipfs.io/ipns/your.domain`.
 
 **Note:** When using IPNS to update websites, assets may be loaded from two different 
-resolved hashes while the update your website propagates. This may result in outdated URLs 
+resolved hashes while the update propagates. This may result in outdated URLs 
 or missing assets until the update has completely propagated.
 
 #### Pointing your.domain to IPFS
