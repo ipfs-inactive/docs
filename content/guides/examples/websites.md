@@ -36,7 +36,7 @@ To view it from another ipfs node, you can try `http://gateway.ipfs.io/ipfs/$SIT
 in a browser. This will work from a browser on another device, inside or outside the network 
 where you added the site's file.
 
-Those hashes are ugly. Let's look at some ways to get rid of them.
+Those hashes are difficult to remember. Let's look at some ways to get rid of them.
 
 #### Using a DNS TXT record as a shortcut
 
