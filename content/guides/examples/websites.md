@@ -66,7 +66,7 @@ You can get around that limitation by using IPNS, the Interplanetary Naming Syst
 You might have noticed `/ipns/` instead of `/ipfs/` in the updated links in the previous
 section.
 
-[The IPNS is used for mutable content in the ipfs network](https://docs.ipfs.io/guides/concepts/ipns/), and it's relatively easy to use,
+The IPNS  is used for mutable content in the ipfs network. It's relatively easy to use,
 and will allow you to change your website without updating the dns record every time. 
 
 To enable the IPNS for your content run the following command where `$SITE_CID` is the 
