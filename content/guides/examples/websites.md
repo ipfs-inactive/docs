@@ -27,12 +27,12 @@ added QmYeAiiK1UfB8MGLRefok1N7vBTyX8hGPuMXZ4Xq1DPyt7 mysite/
 ```
 
 The last hash, next to the folder name, `mysite/` is the one to remember, call it
-`$SITE_HASH` for now.
+`$SITE_CID` for now.
 
-You can test it out locally by opening `http://localhost:8080/ipfs/$SITE_HASH`
+You can test it out locally by opening `http://localhost:8080/ipfs/$SITE_CID`
 in a browser or with `wget` or `curl` from the command line.
 
-To view it from another ipfs node, you can try `http://gateway.ipfs.io/ipfs/$SITE_HASH`
+To view it from another ipfs node, you can try `http://gateway.ipfs.io/ipfs/$SITE_CID`
 in a browser. This will work from a browser on another device, inside or outside the network 
 where you added the site's file.
 
@@ -44,13 +44,13 @@ Assume you have the domain name `your.domain` and can access your registrar's
 control panel to manage DNS entries for it. 
 
 Create a DNS TXT record, with the key `your.domain.` and the value
-`dnslink=/ipfs/$SITE_HASH` where `$SITE_HASH` is has value from the section above.
+`dnslink=/ipfs/$SITE_CID` where `$SITE_CID` is the value from the section above.
 
 Once you've created that record, and it has propagated you should be able to find it.
 
 ```bash
 $ dig +noall +answer TEXT your.domain
-your.domain.            60      IN      TXT     "dnslink=/ipfs/$SITE_HASH"
+your.domain.            60      IN      TXT     "dnslink=/ipfs/$SITE_CID"
 ```
 Now you can view your site at `http://localhost:8080/ipns/your.domain`. 
 
@@ -59,7 +59,7 @@ You can also try this on the gateway at `http://gateway.ipfs.io/ipns/your.domain
 #### Using the Interplanetary Naming System
 
 Each time you change your website, you will have to republish it, update the DNS TXT 
-record with the new value of `$SITE_HASH` and wait for it to propagate. 
+record with the new value of `$SITE_CID` and wait for it to propagate. 
 
 You can get around that limitation by using IPNS, the Interplanetary Naming System. 
 
@@ -69,12 +69,12 @@ section.
 [The IPNS is used for mutable content in the ipfs network](https://docs.ipfs.io/guides/concepts/ipns/), and it's relatively easy to use,
 and will allow you to change your website without updating the dns record every time. 
 
-To enable the IPNS for your content run the following command where `$SITE_HASH` is the 
+To enable the IPNS for your content run the following command where `$SITE_CID` is the 
 hash value from the first step.
 
 ```bash
-$ ipfs name publish $SITE_HASH
-Published to $PEER_ID: /ipfs/$SITE_HASH
+$ ipfs name publish $SITE_CID
+Published to $PEER_ID: /ipfs/$SITE_CID
 ```
 You will need to note and save that value of `$PEER_ID` for the next steps.
 
