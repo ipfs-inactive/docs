@@ -44,7 +44,7 @@ Assume you have the domain name `your.domain` and can access your registrar's
 control panel to manage DNS entries for it. 
 
 Create a DNS TXT record, with the key `your.domain.` and the value
-`dnslink=/ipfs/$SITE_HASH` where $SITE_HASH is has value from the section above.
+`dnslink=/ipfs/$SITE_HASH` where `$SITE_HASH` is has value from the section above.
 
 Once you've created that record, and it has propagated you should be able to find it.
 
