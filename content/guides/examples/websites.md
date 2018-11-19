@@ -132,4 +132,5 @@ your website without explicitly referring to IP addresses of the ipfs gateway.
 Happy Hacking!
 
 By
-[Whyrusleeping](https://github.com/whyrusleeping)
+[Whyrusleeping](https://github.com/whyrusleeping) and
+[Emma Humphries](https://github.com/emceeaich)
