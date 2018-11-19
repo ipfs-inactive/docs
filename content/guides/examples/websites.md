@@ -61,7 +61,7 @@ You can also try this on the gateway at `http://gateway.ipfs.io/ipns/your.domain
 Each time you change your website, you will have to republish it, update the DNS TXT 
 record with the new value of `$SITE_CID` and wait for it to propagate. 
 
-You can get around that limitation by using IPNS, the Interplanetary Naming System. 
+You can get around that limitation by using IPNS, the [InterPlanetary Naming System](https://docs.ipfs.io/guides/concepts/ipns/). 
 
 You might have noticed `/ipns/` instead of `/ipfs/` in the updated links in the previous
 section.
