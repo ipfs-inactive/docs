@@ -137,6 +137,10 @@ parent = "guides"
 name = "Transferring a File"
 url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
 [[menu.guides]]
+parent = "guides"
+name = "Addressing in Browsers"
+url = "https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
+[[menu.guides]]
 parent = "examples"
 name = "js-ipfs Examples"
 url = "https://github.com/ipfs/js-ipfs/tree/master/examples"

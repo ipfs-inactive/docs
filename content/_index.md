@@ -14,7 +14,7 @@ Head over to the [introduction](/introduction) section for an introduction to th
 
 The guides section has an overview of major concepts in IPFS, guides, and example projects demonstrating various ways to use IPFS.
 
-In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed filesystes.
+In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed file systems.
 
 
 ## Reference
@@ -26,12 +26,12 @@ If you are using IPFS via the [command line](/reference/api/cli) or [interacting
 
 ### Go & JavaScript Implementations
 
-IPFS is fundamentally a set of protocols for communicating about a distributed system of files, but those protocols are informed by reference implementations in both [Go](/reference/go/overview) and [JavaScript](/reference/js/overview). The Go implemntation is more mature and implements more of the IPFS protocols, but the JS implementation can be used in a broader variety of requirements (including in web browsers).
+IPFS is fundamentally a set of protocols for communicating about a distributed system of files, but those protocols are informed by reference implementations in both [Go](/reference/go/overview) and [JavaScript](/reference/js/overview). The Go implementation is more mature and implements more of the IPFS protocols, but the JS implementation can be used in a broader variety of requirements (including in web browsers).
 
 
 ### Specifications & Planning
 
-While IPFS has two reference implementations (in Go and JavaScript), it is fundamentally a set of protocols for formatting and communicating about distributed filesystems. You can find specifications for those protocols, whitepapers, and information about our RFC (Request for Change) process in the “specifications & planning” section.
+While IPFS has two reference implementations (in Go and JavaScript), it is fundamentally a set of protocols for formatting and communicating about distributed file systems. You can find specifications for those protocols, whitepapers, and information about our RFC (Request for Change) process in the “specifications & planning” section.
 
 
 ## Community
