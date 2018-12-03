@@ -63,7 +63,7 @@ Instead of being location-based, IPFS addresses a file by *what’s in it*, or b
 
 Because the address of a file in IPFS is tied to the content itself, links in IPFS can’t be changed. For example…
 
-- If the text on a web page is changed, the new version gets a new, different link. If your favorite recipe site used to be in customary but recently switched to an unfamiliar metric system, your IPFS links will still point to the customary.
+- If the text on a web page is changed, the new version gets a new, different link. If your favorite cooking site changes how they layout recipes your IPFS links will still point to the old version.
 
 - Content can’t be moved to a different address. If a company reorganizes their web site today, they could move a page from `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same content.
 
