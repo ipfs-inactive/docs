@@ -39,7 +39,7 @@ That last point is actually where IPFS gets it’s name: **Inter-Planetary File 
 
 ## Links don’t change on IPFS.
 
-What about that link to the Aardvark page above? It looked pretty crazy:
+What about that link to the Aardvark page above? It looked a little unusual:
 
 ```
 /ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
