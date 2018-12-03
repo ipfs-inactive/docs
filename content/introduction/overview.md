@@ -58,7 +58,7 @@ Traditional URLs and file paths like…
 Instead of being location-based, IPFS addresses a file by *what’s in it*, or by it’s *content*. The content identifier above is a *hash* of the content at that address, which means it’s also unique to that content, even though it’s [relatively] short. It also allows you to verify you got what you asked for — bad actors can’t just hand you content that doesn’t match. (If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction.)
 
 <aside class="alert alert-info">
-  Why do we say “content” instead of “files” or “web pages” here? In order to make the storage & transmission of data more efficient, IPFS can break files up in to many smaller pieces — which then means the system needs some metadata to tie them back together. An IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or even other kinds of data. There’s no single kind of thing that content identifier identifies.
+  Why do we say “content” instead of “files” or “web pages” here? Because a content identifier can point to many different types of data. In order to make the storage & transmission of data more efficient, IPFS can break files up in to many smaller pieces — which then means the system needs some metadata to tie them back together. An IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or even other kinds of data.
 </aside>
 
 Because the address of a file in IPFS is tied to the content itself, links in IPFS can’t be changed. For example…
