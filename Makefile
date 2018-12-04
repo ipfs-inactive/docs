@@ -64,8 +64,6 @@ resources: ipfs-theme packages
 install: bin/hugo node_modules resources
 
 css:
-	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
-	# https://github.com/less/less.js/issues/3187
 	$(PREPEND)$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css $(APPEND)
 
 js:
