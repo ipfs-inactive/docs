@@ -38,7 +38,7 @@ to get started, enter:
     The hash after <code>peer identity: </code> is your node’s ID and will be different from the one shown in the above output. Other nodes on the network use it to find and connect to you. You can run <code>ipfs id</code> at any time to get it again if you need it.
 </div>
 
-Now, try running the command suggested to you in the output of ipfs init. The one that looks like `ipfs cat /ipfs/<HASH>/readme`.
+Now, try running the command suggested to you in the output of `ipfs init`. The one that looks like `ipfs cat /ipfs/<HASH>/readme`.
 
 You should see something like this:
 
@@ -72,14 +72,11 @@ Check out some of the other files in this directory:
 
 ```
 
-You can explore other objects in there. In particular, check out `quick-start`:
-
+You can explore other objects in the repository. In particular, the `quick-start` directory which shows example commands to try:
 
 ```sh
 ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/quick-start
 ```
-
-Which will walk you through several interesting examples.
 
 ## Going Online
 
