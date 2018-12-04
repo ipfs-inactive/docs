@@ -78,9 +78,9 @@ You can explore other objects in the repository. In particular, the `quick-start
 ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/quick-start
 ```
 
-## Going Online
+## Taking your Node Online
 
-Once you're ready to take things online, run the daemon in another terminal:
+Once you're ready to join your node to the public network, run the ipfs daemon in another terminal and wait for all three lines below to appear to know that your node is ready:
 
 ```sh
 > ipfs daemon
@@ -89,10 +89,8 @@ API server listening on /ip4/127.0.0.1/tcp/5001
 Gateway server listening on /ip4/127.0.0.1/tcp/8080
 ```
 
-Wait for all three lines to appear.
-
 <div class="alert alert-info">
-Make note of the tcp ports you get. If they are different, use yours in the commands below.
+Make note of the tcp ports you receive. If they are different, use yours in the commands below.
 </div>
 
 Now, switch back to your original terminal. If you're connected to the network,
@@ -110,42 +108,42 @@ These are a combination of `<transport address>/ipfs/<hash-of-public-key>`.
 
 Now, you should be able to get objects from the network. Try:
 
-```
+```sh
 ipfs cat /ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ/cat.jpg >cat.jpg
 open cat.jpg
 ```
 
-And, you should be able to give the network objects. Try adding one, and then
-viewing it in your favorite browser. In this example, we are using `curl`
-as our browser, but you can open the IPFS URL in other browsers as well:
+Next try sending objects to the network, and then
+viewing it in your favorite browser. The example below uses `curl`
+as the browser, but you can open the IPFS URL in other browsers as well:
 
-```
+```sh
 > hash=`echo "I <3 IPFS -$(whoami)" | ipfs add -q`
 > curl "https://ipfs.io/ipfs/$hash"
 I <3 IPFS -<your username>
 ```
 
 Cool, huh? The gateway served a file _from your computer_. The gateway queried
-the DHT, found your machine, requested the file, your machine sent it to the
+the Distributed hash table (DHT), found your machine, requested the file, your machine sent it to the
 gateway, and the gateway sent it to your browser.
 
 <div class="alert alert-warning">
-    Note: depending on the state of the network, <code>curl</code> may take a while. The public gateways may be overloaded or having a hard time reaching you.
+    Depending on the state of the network, <code>curl</code> may take a while. The public gateways may be overloaded or having a hard time reaching you.
 </div>
 
 You can also check it out at your own local gateway:
 
-```
+```sh
 > curl "http://127.0.0.1:8080/ipfs/$hash"
 I <3 IPFS -<your username>
 ```
 
 By default, your gateway is not exposed to the world, it only works locally.
 
-## Fancy Web Console
+## Web Console
 
 We also have a web console you can use to check the state of your node.
-On your favorite web browser, go to:
+In your favorite web browser, open:
 
 <pre><code><a href="http://localhost:5001/webui">http://localhost:5001/webui</a></code></pre>
 
@@ -155,7 +153,7 @@ This should bring up a console like this:
     <img class="screenshot" alt="Web console connection view" src="../webui-connection.png">
 </figure>
 
-Now, you're ready:
+Next, we recommend you look at our examples to find out more about what IPFS is capable of:
 
 <a class="button button-primary" href="{{< ref "/guides/examples" >}}" role="button">
   Onward to more Examples &nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
