@@ -106,7 +106,7 @@ weight = 20
 [[menu.reference]]
 parent = "specs"
 name = "Roadmap to 1.0.0"
-url = "https://github.com/ipfs/ipfs/blob/master/REQUIREMENTS-TO-1.0.0.md"
+url = "https://github.com/ipfs/ipfs/blob/master/REQUIREMENTS.md"
 weight = 30
 [[menu.reference]]
 parent = "specs"
