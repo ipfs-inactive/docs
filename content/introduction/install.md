@@ -1,6 +1,6 @@
 ---
 title: Install IPFS
-weight: 1
+weight: 2
 ---
 
 <!--
