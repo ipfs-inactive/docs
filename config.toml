@@ -264,12 +264,12 @@ weight = 40
 [[menu.community]]
 parent = "contribute"
 name = "Go Style Guide"
-url = "https://github.com/ipfs/community/blob/master/go-code-guidelines.md"
+url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING_GO.md"
 weight = 50
 [[menu.community]]
 parent = "contribute"
 name = "JS Style Guide"
-url = "https://github.com/ipfs/community/blob/master/js-code-guidelines.md"
+url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md"
 weight = 60
 
 [[menu.community]]
