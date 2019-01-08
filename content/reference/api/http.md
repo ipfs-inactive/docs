@@ -931,7 +931,7 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "ID": "<string>"
             "Addrs": [
-                "<object>"
+                "<multiaddr-string>"
             ]
         }
     ]
@@ -970,7 +970,7 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "ID": "<string>"
             "Addrs": [
-                "<object>"
+                "<multiaddr-string>"
             ]
         }
     ]
@@ -1008,7 +1008,7 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "ID": "<string>"
             "Addrs": [
-                "<object>"
+                "<multiaddr-string>"
             ]
         }
     ]
@@ -1047,7 +1047,7 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "ID": "<string>"
             "Addrs": [
-                "<object>"
+                "<multiaddr-string>"
             ]
         }
     ]
@@ -1086,7 +1086,7 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "ID": "<string>"
             "Addrs": [
-                "<object>"
+                "<multiaddr-string>"
             ]
         }
     ]
@@ -1124,7 +1124,7 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "ID": "<string>"
             "Addrs": [
-                "<object>"
+                "<multiaddr-string>"
             ]
         }
     ]
