@@ -7,8 +7,6 @@ menu:
 ----
 
 <!-- TODO: Describe how to change ports and configure the API server -->
-<!-- TODO: Update generation code to fix links (they've been manually fixed here) -->
-<!-- TODO: Remove index since it's handled by the TOC in the menu? -->
 <!-- TODO: Structure this around command groups (dag, object, files, etc.) -->
 
 <sup>Generated on 2019-01-08, from go-ipfs v0.4.18.</sup>
@@ -88,128 +86,6 @@ flag is the `&encoding=json` query parameter below:
   "Data": "CAE="
 }
 ```
-## Index
-
-  *  [/add](#api-v0-add)
-  *  [/bitswap/ledger](#api-v0-bitswap-ledger)
-  *  [/bitswap/reprovide](#api-v0-bitswap-reprovide)
-  *  [/bitswap/stat](#api-v0-bitswap-stat)
-  *  [/bitswap/wantlist](#api-v0-bitswap-wantlist)
-  *  [/block/get](#api-v0-block-get)
-  *  [/block/put](#api-v0-block-put)
-  *  [/block/rm](#api-v0-block-rm)
-  *  [/block/stat](#api-v0-block-stat)
-  *  [/bootstrap/add/default](#api-v0-bootstrap-add-default)
-  *  [/bootstrap/list](#api-v0-bootstrap-list)
-  *  [/bootstrap/rm/all](#api-v0-bootstrap-rm-all)
-  *  [/cat](#api-v0-cat)
-  *  [/cid/base32](#api-v0-cid-base32)
-  *  [/cid/bases](#api-v0-cid-bases)
-  *  [/cid/codecs](#api-v0-cid-codecs)
-  *  [/cid/format](#api-v0-cid-format)
-  *  [/cid/hashes](#api-v0-cid-hashes)
-  *  [/commands](#api-v0-commands)
-  *  [/config/edit](#api-v0-config-edit)
-  *  [/config/profile/apply](#api-v0-config-profile-apply)
-  *  [/config/replace](#api-v0-config-replace)
-  *  [/config/show](#api-v0-config-show)
-  *  [/dag/get](#api-v0-dag-get)
-  *  [/dag/put](#api-v0-dag-put)
-  *  [/dag/resolve](#api-v0-dag-resolve)
-  *  [/dht/findpeer](#api-v0-dht-findpeer)
-  *  [/dht/findprovs](#api-v0-dht-findprovs)
-  *  [/dht/get](#api-v0-dht-get)
-  *  [/dht/provide](#api-v0-dht-provide)
-  *  [/dht/put](#api-v0-dht-put)
-  *  [/dht/query](#api-v0-dht-query)
-  *  [/diag/cmds/clear](#api-v0-diag-cmds-clear)
-  *  [/diag/cmds/set-time](#api-v0-diag-cmds-set-time)
-  *  [/diag/sys](#api-v0-diag-sys)
-  *  [/dns](#api-v0-dns)
-  *  [/file/ls](#api-v0-file-ls)
-  *  [/files/chcid](#api-v0-files-chcid)
-  *  [/files/cp](#api-v0-files-cp)
-  *  [/files/flush](#api-v0-files-flush)
-  *  [/files/ls](#api-v0-files-ls)
-  *  [/files/mkdir](#api-v0-files-mkdir)
-  *  [/files/mv](#api-v0-files-mv)
-  *  [/files/read](#api-v0-files-read)
-  *  [/files/rm](#api-v0-files-rm)
-  *  [/files/stat](#api-v0-files-stat)
-  *  [/files/write](#api-v0-files-write)
-  *  [/filestore/dups](#api-v0-filestore-dups)
-  *  [/filestore/ls](#api-v0-filestore-ls)
-  *  [/filestore/verify](#api-v0-filestore-verify)
-  *  [/get](#api-v0-get)
-  *  [/id](#api-v0-id)
-  *  [/key/gen](#api-v0-key-gen)
-  *  [/key/list](#api-v0-key-list)
-  *  [/key/rename](#api-v0-key-rename)
-  *  [/key/rm](#api-v0-key-rm)
-  *  [/log/level](#api-v0-log-level)
-  *  [/log/ls](#api-v0-log-ls)
-  *  [/log/tail](#api-v0-log-tail)
-  *  [/ls](#api-v0-ls)
-  *  [/mount](#api-v0-mount)
-  *  [/name/publish](#api-v0-name-publish)
-  *  [/name/pubsub/cancel](#api-v0-name-pubsub-cancel)
-  *  [/name/pubsub/state](#api-v0-name-pubsub-state)
-  *  [/name/pubsub/subs](#api-v0-name-pubsub-subs)
-  *  [/name/resolve](#api-v0-name-resolve)
-  *  [/object/data](#api-v0-object-data)
-  *  [/object/diff](#api-v0-object-diff)
-  *  [/object/get](#api-v0-object-get)
-  *  [/object/links](#api-v0-object-links)
-  *  [/object/new](#api-v0-object-new)
-  *  [/object/patch/add-link](#api-v0-object-patch-add-link)
-  *  [/object/patch/append-data](#api-v0-object-patch-append-data)
-  *  [/object/patch/rm-link](#api-v0-object-patch-rm-link)
-  *  [/object/patch/set-data](#api-v0-object-patch-set-data)
-  *  [/object/put](#api-v0-object-put)
-  *  [/object/stat](#api-v0-object-stat)
-  *  [/p2p/close](#api-v0-p2p-close)
-  *  [/p2p/forward](#api-v0-p2p-forward)
-  *  [/p2p/listen](#api-v0-p2p-listen)
-  *  [/p2p/ls](#api-v0-p2p-ls)
-  *  [/p2p/stream/close](#api-v0-p2p-stream-close)
-  *  [/p2p/stream/ls](#api-v0-p2p-stream-ls)
-  *  [/pin/add](#api-v0-pin-add)
-  *  [/pin/ls](#api-v0-pin-ls)
-  *  [/pin/rm](#api-v0-pin-rm)
-  *  [/pin/update](#api-v0-pin-update)
-  *  [/pin/verify](#api-v0-pin-verify)
-  *  [/ping](#api-v0-ping)
-  *  [/pubsub/ls](#api-v0-pubsub-ls)
-  *  [/pubsub/peers](#api-v0-pubsub-peers)
-  *  [/pubsub/pub](#api-v0-pubsub-pub)
-  *  [/pubsub/sub](#api-v0-pubsub-sub)
-  *  [/refs/local](#api-v0-refs-local)
-  *  [/repo/fsck](#api-v0-repo-fsck)
-  *  [/repo/gc](#api-v0-repo-gc)
-  *  [/repo/stat](#api-v0-repo-stat)
-  *  [/repo/verify](#api-v0-repo-verify)
-  *  [/repo/version](#api-v0-repo-version)
-  *  [/resolve](#api-v0-resolve)
-  *  [/shutdown](#api-v0-shutdown)
-  *  [/stats/bitswap](#api-v0-stats-bitswap)
-  *  [/stats/bw](#api-v0-stats-bw)
-  *  [/stats/repo](#api-v0-stats-repo)
-  *  [/swarm/addrs/listen](#api-v0-swarm-addrs-listen)
-  *  [/swarm/addrs/local](#api-v0-swarm-addrs-local)
-  *  [/swarm/connect](#api-v0-swarm-connect)
-  *  [/swarm/disconnect](#api-v0-swarm-disconnect)
-  *  [/swarm/filters/add](#api-v0-swarm-filters-add)
-  *  [/swarm/filters/rm](#api-v0-swarm-filters-rm)
-  *  [/swarm/peers](#api-v0-swarm-peers)
-  *  [/tar/add](#api-v0-tar-add)
-  *  [/tar/cat](#api-v0-tar-cat)
-  *  [/update](#api-v0-update)
-  *  [/urlstore/add](#api-v0-urlstore-add)
-  *  [/version](#api-v0-version)
-
-
-## Endpoints
-
 
 ### /api/v0/add
 
@@ -338,7 +214,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 {
     "ProvideBufLen": "<int>"
     "Wantlist": [
-        "<string>"
+        { "/": "<cid-string>" }
     ]
     "Peers": [
         "<string>"
@@ -376,7 +252,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 ```text
 {
     "Keys": [
-        "<string>"
+        { "/": "<cid-string>" }
     ]
 }
 
@@ -993,7 +869,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ```text
 {
-    "Cid": "<string>"
+    "Cid": { "/": "<cid-string>" }
 }
 
 ```
@@ -1020,7 +896,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ```text
 {
-    "Cid": "<string>"
+    "Cid": { "/": "<cid-string>" }
     "RemPath": "<string>"
 }
 
@@ -1757,7 +1633,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 {
     "Status": "<int32>"
     "ErrorMsg": "<string>"
-    "Key": "<string>"
+    "Key": { "/": "<cid-string>" }
     "FilePath": "<string>"
     "Offset": "<uint64>"
     "Size": "<uint64>"
@@ -1790,7 +1666,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 {
     "Status": "<int32>"
     "ErrorMsg": "<string>"
-    "Key": "<string>"
+    "Key": { "/": "<cid-string>" }
     "FilePath": "<string>"
     "Offset": "<uint64>"
     "Size": "<uint64>"
@@ -2344,8 +2220,8 @@ On success, the call to this endpoint will return with 200 and the following bod
         {
             "Type": "<int>"
             "Path": "<string>"
-            "Before": "<string>"
-            "After": "<string>"
+            "Before": { "/": "<cid-string>" }
+            "After": { "/": "<cid-string>" }
         }
     ]
 }
@@ -3249,7 +3125,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ```text
 {
-    "Key": "<string>"
+    "Key": { "/": "<cid-string>" }
     "Error": "<string>"
 }
 
@@ -3422,7 +3298,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 {
     "ProvideBufLen": "<int>"
     "Wantlist": [
-        "<string>"
+        { "/": "<cid-string>" }
     ]
     "Peers": [
         "<string>"
