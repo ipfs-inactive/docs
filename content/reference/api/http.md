@@ -1,15 +1,15 @@
-----
+---
 title: "HTTP API"
 weight: 20
 menu:
     reference:
         parent: api
-----
+---
 
 <!-- TODO: Describe how to change ports and configure the API server -->
 <!-- TODO: Structure this around command groups (dag, object, files, etc.) -->
 
-<sup>Generated on 2019-01-08, from go-ipfs v0.4.18.</sup>
+<sup>Generated on 2019-01-14, from go-ipfs v0.4.18.</sup>
 
 When an IPFS node is running as a daemon, it exposes an HTTP API that allows
 you to control the node and run the same commands you can from the command
