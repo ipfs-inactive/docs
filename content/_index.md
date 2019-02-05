@@ -16,6 +16,7 @@ The guides section has an overview of major concepts in IPFS, guides, and exampl
 
 In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed file systems.
 
+If you prefer “hands-on” approach, [ProtoSchool](https://proto.school) will introduce you to decentralized web by writing code and solving challenges.
 
 ## Reference
 
@@ -59,6 +60,6 @@ If you are diving in to contribute new code, make sure you check both the [contr
 
 We’ve split out some of the major parts of IPFS into separate projects over time — while they’re still critical components of IPFS, they can be useful in a variety of other contexts, too. Check their individual sites for specific information and references:
 
-- [Libp2p](https://libp2p.io) manages all the peer-to-peer networking parts of IFPS.
+- [Libp2p](https://libp2p.io) manages all the peer-to-peer networking parts of IPFS.
 - [Multiformats](https://multiformats.io) is a variety of *self-describing* data formats.
 - [IPLD](https://ipld.io) is a set of tools for describing links between content-addressed data, like IPFS files, Git commits, or Ethereum blocks.
