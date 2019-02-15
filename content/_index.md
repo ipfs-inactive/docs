@@ -16,7 +16,7 @@ The guides section has an overview of major concepts in IPFS, guides, and exampl
 
 In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed file systems.
 
-If you prefer “hands-on” approach, [ProtoSchool](https://proto.school) will introduce you to decentralized web by writing code and solving challenges.
+If you prefer a hands-on approach, try out the interactive tutorials at [ProtoSchool](https://proto.school), where you can learn about the decentralized web by solving code challenges.
 
 ## Reference
 
