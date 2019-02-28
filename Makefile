@@ -1,5 +1,4 @@
 SHELL=/bin/bash
-DOMAIN="ipfs.io"
 
 IPFSLOCAL="http://localhost:8080/ipfs/"
 IPFSGATEWAY="https://ipfs.io/ipfs/"
@@ -17,24 +16,6 @@ else
 	APPEND=1>/dev/null
 endif
 
-# Where Hugo should be installed locally
-HUGO_LOCAL=./bin/hugo
-# Path to Hugo binary to use when building the site
-HUGO_BINARY=$(HUGO_LOCAL)
-HUGO_VERSION=0.45.1
-PLATFORM:=$(shell uname)
-ifeq ('$(PLATFORM)', 'Darwin')
-	PLATFORM=macOS
-endif
-MACH:=$(shell uname -m)
-ifeq ('$(MACH)', 'x86_64')
-	MACH=64bit
-else
-	MACH=32bit
-endif
-HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_$(PLATFORM)-$(MACH).tar.gz"
-
-
 node_modules:
 	$(PREPEND)$(NPM) install $(APPEND)
 
@@ -48,20 +29,14 @@ packages:
 	# The JS packages don't actually generate useful docs right now, so skip them
 	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
 	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v1.2.1 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.15 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.15 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.15 $(PKGDIR) go/pkg
-
-bin/hugo:
-	@echo "Installing Hugo to $(HUGO_LOCAL)..."
-	$(PREPEND)mkdir -p tmp_hugo $(APPEND)
-	$(PREPEND)curl --location "$(HUGO_URL)" | tar -xzf - -C tmp_hugo && chmod +x tmp_hugo/hugo && mv tmp_hugo/hugo $(HUGO_LOCAL) $(APPEND)
-	$(PREPEND)rm -rf tmp_hugo $(APPEND)
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api gx/v1.3.5 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.18 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.18 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.18 $(PKGDIR) go/pkg
 
 resources: ipfs-theme packages
 
-install: bin/hugo node_modules resources
+install: node_modules resources
 
 css:
 	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
@@ -78,9 +53,9 @@ lint:
 	$(NPMBIN)/standard src/js/**/*.js
 
 build: clean install lint css js minify-js
-	$(PREPEND)$(HUGO_BINARY) && \
+	$(PREPEND)$(NPMBIN)/hugo && \
 	echo "" && \
-	echo "Site built out to ./$(OUTPUTDIR)"
+	echo "Site built out to ./public dir"
 
 dev: css
 	$(PREPEND)( \
