@@ -1,5 +1,7 @@
 # IPFS Docs
 
+[![build status](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
+
 This repo is used to:
 
 1. Organize documentation work across the IPFS project.
