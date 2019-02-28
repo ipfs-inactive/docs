@@ -3,12 +3,14 @@ jobs:
   build:
     docker:
       - image: ipfs/ci-websites
+        environment:
+          DEBUG: "true"
     steps:
       - checkout
       - run:
           command: make install
       - run:
-          command: make
+          command: make build
       - persist_to_workspace:
           root: .
           paths:
