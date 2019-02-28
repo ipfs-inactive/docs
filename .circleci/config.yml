@@ -6,6 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
+          command: make install
+      - run:
           command: make
       - persist_to_workspace:
           root: .
