@@ -1,4 +1,0 @@
-website([
-  website: 'docs.ipfs.io',
-  record: '_dnslink'
-])
