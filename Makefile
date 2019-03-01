@@ -39,8 +39,6 @@ resources: ipfs-theme packages
 install: node_modules resources
 
 css:
-	# Dual calls to less because there seems to be a bug with multiple plugins in v3 :(
-	# https://github.com/less/less.js/issues/3187
 	$(PREPEND)$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css $(APPEND)
 
 js:
@@ -51,6 +49,9 @@ minify-js: js
 
 lint:
 	$(NPMBIN)/standard src/js/**/*.js
+
+lint-fix:
+	$(NPMBIN)/standard src/js/**/*.js --fix
 
 build: clean install lint css js minify-js
 	$(PREPEND)$(NPMBIN)/hugo && \

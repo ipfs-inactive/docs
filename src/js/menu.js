@@ -124,7 +124,7 @@ function focusWithoutScroll (element) {
   const scrollX = window.pageXOffset
   const scrollY = window.pageYOffset
   ensureFocusable(element)
-  element.focus({preventScroll: true})
+  element.focus({ preventScroll: true })
   window.scrollTo(scrollX, scrollY)
 }
 
