@@ -50,6 +50,9 @@ minify-js: js
 lint:
 	$(NPMBIN)/standard src/js/**/*.js
 
+lint-fix:
+	$(NPMBIN)/standard src/js/**/*.js --fix
+
 build: clean install lint css js minify-js
 	$(PREPEND)$(NPMBIN)/hugo && \
 	echo "" && \
