@@ -1,6 +1,6 @@
 ---
 title: Basic Usage
-weight: 2
+weight: 3
 ---
 
 If you haven't done so, [install IPFS](../install).

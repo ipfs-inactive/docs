@@ -1,5 +1,7 @@
 # IPFS Docs
 
+[![build status](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
+
 This repo is used to:
 
 1. Organize documentation work across the IPFS project.
@@ -49,7 +51,7 @@ The documentation site contains several different kinds of content. We’d love 
 
 This repo is also a website, which means we could also use your help with design and technical features (interactive examples, better syntax highlighting, scripts to pull in content from other repos, etc.) in addition to writing. To get a sense of what we could use help on, check the [the issues](https://github.com/ipfs/docs/issues). If you decide to work on one, please post to the issue to let us know!
 
-Before posting a PR with your changes, please check [our styleguide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and [contributing guide](https://github.com/ipfs/community/blob/master/contributing.md).
+Before posting a PR with your changes, please check [our styleguide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and [contributing guide](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md).
 
 Finally, let’s work together to keep this a respectful and friendly space. Please make sure to follow [our code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
