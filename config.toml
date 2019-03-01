@@ -2,6 +2,7 @@ baseURL = "https://docs.ipfs.io"
 relativeURLs = true
 languageCode = "en"
 DefaultContentLanguage = "en"
+googleAnalytics = "UA-96910779-6"
 
 title = "IPFS Documentation"
 
