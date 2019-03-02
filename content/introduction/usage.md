@@ -158,6 +158,26 @@ This should bring up a console like this:
     <img class="screenshot" alt="Web console connection view" src="../webui-connection.png">
 </figure>
 
+## Companion Browser Extension
+
+While we are at it,  [IPFS Companion](https://github.com/ipfs-shipyard/ipfs-companion#ipfs-companion) is a
+browser extension that simplifies access to IPFS resources and adds support for
+the IPFS protocol.
+
+<div class="alert alert-info">
+It will automatically redirect IPFS gateway requests to
+your local daemon so that you are not relying on, or trusting, remote gateways.
+</div>
+
+It runs in Firefox (Desktop and Android)
+and various Chromium-based browsers such as Google Chrome or Brave.
+Check [its features](https://github.com/ipfs-shipyard/ipfs-companion#features) and [**install it**](https://github.com/ipfs-shipyard/ipfs-companion#install) today!
+
+| <img src="https://ipfs.io/ipfs/QmdT9hsdHwGqNk6ebyyn4qmPYZKABU3quyt2hbozXfNFuc/firefox_16x16.png" widgth="16" height="16"> [Firefox](https://www.mozilla.org/firefox/new/) / <img src="https://ipfs.io/ipfs/QmdT9hsdHwGqNk6ebyyn4qmPYZKABU3quyt2hbozXfNFuc/firefox_16x16.png" widgth="16" height="16"> [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | <img src="https://ipfs.io/ipfs/QmdT9hsdHwGqNk6ebyyn4qmPYZKABU3quyt2hbozXfNFuc/chrome_16x16.png" width="16" height="16"> [Chrome](https://www.google.com/chrome/) / <img src="https://ipfs.io/ipfs/QmdT9hsdHwGqNk6ebyyn4qmPYZKABU3quyt2hbozXfNFuc/brave_16x16.png" width="16" height="16"> [Brave](https://brave.com/)
+|------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![Install From Firefox Add-ons](https://ipfs.io/ipfs/QmSX44XockQifmxE8Wdevkaa6vaqTXtGdH9t9aHWXZkuJq)](https://addons.mozilla.org/firefox/addon/ipfs-companion/) | [![Install from Chrome Store](https://ipfs.io/ipfs/QmPinSJKFYCMuTDh484dLk5Av4HpZRzBRR1KPv7TM7CBVF)](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch) |
+
+
 Now, you're ready:
 
 <a class="button button-primary" href="{{< ref "/guides/examples" >}}" role="button">
