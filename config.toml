@@ -2,10 +2,14 @@ baseURL = "https://docs.ipfs.io"
 relativeURLs = true
 languageCode = "en"
 DefaultContentLanguage = "en"
-
 title = "IPFS Documentation"
-
 staticDir = ["static", "build"]
+googleAnalytics = "UA-96910779-6"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
 
 [blackfriday]
 hrefTargetBlank = true
