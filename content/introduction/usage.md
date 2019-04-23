@@ -3,9 +3,16 @@ title: Basic Usage
 weight: 3
 ---
 
-If you haven't done so, [install IPFS](../install).
+## Install IPFS
 
-During this tutorial, if you have any questions, feel free to ask them in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
+If you haven't done so, your first step is to **install IPFS**! Most people prefer to install a prebuilt package - which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](../install/#installing-from-a-prebuilt-package).
+
+<a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
+  Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+</a>
+
+
+Looking for other options like *building from source*, or having trouble? Check out our [install page](../install) for more options and troublshooting help. During this tutorial, if you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
 
 ## Initialize the repository
 
