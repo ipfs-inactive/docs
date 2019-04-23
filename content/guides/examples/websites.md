@@ -49,7 +49,7 @@ Create a DNS TXT record ([DNSLink](https://docs.ipfs.io/guides/concepts/dnslink/
 Once you've created that record, and it has propagated you should be able to find it.
 
 ```bash
-$ dig +noall +answer TEXT your.domain
+$ dig +noall +answer TXT your.domain
 your.domain.            60      IN      TXT     "dnslink=/ipfs/$SITE_CID"
 ```
 Now you can view your site at `http://localhost:8080/ipns/your.domain`. 
