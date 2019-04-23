@@ -19,9 +19,9 @@ IPNS is not the only way to create mutable addresses on IPFS. You can also use [
 
 **Example:**
 
-Imagine you want to publish your website under IPFS. You can use the [Files API](/guides/concepts/mfs) to publish your static website and then you'll get a multihash you can link to. But when you need to make a change, a problem arises: you get a new multihash because you now have a different content. And it is not possible for you to be always giving others the new address.
+Imagine you want to publish your website under IPFS. You can use the [Files API](/guides/concepts/mfs) to publish your static website and then you'll get a CID you can link to. But when you need to make a change, a problem arises: you get a new CID because you now have a different content. And it is not possible for you to be always giving others the new address.
 
-Here's where the Name API comes in handy. With it, you can use one static multihash for your website under IPNS (InterPlanetary Name Service). This way, you can have one single multihash poiting to the newest version of your website.
+Here's where the Name API comes in handy. With it, you can create a single, stable IPNS address that points to the CID for the latest version of your website.
 
 ```JavaScript
 // The address of your files.
@@ -35,4 +35,4 @@ ipfs.name.publish(addr, function (err, res) {
 })
 ```
 
-This way, you can republish a new version of your website under the same address. By default, `ipfs.name.publish` will use the Peer ID.
+In the same way, you can republish a new version of your website under the same address. By default, `ipfs.name.publish` will use the Peer ID.
