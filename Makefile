@@ -16,6 +16,11 @@ else
 	APPEND=1>/dev/null
 endif
 
+build: clean install lint css js minify-js
+	$(PREPEND)$(NPMBIN)/hugo && \
+	echo "" && \
+	echo "Site built out to ./public dir"
+
 node_modules:
 	$(PREPEND)$(NPM) install $(APPEND)
 
@@ -53,20 +58,15 @@ lint:
 lint-fix:
 	$(NPMBIN)/standard src/js/**/*.js --fix
 
-build: clean install lint css js minify-js
-	$(PREPEND)$(NPMBIN)/hugo && \
-	echo "" && \
-	echo "Site built out to ./public dir"
-
 dev: css
 	$(PREPEND)( \
-		$(NPMBIN)/nodemon --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css" & \
+		$(NPMBIN)/nodemon -q --watch src/styles --ext less,css --exec "$(NPMBIN)/lessc -clean-css --autoprefix src/styles/main.less build/assets/main.css" & \
 		$(NPMBIN)/watchify src/js/main.js -o build/assets/main.js --debug & \
-		$(HUGO_BINARY) server -w --port $(PORT) --bind 0.0.0.0 \
+		$(NPMBIN)/hugo server -w --port $(PORT) --bind 0.0.0.0 \
 	)
 
 serve:
-	$(PREPEND)$(HUGO_BINARY) server
+	$(PREPEND)$(NPMBIN)/hugo server
 
 deploy:
 	export hash=`ipfs add -r -Q $(OUTPUTDIR)`; \
