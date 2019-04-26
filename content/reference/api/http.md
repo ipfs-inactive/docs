@@ -9,7 +9,7 @@ menu:
 <!-- TODO: Describe how to change ports and configure the API server -->
 <!-- TODO: Structure this around command groups (dag, object, files, etc.) -->
 
-<sup>Generated on 2019-01-14, from go-ipfs v0.4.18.</sup>
+<sup>Generated on 2019-04-26, from go-ipfs v0.4.20.</sup>
 
 When an IPFS node is running as a daemon, it exposes an HTTP API that allows
 you to control the node and run the same commands you can from the command
@@ -95,7 +95,10 @@ Add a file or directory to ipfs.
 #### Arguments
 
   - `arg` [file]: The path to a file to be added to ipfs. Required: **yes**.
-  - `recursive` [bool]: Add directory paths recursively. Default: "false". Required: no.
+  - `recursive` [bool]: Add directory paths recursively. Required: no.
+  - `dereference-args` [bool]: Symlinks supplied in arguments are dereferenced. Required: no.
+  - `stdin-name` [string]: Assign a name if the file source is stdin. Required: no.
+  - `hidden` [bool]: Include files that are hidden. Only takes effect on recursive add. Required: no.
   - `quiet` [bool]: Write minimal output. Required: no.
   - `quieter` [bool]: Write only final hash. Required: no.
   - `silent` [bool]: Write no output. Required: no.
@@ -103,8 +106,6 @@ Add a file or directory to ipfs.
   - `trickle` [bool]: Use trickle-dag format for dag generation. Required: no.
   - `only-hash` [bool]: Only chunk and hash - do not write to disk. Required: no.
   - `wrap-with-directory` [bool]: Wrap files with a directory object. Required: no.
-  - `stdin-name` [string]: Assign a name if the file source is stdin. Required: no.
-  - `hidden` [bool]: Include files that are hidden. Only takes effect on recursive add. Required: no.
   - `chunker` [string]: Chunking algorithm, size-[bytes] or rabin-[min]-[avg]-[max]. Default: "size-262144". Required: no.
   - `pin` [bool]: Pin this object when adding. Default: "true". Required: no.
   - `raw-leaves` [bool]: Use raw blocks for leaf nodes. (experimental). Required: no.
@@ -137,7 +138,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/add?recursive=false&quiet=<value>&quieter=<value>&silent=<value>&progress=<value>&trickle=<value>&only-hash=<value>&wrap-with-directory=<value>&stdin-name=<value>&hidden=<value>&chunker=size-262144&pin=true&raw-leaves=<value>&nocopy=<value>&fscache=<value>&cid-version=<value>&hash=sha2-256&inline=<value>&inline-limit=32"`
+`curl -F file=@myfile "http://localhost:5001/api/v0/add?recursive=<value>&dereference-args=<value>&stdin-name=<value>&hidden=<value>&quiet=<value>&quieter=<value>&silent=<value>&progress=<value>&trickle=<value>&only-hash=<value>&wrap-with-directory=<value>&chunker=size-262144&pin=true&raw-leaves=<value>&nocopy=<value>&fscache=<value>&cid-version=<value>&hash=sha2-256&inline=<value>&inline-limit=32"`
 
 ***
 
@@ -203,7 +204,7 @@ Show some diagnostic information on the bitswap agent.
 
 #### Arguments
 
-This endpoint takes no arguments.
+  - `verbose` [bool]: Print extra information. Required: no.
 
 
 #### Response
@@ -225,13 +226,14 @@ On success, the call to this endpoint will return with 200 and the following bod
     "DataSent": "<uint64>"
     "DupBlksReceived": "<uint64>"
     "DupDataReceived": "<uint64>"
+    "MessagesReceived": "<uint64>"
 }
 
 ```
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bitswap/stat"`
+`curl "http://localhost:5001/api/v0/bitswap/stat?verbose=<value>"`
 
 ***
 
@@ -299,6 +301,7 @@ Store input as an IPFS block.
   - `format` [string]: cid format for blocks to be created with. Required: no.
   - `mhtype` [string]: multihash hash function. Default: "sha2-256". Required: no.
   - `mhlen` [int]: multihash hash length. Default: "-1". Required: no.
+  - `pin` [bool]: pin added blocks recursively. Default: "false". Required: no.
 
 
 #### Request Body
@@ -320,7 +323,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/block/put?format=<value>&mhtype=sha2-256&mhlen=-1"`
+`curl -F file=@myfile "http://localhost:5001/api/v0/block/put?format=<value>&mhtype=sha2-256&mhlen=-1&pin=false"`
 
 ***
 
@@ -382,6 +385,65 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ***
 
+### /api/v0/bootstrap
+
+Show or edit the list of bootstrap peers.
+
+
+#### Arguments
+
+This endpoint takes no arguments.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Peers": [
+        "<string>"
+    ]
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/bootstrap"`
+
+***
+
+### /api/v0/bootstrap/add
+
+Add peers to the bootstrap list.
+
+
+#### Arguments
+
+  - `arg` [string]: A peer to add to the bootstrap list (in the format '<multiaddr>/<peerID>') Required: no.
+  - `default` [bool]: Add default bootstrap nodes. (Deprecated, use 'default' subcommand instead). Required: no.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Peers": [
+        "<string>"
+    ]
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/bootstrap/add?arg=<peer>&default=<value>"`
+
+***
+
 ### /api/v0/bootstrap/add/default
 
 Add default peers to the bootstrap list.
@@ -437,6 +499,36 @@ On success, the call to this endpoint will return with 200 and the following bod
 #### cURL Example
 
 `curl "http://localhost:5001/api/v0/bootstrap/list"`
+
+***
+
+### /api/v0/bootstrap/rm
+
+Remove peers from the bootstrap list.
+
+
+#### Arguments
+
+  - `arg` [string]: A peer to add to the bootstrap list (in the format '<multiaddr>/<peerID>') Required: no.
+  - `all` [bool]: Remove all bootstrap peers. (Deprecated, use 'all' subcommand). Required: no.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Peers": [
+        "<string>"
+    ]
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/bootstrap/rm?arg=<peer>&all=<value>"`
 
 ***
 
@@ -704,6 +796,37 @@ On success, the call to this endpoint will return with 200 and the following bod
 #### cURL Example
 
 `curl "http://localhost:5001/api/v0/commands?flags=<value>"`
+
+***
+
+### /api/v0/config
+
+Get and set ipfs config values.
+
+
+#### Arguments
+
+  - `arg` [string]: The key of the config entry (e.g. "Addresses.API"). Required: **yes**.
+  - `arg` [string]: The value to set the config entry to. Required: no.
+  - `bool` [bool]: Set a boolean value. Required: no.
+  - `json` [bool]: Parse stringified JSON. Required: no.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Key": "<string>"
+    "Value": "<object>"
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/config?arg=<key>&arg=<value>&bool=<value>&json=<value>"`
 
 ***
 
@@ -1139,6 +1262,45 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ***
 
+### /api/v0/diag/cmds
+
+List commands run on this IPFS node.
+
+
+#### Arguments
+
+  - `verbose` [bool]: Print extra information. Required: no.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+[
+    {
+        "StartTime": "<string>"
+        "EndTime": "<string>"
+        "Active": "<bool>"
+        "Command": "<string>"
+        "Options": {
+            "<string>": "<object>"
+        }
+        "Args": [
+            "<string>"
+        ]
+        "ID": "<int>"
+    }
+]
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/diag/cmds?verbose=<value>"`
+
+***
+
 ### /api/v0/diag/cmds/clear
 
 Clear inactive requests from the log.
@@ -1219,7 +1381,7 @@ Resolve DNS links.
 #### Arguments
 
   - `arg` [string]: The domain-name name to resolve. Required: **yes**.
-  - `recursive` [bool]: Resolve until the result is not a DNS link. Required: no.
+  - `recursive` [bool]: Resolve until the result is not a DNS link. Default: "true". Required: no.
 
 
 #### Response
@@ -1235,7 +1397,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dns?arg=<domain-name>&recursive=<value>"`
+`curl "http://localhost:5001/api/v0/dns?arg=<domain-name>&recursive=true"`
 
 ***
 
@@ -1349,7 +1511,10 @@ Flush a given path's data to disk.
 On success, the call to this endpoint will return with 200 and the following body:
 
 ```text
-This endpoint returns a `text/plain` response body.
+{
+    "Cid": "<string>"
+}
+
 ```
 
 #### cURL Example
@@ -1962,6 +2127,8 @@ List directory contents for Unix filesystem objects.
   - `arg` [string]: The path to the IPFS object(s) to list links from. Required: **yes**.
   - `headers` [bool]: Print table headers (Hash, Size, Name). Required: no.
   - `resolve-type` [bool]: Resolve linked objects to find out their types. Default: "true". Required: no.
+  - `size` [bool]: Resolve linked objects to find out their file size. Default: "true". Required: no.
+  - `stream` [bool]: Enable exprimental streaming of directory entries as they are traversed. Required: no.
 
 
 #### Response
@@ -1979,6 +2146,7 @@ On success, the call to this endpoint will return with 200 and the following bod
                     "Hash": "<string>"
                     "Size": "<uint64>"
                     "Type": "<int32>"
+                    "Target": "<string>"
                 }
             ]
         }
@@ -1989,7 +2157,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/ls?arg=<ipfs-path>&headers=<value>&resolve-type=true"`
+`curl "http://localhost:5001/api/v0/ls?arg=<ipfs-path>&headers=<value>&resolve-type=true&size=true&stream=<value>"`
 
 ***
 
@@ -2031,13 +2199,13 @@ Publish IPNS names.
 #### Arguments
 
   - `arg` [string]: ipfs path of the object to be published. Required: **yes**.
-  - `resolve` [bool]: Resolve given path before publishing. Default: "true". Required: no.
+  - `resolve` [bool]: Check if the given path can be resolved before publishing. Default: "true". Required: no.
   - `lifetime` [string]: Time duration that the record will be valid for.
     This accepts durations such as "300s", "1.5h" or "2h45m". Valid time units are
     "ns", "us" (or "µs"), "ms", "s", "m", "h". Default: "24h". Required: no.
   - `allow-offline` [bool]: When offline, save the IPNS record to the the local datastore without broadcasting to the network instead of simply failing. Required: no.
-  - `ttl` [string]: Time duration this record should be cached for (caution: experimental). Required: no.
-  - `key` [string]: Name of the key to be used or a valid PeerID, as listed by 'ipfs key list -l'. Default:. Default: "self". Required: no.
+  - `ttl` [string]: Time duration this record should be cached for. Uses the same syntax as the lifetime option. (caution: experimental). Required: no.
+  - `key` [string]: Name of the key to be used or a valid PeerID, as listed by 'ipfs key list -l'. Default: "self". Required: no.
   - `quieter` [bool]: Write only final hash. Required: no.
 
 
@@ -2150,7 +2318,7 @@ Resolve IPNS names.
 #### Arguments
 
   - `arg` [string]: The IPNS name to resolve. Defaults to your node's peerID. Required: no.
-  - `recursive` [bool]: Resolve until the result is not an IPNS name. Required: no.
+  - `recursive` [bool]: Resolve until the result is not an IPNS name. Default: "true". Required: no.
   - `nocache` [bool]: Do not use cached entries. Required: no.
   - `dht-record-count` [uint]: Number of records to request for DHT resolution. Required: no.
   - `dht-timeout` [string]: Max time to collect values during DHT resolution eg "30s". Pass 0 for no timeout. Required: no.
@@ -2170,7 +2338,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/name/resolve?arg=<name>&recursive=<value>&nocache=<value>&dht-record-count=<value>&dht-timeout=<value>&stream=<value>"`
+`curl "http://localhost:5001/api/v0/name/resolve?arg=<name>&recursive=true&nocache=<value>&dht-record-count=<value>&dht-timeout=<value>&stream=<value>"`
 
 ***
 
@@ -2630,6 +2798,7 @@ Create libp2p service
   - `arg` [string]: Protocol name. Required: **yes**.
   - `arg` [string]: Target endpoint. Required: **yes**.
   - `allow-custom-protocol` [bool]: Don't require /x/ prefix. Required: no.
+  - `report-peer-id` [bool]: Send remote base58 peerid to target when a new connection is established. Required: no.
 
 
 #### Response
@@ -2642,7 +2811,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/listen?arg=<protocol>&arg=<target-address>&allow-custom-protocol=<value>"`
+`curl "http://localhost:5001/api/v0/p2p/listen?arg=<protocol>&arg=<target-address>&allow-custom-protocol=<value>&report-peer-id=<value>"`
 
 ***
 
@@ -3053,6 +3222,39 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ***
 
+### /api/v0/refs
+
+List links (references) from an object.
+
+
+#### Arguments
+
+  - `arg` [string]: Path to the object(s) to list refs from. Required: **yes**.
+  - `format` [string]: Emit edges with given format. Available tokens: <src> <dst> <linkname>. Default: <dst>. Default: "<dst>". Required: no.
+  - `edges` [bool]: Emit edge format: `<from> -> <to>`. Required: no.
+  - `unique` [bool]: Omit duplicate refs from output. Required: no.
+  - `recursive` [bool]: Recursively list links of child nodes. Required: no.
+  - `max-depth` [int]: Only for recursive refs, limits fetch and listing to the given depth. Default: "-1". Required: no.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Ref": "<string>"
+    "Err": "<string>"
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/refs?arg=<ipfs-path>&format=<dst>&edges=<value>&unique=<value>&recursive=<value>&max-depth=-1"`
+
+***
+
 ### /api/v0/refs/local
 
 List all local references.
@@ -3145,7 +3347,7 @@ Get stats for the currently used repo.
 #### Arguments
 
   - `size-only` [bool]: Only report RepoSize and StorageMax. Required: no.
-  - `human` [bool]: Output sizes in MiB. Required: no.
+  - `human` [bool]: Print sizes in human readable format (e.g., 1K 234M 2G). Required: no.
 
 
 #### Response
@@ -3234,7 +3436,7 @@ Resolve the value of names to IPFS.
 #### Arguments
 
   - `arg` [string]: The name to resolve. Required: **yes**.
-  - `recursive` [bool]: Resolve until the result is an IPFS name. Required: no.
+  - `recursive` [bool]: Resolve until the result is an IPFS name. Default: "true". Required: no.
   - `dht-record-count` [int]: Number of records to request for DHT resolution. Required: no.
   - `dht-timeout` [string]: Max time to collect values during DHT resolution eg "30s". Pass 0 for no timeout. Required: no.
 
@@ -3252,7 +3454,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/resolve?arg=<name>&recursive=<value>&dht-record-count=<value>&dht-timeout=<value>"`
+`curl "http://localhost:5001/api/v0/resolve?arg=<name>&recursive=true&dht-record-count=<value>&dht-timeout=<value>"`
 
 ***
 
@@ -3287,7 +3489,7 @@ Show some diagnostic information on the bitswap agent.
 
 #### Arguments
 
-This endpoint takes no arguments.
+  - `verbose` [bool]: Print extra information. Required: no.
 
 
 #### Response
@@ -3309,13 +3511,14 @@ On success, the call to this endpoint will return with 200 and the following bod
     "DataSent": "<uint64>"
     "DupBlksReceived": "<uint64>"
     "DupDataReceived": "<uint64>"
+    "MessagesReceived": "<uint64>"
 }
 
 ```
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/stats/bitswap"`
+`curl "http://localhost:5001/api/v0/stats/bitswap?verbose=<value>"`
 
 ***
 
@@ -3363,7 +3566,7 @@ Get stats for the currently used repo.
 #### Arguments
 
   - `size-only` [bool]: Only report RepoSize and StorageMax. Required: no.
-  - `human` [bool]: Output sizes in MiB. Required: no.
+  - `human` [bool]: Print sizes in human readable format (e.g., 1K 234M 2G). Required: no.
 
 
 #### Response
@@ -3386,6 +3589,37 @@ On success, the call to this endpoint will return with 200 and the following bod
 #### cURL Example
 
 `curl "http://localhost:5001/api/v0/stats/repo?size-only=<value>&human=<value>"`
+
+***
+
+### /api/v0/swarm/addrs
+
+List known addresses. Useful for debugging.
+
+
+#### Arguments
+
+This endpoint takes no arguments.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Addrs": {
+        "<string>": [
+            "<string>"
+        ]
+    }
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/swarm/addrs"`
 
 ***
 
@@ -3502,6 +3736,35 @@ On success, the call to this endpoint will return with 200 and the following bod
 #### cURL Example
 
 `curl "http://localhost:5001/api/v0/swarm/disconnect?arg=<address>"`
+
+***
+
+### /api/v0/swarm/filters
+
+Manipulate address filters.
+
+
+#### Arguments
+
+This endpoint takes no arguments.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Strings": [
+        "<string>"
+    ]
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/swarm/filters"`
 
 ***
 
@@ -3698,6 +3961,7 @@ Add URL via urlstore.
 
   - `arg` [string]: URL to add to IPFS Required: **yes**.
   - `trickle` [bool]: Use trickle-dag format for dag generation. Required: no.
+  - `pin` [bool]: Pin this object when adding. Default: "true". Required: no.
 
 
 #### Response
@@ -3714,7 +3978,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/urlstore/add?arg=<url>&trickle=<value>"`
+`curl "http://localhost:5001/api/v0/urlstore/add?arg=<url>&trickle=<value>&pin=true"`
 
 ***
 
@@ -3749,6 +4013,36 @@ On success, the call to this endpoint will return with 200 and the following bod
 #### cURL Example
 
 `curl "http://localhost:5001/api/v0/version?number=<value>&commit=<value>&repo=<value>&all=<value>"`
+
+***
+
+### /api/v0/version/deps
+
+Shows information about dependencies used for build
+
+
+#### Arguments
+
+This endpoint takes no arguments.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```text
+{
+    "Path": "<string>"
+    "Version": "<string>"
+    "ReplacedBy": "<string>"
+    "Sum": "<string>"
+}
+
+```
+
+#### cURL Example
+
+`curl "http://localhost:5001/api/v0/version/deps"`
 
 ***
 
