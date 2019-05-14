@@ -195,7 +195,7 @@ from [https://dist.ipfs.io/#fs-repo-migrations](https://dist.ipfs.io/#fs-repo-mi
 ### Help!
 
 If you have any problems, come get live help at
-[#ipfs](../#community) or via [the mailing list](../#community).
+[#ipfs](/#community) or via [the mailing list](/#community).
 
 ### Check Go Version
 
