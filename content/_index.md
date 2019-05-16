@@ -5,9 +5,11 @@ title: IPFS Documentation
 
 Welcome to the IPFS documentation portal! Whether you’re just learning about IPFS or are looking for detailed reference information, this is the place to start. You might have noticed that IPFS is a project with a big scope — and a *lot* of different tools, sites, and code.
 
+Here's an overview of what you'll find in our documentation:
+
 ## Introduction
 
-Head over to the [introduction](/introduction) section for an introduction to the basics of IPFS and a guide to getting up and running.
+Head over to the [introduction](/introduction) section to learn about the basics of IPFS and a guide to getting up and running.
 
 
 ## Guides
