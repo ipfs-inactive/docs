@@ -9,7 +9,7 @@ Here's an overview of what you'll find in our documentation:
 
 ## Introduction
 
-Head over to the [introduction](/introduction) section to learn about the basics of IPFS and a guide to getting up and running.
+Head over to the [introduction](/introduction) section to learn about the basics of IPFS. There are also instructions on how to install IPFS, and tips on basic IPFS usage.
 
 
 ## Guides
