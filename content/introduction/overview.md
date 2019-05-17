@@ -3,7 +3,7 @@ title: What is IPFS?
 weight: 1
 ---
 
-Welcome! If you’re new to IPFS, you’ve come to the right place. This guide is intended to give you a thorough but quick overview of what IPFS is, how it works, and how to use it.
+Welcome! If you’re new to IPFS, you’ve come to the right place. Here is a quick overview of what IPFS is, how it works, and how to use it.
 
 ## IPFS is a distributed system for storing and accessing files, websites, applications, and data.
 
