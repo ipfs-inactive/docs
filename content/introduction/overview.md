@@ -34,7 +34,7 @@ Making it possible to download a file from many locations that aren’t managed 
 
 - **Makes it hard for a website to go offline.** If someone attacks Wikipedia’s web servers or an engineer at Wikipedia makes a big mistake that causes their servers to catch fire, you can still get the same page from somewhere else.
 
-- **Makes it harder for authorities to censor content.** Because files on IPFS can come from many places and because some of those places might be nearby, it’s very hard for authorities (whether they’re states, corporations, or someone else) to block things. In 2017, Turkey blocked Wikipedia and Spain blocked access to Catalonian independence sites. We hope IPFS can prevent actions like those.
+- **Makes it harder for authorities to censor content.** Because files on IPFS can come from many places, it’s very hard for authorities (whether they’re states, corporations, or someone else) to block things. In 2017, Turkey blocked Wikipedia and Spain blocked access to Catalonian independence sites. We hope IPFS can prevent actions like those.
 
 - **Can speed up the web when you’re far away or disconnected.** If you can retrieve a file from someone nearby instead of hundreds or thousands of miles away, you can get it faster. (Organizations with enough money and expertise can do this with CDNs or multiple data centers, but IPFS aims to make this possible for everyone.) That’s especially valuable if your community is networked, but doesn’t have a good connection to the wider internet.
 
