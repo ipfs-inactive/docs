@@ -13,15 +13,19 @@ What does that mean, exactly? Let’s say you’re doing some research on Aardva
 https://en.wikipedia.org/wiki/Aardvark
 ```
 
-When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country — or even the planet — for the Aardvark page. However, if you use IPFS to get that page from:
+When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country (or even the planet), for the Aardvark page.
+
+However, if you use IPFS, your computer asks to get that page like this:
 
 ```
 /ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
 ```
 
-Your computer might have gotten it from someone else’s computer across town, or maybe even your neighbor’s computer across the street. When you use IPFS, you don’t only download a file from someone else, but your computer can help distribute it, too — when your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor.
+IPFS knows how to find that sweet, sweet Aardvark information by its [contents](/guides/concepts/cid/), not its location. The IPFS-translated version of the Aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world (or across town from you, or next door) to share the page with you. It can get your Aardvark info from anyone who has it, not just Wikipedia.
 
-IPFS makes this possible for web pages, but also for any kind of file a computer might store, whether it’s an MS Word document, an e-mail, an MP3 file, or even a database record.
+And, when you use IPFS, you don’t just download files from someone else — your computer also helps distribute them. When your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor.
+
+IPFS makes this possible for not only web pages, but also any kind of file a computer might store, whether it’s an MS Word document, an e-mail, an MP3 file, or even a database record.
 
 
 ## So why does that matter?
