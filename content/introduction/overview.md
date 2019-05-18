@@ -21,7 +21,7 @@ However, if you use IPFS, your computer asks to get that page like this:
 /ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
 ```
 
-IPFS knows how to find that sweet, sweet Aardvark information by its [contents](/guides/concepts/cid/), not its location. The IPFS-translated version of the Aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world (or across town from you, or next door) to share the page with you. It can get your Aardvark info from anyone who has it, not just Wikipedia.
+IPFS knows how to find that sweet, sweet Aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that below!). The IPFS-translated version of the Aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world (or across town from you, or next door) to share the page with you. It can get your Aardvark info from anyone who has it, not just Wikipedia.
 
 And, when you use IPFS, you don’t just download files from someone else — your computer also helps distribute them. When your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor.
 
@@ -51,7 +51,7 @@ What about that link to the Aardvark page above? It looked a little unusual:
 
 That jumble of letters after `/ipfs/` is called a [*content identifier*]({{<relref "guides/concepts/cid.md">}}) and it’s how IPFS can get content from multiple places.
 
-Traditional URLs and file paths like…
+Traditional URLs and file paths such as…
 
 - `https://en.wikipedia.org/wiki/Aardvark`
 - `/Users/Alice/Documents/term_paper.doc`
@@ -59,21 +59,19 @@ Traditional URLs and file paths like…
 
 …identify a file by *where it’s located* — what computer it’s on and where on that computer’s hard drive it is. That doesn’t work if the file is in many places, though, like your neighbor’s computer and your friend’s across town.
 
-Instead of being location-based, IPFS addresses a file by *what’s in it*, or by its *content*. The content identifier above is a *hash* of the content at that address, which means it’s also unique to that content, even though it’s [relatively] short. It also allows you to verify you got what you asked for — bad actors can’t just hand you content that doesn’t match. (If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction.)
+Instead of being location-based, IPFS addresses a file by *what’s in it*, or by its *content*. The content identifier above is a *hash* of the content at that address. The hash is unique to the content that it came from, even though it’s short (well, short compared to all the bits and bytes that make up the original content). It also allows you to verify you got what you asked for — bad actors can’t just hand you content that doesn’t match. (If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction.)
 
 <aside class="alert alert-info">
-  Why do we say “content” instead of “files” or “web pages” here? Because a content identifier can point to many different types of data. In order to make the storage & transmission of data more efficient, IPFS can break files up in to many smaller pieces — which then means the system needs some metadata to tie them back together. An IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or even other kinds of data.
+  Why do we say “content” instead of “files” or “web pages” here? Because a content identifier can point to many different types of data. In order to make the storage and transmission of data more efficient, IPFS can break files up in to many smaller pieces — which then means the system needs some metadata to tie them back together. An IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or even other kinds of data.
 </aside>
+Because the address of a file in IPFS is created from the content itself, links in IPFS can’t be changed. For example…
 
-Because the address of a file in IPFS is tied to the content itself, links in IPFS can’t be changed. For example…
+- If the text on a web page is changed, the new version gets a new, different link.
+- Content can’t be moved to a different address. On today's internet, a company could reorganize content on their website and move a page at  `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same content.
 
-- If the text on a web page is changed, the new version gets a new, different link. If your favorite cooking site changes how they layout recipes your IPFS links will still point to the old version.
+Of course, people want to update and change content all the time, and don't want to send new links every time they do it. Check out the concept guides on [IPNS]({{<relref "guides/concepts/ipns.md">}}) and the [Mutable File System (MFS)]({{<relref "guides/concepts/mfs.md">}}) to learn more about how changing content can work in a content-addressed, distributed system.
 
-- Content can’t be moved to a different address. If a company reorganizes their web site today, they could move a page from `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same content.
-
-- If someone removes a page entirely, you can still get it at the same address.
-
-It’s important to remember in all of these situations that it’s the address or link that doesn’t change. The IPFS network is a participatory and collaborative one — if nobody has the content identified by a given address, it won’t be available. On the other hand, content can’t be removed from IPFS so long as *someone* is interested enough to make it available, whether or not that person is the original author.
+It’s important to remember in all of these situations using IPFS is participatory and collaborative. If nobody has the content identified by a given address available for others to access, you won't be able to get it. On the other hand, content can’t be removed from IPFS as long as *someone* is interested enough to make it available, whether that person is the original author or not.
 
 
 ## It’s all about possession and participation.
