@@ -1,6 +1,9 @@
 ---
 title: Install IPFS
-weight: 2
+menu:
+    guides:
+        parent: guides
+weight: 1
 ---
 
 <!--

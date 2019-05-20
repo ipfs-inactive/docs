@@ -43,6 +43,43 @@ identifier = "community"
 name = "Community"
 weight = 4
 
+
+[[menu.guides]]
+identifier = "guides"
+name = "Guides"
+weight = 3
+[[menu.guides]]
+parent = "guides"
+name = "Transferring a File"
+url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
+weight = 2
+[[menu.guides]]
+parent = "guides"
+name = "Replicating Large Datasets"
+url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
+weight = 3
+[[menu.guides]]
+parent = "guides"
+name = "Addressing in Browsers"
+url = "https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
+weight = 4
+[[menu.guides]]
+parent = "guides"
+name = "Interactive Tutorials"
+url = "https://proto.school/#/tutorials"
+weight = 5
+
+
+[[menu.guides]]
+identifier = "examples"
+name = "Examples"
+weight = 4
+[[menu.guides]]
+parent = "examples"
+name = "js-ipfs Examples"
+url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
+
+
 [[menu.reference]]
 identifier = "api"
 name = "Commands & API"
@@ -124,38 +161,6 @@ title = "“Requests for Changes” (RFC) are proposals for major modifications 
 url = "https://github.com/ipfs/rfcs"
 weight = 50
 
-[[menu.guides]]
-identifier = "guides"
-name = "Guides"
-weight = 3
-[[menu.guides]]
-identifier = "examples"
-name = "Examples"
-weight = 4
-[[menu.guides]]
-parent = "guides"
-name = "Replicating Large Datasets"
-url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
-weight = 3
-[[menu.guides]]
-parent = "guides"
-name = "Transferring a File"
-url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
-weight = 2
-[[menu.guides]]
-parent = "guides"
-name = "Addressing in Browsers"
-url = "https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
-weight = 4
-[[menu.guides]]
-parent = "guides"
-name = "Interactive Tutorials"
-url = "https://proto.school/#/tutorials"
-weight = 5
-[[menu.guides]]
-parent = "examples"
-name = "js-ipfs Examples"
-url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
 
 [[menu.community]]
 identifier = "applications"
