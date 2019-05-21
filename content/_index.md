@@ -5,18 +5,18 @@ title: IPFS Documentation
 
 Welcome to the IPFS documentation portal! Whether you’re just learning about IPFS or are looking for detailed reference information, this is the place to start. You might have noticed that IPFS is a project with a big scope — and a *lot* of different tools, sites, and code.
 
+Here's an overview of what you'll find in our documentation:
+
 ## Introduction
 
-Head over to the [introduction](/introduction) section for an introduction to the basics of IPFS and a guide to getting up and running.
+Head over to the [introduction](/introduction) section to learn about the basics of IPFS. There are also instructions on how to install IPFS, and tips on basic IPFS usage.
 
 
 ## Guides
 
-The guides section has an overview of major concepts in IPFS, guides, and example projects demonstrating various ways to use IPFS.
+IPFS is a complex system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), guides for specific IPFS use cases, and example projects demonstrating various ways to use the IPFS ecosystem.
 
-In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed file systems.
-
-If you prefer a hands-on approach, try out the interactive tutorials at [ProtoSchool](https://proto.school), where you can learn about the decentralized web by solving code challenges.
+If you prefer a hands-on approach, try out the interactive tutorials at [ProtoSchool](https://proto.school). You can learn about the decentralized web by solving code challenges.
 
 ## Reference
 
