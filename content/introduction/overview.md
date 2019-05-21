@@ -25,7 +25,7 @@ IPFS knows how to find that sweet, sweet aardvark information by its [contents](
 
 And, when you use IPFS, you don’t just download files from someone else — your computer also helps distribute them. When your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor or anyone else using IPFS.
 
-IPFS makes this possible for not only web pages, but also any kind of file a computer might store, whether it’s an MS Word document, an e-mail, an MP3 file, or even a database record.
+IPFS makes this possible for not only web pages, but also any kind of file a computer might store, whether it’s a document, an e-mail, an MP3 file, or even a database record.
 
 
 ## So why does that matter?
