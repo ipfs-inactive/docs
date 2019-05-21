@@ -21,7 +21,7 @@ However, if you use IPFS, your computer asks to get that page like this:
 /ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/aardvark.html
 ```
 
-IPFS knows how to find that sweet, sweet aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that, which is called content-addressing, below!). The IPFS-translated version of the aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world to share the page with you. It can get your aardvark info from anyone who has it, not just Wikipedia.
+IPFS knows how to find that sweet, sweet aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that, which is called content-addressing, below!). The IPFS-ified version of the aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world to share the page with you. It can get your aardvark info from anyone who has it, not just Wikipedia.
 
 And, when you use IPFS, you don’t just download files from someone else — your computer also helps distribute them. When your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor or anyone else using IPFS.
 
