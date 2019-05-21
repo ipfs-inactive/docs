@@ -7,21 +7,21 @@ Welcome! If you’re new to IPFS, you’ve come to the right place. Here is a qu
 
 ## IPFS is a distributed system for storing and accessing files, websites, applications, and data.
 
-What does that mean, exactly? Let’s say you’re doing some research on Aardvarks. (Just roll with it; Aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the wikipedia page on Aardvarks at:
+What does that mean, exactly? Let’s say you’re doing some research on aardvarks. (Just roll with it; aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the wikipedia page on aardvarks at:
 
 ```
-https://en.wikipedia.org/wiki/Aardvark
+https://en.wikipedia.org/wiki/aardvark
 ```
 
-When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country (or even the planet), for the Aardvark page.
+When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country (or even the planet), for the aardvark page.
 
 However, if you use IPFS, your computer asks to get that page like this:
 
 ```
-/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/aardvark.html
 ```
 
-IPFS knows how to find that sweet, sweet Aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that, which is called content-addressing, below!). The IPFS-translated version of the Aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world to share the page with you. It can get your Aardvark info from anyone who has it, not just Wikipedia.
+IPFS knows how to find that sweet, sweet aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that, which is called content-addressing, below!). The IPFS-translated version of the aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world to share the page with you. It can get your aardvark info from anyone who has it, not just Wikipedia.
 
 And, when you use IPFS, you don’t just download files from someone else — your computer also helps distribute them. When your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor or anyone else using IPFS.
 
@@ -43,17 +43,17 @@ That last point is actually where IPFS gets it’s name: **Inter-Planetary File 
 
 ## Links don’t change on IPFS.
 
-What about that link to the Aardvark page above? It looked a little unusual:
+What about that link to the aardvark page above? It looked a little unusual:
 
 ```
-/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/aardvark.html
 ```
 
 That jumble of letters after `/ipfs/` is called a [*content identifier*]({{<relref "guides/concepts/cid.md">}}) and it’s how IPFS can get content from multiple places.
 
 Traditional URLs and file paths such as…
 
-- `https://en.wikipedia.org/wiki/Aardvark`
+- `https://en.wikipedia.org/wiki/aardvark`
 - `/Users/Alice/Documents/term_paper.doc`
 - `C:\Users\Joe\My Documents\project_sprint_presentation.ppt`
 
