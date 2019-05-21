@@ -5,14 +5,17 @@ weight: 2
 
 ## Install IPFS
 
-If you haven't done so, your first step is to **install IPFS**! Most people prefer to install a prebuilt package — which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](../install/#installing-from-a-prebuilt-package).
+If you haven't done so already, your first step is to **install IPFS**! Most people prefer to install a prebuilt package, which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](../install/#installing-from-a-prebuilt-package).
 
 <a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
   Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
 </a>
 
+<aside class="alert alert-info">
+  Don't want to use the command line right now? You can give the desktop-app implementation of IPFS a go! <a href src="https://github.com/ipfs-shipyard/ipfs-desktop">Get started with that here <i class="fas fa-external-link-square-alt fa-sm"></i></a>
+</aside>
 
-Looking for other options like *building from source*, or having trouble? Check out our [install guide]({{<relref "guides/guides/install.md">}}) for more options and troublshooting help. During this tutorial, if you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
+For more install options, such as building from source, and toubleshooting tips, visit our [install guide]({{<relref "guides/guides/install.md">}}). If you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
 
 ## Initialize the repository
 
