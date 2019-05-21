@@ -66,17 +66,17 @@ Instead of being location-based, IPFS addresses a file by *what’s in it*, or b
 </aside>
 Because the address of a file in IPFS is created from the content itself, links in IPFS can’t be changed. For example…
 
-- If the text on a web page is changed, the new version gets a new, different link.
-- Content can’t be moved to a different address. On today's internet, a company could reorganize content on their website and move a page at  `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same content.
+- If the text on a web page is changed, the new version gets a new, different address.
+- Content can’t be moved to a different address. On today's internet, a company could reorganize content on their website and move a page at `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same old content.
 
-Of course, people want to update and change content all the time, and don't want to send new links every time they do it. Check out the concept guides on [IPNS]({{<relref "guides/concepts/ipns.md">}}) and the [Mutable File System (MFS)]({{<relref "guides/concepts/mfs.md">}}) to learn more about how changing content can work in a content-addressed, distributed system.
+Of course, people want to update and change content all the time, and don't want to send new links every time they do it. This is entirely possible in an IPFS world, but explaining it requires a little more info than what's within the scope of this guide. Check out the concept guides on [IPNS]({{<relref "guides/concepts/ipns.md">}}) and the [Mutable File System (MFS)]({{<relref "guides/concepts/mfs.md">}}) to learn more about how changing content can work in a content-addressed, distributed system.
 
-It’s important to remember in all of these situations using IPFS is participatory and collaborative. If nobody has the content identified by a given address available for others to access, you won't be able to get it. On the other hand, content can’t be removed from IPFS as long as *someone* is interested enough to make it available, whether that person is the original author or not.
+It’s important to remember in all of these situations using IPFS is participatory and collaborative. If nobody using IPFS has the content identified by a given address available for others to access, you won't be able to get it. On the other hand, content can’t be removed from IPFS as long as *someone* is interested enough to make it available, whether that person is the original author or not.
 
 
 ## It’s all about possession and participation.
 
-While there's lots of complex technology in IPFS, the fundamental ideas are about changing how networks of people and computers communicate. Today’s world-wide-web is structured on *ownership* and *access*, where you get files from whoever owns them and they choose to grant you access. IPFS is based on the ideas of *possession* and *participation*, where many people have each others’ files and *participate* in making them available.
+While there's lots of complex technology in IPFS, the fundamental ideas are about changing how networks of people and computers communicate. Today’s World Wide Web is structured on *ownership* and *access*, meaning that you get files from whoever owns them — if they choose to grant you access. IPFS is based on the ideas of *possession* and *participation*, where many people have each others’ files and *participate* in making them available.
 
 That means IPFS only works well when people are actively participating. If you share a file on your computer, but then turn your computer off, other people won’t be able to access it from you. But if you or others make sure a copy of that file is stored on another computer running IPFS, it will be available more often. By default, your computer participates in sharing a file with others for a limited time after you’ve downloaded it with IPFS. You can *pin* a file to save and permanently share it (and you should read the [concept guide on pinning]({{<relref "guides/concepts/mfs.md">}}) to learn more about that!).
 
