@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-weight: 2
+weight: 3
 ---
 
 ## Install IPFS

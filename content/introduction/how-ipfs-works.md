@@ -1,6 +1,6 @@
 ---
 title: How IPFS Works
-weight: 4
+weight: 2
 ---
 
 ## What IPFS has done is make it so you don't have to worry about location

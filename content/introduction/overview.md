@@ -85,4 +85,4 @@ If you want to make sure one of your own files is permanently shared on the inte
 
 ## Next Steps
 
-Sounds interesting? We’ll cover [how to use it]({{<relref "introduction/usage.md">}}) next.
+Sound interesting? You can continue to our more in-depth explanation of [how the IPFS ecosystem works]({{<relref "introduction/how-ipfs-works.md">}}), or to dive right in and install IPFS, check out our [getting started guide]({{<relref "introduction/usage.md">}}).
