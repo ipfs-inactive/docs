@@ -59,7 +59,7 @@ Another important aspect of DAGs to note: if you change a small part of a DAG, t
 
 So, to recap, IPFS lets you to give CIDs to content, and link that content together by generating DAGs using IPLD. Now let’s move on to the last piece: how you find and move that content around!
 
-In order to find which peer has certain content (_discovery_), you use a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. **IPFS is essentially a database.** Just like key-value pairs, if you have a peer, it will let you find content, and if you have content, it will let you find you the peer where the content is stored.
+To find which peers are hosting the content you’re after (_discovery_), IPFS uses a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. A hash table is a database of keys to values. A _distributed_ hash table is one where the table is split across all the peers in a distributed network. To find content, you ask these peers.
 
 The <a hrefm src="https://libp2p.io/">libp2p project</a> is the part of the IPFS ecosystem that provides the DHT and handles peers connecting and talking to each other. It can be used as a tool for other distributed systems as well; just as there is “IPFS-flavored IPLD,” there’s also “IPFS-flavored libp2p.”
 
