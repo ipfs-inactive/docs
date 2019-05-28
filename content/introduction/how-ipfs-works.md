@@ -19,7 +19,7 @@ Let's first dive in to _content addressing_. This "middle" part of the IPFS stac
 
 <img alt="IPFS Stack - Data Structures" src="../assets/ipfs_stack-data.png" width="200px" />
 
-IPFS uses _content addressing_ to identity content by what's in it, rather than by where it's located. Looking for an item by content is actually something you do all the time. For example, when you look for a book in the library, you ask for it by the title; that's content addressing because you're asking for **what** it is. If you were using location addressing to find that book, you'd ask for it by **where** it is: "I want the book that's on the second floor, first stack, third shelf from the bottom, four books from the left." If someone moved that book, you'd be out of luck!
+IPFS uses _content addressing_ to identify content by what's in it, rather than by where it's located. Looking for an item by content is actually something you do all the time. For example, when you look for a book in the library, you ask for it by the title; that's content addressing because you're asking for **what** it is. If you were using location addressing to find that book, you'd ask for it by **where** it is: "I want the book that's on the second floor, first stack, third shelf from the bottom, four books from the left." If someone moved that book, you'd be out of luck!
 
 It's the same on the internet and on your computer. Right now, content is found by location, such as…
 
