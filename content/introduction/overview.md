@@ -10,7 +10,7 @@ Welcome! If you’re new to IPFS, you’ve come to the right place. Here is a qu
 What does that mean, exactly? Let’s say you’re doing some research on aardvarks. (Just roll with it; aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the wikipedia page on aardvarks at:
 
 ```
-https://en.wikipedia.org/wiki/aardvark
+https://en.wikipedia.org/wiki/Aardvark
 ```
 
 When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country (or even the planet), for the aardvark page.
@@ -18,7 +18,7 @@ When you put that URL in your browser’s address bar, your computer asks one of
 However, if you use IPFS, your computer asks to get that page like this:
 
 ```
-/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/aardvark.html
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
 ```
 
 IPFS knows how to find that sweet, sweet aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that, which is called content-addressing, below!). The IPFS-ified version of the aardvark info is represented by that string of numbers in the middle of the URL (`QmXo…`), and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world to share the page with you. It can get your aardvark info from anyone who has it, not just Wikipedia.
