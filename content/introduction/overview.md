@@ -53,7 +53,7 @@ That jumble of letters after `/ipfs/` is called a [*content identifier*]({{<relr
 
 Traditional URLs and file paths such as…
 
-- `https://en.wikipedia.org/wiki/aardvark`
+- `https://en.wikipedia.org/wiki/Aardvark`
 - `/Users/Alice/Documents/term_paper.doc`
 - `C:\Users\Joe\My Documents\project_sprint_presentation.ppt`
 
