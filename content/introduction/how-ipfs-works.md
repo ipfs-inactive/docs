@@ -48,7 +48,6 @@ IPFS uses a DAG that is optimized for representing directories and files, but yo
 
 IPFS first separates your content into _blocks_. If you had a huge file with a single CID, you’d have to transfer the whole CID every time someone requested it. But instead, you can break it into blocks, and transfer it block by block instead of one massive chunk at a time. Splitting it into blocks also means that different parts of the file can come from a different source! This is a much more efficient way to transmit data. (If you've used BitTorrent, you may have noticed that when you download a file, it can fetch it from multiple peers at once; this is the same idea.)
 
-
 Another great feature of the DAG and breaking content into blocks is that if you have two similar files, they can share parts of the DAG; ie, parts of different DAGs can reference the same data. For example, if you copyedit a document and change a few commas here and there, IPFS knows to only create new blocks for those small changes. Your old version and your new version can refer to the same blocks for everything else. This can make transferring versions of large datasets (such as genomics research or weather data) much more efficient because you only need to transfer the parts that are new or have changed instead of creating entirely new files each time.
 
 DAGs are a bit of a [“turtles all the way down”](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Turtles_all_the_way_down.html) scenario; that is, **everything** has a CID! You’ve got a file that has a CID. What if there are several files in a folder? That folder has a CID, and that CID contains the CIDs of the files underneath. In turn, those files are made up of blocks, and each of those blocks has a CID. You can see how a file system on your computer could just be a DAG. You can also, hopefully, how DAG trees start to form.
@@ -59,7 +58,7 @@ Another important aspect of DAGs to note: if you change a small part of a DAG, t
 
 <img alt="IPFS Stack - Routing and Exchange" src="../assets/ipfs_stack-exchange_routing.png" width="200px" />
 
-So, to recap, IPFS lets you to give CIDs to content, and link that content together by generating DAGs using IPLD. Now let’s move on to the last piece: how you find and move that content around!
+So, to recap, IPFS lets you to give CIDs to content, and link that content together in a DAG using IPLD. Now let’s move on to the last piece: how you find and move that content around!
 
 To find which peers are hosting the content you’re after (_discovery_), IPFS uses a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. A hash table is a database of keys to values. A _distributed_ hash table is one where the table is split across all the peers in a distributed network. To find content, you ask these peers.
 
