@@ -18,7 +18,7 @@ When you put that URL in your browser’s address bar, your computer asks one of
 However, if you use IPFS, your computer asks to get that page like this:
 
 ```
-/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/aardvark.html
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
 ```
 
 IPFS knows how to find that sweet, sweet aardvark information by its [contents](/guides/concepts/cid/), not its location (more on that, which is called content-addressing, below!). The IPFS-ified version of the aardvark info is represented by that string of numbers in the middle of the URL, and instead of asking one of Wikipedia's computers for the page, your computer uses IPFS to ask lots of computers around the world to share the page with you. It can get your aardvark info from anyone who has it, not just Wikipedia.
