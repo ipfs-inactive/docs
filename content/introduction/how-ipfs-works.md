@@ -41,7 +41,7 @@ In the case of a peer to peer network using the IPFS protocol, your computer use
 
 <img alt="IPFS Stack - Applications" src="../assets/ipfs_stack-apps.png" width="200px" />
 
-IPFS and many other distributed systems take advantage of a concept called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. DAG structures are what allow distributed nodes to connect to each other in computationally reasonable ways, and are how you can build trees of content-addressed nodes.
+IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. IPFS uses DAGs to represent things like files and folders.
 
 As mentioned above, IPFS has its own preferences and conventions about how data should be broken up into DAGs that optimize for its specific use cases. You can do this chunking and structuring in lots of different ways. For example, Git is a DAG that has many versions of your repo inside of it. Its DAG tree doesn’t behave in the same way the IPFS DAG does.
 
