@@ -46,7 +46,7 @@ That last point is actually where IPFS gets it’s name: **Inter-Planetary File 
 What about that link to the aardvark page above? It looked a little unusual:
 
 ```
-/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/aardvark.html
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
 ```
 
 That jumble of letters after `/ipfs/` is called a [*content identifier*]({{<relref "guides/concepts/cid.md">}}) and it’s how IPFS can get content from multiple places.
