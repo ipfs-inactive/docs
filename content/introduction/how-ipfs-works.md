@@ -3,17 +3,15 @@ title: How IPFS Works
 weight: 2
 ---
 
-## What IPFS has done is make it so you don’t have to worry about location
-
 IPFS is a peer-to-peer (p2p) network that links content-addressed data to other content-addressed data. Content is accessible through peers that might relay information or store it (or do both!), and those peers can be located anywhere in the world. IPFS knows how to find what you ask for by its content address, rather than where it is.
 
 <img alt="IPFS Stack" src="../assets/ipfs_stack.png" width="200px" />
 
 ## There are three important things to understand about IPFS
 
-Let’s first dive in to _content addressing_. This “middle” part of the IPFS stack is what connects the ecosystem together; everything is built on being able to find content via linked, unique identifiers.
+Let’s first dive in to _content addressing_ and how that content is _linked together_. This “middle” part of the IPFS stack is what connects the ecosystem together; everything is built on being able to find content via linked, unique identifiers.
 
-### 1 \\ Content addressing
+### 1 \\ Content addressing and linked data
 
 <img alt="IPFS Stack - Data Structures" src="../assets/ipfs_stack-data.png" width="200px" />
 
@@ -29,7 +27,7 @@ By contast, every piece of content that uses the IPFS protocol has a [*content i
 
 Content addressing through hashes has become a widely-used means of connecting data in distributed systems, from the commits that back your code to the blockchains that run cryptocurrencies. However, the underlying data structures in these systems are not necessarily interoperable.
 
-This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD links that content together**. Through IPLD, links can be traversed across protocols, allowing you explore data regardless of the underlying protocol. Since different distributed systems structure their data in different ways, IPLD provides libraries for combining pluggable modules (parsers for each possible type of IPLD node) to resolve a path, selector, or query across many linked nodes (of varying formats, even!). IPLD really refers to any content addressable data with links to other content addressable data: “Oh you use git-style, no worries, I can follow those links. Oh you use Ethereum, I got you, I can follow those links too!”
+This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD links that content together**. Since different distributed systems structure their data in different ways, IPLD provides libraries for combining pluggable modules (parsers for each possible type of IPLD node) to resolve a path, selector, or query across many linked nodes (allowing you explore data regardless of the underlying protocol). IPLD really refers to any content addressable data with links to other content addressable data: “Oh you use git-style, no worries, I can follow those links. Oh you use Ethereum, I got you, I can follow those links too!”
 
 The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IPFS address. IPFS has its own preferences and conventions about how data should be broken up into a DAG (more on DAGs below!); IPLD links content on the IPFS network together using those conventions.
 
