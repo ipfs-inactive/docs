@@ -7,7 +7,7 @@ weight: 2
 
 Content-addressing flips the bottom two layers of the [traditional cloud/web application stack](https://en.wikipedia.org/wiki/Internet_protocol_suite), building the entire network on linked data.
 
-IPFS is a peer-to-peer (p2p) network that links content-identified data to other content-identified data. Content is accessible through peers. Since peers are location-agnostic, your content is location agnostic.
+IPFS is a peer-to-peer (p2p) network that links content-addressed data to other content-addressed data. Content is accessible through peers that might relay information or store it (or do both!), and those peers can be located anywhere in the world. IPFS knows how to find what you ask for by its content address, rather than where it is.
 
 <img alt="IPFS Stack" src="../assets/ipfs_stack.png" width="200px" />
 
