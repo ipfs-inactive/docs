@@ -5,8 +5,6 @@ weight: 2
 
 ## What IPFS has done is make it so you don’t have to worry about location
 
-Content-addressing flips the bottom two layers of the [traditional cloud/web application stack](https://en.wikipedia.org/wiki/Internet_protocol_suite), building the entire network on linked data.
-
 IPFS is a peer-to-peer (p2p) network that links content-addressed data to other content-addressed data. Content is accessible through peers that might relay information or store it (or do both!), and those peers can be located anywhere in the world. IPFS knows how to find what you ask for by its content address, rather than where it is.
 
 <img alt="IPFS Stack" src="../assets/ipfs_stack.png" width="200px" />
@@ -50,7 +48,7 @@ IPFS first separates your content into _blocks_. If you had a huge file with a s
 
 Another great feature of the DAG and breaking content into blocks is that if you have two similar files, they can share parts of the DAG; ie, parts of different DAGs can reference the same data. For example, if you copyedit a document and change a few commas here and there, IPFS knows to only create new blocks for those small changes. Your old version and your new version can refer to the same blocks for everything else. This can make transferring versions of large datasets (such as genomics research or weather data) much more efficient because you only need to transfer the parts that are new or have changed instead of creating entirely new files each time.
 
-DAGs are a bit of a [“turtles all the way down”](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Turtles_all_the_way_down.html) scenario; that is, **everything** has a CID! You’ve got a file that has a CID. What if there are several files in a folder? That folder has a CID, and that CID contains the CIDs of the files underneath. In turn, those files are made up of blocks, and each of those blocks has a CID. You can see how a file system on your computer could just be a DAG. You can also, hopefully, how DAG trees start to form.
+DAGs are a bit of a [“turtles all the way down”](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Turtles_all_the_way_down.html) scenario; that is, **everything** has a CID! You’ve got a file that has a CID. What if there are several files in a folder? That folder has a CID, and that CID contains the CIDs of the files underneath. In turn, those files are made up of blocks, and each of those blocks has a CID. You can see how a file system on your computer could just be a DAG. You can also, hopefully, how DAG trees start to form. For a fun visual exploration of this, take a look at our [IPLD Explorer](https://explore.ipld.io/#/explore/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D)!
 
 Another important aspect of DAGs to note: if you change a small part of a DAG, the whole root will become different. Take a look at [this helpful illustration using bananas](https://media.consensys.net/ever-wonder-how-merkle-trees-work-c2f8b7100ed3) from our friends at Consensys.
 
@@ -84,4 +82,4 @@ For example, all of the exchange and routing parts of the stack will let you ope
 
 The IPFS ecosystem gives CIDs to content, and links that content together by generating IPLD-DAGs. You can discover content using a DHT that's provided by libp2p, and open a connection to any provider of that content and move it around using a multiplexed connection. All of this is held together by the “middle” of stack, which is linked, unique identifiers; that's the essential part that the IPFS is built on.
 
-Next, we’ll look at how really, instead of a network “stack”, IPFS is an interconnected network of equal peers, each with the same abilities (no client-server relationships), and what that means for system architectures. We’ll also touch on another useful project in the ecosystem — IPFS Cluster — that can help make sure your content is always available, even on a network like IPFS that supports peers dropping in and out at will.
+Next, we’ll look at how IPFS is an interconnected network of equal peers, each with the same abilities (no client-server relationships), and what that means for system architectures. We’ll also touch on another useful project in the ecosystem — IPFS Cluster — that can help make sure your content is always available, even on a network like IPFS that supports peers dropping in and out at will.
