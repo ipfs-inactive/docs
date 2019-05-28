@@ -44,7 +44,7 @@ The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IP
 
 IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. IPFS uses DAGs to represent things like files and folders.
 
-As mentioned above, IPFS has its own preferences and conventions about how data should be broken up into DAGs that optimize for its specific use cases. You can do this chunking and structuring in lots of different ways. For example, Git is a DAG that has many versions of your repo inside of it. Its DAG tree doesn’t behave in the same way the IPFS DAG does.
+IPFS uses a DAG that is optimized for representing directories and files, but you can structure a DAG in lots of different ways. For example, Git uses a DAG that has many versions of your repo inside of it. Its DAG tree doesn't behave in the same way the IPFS DAG does.
 
 IPFS first separates your content into _blocks_. If you had a huge file with a single CID, you’d have to transfer the whole CID every time someone requested it. But Instead, you can break it into blocks, and transfer it block by block instead of one massive chunk at a time. Each block might come from a different source, even! This is a much more efficient way to transmit data. (If you’ve used BitTorrent, you may have noticed that when you download a file, it fetches it from a bunch of random people; this is the same idea.)
 
