@@ -67,7 +67,7 @@ Once you know where your content is (ie, which peer or peers are storing the var
 
 You’ve discovered your content, and you’ve found the current location(s) of that content — now you need to connect to that content (_exchange_). libp2p again to the rescue! _[Maybe something here about bootstrapping, Bitswap, or Graphsync.]_
 
-What makes the IPFS protocol especially useful for peer to peer connections is _multiplexing_. Traditionally, you open a different connection to each protocol you talk to. Using IPFS, you open just one connection, and you multiplex everything on that. For everything your peers have to talk to each other about, you send a little bit of each thing, and the other end knows how to sort those chunks where they belong.
+What makes the IPFS protocol especially useful for peer to peer connections is _connection multiplexing_. Traditionally, every service in a system would open a different connection to remotely communicate with other services of the same kind. Using IPFS, you open just one connection, and you multiplex everything on that. For everything your peers have to talk to each other about, you send a little bit of each thing, and the other end knows how to sort those chunks where they belong.
 
 This is useful because establishing a connection in p2p systems is sometimes difficult depending on where they are. Once you have that connectivity, you can do whatever you need on it. And you only need one socket.
 
