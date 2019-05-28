@@ -27,7 +27,7 @@ By contast, every piece of content that uses the IPFS protocol has a [*content i
 
 Content addressing through hashes has become a widely-used means of connecting data in distributed systems, from the commits that back your code to the blockchains that run cryptocurrencies. However, the underlying data structures in these systems are not necessarily interoperable.
 
-This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD links that content together**. Since different distributed systems structure their data in different ways, IPLD provides libraries for combining pluggable modules (parsers for each possible type of IPLD node) to resolve a path, selector, or query across many linked nodes (allowing you explore data regardless of the underlying protocol). IPLD really refers to any content addressable data with links to other content addressable data: “Oh you use git-style, no worries, I can follow those links. Oh you use Ethereum, I got you, I can follow those links too!”
+This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD links that content together**. Since different distributed systems structure their data in different ways, IPLD provides libraries for combining pluggable modules (parsers for each possible type of IPLD node) to resolve a path, selector, or query across many linked nodes (allowing you explore data regardless of the underlying protocol). IPLD really refers to any content addressable data with links to other content addressable data: “Oh you use Git-style, no worries, I can follow those links. Oh you use Ethereum, I got you, I can follow those links too!”
 
 The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IPFS address. IPFS has its own preferences and conventions about how data should be broken up into a DAG (more on DAGs below!); IPLD links content on the IPFS network together using those conventions.
 
@@ -38,9 +38,7 @@ The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IP
 
 <img alt="IPFS Stack - Applications" src="../assets/ipfs_stack-apps.png" width="200px" />
 
-IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. IPFS uses DAGs to represent things like files and folders.
-
-IPFS uses a DAG that is optimized for representing directories and files, but you can structure a DAG in lots of different ways. For example, Git uses a DAG that has many versions of your repo inside of it. Its DAG tree doesn't behave in the same way the IPFS DAG does.
+IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. IPFS uses a DAG that is optimized for representing directories and files, but you can structure a DAG in lots of different ways. For example, Git uses a DAG that has many versions of your repo inside of it. Its DAG tree doesn't behave in the same way the IPFS DAG does.
 
 IPFS first separates your content into _blocks_. If you had a huge file with a single CID, you’d have to transfer the whole file in a single chunk every time someone requested it. But instead, you can break it into blocks, and transfer it block by block. Splitting it into blocks also means that different parts of the file can come from different sources. This is a much more efficient way to transmit data. (If you've used BitTorrent, you may have noticed that when you download a file, it can fetch it from multiple peers at once; this is the same idea.)
 
