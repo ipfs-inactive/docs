@@ -27,7 +27,7 @@ It's the same on the internet and on your computer. Right now, content is found 
 - `/Users/Alice/Documents/term_paper.doc`
 - `C:\Users\Joe\My Documents\project_sprint_presentation.ppt`
 
-By contast, every piece of content that uses the IPFS protocol has a [*content identifier*]({{<relref "guides/concepts/cid.md">}}) that is its *hash*. The hash is unique to the content that it came from, even though it’s short (well, short compared to all the bits and bytes that make up the original content). _If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction._
+By contast, every piece of content that uses the IPFS protocol has a [*content identifier*]({{<relref "guides/concepts/cid.md">}}), or CID, that is its *hash*. The hash is unique to the content that it came from, even though it may look short compared to the original content. _If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction._
 
 Content addressing through hashes has become a widely-used means of connecting data in distributed systems, from the blockchains that run your favorite cryptocurrencies, to the commits that back your code, to the web’s content at large. However, the underlying data structures in these systems are not necessarily interoperable.
 
