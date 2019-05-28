@@ -33,7 +33,8 @@ Content addressing through hashes has become a widely-used means of connecting d
 
 This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD links that content together**. IPLD is “software” that provides both rules for how to organize content-addressed data, and translations across different organization methods. Since different distributed systems structure their data in different ways, IPLD provides a platform for combining pluggable modules (parsers for each possible type of IPLD node) to resolve a path, selector, or query across many linked nodes (of varying formats, even!). IPLD really refers to any content addressable data with links to other content addressable data: “Oh you use git-style, no worries, I can follow those links. Oh you use Ethereum, I got you, I can follow those links too!”
 
-In the case of a peer to peer network using the IPFS protocol, your computer uses “IPFS-flavored IPLD” to get from raw content to an IPFS address. IPFS has its own preferences and conventions about how data should be broken up into a DAG (more on DAGs below!); IPLD links content on the IPFS network together using those conventions.
+The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IPFS address. IPFS has its own preferences and conventions about how data should be broken up into a DAG (more on DAGs below!); IPLD links content on the IPFS network together using those conventions.
+
 
 **Everything else in the IPFS ecosystem builds on top of this core concept; linked, addressable content is the fundamental connecting element that makes the rest work.**
 
