@@ -29,7 +29,7 @@ It's the same on the internet and on your computer. Right now, content is found 
 
 By contast, every piece of content that uses the IPFS protocol has a [*content identifier*]({{<relref "guides/concepts/cid.md">}}), or CID, that is its *hash*. The hash is unique to the content that it came from, even though it may look short compared to the original content. _If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction._
 
-Content addressing through hashes has become a widely-used means of connecting data in distributed systems, from the blockchains that run your favorite cryptocurrencies, to the commits that back your code, to the web’s content at large. However, the underlying data structures in these systems are not necessarily interoperable.
+Content addressing through hashes has become a widely-used means of connecting data in distributed systems, from the commits that back your code to the blockchains that run cryptocurrencies. However, the underlying data structures in these systems are not necessarily interoperable.
 
 This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD links that content together** using any number of arrangements. It's a bit like your file system at home. You might organize all your bills by year; another person might organize them by type. These are both valid ways of organizing content, but you have to know which one you're using, otherwise you can't find anything or add anything to your folders.
 
