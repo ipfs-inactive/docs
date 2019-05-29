@@ -51,7 +51,7 @@ Another great feature of a Merkle-DAG and breaking content into blocks is that i
 
 ### 3 \\ The DHT
 
-<img alt="IPFS Stack - Routing and Exchange" src="../assets/ipfs_stack-exchange_routing.png" width="200px" />
+<!-- <img alt="IPFS Stack - Routing and Exchange" src="../assets/ipfs_stack-exchange_routing.png" width="200px" /> -->
 
 So, to recap, IPFS lets you to give CIDs to content, and link that content together in a Merkle-DAG using IPLD. Now let’s move on to the last piece: how you find and move that content around!
 
