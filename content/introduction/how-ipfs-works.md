@@ -5,7 +5,7 @@ weight: 2
 
 IPFS is a peer-to-peer (p2p) network that links content-addressed data to other content-addressed data. Content is accessible through peers that might relay information or store it (or do both!), and those peers can be located anywhere in the world. IPFS knows how to find what you ask for by its content address, rather than where it is.
 
-<img alt="IPFS Stack" src="../assets/ipfs_stack.png" width="200px" />
+<!-- <img alt="IPFS Stack" src="../assets/ipfs_stack.png" width="200px" /> -->
 
 ## There are three important things to understand about IPFS
 
@@ -13,7 +13,7 @@ Let’s first dive in to _content addressing_ and how that content is _linked to
 
 ### 1 \\ Content addressing and linked data
 
-<img alt="IPFS Stack - Data Structures" src="../assets/ipfs_stack-data.png" width="200px" />
+<!-- <img alt="IPFS Stack - Data Structures" src="../assets/ipfs_stack-data.png" width="200px" /> -->
 
 IPFS uses _content addressing_ to identify content by what’s in it, rather than by where it’s located. Looking for an item by content is actually something you do all the time. For example, when you look for a book in the library, you ask for it by the title; that’s content addressing because you’re asking for **what** it is. If you were using location addressing to find that book, you’d ask for it by **where** it is: “I want the book that’s on the second floor, first stack, third shelf from the bottom, four books from the left.” If someone moved that book, you’d be out of luck!
 
@@ -36,17 +36,18 @@ The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IP
 
 ### 2 \\ DAGs
 
-<img alt="IPFS Stack - Applications" src="../assets/ipfs_stack-apps.png" width="200px" />
+<!-- <img alt="IPFS Stack - Applications" src="../assets/ipfs_stack-apps.png" width="200px" /> -->
 
-IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. IPFS uses a DAG that is optimized for representing directories and files, but you can structure a DAG in lots of different ways. For example, Git uses a DAG that has many versions of your repo inside of it. Its DAG tree doesn't behave in the same way the IPFS DAG does.
+IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. Specifically, they use _Merkle-DAGs_, which are DAGs where each node has an identifier that is a hash of the node’s contents. Sound familiar? Yup, this refers back to the _CID_ concept that we covered in the previous section. Another way to look the whole CID-linked-data thing: identifying a data object (like a Merkle-DAG node) by the value of its hash is _content addressing_. _(Check out [the concept guide on Merkle-DAGs]({{<relref "guides/concepts/merkle-DAG.md">}}) for a more in-depth treatment of this topic.)_
 
-IPFS first separates your content into _blocks_. If you had a huge file with a single CID, you’d have to transfer the whole file in a single chunk every time someone requested it. But instead, you can break it into blocks, and transfer it block by block. Splitting it into blocks also means that different parts of the file can come from different sources. This is a much more efficient way to transmit data. (If you've used BitTorrent, you may have noticed that when you download a file, it can fetch it from multiple peers at once; this is the same idea.)
+IPFS uses a Merkle-DAG that is optimized for representing directories and files, but you can structure a Merkle-DAG in lots of different ways. For example, Git uses a Merkle-DAG that has many versions of your repo inside of it.
 
-Another great feature of the DAG and breaking content into blocks is that if you have two similar files, they can share parts of the DAG; ie, parts of different DAGs can reference the same data. For example, if you copyedit a document and change a few commas here and there, IPFS knows to only create new blocks for those small changes. Your old version and your new version can refer to the same blocks for everything else. This can make transferring versions of large datasets (such as genomics research or weather data) much more efficient because you only need to transfer the parts that are new or have changed instead of creating entirely new files each time.
+To build a Markle-DAG representation of your content, IPFS first separates it into _blocks_. If you had a huge file with a single CID, you’d have to transfer the whole file in a single chunk every time someone requested it. But instead, you can break it into blocks, and transfer it block by block. Splitting it into blocks also means that different parts of the file can come from different sources. This is a much more efficient way to transmit data. (If you've used BitTorrent, you may have noticed that when you download a file, it can fetch it from multiple peers at once; this is the same idea.)
 
-DAGs are a bit of a [“turtles all the way down”](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Turtles_all_the_way_down.html) scenario; that is, **everything** has a CID! You’ve got a file that has a CID. What if there are several files in a folder? That folder has a CID, and that CID contains the CIDs of the files underneath. In turn, those files are made up of blocks, and each of those blocks has a CID. You can see how a file system on your computer could just be a DAG. You can also, hopefully, how DAG trees start to form. For a fun visual exploration of this, take a look at our [IPLD Explorer](https://explore.ipld.io/#/explore/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D)!
+Merkle-DAGs are a bit of a [“turtles all the way down”](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Turtles_all_the_way_down.html) scenario; that is, **everything** has a CID! You’ve got a file that has a CID. What if there are several files in a folder? That folder has a CID, and that CID contains the CIDs of the files underneath. In turn, those files are made up of blocks, and each of those blocks has a CID. You can see how a file system on your computer could just be a DAG. You can also, hopefully, how Merkle-DAG graphs start to form. For a fun visual exploration of this, take a look at our [IPLD Explorer](https://explore.ipld.io/#/explore/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D)!
 
-Another important aspect of DAGs to note: if you change a small part of a DAG, the whole root will become different. Take a look at [this helpful illustration using bananas](https://media.consensys.net/ever-wonder-how-merkle-trees-work-c2f8b7100ed3) from our friends at Consensys.
+Another great feature of a Merkle-DAG and breaking content into blocks is that if you have two similar files, they can share parts of the Merkle-DAG; ie, parts of different Merkle-DAGs can reference the same data. For example, if you copyedit a document and change a few commas here and there, IPFS knows to only create new blocks for those small changes. Your old version and your new version can refer to the same blocks for everything else. This can make transferring versions of large datasets (such as genomics research or weather data) much more efficient because you only need to transfer the parts that are new or have changed instead of creating entirely new files each time.
+
 
 ### 3 \\ The DHT
 
