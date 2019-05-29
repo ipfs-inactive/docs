@@ -53,7 +53,7 @@ Another great feature of a Merkle-DAG and breaking content into blocks is that i
 
 <img alt="IPFS Stack - Routing and Exchange" src="../assets/ipfs_stack-exchange_routing.png" width="200px" />
 
-So, to recap, IPFS lets you to give CIDs to content, and link that content together in a DAG using IPLD. Now let’s move on to the last piece: how you find and move that content around!
+So, to recap, IPFS lets you to give CIDs to content, and link that content together in a Merkle-DAG using IPLD. Now let’s move on to the last piece: how you find and move that content around!
 
 To find which peers are hosting the content you’re after (_discovery_), IPFS uses a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. A hash table is a database of keys to values. A _distributed_ hash table is one where the table is split across all the peers in a distributed network. To find content, you ask these peers.
 
@@ -61,7 +61,7 @@ The <a hrefm src="https://libp2p.io/">libp2p project</a> is the part of the IPFS
 
 Once you know where your content is (ie, which peer or peers are storing the various blocks that make up the content you’re after), you use the DHT **again** to find the current location of those peers (_routing_). So, in order to get to content, you use libp2p to query the DHT twice.
 
-You’ve discovered your content, and you’ve found the current location(s) of that content — now you need to connect to that content (_exchange_). libp2p again to the rescue! _[Maybe something here about bootstrapping, Bitswap, or Graphsync.]_
+**TODO: —> this description of exchange might not be right, and we perhaps need something about bootstrapping, Bitswap, or Graphsync.** You’ve discovered your content, and you’ve found the current location(s) of that content — now you need to connect to that content (_exchange_). libp2p again to the rescue! _[Maybe something here about bootstrapping, Bitswap, or Graphsync.]_
 
 What makes the IPFS protocol especially useful for peer to peer connections is _connection multiplexing_. Traditionally, every service in a system would open a different connection to remotely communicate with other services of the same kind. Using IPFS, you open just one connection, and you multiplex everything on that. For everything your peers have to talk to each other about, you send a little bit of each thing, and the other end knows how to sort those chunks where they belong.
 
@@ -72,7 +72,7 @@ This is useful because establishing connections is usually hard to set up and ex
 
 As you may have noticed from this discussion, the IPFS ecosystem is made up of many modular libraries that support specific parts of any distributed system. You can certainly use any part of the stack independently, or combine them in novel ways!
 
-For example, all of the exchange and routing parts of the stack will let you open a connection, and exchange that data with other peers. And _[insert another example here.]_
+**TODO: —> this first example isn't quite right yet, and we could use another.** For example, all of the exchange and routing parts of the stack will let you open a connection, and exchange that data with other peers. And _[insert another example here.]_
 
 
 ## Summary
