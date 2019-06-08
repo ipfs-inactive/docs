@@ -92,7 +92,7 @@ Congratulations! You now have a working IPFS installation on your computer.
 
 `ipfs-update` can be downloaded for your platform at: https://dist.ipfs.io/#ipfs-update
 
-If you have a working Go environment (>=1.8), you can also install it with:
+If you have a working Go environment (>=1.12), you can also install it with:
 ```
 $ go get -u github.com/ipfs/ipfs-update
 ```
@@ -184,13 +184,13 @@ If you have any problems, come get live help at
 
 ### Check Go Version
 
-IPFS works with Go 1.7.0 or later.
+IPFS works with Go 1.12.0 or later.
 To check what go version you have installed, type `go version`.
 Here's what I get:
 
 ```sh
 $ go version
-go version go1.7 linux/amd64
+go version go1.12.2 linux/amd64
 ```
 
 If you need to update, it is recommended to install from the
