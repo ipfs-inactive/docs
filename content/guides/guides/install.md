@@ -107,22 +107,9 @@ When installing new versions of `ipfs` or upgrading make sure you are using the 
 ```
 $ ipfs-update versions
 v0.3.2
-v0.3.4
-v0.3.5
-v0.3.6
-v0.3.7
-v0.3.8
-v0.3.9
-v0.3.10
-v0.3.11
-v0.4.0
-v0.4.1
-v0.4.2
-v0.4.3
-v0.4.4
-v0.4.5
-v0.4.6
-v0.4.7-rc1
+[...]
+v0.4.20
+v0.4.21
 ```
 
 
@@ -130,7 +117,7 @@ v0.4.7-rc1
 
 ```
 $ ipfs-update install latest
-fetching go-ipfs version v0.4.7-rc1
+fetching go-ipfs version v0.4.21
 binary downloaded, verifying...
 success!
 stashing old binary
@@ -141,16 +128,11 @@ Installation complete!
 
 Note that the latest available version may not be stable (i.e. release candidates
 in the form `vX.X.X-rcX`). So it is recommended to specify the version you want
-to install, for example: `ipfs-update install v0.4.6`.
+to install, for example: `ipfs-update install v0.4.21`.
 
 ---
 
 ## Building from Source
-
-<div class="message mb">
-  <strong>Warning:</strong> In the past you could install IPFS using <code>go get</code>. This
-  does not work anymore!
-</div>
 
 If you want, you can also build IPFS from source.
 If you are on Mac OS X or Linux take a look at [the readme](https://github.com/ipfs/go-ipfs#build-from-source) for install instructions.
