@@ -5,7 +5,7 @@ weight: 2
 
 ## Install IPFS
 
-If you haven't done so already, your first step is to **install IPFS**! Most people prefer to install a prebuilt package, which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](../install/#installing-from-a-prebuilt-package).
+If you haven't done so already, your first step is to **install IPFS**! Most people prefer to install a prebuilt package, which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](https://docs.ipfs.io/guides/guides/install/#installing-from-a-prebuilt-package).
 
 <a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
   Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
