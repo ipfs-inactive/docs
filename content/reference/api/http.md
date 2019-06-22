@@ -9,7 +9,7 @@ menu:
 <!-- TODO: Describe how to change ports and configure the API server -->
 <!-- TODO: Structure this around command groups (dag, object, files, etc.) -->
 
-<sup>Generated on 2019-04-26, from go-ipfs v0.4.20.</sup>
+<sup>Generated on 2019-06-21, from go-ipfs v0.4.21.</sup>
 
 When an IPFS node is running as a daemon, it exposes an HTTP API that allows
 you to control the node and run the same commands you can from the command
@@ -126,12 +126,12 @@ Argument "path" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Name": "<string>"
-    "Hash": "<string>"
-    "Bytes": "<int64>"
-    "Size": "<string>"
+  "Bytes": "<int64>",
+  "Hash": "<string>",
+  "Name": "<string>",
+  "Size": "<string>"
 }
 
 ```
@@ -156,13 +156,13 @@ Show the current ledger for a peer.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peer": "<string>"
-    "Value": "<float64>"
-    "Sent": "<uint64>"
-    "Recv": "<uint64>"
-    "Exchanged": "<uint64>"
+  "Exchanged": "<uint64>",
+  "Peer": "<string>",
+  "Recv": "<uint64>",
+  "Sent": "<uint64>",
+  "Value": "<float64>"
 }
 
 ```
@@ -187,7 +187,7 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -205,35 +205,38 @@ Show some diagnostic information on the bitswap agent.
 #### Arguments
 
   - `verbose` [bool]: Print extra information. Required: no.
+  - `human` [bool]: Print sizes in human readable format (e.g., 1K 234M 2G). Required: no.
 
 
 #### Response
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ProvideBufLen": "<int>"
-    "Wantlist": [
-        { "/": "<cid-string>" }
-    ]
-    "Peers": [
-        "<string>"
-    ]
-    "BlocksReceived": "<uint64>"
-    "DataReceived": "<uint64>"
-    "BlocksSent": "<uint64>"
-    "DataSent": "<uint64>"
-    "DupBlksReceived": "<uint64>"
-    "DupDataReceived": "<uint64>"
-    "MessagesReceived": "<uint64>"
+  "BlocksReceived": "<uint64>",
+  "BlocksSent": "<uint64>",
+  "DataReceived": "<uint64>",
+  "DataSent": "<uint64>",
+  "DupBlksReceived": "<uint64>",
+  "DupDataReceived": "<uint64>",
+  "MessagesReceived": "<uint64>",
+  "Peers": [
+    "<string>"
+  ],
+  "ProvideBufLen": "<int>",
+  "Wantlist": [
+    {
+      "/": "<cid-string>"
+    }
+  ]
 }
 
 ```
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bitswap/stat?verbose=<value>"`
+`curl "http://localhost:5001/api/v0/bitswap/stat?verbose=<value>&human=<value>"`
 
 ***
 
@@ -251,11 +254,13 @@ Show blocks currently on the wantlist.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Keys": [
-        { "/": "<cid-string>" }
-    ]
+  "Keys": [
+    {
+      "/": "<cid-string>"
+    }
+  ]
 }
 
 ```
@@ -280,7 +285,7 @@ Get a raw IPFS block.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -313,10 +318,10 @@ Argument "data" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Key": "<string>"
-    "Size": "<int>"
+  "Key": "<string>",
+  "Size": "<int>"
 }
 
 ```
@@ -343,10 +348,10 @@ Remove IPFS block(s).
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Error": "<string>"
+  "Error": "<string>",
+  "Hash": "<string>"
 }
 
 ```
@@ -371,10 +376,10 @@ Print information of a raw IPFS block.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Key": "<string>"
-    "Size": "<int>"
+  "Key": "<string>",
+  "Size": "<int>"
 }
 
 ```
@@ -399,11 +404,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
-        "<string>"
-    ]
+  "Peers": [
+    "<string>"
+  ]
 }
 
 ```
@@ -429,11 +434,11 @@ Add peers to the bootstrap list.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
-        "<string>"
-    ]
+  "Peers": [
+    "<string>"
+  ]
 }
 
 ```
@@ -458,11 +463,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
-        "<string>"
-    ]
+  "Peers": [
+    "<string>"
+  ]
 }
 
 ```
@@ -487,11 +492,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
-        "<string>"
-    ]
+  "Peers": [
+    "<string>"
+  ]
 }
 
 ```
@@ -517,11 +522,11 @@ Remove peers from the bootstrap list.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
-        "<string>"
-    ]
+  "Peers": [
+    "<string>"
+  ]
 }
 
 ```
@@ -546,11 +551,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
-        "<string>"
-    ]
+  "Peers": [
+    "<string>"
+  ]
 }
 
 ```
@@ -577,7 +582,7 @@ Show IPFS object data.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -601,11 +606,11 @@ Convert CIDs to Base32 CID version 1.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "CidStr": "<string>"
-    "Formatted": "<string>"
-    "ErrorMsg": "<string>"
+  "CidStr": "<string>",
+  "ErrorMsg": "<string>",
+  "Formatted": "<string>"
 }
 
 ```
@@ -631,12 +636,12 @@ List available multibase encodings.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 [
-    {
-        "Code": "<int>"
-        "Name": "<string>"
-    }
+  {
+    "Code": "<int>",
+    "Name": "<string>"
+  }
 ]
 
 ```
@@ -661,12 +666,12 @@ List available CID codecs.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 [
-    {
-        "Code": "<int>"
-        "Name": "<string>"
-    }
+  {
+    "Code": "<int>",
+    "Name": "<string>"
+  }
 ]
 
 ```
@@ -694,11 +699,11 @@ Format and convert a CID in various useful ways.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "CidStr": "<string>"
-    "Formatted": "<string>"
-    "ErrorMsg": "<string>"
+  "CidStr": "<string>",
+  "ErrorMsg": "<string>",
+  "Formatted": "<string>"
 }
 
 ```
@@ -723,12 +728,12 @@ List available multihashes.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 [
-    {
-        "Code": "<int>"
-        "Name": "<string>"
-    }
+  {
+    "Code": "<int>",
+    "Name": "<string>"
+  }
 ]
 
 ```
@@ -753,42 +758,31 @@ List all available commands.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Name": "<string>"
-    "Subcommands": [
+  "Name": "<string>",
+  "Options": [
+    {
+      "Names": [
+        "<string>"
+      ]
+    }
+  ],
+  "Subcommands": [
+    {
+      "Name": "<string>",
+      "Options": [
         {
-            "Name": "<string>"
-            "Subcommands": [
-                {
-                    "Name": "<string>"
-                    "Subcommands": [
-                        ...
-                    ]
-                    "Options": [
-                        ...
-                    ]
-                    "showOpts": "<bool>"
-                }
-            ]
-            "Options": [
-                {
-                    "Names": [
-                        ...
-                    ]
-                }
-            ]
-            "showOpts": "<bool>"
+          "Names": [
+            "<string>"
+          ]
         }
-    ]
-    "Options": [
-        {
-            "Names": [
-                "<string>"
-            ]
-        }
-    ]
-    "showOpts": "<bool>"
+      ],
+      "Subcommands": [
+        "..."
+      ]
+    }
+  ]
 }
 
 ```
@@ -816,10 +810,10 @@ Get and set ipfs config values.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Key": "<string>"
-    "Value": "<object>"
+  "Key": "<string>",
+  "Value": "<object>"
 }
 
 ```
@@ -844,7 +838,7 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -869,14 +863,14 @@ Apply profile to config.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "OldCfg": {
-        "<string>": "<object>"
-    }
-    "NewCfg": {
-        "<string>": "<object>"
-    }
+  "NewCfg": {
+    "<string>": "<object>"
+  },
+  "OldCfg": {
+    "<string>": "<object>"
+  }
 }
 
 ```
@@ -906,7 +900,7 @@ Argument "file" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -930,9 +924,9 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "<string>": "<object>"
+  "<string>": "<object>"
 }
 
 ```
@@ -957,7 +951,7 @@ Get a dag node from ipfs.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -990,9 +984,11 @@ Argument "object data" is of file type. This endpoint expects a file in the body
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Cid": { "/": "<cid-string>" }
+  "Cid": {
+    "/": "<cid-string>"
+  }
 }
 
 ```
@@ -1017,10 +1013,12 @@ Resolve ipld block
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Cid": { "/": "<cid-string>" }
-    "RemPath": "<string>"
+  "Cid": {
+    "/": "<cid-string>"
+  },
+  "RemPath": "<string>"
 }
 
 ```
@@ -1046,19 +1044,14 @@ Find the multiaddresses associated with a Peer ID.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "Type": "<int>"
-    "Responses": [
-        {
-            "ID": "<string>"
-            "Addrs": [
-                "<multiaddr-string>"
-            ]
-        }
-    ]
-    "Extra": "<string>"
+  "Extra": "<string>",
+  "ID": "<peer-id>",
+  "Responses": [
+    "<object>"
+  ],
+  "Type": "<int>"
 }
 
 ```
@@ -1085,19 +1078,14 @@ Find peers that can provide a specific value, given a key.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "Type": "<int>"
-    "Responses": [
-        {
-            "ID": "<string>"
-            "Addrs": [
-                "<multiaddr-string>"
-            ]
-        }
-    ]
-    "Extra": "<string>"
+  "Extra": "<string>",
+  "ID": "<peer-id>",
+  "Responses": [
+    "<object>"
+  ],
+  "Type": "<int>"
 }
 
 ```
@@ -1123,19 +1111,14 @@ Given a key, query the routing system for its best value.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "Type": "<int>"
-    "Responses": [
-        {
-            "ID": "<string>"
-            "Addrs": [
-                "<multiaddr-string>"
-            ]
-        }
-    ]
-    "Extra": "<string>"
+  "Extra": "<string>",
+  "ID": "<peer-id>",
+  "Responses": [
+    "<object>"
+  ],
+  "Type": "<int>"
 }
 
 ```
@@ -1162,19 +1145,14 @@ Announce to the network that you are providing given values.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "Type": "<int>"
-    "Responses": [
-        {
-            "ID": "<string>"
-            "Addrs": [
-                "<multiaddr-string>"
-            ]
-        }
-    ]
-    "Extra": "<string>"
+  "Extra": "<string>",
+  "ID": "<peer-id>",
+  "Responses": [
+    "<object>"
+  ],
+  "Type": "<int>"
 }
 
 ```
@@ -1201,19 +1179,14 @@ Write a key/value pair to the routing system.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "Type": "<int>"
-    "Responses": [
-        {
-            "ID": "<string>"
-            "Addrs": [
-                "<multiaddr-string>"
-            ]
-        }
-    ]
-    "Extra": "<string>"
+  "Extra": "<string>",
+  "ID": "<peer-id>",
+  "Responses": [
+    "<object>"
+  ],
+  "Type": "<int>"
 }
 
 ```
@@ -1239,19 +1212,14 @@ Find the closest Peer IDs to a given Peer ID by querying the DHT.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "Type": "<int>"
-    "Responses": [
-        {
-            "ID": "<string>"
-            "Addrs": [
-                "<multiaddr-string>"
-            ]
-        }
-    ]
-    "Extra": "<string>"
+  "Extra": "<string>",
+  "ID": "<peer-id>",
+  "Responses": [
+    "<object>"
+  ],
+  "Type": "<int>"
 }
 
 ```
@@ -1276,21 +1244,21 @@ List commands run on this IPFS node.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 [
-    {
-        "StartTime": "<string>"
-        "EndTime": "<string>"
-        "Active": "<bool>"
-        "Command": "<string>"
-        "Options": {
-            "<string>": "<object>"
-        }
-        "Args": [
-            "<string>"
-        ]
-        "ID": "<int>"
-    }
+  {
+    "Active": "<bool>",
+    "Args": [
+      "<string>"
+    ],
+    "Command": "<string>",
+    "EndTime": "<timestamp>",
+    "ID": "<int>",
+    "Options": {
+      "<string>": "<object>"
+    },
+    "StartTime": "<timestamp>"
+  }
 ]
 
 ```
@@ -1315,7 +1283,7 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1339,7 +1307,7 @@ Set how long to keep inactive requests in the log.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1363,7 +1331,7 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1388,9 +1356,9 @@ Resolve DNS links.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Path": "<string>"
+  "Path": "<string>"
 }
 
 ```
@@ -1415,26 +1383,26 @@ List directory contents for Unix filesystem objects.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Arguments": {
-        "<string>": "<string>"
-    }
-    "Objects": {
-        "<string>": {
-            "Hash": "<string>"
-            "Size": "<uint64>"
-            "Type": "<string>"
-            "Links": [
-                {
-                    "Name": "<string>"
-                    "Hash": "<string>"
-                    "Size": "<uint64>"
-                    "Type": "<string>"
-                }
-            ]
+  "Arguments": {
+    "<string>": "<string>"
+  },
+  "Objects": {
+    "<string>": {
+      "Hash": "<string>",
+      "Links": [
+        {
+          "Hash": "<string>",
+          "Name": "<string>",
+          "Size": "<uint64>",
+          "Type": "<string>"
         }
+      ],
+      "Size": "<uint64>",
+      "Type": "<string>"
     }
+  }
 }
 
 ```
@@ -1461,7 +1429,7 @@ Change the cid version or hash function of the root node of a given path.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1486,7 +1454,7 @@ Copy files into mfs.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1510,9 +1478,9 @@ Flush a given path's data to disk.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Cid": "<string>"
+  "Cid": "<string>"
 }
 
 ```
@@ -1539,16 +1507,16 @@ List directories in the local mutable namespace.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Entries": [
-        {
-            "Name": "<string>"
-            "Type": "<int>"
-            "Size": "<int64>"
-            "Hash": "<string>"
-        }
-    ]
+  "Entries": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<int64>",
+      "Type": "<int>"
+    }
+  ]
 }
 
 ```
@@ -1576,7 +1544,7 @@ Make directories.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1601,7 +1569,7 @@ Move files.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1627,7 +1595,7 @@ Read a file in a given mfs.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1653,7 +1621,7 @@ Remove a file.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1689,16 +1657,16 @@ Type: <type>". Required: no.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Size": "<uint64>"
-    "CumulativeSize": "<uint64>"
-    "Blocks": "<int>"
-    "Type": "<string>"
-    "WithLocality": "<bool>"
-    "Local": "<bool>"
-    "SizeLocal": "<uint64>"
+  "Blocks": "<int>",
+  "CumulativeSize": "<uint64>",
+  "Hash": "<string>",
+  "Local": "<bool>",
+  "Size": "<uint64>",
+  "SizeLocal": "<uint64>",
+  "Type": "<string>",
+  "WithLocality": "<bool>"
 }
 
 ```
@@ -1741,7 +1709,7 @@ Argument "data" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1765,10 +1733,10 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Ref": "<string>"
-    "Err": "<string>"
+  "Err": "<string>",
+  "Ref": "<string>"
 }
 
 ```
@@ -1794,14 +1762,16 @@ List objects in filestore.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Status": "<int32>"
-    "ErrorMsg": "<string>"
-    "Key": { "/": "<cid-string>" }
-    "FilePath": "<string>"
-    "Offset": "<uint64>"
-    "Size": "<uint64>"
+  "ErrorMsg": "<string>",
+  "FilePath": "<string>",
+  "Key": {
+    "/": "<cid-string>"
+  },
+  "Offset": "<uint64>",
+  "Size": "<uint64>",
+  "Status": "<int32>"
 }
 
 ```
@@ -1827,14 +1797,16 @@ Verify objects in filestore.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Status": "<int32>"
-    "ErrorMsg": "<string>"
-    "Key": { "/": "<cid-string>" }
-    "FilePath": "<string>"
-    "Offset": "<uint64>"
-    "Size": "<uint64>"
+  "ErrorMsg": "<string>",
+  "FilePath": "<string>",
+  "Key": {
+    "/": "<cid-string>"
+  },
+  "Offset": "<uint64>",
+  "Size": "<uint64>",
+  "Status": "<int32>"
 }
 
 ```
@@ -1863,7 +1835,7 @@ Download IPFS objects.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -1888,15 +1860,15 @@ Show ipfs node id info.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ID": "<string>"
-    "PublicKey": "<string>"
-    "Addresses": [
-        "<string>"
-    ]
-    "AgentVersion": "<string>"
-    "ProtocolVersion": "<string>"
+  "Addresses": [
+    "<string>"
+  ],
+  "AgentVersion": "<string>",
+  "ID": "<string>",
+  "ProtocolVersion": "<string>",
+  "PublicKey": "<string>"
 }
 
 ```
@@ -1923,10 +1895,10 @@ Create a new keypair
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Name": "<string>"
-    "Id": "<string>"
+  "Id": "<string>",
+  "Name": "<string>"
 }
 
 ```
@@ -1951,14 +1923,14 @@ List all local keypairs
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Keys": [
-        {
-            "Name": "<string>"
-            "Id": "<string>"
-        }
-    ]
+  "Keys": [
+    {
+      "Id": "<string>",
+      "Name": "<string>"
+    }
+  ]
 }
 
 ```
@@ -1985,12 +1957,12 @@ Rename a keypair
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Was": "<string>"
-    "Now": "<string>"
-    "Id": "<string>"
-    "Overwrite": "<bool>"
+  "Id": "<string>",
+  "Now": "<string>",
+  "Overwrite": "<bool>",
+  "Was": "<string>"
 }
 
 ```
@@ -2016,14 +1988,14 @@ Remove a keypair
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Keys": [
-        {
-            "Name": "<string>"
-            "Id": "<string>"
-        }
-    ]
+  "Keys": [
+    {
+      "Id": "<string>",
+      "Name": "<string>"
+    }
+  ]
 }
 
 ```
@@ -2051,9 +2023,9 @@ Change the logging level.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Message": "<string>"
+  "Message": "<string>"
 }
 
 ```
@@ -2078,11 +2050,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -2107,7 +2079,7 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -2135,22 +2107,22 @@ List directory contents for Unix filesystem objects.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Objects": [
+  "Objects": [
+    {
+      "Hash": "<string>",
+      "Links": [
         {
-            "Hash": "<string>"
-            "Links": [
-                {
-                    "Name": "<string>"
-                    "Hash": "<string>"
-                    "Size": "<uint64>"
-                    "Type": "<int32>"
-                    "Target": "<string>"
-                }
-            ]
+          "Hash": "<string>",
+          "Name": "<string>",
+          "Size": "<uint64>",
+          "Target": "<string>",
+          "Type": "<int32>"
         }
-    ]
+      ]
+    }
+  ]
 }
 
 ```
@@ -2176,11 +2148,11 @@ Mounts IPFS to the filesystem (read-only).
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "IPFS": "<string>"
-    "IPNS": "<string>"
-    "FuseAllowOther": "<bool>"
+  "FuseAllowOther": "<bool>",
+  "IPFS": "<string>",
+  "IPNS": "<string>"
 }
 
 ```
@@ -2213,10 +2185,10 @@ Publish IPNS names.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Name": "<string>"
-    "Value": "<string>"
+  "Name": "<string>",
+  "Value": "<string>"
 }
 
 ```
@@ -2241,9 +2213,9 @@ Cancel a name subscription
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Canceled": "<bool>"
+  "Canceled": "<bool>"
 }
 
 ```
@@ -2268,9 +2240,9 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Enabled": "<bool>"
+  "Enabled": "<bool>"
 }
 
 ```
@@ -2295,11 +2267,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -2329,9 +2301,9 @@ Resolve IPNS names.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Path": "<string>"
+  "Path": "<string>"
 }
 
 ```
@@ -2356,7 +2328,7 @@ Output the raw bytes of an IPFS object.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -2382,16 +2354,20 @@ Display the diff between two ipfs objects.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Changes": [
-        {
-            "Type": "<int>"
-            "Path": "<string>"
-            "Before": { "/": "<cid-string>" }
-            "After": { "/": "<cid-string>" }
-        }
-    ]
+  "Changes": [
+    {
+      "After": {
+        "/": "<cid-string>"
+      },
+      "Before": {
+        "/": "<cid-string>"
+      },
+      "Path": "<string>",
+      "Type": "<int>"
+    }
+  ]
 }
 
 ```
@@ -2417,16 +2393,16 @@ Get and serialize the DAG node named by <key>.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
-    "Data": "<string>"
+  "Data": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2452,16 +2428,16 @@ Output the links pointed to by the specified object.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2486,16 +2462,16 @@ Create a new object from an ipfs template.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2523,16 +2499,16 @@ Add a link to a given object.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2563,16 +2539,16 @@ Argument "data" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2598,16 +2574,16 @@ Remove a link from a given object.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2638,16 +2614,16 @@ Argument "data" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2681,16 +2657,16 @@ Argument "data" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "Links": [
-        {
-            "Name": "<string>"
-            "Hash": "<string>"
-            "Size": "<uint64>"
-        }
-    ]
+  "Hash": "<string>",
+  "Links": [
+    {
+      "Hash": "<string>",
+      "Name": "<string>",
+      "Size": "<uint64>"
+    }
+  ]
 }
 
 ```
@@ -2709,27 +2685,28 @@ Get stats for the DAG node named by <key>.
 #### Arguments
 
   - `arg` [string]: Key of the object to retrieve, in base58-encoded multihash format. Required: **yes**.
+  - `human` [bool]: Print sizes in human readable format (e.g., 1K 234M 2G). Required: no.
 
 
 #### Response
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Hash": "<string>"
-    "NumLinks": "<int>"
-    "BlockSize": "<int>"
-    "LinksSize": "<int>"
-    "DataSize": "<int>"
-    "CumulativeSize": "<int>"
+  "BlockSize": "<int>",
+  "CumulativeSize": "<int>",
+  "DataSize": "<int>",
+  "Hash": "<string>",
+  "LinksSize": "<int>",
+  "NumLinks": "<int>"
 }
 
 ```
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/stat?arg=<key>"`
+`curl "http://localhost:5001/api/v0/object/stat?arg=<key>&human=<value>"`
 
 ***
 
@@ -2750,7 +2727,7 @@ Stop listening for new connections to forward.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 "<int>"
 
 ```
@@ -2778,7 +2755,7 @@ Forward connections to libp2p service
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -2805,7 +2782,7 @@ Create libp2p service
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -2829,15 +2806,15 @@ List active p2p listeners.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Listeners": [
-        {
-            "Protocol": "<string>"
-            "ListenAddress": "<string>"
-            "TargetAddress": "<string>"
-        }
-    ]
+  "Listeners": [
+    {
+      "ListenAddress": "<string>",
+      "Protocol": "<string>",
+      "TargetAddress": "<string>"
+    }
+  ]
 }
 
 ```
@@ -2863,7 +2840,7 @@ Close active p2p stream.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -2887,16 +2864,16 @@ List active p2p streams.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Streams": [
-        {
-            "HandlerID": "<string>"
-            "Protocol": "<string>"
-            "OriginAddress": "<string>"
-            "TargetAddress": "<string>"
-        }
-    ]
+  "Streams": [
+    {
+      "HandlerID": "<string>",
+      "OriginAddress": "<string>",
+      "Protocol": "<string>",
+      "TargetAddress": "<string>"
+    }
+  ]
 }
 
 ```
@@ -2923,12 +2900,12 @@ Pin objects to local storage.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Pins": [
-        "<string>"
-    ]
-    "Progress": "<int>"
+  "Pins": [
+    "<string>"
+  ],
+  "Progress": "<int>"
 }
 
 ```
@@ -2955,13 +2932,13 @@ List objects pinned to local storage.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Keys": {
-        "<string>": {
-            "Type": "<string>"
-        }
+  "Keys": {
+    "<string>": {
+      "Type": "<string>"
     }
+  }
 }
 
 ```
@@ -2987,11 +2964,11 @@ Remove pinned objects from local storage.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Pins": [
-        "<string>"
-    ]
+  "Pins": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3018,11 +2995,11 @@ Update a recursive pin
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Pins": [
-        "<string>"
-    ]
+  "Pins": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3048,18 +3025,18 @@ Verify that recursive pins are complete.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Cid": "<string>"
-    "PinStatus": {
-        "Ok": "<bool>"
-        "BadNodes": [
-            {
-                "Cid": "<string>"
-                "Err": "<string>"
-            }
-        ]
-    }
+  "Cid": "<string>",
+  "PinStatus": {
+    "BadNodes": [
+      {
+        "Cid": "<string>",
+        "Err": "<string>"
+      }
+    ],
+    "Ok": "<bool>"
+  }
 }
 
 ```
@@ -3085,11 +3062,11 @@ Send echo request packets to IPFS hosts.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Success": "<bool>"
-    "Time": "<int64>"
-    "Text": "<string>"
+  "Success": "<bool>",
+  "Text": "<string>",
+  "Time": "<duration-ns>"
 }
 
 ```
@@ -3114,11 +3091,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3143,11 +3120,11 @@ List peers we are currently pubsubbing with.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3173,7 +3150,7 @@ Publish a message to a given pubsub topic.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -3198,20 +3175,14 @@ Subscribe to messages on a given topic.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "From": [
-        "<uint8>"
-    ]
-    "Data": [
-        "<uint8>"
-    ]
-    "Seqno": [
-        "<uint8>"
-    ]
-    "TopicIDs": [
-        "<string>"
-    ]
+  "data": "<base64-string>",
+  "from": "<base64-string>",
+  "seqno": "<base64-string>",
+  "topicIDs": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3241,10 +3212,10 @@ List links (references) from an object.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Ref": "<string>"
-    "Err": "<string>"
+  "Err": "<string>",
+  "Ref": "<string>"
 }
 
 ```
@@ -3269,10 +3240,10 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Ref": "<string>"
-    "Err": "<string>"
+  "Err": "<string>",
+  "Ref": "<string>"
 }
 
 ```
@@ -3297,9 +3268,9 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Message": "<string>"
+  "Message": "<string>"
 }
 
 ```
@@ -3325,10 +3296,12 @@ Perform a garbage collection sweep on the repo.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Key": { "/": "<cid-string>" }
-    "Error": "<string>"
+  "Error": "<string>",
+  "Key": {
+    "/": "<cid-string>"
+  }
 }
 
 ```
@@ -3354,15 +3327,15 @@ Get stats for the currently used repo.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "SizeStat": {
-        "RepoSize": "<uint64>"
-        "StorageMax": "<uint64>"
-    }
-    "NumObjects": "<uint64>"
-    "RepoPath": "<string>"
-    "Version": "<string>"
+  "NumObjects": "<uint64>",
+  "RepoPath": "<string>",
+  "SizeStat": {
+    "RepoSize": "<uint64>",
+    "StorageMax": "<uint64>"
+  },
+  "Version": "<string>"
 }
 
 ```
@@ -3387,10 +3360,10 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Msg": "<string>"
-    "Progress": "<int>"
+  "Msg": "<string>",
+  "Progress": "<int>"
 }
 
 ```
@@ -3415,9 +3388,9 @@ Show the repo version.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Version": "<string>"
+  "Version": "<string>"
 }
 
 ```
@@ -3445,9 +3418,9 @@ Resolve the value of names to IPFS.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Path": "<string>"
+  "Path": "<string>"
 }
 
 ```
@@ -3472,7 +3445,7 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -3490,35 +3463,38 @@ Show some diagnostic information on the bitswap agent.
 #### Arguments
 
   - `verbose` [bool]: Print extra information. Required: no.
+  - `human` [bool]: Print sizes in human readable format (e.g., 1K 234M 2G). Required: no.
 
 
 #### Response
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "ProvideBufLen": "<int>"
-    "Wantlist": [
-        { "/": "<cid-string>" }
-    ]
-    "Peers": [
-        "<string>"
-    ]
-    "BlocksReceived": "<uint64>"
-    "DataReceived": "<uint64>"
-    "BlocksSent": "<uint64>"
-    "DataSent": "<uint64>"
-    "DupBlksReceived": "<uint64>"
-    "DupDataReceived": "<uint64>"
-    "MessagesReceived": "<uint64>"
+  "BlocksReceived": "<uint64>",
+  "BlocksSent": "<uint64>",
+  "DataReceived": "<uint64>",
+  "DataSent": "<uint64>",
+  "DupBlksReceived": "<uint64>",
+  "DupDataReceived": "<uint64>",
+  "MessagesReceived": "<uint64>",
+  "Peers": [
+    "<string>"
+  ],
+  "ProvideBufLen": "<int>",
+  "Wantlist": [
+    {
+      "/": "<cid-string>"
+    }
+  ]
 }
 
 ```
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/stats/bitswap?verbose=<value>"`
+`curl "http://localhost:5001/api/v0/stats/bitswap?verbose=<value>&human=<value>"`
 
 ***
 
@@ -3542,12 +3518,12 @@ Print ipfs bandwidth information.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "TotalIn": "<int64>"
-    "TotalOut": "<int64>"
-    "RateIn": "<float64>"
-    "RateOut": "<float64>"
+  "RateIn": "<float64>",
+  "RateOut": "<float64>",
+  "TotalIn": "<int64>",
+  "TotalOut": "<int64>"
 }
 
 ```
@@ -3573,15 +3549,15 @@ Get stats for the currently used repo.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "SizeStat": {
-        "RepoSize": "<uint64>"
-        "StorageMax": "<uint64>"
-    }
-    "NumObjects": "<uint64>"
-    "RepoPath": "<string>"
-    "Version": "<string>"
+  "NumObjects": "<uint64>",
+  "RepoPath": "<string>",
+  "SizeStat": {
+    "RepoSize": "<uint64>",
+    "StorageMax": "<uint64>"
+  },
+  "Version": "<string>"
 }
 
 ```
@@ -3606,13 +3582,13 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Addrs": {
-        "<string>": [
-            "<string>"
-        ]
-    }
+  "Addrs": {
+    "<string>": [
+      "<string>"
+    ]
+  }
 }
 
 ```
@@ -3637,11 +3613,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3666,11 +3642,11 @@ List local addresses.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3695,11 +3671,11 @@ Open connection to a given address.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3724,11 +3700,11 @@ Close connection to a given address.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3753,11 +3729,11 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3782,11 +3758,11 @@ Add an address filter.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3811,11 +3787,11 @@ Remove an address filter.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Strings": [
-        "<string>"
-    ]
+  "Strings": [
+    "<string>"
+  ]
 }
 
 ```
@@ -3843,22 +3819,22 @@ List peers with open connections.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Peers": [
+  "Peers": [
+    {
+      "Addr": "<string>",
+      "Direction": "<int>",
+      "Latency": "<string>",
+      "Muxer": "<string>",
+      "Peer": "<string>",
+      "Streams": [
         {
-            "Addr": "<string>"
-            "Peer": "<string>"
-            "Latency": "<string>"
-            "Muxer": "<string>"
-            "Direction": "<int>"
-            "Streams": [
-                {
-                    "Protocol": "<string>"
-                }
-            ]
+          "Protocol": "<string>"
         }
-    ]
+      ]
+    }
+  ]
 }
 
 ```
@@ -3888,12 +3864,12 @@ Argument "file" is of file type. This endpoint expects a file in the body of the
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Name": "<string>"
-    "Hash": "<string>"
-    "Bytes": "<int64>"
-    "Size": "<string>"
+  "Bytes": "<int64>",
+  "Hash": "<string>",
+  "Name": "<string>",
+  "Size": "<string>"
 }
 
 ```
@@ -3918,7 +3894,7 @@ Export a tar file from IPFS.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -3942,7 +3918,7 @@ This endpoint returns a `text/plain` response body.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 This endpoint returns a `text/plain` response body.
 ```
 
@@ -3968,10 +3944,10 @@ Add URL via urlstore.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Key": "<string>"
-    "Size": "<int>"
+  "Key": "<string>",
+  "Size": "<int>"
 }
 
 ```
@@ -3999,13 +3975,13 @@ Show ipfs version information.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Version": "<string>"
-    "Commit": "<string>"
-    "Repo": "<string>"
-    "System": "<string>"
-    "Golang": "<string>"
+  "Commit": "<string>",
+  "Golang": "<string>",
+  "Repo": "<string>",
+  "System": "<string>",
+  "Version": "<string>"
 }
 
 ```
@@ -4030,12 +4006,12 @@ This endpoint takes no arguments.
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-```text
+```json
 {
-    "Path": "<string>"
-    "Version": "<string>"
-    "ReplacedBy": "<string>"
-    "Sum": "<string>"
+  "Path": "<string>",
+  "ReplacedBy": "<string>",
+  "Sum": "<string>",
+  "Version": "<string>"
 }
 
 ```
