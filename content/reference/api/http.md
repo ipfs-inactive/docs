@@ -9,7 +9,7 @@ menu:
 <!-- TODO: Describe how to change ports and configure the API server -->
 <!-- TODO: Structure this around command groups (dag, object, files, etc.) -->
 
-<sup>Generated on 2019-06-21, from go-ipfs v0.4.21.</sup>
+<sup>Generated on 2019-06-22, from go-ipfs v0.4.21.</sup>
 
 When an IPFS node is running as a daemon, it exposes an HTTP API that allows
 you to control the node and run the same commands you can from the command
@@ -1049,7 +1049,12 @@ On success, the call to this endpoint will return with 200 and the following bod
   "Extra": "<string>",
   "ID": "<peer-id>",
   "Responses": [
-    "<object>"
+    {
+      "Addrs": [
+        "<multiaddr-string>"
+      ],
+      "ID": "peer-id"
+    }
   ],
   "Type": "<int>"
 }
@@ -1083,7 +1088,12 @@ On success, the call to this endpoint will return with 200 and the following bod
   "Extra": "<string>",
   "ID": "<peer-id>",
   "Responses": [
-    "<object>"
+    {
+      "Addrs": [
+        "<multiaddr-string>"
+      ],
+      "ID": "peer-id"
+    }
   ],
   "Type": "<int>"
 }
@@ -1116,7 +1126,12 @@ On success, the call to this endpoint will return with 200 and the following bod
   "Extra": "<string>",
   "ID": "<peer-id>",
   "Responses": [
-    "<object>"
+    {
+      "Addrs": [
+        "<multiaddr-string>"
+      ],
+      "ID": "peer-id"
+    }
   ],
   "Type": "<int>"
 }
@@ -1150,7 +1165,12 @@ On success, the call to this endpoint will return with 200 and the following bod
   "Extra": "<string>",
   "ID": "<peer-id>",
   "Responses": [
-    "<object>"
+    {
+      "Addrs": [
+        "<multiaddr-string>"
+      ],
+      "ID": "peer-id"
+    }
   ],
   "Type": "<int>"
 }
@@ -1184,7 +1204,12 @@ On success, the call to this endpoint will return with 200 and the following bod
   "Extra": "<string>",
   "ID": "<peer-id>",
   "Responses": [
-    "<object>"
+    {
+      "Addrs": [
+        "<multiaddr-string>"
+      ],
+      "ID": "peer-id"
+    }
   ],
   "Type": "<int>"
 }
@@ -1217,7 +1242,12 @@ On success, the call to this endpoint will return with 200 and the following bod
   "Extra": "<string>",
   "ID": "<peer-id>",
   "Responses": [
-    "<object>"
+    {
+      "Addrs": [
+        "<multiaddr-string>"
+      ],
+      "ID": "peer-id"
+    }
   ],
   "Type": "<int>"
 }
