@@ -1,6 +1,15 @@
-# IPFS Docs
+![IPFS Documentation](https://github.com/ipfs/package-managers/blob/master/packagemanagers-sig-header.png "IPFS Documentation")
 
 [![build status](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
+[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai/)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
+
+## Join our weekly sync (all welcome!)
+Tuesdays at 3:00pm UTC / 4:00pm BST / 7:00am PST
+
+📞 Zoom: https://protocol.zoom.us/j/568955431
+
+ :orange_book: Notes and recordings from previous sessions [can be found here](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP)
 
 This repo is used to:
 
