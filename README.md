@@ -34,8 +34,23 @@ Check the near-term roadmap for this work in [issue #58](https://github.com/ipfs
 
 *Read a more detailed summary of our research on documentation problems in [issue #52](https://github.com/ipfs/docs/issues/52) or at [/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html](https://ipfs.io/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html/).*
 
+### Our Q3 2019 goals
+You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1AiNUL7vK5Jp8aa839UaMaI_AlBU5r6Bor-A40179I2A/edit#gid=1841105909), or filter [this repo's issues](https://github.com/ipfs/docs/issues) for ones with the `OKR` label.
 
-## Want to get involved?
+1. Evaluate existing IPFS documentation content and presentation platform and make decisions for future-proof improvement and alignment
+- Complete a content audit of ipfs.io based on framework executed for Cluster content audit			
+- Create prioritized features list for "new" IPFS docs platform based on research on competitors/analogous documentation sites			
+- Determine tech stack/framework for the IPFS docs site (to be used as a proving ground for future docs sites or retrofitting others)			
+2. Better understand our users and their needs, and use this knowledge to prioritize improvements				
+- Complete ranked, goal-based personae for key audience segments for IPFS			
+- Hire new documentation specialist so they can extend upon this goal			
+
+3. Improve existing content with emphasis on collecting metrics		
+- Implement 3+ hotfixes for either content or metrics collection as they emerge from content audit or features list	P0	All			
+- Add content and metrics mechanism for one-question “you’d like to” quiz on ipfs.io with guidance on next steps	P1	Eric/Chris		- ProtoSchool-specific Q3 OKRs: see separate spreadsheet			
+
+
+## Want to get involved with IPFS documentation?
 
 While we're making every effort to craft a comprehensive roadmap for our overall documentation strategy in Q3 2019, that doesn't mean any pause in overall work in IPFS docs -- and to that end, we would love ❤️ **your** help with any of the types of content currently on the IPFS docs site:
 
