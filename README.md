@@ -34,7 +34,7 @@ IPFS documentation currently has a number of acute problems:
 We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html/), including user interviews, that help us quantify the problems outlined above. In Q3 2019, we plan to use this body of knowledge, as well as additional work mentioned below, to formulate and begin execution upon an overall IPFS documentation approach that will benefit users in both the short and long term.
 
 ### Our Q3 2019 goals
-You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1AiNUL7vK5Jp8aa839UaMaI_AlBU5r6Bor-A40179I2A/edit#gid=1841105909), or filter [this repo's issues](https://github.com/ipfs/docs/labels/Priority%3A%20OKR) for ones with the `OKR` label.
+*You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1AiNUL7vK5Jp8aa839UaMaI_AlBU5r6Bor-A40179I2A/edit#gid=1841105909), or filter [this repo's issues](https://github.com/ipfs/docs/labels/Priority%3A%20OKR) for ones with the `OKR` label.*
 
 1. **Evaluate existing IPFS documentation content and presentation platform and make decisions for future-proof improvement and alignment**
 - Complete a content audit of existing ipfs.io material and use to prioritize next steps		
