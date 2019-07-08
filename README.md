@@ -1,4 +1,4 @@
-![IPFS Documentation](https://github.com/ipfs/package-managers/blob/master/packagemanagers-sig-header.png "IPFS Documentation")
+![IPFS Documentation](ipfs-docs-header.png "IPFS Documentation")
 
 [![build status](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai/)
@@ -11,15 +11,14 @@ Tuesdays at 3:00pm UTC / 4:00pm BST / 7:00am PST
 
  :orange_book: Notes and recordings from previous sessions [can be found here](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP)
 
-This repo is used to:
+# About this repo
 
-1. Organize documentation work across the IPFS project.
-2. Host the documentation website for IPFS. It gets published to https://docs.ipfs.io/.
+This repo is used for two purposes:
 
-Read the Captain's Log or check the [issues](https://github.com/ipfs/docs/issues) for updates: [ipfs/docs#47](https://github.com/ipfs/docs/issues/47)
+1. To organize overall documentation work across the IPFS project
+2. To host the documentation website for IPFS, available at https://docs.ipfs.io/
 
-
-## Overview
+# IPFS documentation: An overview
 
 IPFS documentation currently has several acute problems:
 
@@ -67,9 +66,9 @@ Finally, let’s work together to keep this a respectful and friendly space. Ple
 [![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
 
 
-## Building the Docs Site
+# Just want to build the docs site?
 
-### One-Time Setup
+### One-time setup
 
 1. Install [AEgir](https://www.npmjs.com/package/aegir)
 
@@ -88,7 +87,7 @@ Finally, let’s work together to keep this a respectful and friendly space. Ple
     When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
 
 
-### Build and Run the Site
+### Build and run the site
 
 * In the root directory, run `make dev`
 * Load http://localhost:1313 in your web browser
@@ -97,14 +96,12 @@ Finally, let’s work together to keep this a respectful and friendly space. Ple
 To create a production build, run `make build` instead. You’ll find the final static site in the `public` directory.
 
 
-## FAQ
-
 ### Why is this is a static site?
 
 We believe in hosting IPFS’s documentation on IPFS, and that’s much easier when the content is static.
 
 
-## License
+### License
 
 All software code is copyright (c) Protocol Labs, Inc. under the **MIT license**.
 
