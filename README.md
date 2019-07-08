@@ -38,16 +38,18 @@ Check the near-term roadmap for this work in [issue #58](https://github.com/ipfs
 You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1AiNUL7vK5Jp8aa839UaMaI_AlBU5r6Bor-A40179I2A/edit#gid=1841105909), or filter [this repo's issues](https://github.com/ipfs/docs/issues) for ones with the `OKR` label.
 
 1. Evaluate existing IPFS documentation content and presentation platform and make decisions for future-proof improvement and alignment
-- Complete a content audit of ipfs.io based on framework executed for Cluster content audit			
-- Create prioritized features list for "new" IPFS docs platform based on research on competitors/analogous documentation sites			
-- Determine tech stack/framework for the IPFS docs site (to be used as a proving ground for future docs sites or retrofitting others)			
-2. Better understand our users and their needs, and use this knowledge to prioritize improvements				
-- Complete ranked, goal-based personae for key audience segments for IPFS			
-- Hire new documentation specialist so they can extend upon this goal			
+- Complete a content audit of existing ipfs.io material and use to prioritize next steps		
+- Create prioritized features list for a best-in-breed IPFS docs platform based on competitive-landscape and analogous product/service research, as well as community feedback
+- Determine best-fit tech stack/framework for the IPFS docs site
 
-3. Improve existing content with emphasis on collecting metrics		
-- Implement 3+ hotfixes for either content or metrics collection as they emerge from content audit or features list	P0	All			
-- Add content and metrics mechanism for one-question “you’d like to” quiz on ipfs.io with guidance on next steps	P1	Eric/Chris		- ProtoSchool-specific Q3 OKRs: see separate spreadsheet			
+2. Better understand our users and their needs, and use this knowledge to prioritize improvements				
+- Complete the creation of ranked, goal-based personae for key IPFS user segments			
+- Ensure appropriate resourcing in order to execute upon results of content audit, features list, user suggestion, or other asks
+
+3. Improve existing docs content in the short term, with emphasis on collecting metrics		
+- Implement hotfixes for either content or metrics collection as they emerge from content audit, features list, or user suggestion
+- Add interactive "so you'd like to ..." content on the front of ipfs.io (including analytics) with appropriate guidance for users' next steps
+- [ProtoSchool](https://proto.school)-specific enhancements related to improved analytics and user feedback collection
 
 
 ## Want to get involved with IPFS documentation?
