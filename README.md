@@ -5,7 +5,7 @@
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
 
 ## Join our weekly sync (all welcome!)
-Tuesdays at 3:00pm UTC / 4:00pm BST / 7:00am PST
+Mondays at 3:00pm UTC / 4:00pm BST / 7:00am PST
 
 📞 Zoom: https://protocol.zoom.us/j/568955431
 
