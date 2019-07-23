@@ -2,7 +2,6 @@
 title: FAQ
 ---
 
-# IPFS FAQ
 
 ## What is IPFS?
 
