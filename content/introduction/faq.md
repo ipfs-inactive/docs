@@ -27,6 +27,19 @@ A great way to help out right now is to run a node or two and report any issues 
 
 Stop in and say hi on IRC at #ipfs on freenode too if you feel like chatting.
 
+
+## What is the connection between IPFS and Filecoin?
+Filecoin and IPFS are two separate, complementary protocols, both created by Protocol Labs. IPFS allows peers to store, request, and transfer verifiable data with each other, while Filecoin is designed to provide a system of persistent data storage. Under Filecoin’s incentive structure, clients pay to store data at specific levels of redundancy and availability, and miners earn payments and rewards by continuously storing data and cryptographically proving it.
+
+In short: IPFS addresses and moves content; while Filecoin is an incentive layer to persist data.
+
+These components are separable - you can use one without the other, and IPFS already supports more self-organized or altruistic forms of data persistance via tools like [IPFS Cluster](https://cluster.ipfs.io/). Compatibility between IPFS and Filecoin is intended to be as seamless as possible, but we expect it to evolve over time. You can view the [draft spec for IPFS<>Filecoin Interoperability](https://github.com/filecoin-project/specs/issues/143) and [ideas for future improvements](https://github.com/filecoin-project/specs/issues/144) to learn more.
+
+
+## How are the IPFS Project and Protocol Labs related?
+IPFS is an Open Source Project and Community with over 4K contributors around the world from many different projects. There are a number of core IPFS team members who are sponsored to work on the project by [Protocol Labs](https://protocol.ai/) - a startup that supports development on many related protocols like libp2p and Filecoin as well, with the aim of making the internet more capable and resilient. However the vast majority of developers in the IPFS community and ecosystem are supported by other organisations or individual OSS contributions.
+
+
 ## I have another question
 
 You can see answers to past questions here: https://discuss.ipfs.io/c/help/Old-FAQ - If you don’t see your question, feel free to ask it too!
