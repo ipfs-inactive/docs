@@ -1,0 +1,4 @@
+github.com/davecheney/godoc2md v0.0.0-20190217193848-4eed58d98896 h1:apKR8F+DQ+Hyn+M04tw7U99LZXzlMwLONP+1yLcKRUw=
+github.com/davecheney/godoc2md v0.0.0-20190217193848-4eed58d98896/go.mod h1:mUyU+12reTra3LLJzldnOLcKjknB0ajbIpIgvIBF4OE=
+golang.org/x/tools v0.0.0-20181011021141-0e57ebad1d6b h1:HmX7qDZr5gv5SRnNE4hk4jaqDx4+d+bmiXgS3zdanJs=
+golang.org/x/tools v0.0.0-20181011021141-0e57ebad1d6b/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
