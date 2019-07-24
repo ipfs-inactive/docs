@@ -1,5 +1,8 @@
 ---
 title: Install IPFS
+menu:
+    guides:
+        parent: guides
 weight: 1
 ---
 
@@ -89,7 +92,7 @@ Congratulations! You now have a working IPFS installation on your computer.
 
 `ipfs-update` can be downloaded for your platform at: https://dist.ipfs.io/#ipfs-update
 
-If you have a working Go environment (>=1.8), you can also install it with:
+If you have a working Go environment (>=1.12), you can also install it with:
 ```
 $ go get -u github.com/ipfs/ipfs-update
 ```
@@ -104,22 +107,9 @@ When installing new versions of `ipfs` or upgrading make sure you are using the 
 ```
 $ ipfs-update versions
 v0.3.2
-v0.3.4
-v0.3.5
-v0.3.6
-v0.3.7
-v0.3.8
-v0.3.9
-v0.3.10
-v0.3.11
-v0.4.0
-v0.4.1
-v0.4.2
-v0.4.3
-v0.4.4
-v0.4.5
-v0.4.6
-v0.4.7-rc1
+[...]
+v0.4.20
+v0.4.21
 ```
 
 
@@ -127,7 +117,7 @@ v0.4.7-rc1
 
 ```
 $ ipfs-update install latest
-fetching go-ipfs version v0.4.7-rc1
+fetching go-ipfs version v0.4.21
 binary downloaded, verifying...
 success!
 stashing old binary
@@ -138,16 +128,11 @@ Installation complete!
 
 Note that the latest available version may not be stable (i.e. release candidates
 in the form `vX.X.X-rcX`). So it is recommended to specify the version you want
-to install, for example: `ipfs-update install v0.4.6`.
+to install, for example: `ipfs-update install v0.4.21`.
 
 ---
 
 ## Building from Source
-
-<div class="message mb">
-  <strong>Warning:</strong> In the past you could install IPFS using <code>go get</code>. This
-  does not work anymore!
-</div>
 
 If you want, you can also build IPFS from source.
 If you are on Mac OS X or Linux take a look at [the readme](https://github.com/ipfs/go-ipfs#build-from-source) for install instructions.
@@ -195,17 +180,17 @@ from [https://dist.ipfs.io/#fs-repo-migrations](https://dist.ipfs.io/#fs-repo-mi
 ### Help!
 
 If you have any problems, come get live help at
-[#ipfs](../#community) or via [the mailing list](../#community).
+[#ipfs](/#community) or via [the mailing list](/#community).
 
 ### Check Go Version
 
-IPFS works with Go 1.7.0 or later.
+IPFS works with Go 1.12.0 or later.
 To check what go version you have installed, type `go version`.
 Here's what I get:
 
 ```sh
 $ go version
-go version go1.7 linux/amd64
+go version go1.12.2 linux/amd64
 ```
 
 If you need to update, it is recommended to install from the

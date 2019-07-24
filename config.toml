@@ -2,10 +2,14 @@ baseURL = "https://docs.ipfs.io"
 relativeURLs = true
 languageCode = "en"
 DefaultContentLanguage = "en"
-
 title = "IPFS Documentation"
-
 staticDir = ["static", "build"]
+googleAnalytics = "UA-96910779-6"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
 
 [blackfriday]
 hrefTargetBlank = true
@@ -38,6 +42,43 @@ weight = 3
 identifier = "community"
 name = "Community"
 weight = 4
+
+
+[[menu.guides]]
+identifier = "guides"
+name = "Guides"
+weight = 3
+[[menu.guides]]
+parent = "guides"
+name = "Transferring a File"
+url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
+weight = 2
+[[menu.guides]]
+parent = "guides"
+name = "Replicating Large Datasets"
+url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
+weight = 3
+[[menu.guides]]
+parent = "guides"
+name = "Addressing in Browsers"
+url = "https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
+weight = 4
+[[menu.guides]]
+parent = "guides"
+name = "Interactive Tutorials"
+url = "https://proto.school/#/tutorials"
+weight = 5
+
+
+[[menu.guides]]
+identifier = "examples"
+name = "Examples"
+weight = 4
+[[menu.guides]]
+parent = "examples"
+name = "js-ipfs Examples"
+url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
+
 
 [[menu.reference]]
 identifier = "api"
@@ -106,7 +147,7 @@ weight = 20
 [[menu.reference]]
 parent = "specs"
 name = "Roadmap to 1.0.0"
-url = "https://github.com/ipfs/ipfs/blob/master/ROADMAP-TO-1.0.0.md"
+url = "https://github.com/ipfs/ipfs/blob/master/REQUIREMENTS.md"
 weight = 30
 [[menu.reference]]
 parent = "specs"
@@ -120,30 +161,6 @@ title = "“Requests for Changes” (RFC) are proposals for major modifications 
 url = "https://github.com/ipfs/rfcs"
 weight = 50
 
-[[menu.guides]]
-identifier = "guides"
-name = "Guides"
-weight = 3
-[[menu.guides]]
-identifier = "examples"
-name = "Examples"
-weight = 4
-[[menu.guides]]
-parent = "guides"
-name = "Replicating Large Datasets"
-url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
-[[menu.guides]]
-parent = "guides"
-name = "Transferring a File"
-url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
-[[menu.guides]]
-parent = "guides"
-name = "Addressing in Browsers"
-url = "https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
-[[menu.guides]]
-parent = "examples"
-name = "js-ipfs Examples"
-url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
 
 [[menu.community]]
 identifier = "applications"
@@ -243,34 +260,34 @@ name = "Get Involved"
 weight = 10
 [[menu.community]]
 parent = "contribute"
-name = "GitHub"
+name = "GitHub (IPFS)"
 url = "https://github.com/ipfs/ipfs"
-weight = 5
-[[menu.community]]
-parent = "contribute"
-name = "Contribution Guidelines"
-url = "https://github.com/ipfs/community/blob/master/contributing.md"
 weight = 10
 [[menu.community]]
 parent = "contribute"
-name = "Contribution Guidelines 2"
-url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING-2.md"
+name = "GitHub (docs)"
+url = "https://github.com/ipfs/docs"
 weight = 20
+[[menu.community]]
+parent = "contribute"
+name = "Contribution Guidelines"
+url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING.md"
+weight = 30
 [[menu.community]]
 parent = "contribute"
 name = "Code of Conduct"
 url = "https://github.com/ipfs/community/blob/master/code-of-conduct.md"
-weight = 30
-[[menu.community]]
-parent = "contribute"
-name = "Go Style Guide"
-url = "https://github.com/ipfs/community/blob/master/go-code-guidelines.md"
 weight = 40
 [[menu.community]]
 parent = "contribute"
-name = "JS Style Guide"
-url = "https://github.com/ipfs/community/blob/master/js-code-guidelines.md"
+name = "Go Style Guide"
+url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING_GO.md"
 weight = 50
+[[menu.community]]
+parent = "contribute"
+name = "JS Style Guide"
+url = "https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md"
+weight = 60
 
 [[menu.community]]
 identifier = "related"
@@ -290,3 +307,7 @@ parent = "related"
 name = "IPLD"
 url = "https://ipld.io"
 weight = 3
+[[menu.community]]
+parent = "related"
+name = "ProtoSchool"
+url = "https://proto.school/"

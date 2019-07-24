@@ -1,11 +1,21 @@
 ---
-title: Basic Usage
+title: Getting Started
 weight: 2
 ---
 
-If you haven't done so, [install IPFS](../install).
+## Install IPFS
 
-During this tutorial, if you have any questions, feel free to ask them in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
+If you haven't done so already, your first step is to **install IPFS**! Most people prefer to install a prebuilt package, which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](https://docs.ipfs.io/guides/guides/install/#installing-from-a-prebuilt-package).
+
+<a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
+  Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+</a>
+
+<aside class="alert alert-info">
+  Don't want to use the command line right now? You can give the desktop-app implementation of IPFS a go! <a href="https://github.com/ipfs-shipyard/ipfs-desktop">Get started with that here <i class="fas fa-external-link-square-alt fa-sm"></i></a>
+</aside>
+
+For more install options, such as building from source, and toubleshooting tips, visit our [install guide]({{<relref "guides/guides/install.md">}}). If you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
 
 ## Initialize the repository
 
@@ -150,8 +160,30 @@ In your favorite web browser, open:
 This should bring up a console like this:
 
 <figure>
-    <img class="screenshot" alt="Web console connection view" src="../webui-connection.png">
+    <img class="screenshot" alt="Web console connection view" src="../assets/webui-connection.png">
 </figure>
+
+## Companion Browser Extension
+
+While we are at it,  [IPFS Companion](https://github.com/ipfs-shipyard/ipfs-companion#ipfs-companion) is a
+browser extension that simplifies access to IPFS resources and adds support for
+the IPFS protocol.
+
+<div class="alert alert-info">
+It will automatically redirect IPFS gateway requests to
+your local daemon so that you are not relying on, or trusting, remote gateways.
+</div>
+
+It runs in Firefox (Desktop and Android)
+and various Chromium-based browsers such as Google Chrome or Brave.
+Check [its features](https://github.com/ipfs-shipyard/ipfs-companion#features) and [**install it**](https://github.com/ipfs-shipyard/ipfs-companion#install) today!
+
+| <img src="../assets/firefox_16x16.png" widgth="16" height="16"> [Firefox](https://www.mozilla.org/firefox/new/) / <img src="../assets/firefox_16x16.png" widgth="16" height="16"> [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | <img src="../assets/chrome_16x16.png" width="16" height="16"> [Chrome](https://www.google.com/chrome/) / <img src="../assets/brave_16x16.png" width="16" height="16"> [Brave](https://brave.com/)
+|------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![Install From Firefox Add-ons](../assets/get-the-firefox-add-on.png)](https://addons.mozilla.org/firefox/addon/ipfs-companion/) | [![Install from Chrome Store](../assets/chrome-web-store.png)](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch) |
+
+
+## Next Steps
 
 Next, we recommend you look at our examples to find out more about what IPFS is capable of:
 

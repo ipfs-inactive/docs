@@ -5,17 +5,18 @@ title: IPFS Documentation
 
 Welcome to the IPFS documentation portal! Whether you’re just learning about IPFS or are looking for detailed reference information, this is the place to start. You might have noticed that IPFS is a project with a big scope — and a *lot* of different tools, sites, and code.
 
+Here's an overview of what you'll find in our documentation:
+
 ## Introduction
 
-Head over to the [introduction](/introduction) section for an introduction to the basics of IPFS and a guide to getting up and running.
+Head over to the [introduction](/introduction) section to learn about the basics of IPFS. There are also instructions on how to install IPFS, and tips on basic IPFS usage.
 
 
 ## Guides
 
-The guides section has an overview of major concepts in IPFS, guides, and example projects demonstrating various ways to use IPFS.
+IPFS is a complex system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), guides for specific IPFS use cases, and example projects demonstrating various ways to use the IPFS ecosystem.
 
-In particular, IPFS is a complex system that aims to change a lot of things about how we use the internet, so it naturally comes with a lot of new concepts. Check the [concepts](/guides/concepts) section to learn more about the major architectural pieces of IPFS and about terms and ideas associated with distributed file systems.
-
+If you prefer a hands-on approach, try out the interactive tutorials at [ProtoSchool](https://proto.school). You can learn about the decentralized web by solving code challenges.
 
 ## Reference
 
@@ -52,13 +53,13 @@ Both the Go and JavaScript implementations of IPFS are written to function as li
 
 IPFS is an open-source community project. While [Protocol Labs](https://protocol.ai) is able to sponsor some of the work around it, much of the design, code, and effort is contributed by volunteers and community members like you. If you’re interested in helping improve IPFS, check the [how to help](/community/contribute/how_to_help) guide to get started.
 
-If you are diving in to contribute new code, make sure you check both the [contribution guidelines] and the style guide for your language ([Go](https://github.com/ipfs/community/blob/master/go-code-guidelines.md), [JavaScript](https://github.com/ipfs/community/blob/master/js-code-guidelines.md)).
+If you are diving in to contribute new code, make sure you check both the [contribution guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) and the style guide for your language ([Go](https://github.com/ipfs/community/blob/master/CONTRIBUTING_GO.md), [JavaScript](https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md)).
 
 
 ### Related Projects
 
 We’ve split out some of the major parts of IPFS into separate projects over time — while they’re still critical components of IPFS, they can be useful in a variety of other contexts, too. Check their individual sites for specific information and references:
 
-- [Libp2p](https://libp2p.io) manages all the peer-to-peer networking parts of IFPS.
+- [Libp2p](https://libp2p.io) manages all the peer-to-peer networking parts of IPFS.
 - [Multiformats](https://multiformats.io) is a variety of *self-describing* data formats.
 - [IPLD](https://ipld.io) is a set of tools for describing links between content-addressed data, like IPFS files, Git commits, or Ethereum blocks.
