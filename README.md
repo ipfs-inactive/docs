@@ -65,11 +65,11 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 
 While we're making every effort to create a comprehensive plan for our overall documentation strategy in Q3 2019, that doesn't mean any pause in overall work in IPFS docs -- and to that end, we would love ❤️ **your** help with any of the types of content currently on the IPFS docs site:
 
-1. **Introductory overview.** This lives in `content/introduction`. If you spot any problems, or have ideas for improvements, please post an [issue](https://github.com/ipfs/docs/issues) or PR. We're also in the midst of a [complete rework](https://github.com/ipfs/docs/issues/60) of the overall IPFS explainer, so please check its progress!
+1. **Introductory overview.** This lives in `content/introduction`. If you spot any problems, or have ideas for improvements, please post an [issue](https://github.com/ipfs/docs/issues) or PR. We're also in the midst of a [complete rework](https://github.com/ipfs/docs/pull/170) of the overall IPFS explainer, so please check its progress!
 
 2. **Examples and tutorials.** At present, most examples currently live in other repos, like [js-ipfs examples](https://github.com/ipfs/js-ipfs/tree/master/examples). We're working on how to better integrate these, but if you have thoughts on how to best address this, please [file an issue here](https://github.com/ipfs/docs/issues). If you have feedback on an existing example, please file an issue or PR in that example's relevant repo. However, if you have ideas for new guides or tutorials, please [file an issue in this repo](https://github.com/ipfs/docs/issues)!
 
-3. **Concept guides.** Concept guides (which live in the `content/guides/concepts` folder) are intended to present brief overviews of IPFS-related concepts that might be new to the average user. To see which concepts still need guides, please visit [this checklist](https://github.com/ipfs/docs/issues/56). All concept guides should focus on the following key points:
+3. **Concept guides.** Concept guides (which live in the `content/guides/concepts` folder) are intended to present brief overviews of IPFS-related concepts that might be new to the average user. To see which concepts still need guides, please visit [this list](https://github.com/ipfs/docs/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+concept+doc). All concept guides should focus on the following key points:
 
     1. **What** is this concept?
     2. How does it **relate** to the rest of IPFS?
