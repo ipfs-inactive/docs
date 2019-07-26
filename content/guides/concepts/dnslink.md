@@ -5,6 +5,10 @@ menu:
         parent: concepts
 ---
 
+**NOTE: The info below is a quick guide to DNSLink. For a more complete guide, including tutorials, usage examples and FAQs, check out [dnslink.io](http://dnslink.io/).**
+
+## About DNSLink
+
 DNSLink uses [DNS TXT](https://en.wikipedia.org/wiki/TXT_record) records to map
 a domain name (like `ipfs.io`) to an IPFS address. Because you can edit your
 DNS records, you can use them to always point to the latest version of an
