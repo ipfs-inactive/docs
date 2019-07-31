@@ -8,17 +8,15 @@ opened: true
 
 Instructions for installing a copy of IPFS on your system via your choice of the following options:
 
-- Installing from a Prebuilt Package
-- Installing from ipfs-update
+- Installing from a prebuilt ackage
+- Installing from `ipfs-update`
 - Building from source
 
 Also includes information on how to upgrade IPFS, and general troubleshooting instructions.
 
-You should be using command line for these instructions.
-
 # [Transferring a File](https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md)
 
-A guide to help troubleshoot file transfers between two machines
+A guide to help troubleshoot file transfers between two machines.
 
 # [Replicating Large Datasets](https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets)
 
