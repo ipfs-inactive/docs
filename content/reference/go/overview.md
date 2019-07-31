@@ -8,7 +8,7 @@ menu:
 
 `go-ipfs` is the primary reference implementation of IPFS. It is a command-line application, but can also be used as a library in other Go programs.
 
-For more about using the `ipfs` application, see [basic usage](/start/usage) or any of the following reference documents:
+For more about using the `ipfs` application, see any of the following reference documents:
 
 - [Configuration reference](https://github.com/ipfs/go-ipfs/blob/master/docs/config.md)
     - [Datastore configuration](https://github.com/ipfs/go-ipfs/blob/master/docs/datastores.md)
