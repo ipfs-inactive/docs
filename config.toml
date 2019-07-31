@@ -86,7 +86,7 @@ name = "Commands & API"
 weight = 4
 [[menu.reference]]
 parent = "api"
-name = "JS & Go Libraries"
+name = "JS Core API"
 url = "https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"
 weight = 30
 
