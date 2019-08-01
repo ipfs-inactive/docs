@@ -248,7 +248,7 @@ url = "https://awesome.ipfs.io/"
 parent = "community"
 name = "Public Archives on IPFS"
 title = "A community project to host archives of valuable public data."
-url = "https://archives.ipfs.io"
+url = "https://awesome.ipfs.io/datasets/"
 [[menu.community]]
 parent="community"
 name = "FAQ"
