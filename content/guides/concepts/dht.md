@@ -9,7 +9,7 @@ menu:
 
 ## What is a DHT?
 
-Distributed Hash Tables (DHT) are a distributed key-value store where keys are cryptographic hashes. 
+[Distributed Hash Tables](https://en.wikipedia.org/wiki/Distributed_hash_table) (DHT) are a distributed key-value store where keys are [cryptographic hashes](https://docs.ipfs.io/guides/concepts/hashes/). 
 
 DHTs are distributed. Each "peer" (or "node") is responsible for a subset of the DHT. 
 A receiving peer either answers the request, or forward it until another peer can answer it.
@@ -35,7 +35,7 @@ The size of the buckets are related to the size of the prefix. The longer the pr
 Several peers can be in charge of the same bucket if they have the same prefix.
 
 In most DHTs, including IPFS's Kademlia implementation, the size of the buckets (and the size of the prefix), are dynamic. 
-Buckets size growths and prefix size shortens when many nodes leaves the DHT, and vice versa. (/!\ or does it depends on the number of records and not the number of nodes? Is it at bucket level or DHT level?)
+Buckets size growths and prefix size shortens when many nodes leaves the DHT, and vice versa. **(/!\ or does it depends on the number of records and not the number of nodes? Is it at bucket level or DHT level?)**
 
 ### Peer lists
 
@@ -54,16 +54,17 @@ Lists also have a maximum of entries k, otherwise the first lists would contain 
 
 ### Using the DHT
 
-When a peer receives a lookup request, it will either answer with a value if it falls into its own bucket, or forward it to the closest peer it knows from the requested hash. The process goes on until a peer is able to answer it. (Does is it answer directly to requesting peer? Or does the answer takes the same path as the request? )
+When a peer receives a lookup request, it will either answer with a value if it falls into its own bucket, or forward it to the closest peer it knows from the requested hash. The process goes on until a peer is able to answer it. **(Does is it answer directly to requesting peer? Or does the answer takes the same path as the request?)**
 A request for a hash of length n will take at maximum log2(n) steps. 
 
 # The DHT of IPFS
 
-In IPFS Kademlia's DHT, keys are not hashes but multihashes: a generalization of the cryptographic hashes containing also information about which hashing function was used, and the length of the hash in bits.
+In IPFS Kademlia's DHT, keys are not hashes but [multihashes](https://multiformats.io/multihash/): a generalization of the cryptographic hashes containing also information about which hashing function was used, and the length of the hash in bits.
+[PeerIDs](https://docs.libp2p.io/concepts/peer-id/) are those of [libp2p]([PeerIDs](https://docs.libp2p.io/concepts/peer-id/), the networking library used by IPFS.
 
 We use a DHT to lookup two types of objects (both represented by a multihash):
-- Content IDs of the data added to IPFS. A lookup of this value will give the peerIDs of the peers having this content.
-- PeerIDs of IPFS (libp2p?) nodes. A lookup will give all the multiaddresses to reach the peer(s) actually having the content.
-Consequently, IPFS's DHT is use for content routing (1st lookup) and for peer routing (2nd lookup). 
+- [Content IDs](https://docs.ipfs.io/guides/concepts/cid/) of the data added to IPFS. A lookup of this value will give the peerIDs of the peers having this content.
+- PeerIDs. A lookup will give all the [multiaddresses](https://multiformats.io/multiaddr/) to reach the peer(s) actually having the content.
+Consequently, IPFS's DHT is used for content routing (1st lookup) and for peer routing (2nd lookup). 
 
-(what is m and k for IPFS? Does it depends on specs? implementation? )
+**(what is m and k for IPFS? Does it depends on specs? implementation? )**
