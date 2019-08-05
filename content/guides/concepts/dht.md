@@ -67,4 +67,6 @@ We use a DHT to lookup two types of objects (both represented by a multihash):
 - PeerIDs. A lookup will give all the [multiaddresses](https://multiformats.io/multiaddr/) **(or "multiaddrs"?)** to reach the peer(s) actually having the content.
 Consequently, IPFS's DHT is used for content routing (1st lookup) and for peer routing (2nd lookup). 
 
+Implementation status can be checked [here](https://libp2p.io/implementations/#peer-routing).
+
 **(what is m and k for IPFS? Does it depends on specs? implementation? )**
