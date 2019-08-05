@@ -64,7 +64,7 @@ In IPFS Kademlia's DHT, keys are not hashes but [multihashes](https://multiforma
 
 We use a DHT to lookup two types of objects (both represented by a multihash):
 - [Content IDs](https://docs.ipfs.io/guides/concepts/cid/) of the data added to IPFS. A lookup of this value will give the peerIDs of the peers having this content.
-- PeerIDs. A lookup will give all the [multiaddresses](https://multiformats.io/multiaddr/) to reach the peer(s) actually having the content.
+- PeerIDs. A lookup will give all the [multiaddresses](https://multiformats.io/multiaddr/) **(or "multiaddrs"?)** to reach the peer(s) actually having the content.
 Consequently, IPFS's DHT is used for content routing (1st lookup) and for peer routing (2nd lookup). 
 
 **(what is m and k for IPFS? Does it depends on specs? implementation? )**
