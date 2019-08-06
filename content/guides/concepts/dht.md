@@ -12,7 +12,11 @@ menu:
 [Distributed Hash Tables](https://en.wikipedia.org/wiki/Distributed_hash_table) (DHT) are a distributed key-value store where keys are [cryptographic hashes](https://docs.ipfs.io/guides/concepts/hashes/). 
 
 DHTs are distributed. Each "peer" (or "node") is responsible for a subset of the DHT. 
-A receiving peer either answers the request, or forward it until another peer can answer it.
+A receiving peer either answers the request, or the request is passed to another peer until a peer can answer it.
+Depending on implementations, a request not answered by the first contacted node can be :
+- forwarded from peer to peer and the last peer contact the requesting peer
+- forwarded from peer to peer and the answered is forwarded following the same path
+- answered with contacting information of a node having better chances to be able to answer (IPFS uses this strategy)
 
 DHT's decentralization provides advantages compared to a classic Key-Value store:
 - *scalability* as a request for a hash of length *n* takes at most *log2(n)* steps to resolve.
@@ -64,7 +68,7 @@ In IPFS Kademlia's DHT, keys are not hashes but [multihashes](https://multiforma
 
 We use a DHT to lookup two types of objects (both represented by a multihash):
 - [Content IDs](https://docs.ipfs.io/guides/concepts/cid/) of the data added to IPFS. A lookup of this value will give the peerIDs of the peers having this content.
-- PeerIDs. A lookup will give all the [multiaddresses](https://multiformats.io/multiaddr/) **(or "multiaddrs"?)** to reach the peer(s) actually having the content.
+- PeerIDs. A lookup will give all the [multiadds](https://multiformats.io/multiaddr/) to reach the peer(s) actually having the content.
 Consequently, IPFS's DHT is used for content routing (1st lookup) and for peer routing (2nd lookup). 
 
 Implementation status can be checked [here](https://libp2p.io/implementations/#peer-routing).
