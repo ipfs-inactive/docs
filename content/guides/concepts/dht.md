@@ -64,12 +64,12 @@ A request for a hash of length n will take at maximum log2(n) steps, or even log
 # The DHT of IPFS
 
 In IPFS Kademlia's DHT, keys are not hashes but [multihashes](https://multiformats.io/multihash/): a generalization of the cryptographic hashes containing also information about which hashing function was used, and the length of the hash in bits.
-[PeerIDs](https://docs.libp2p.io/concepts/peer-id/) are those of [libp2p](https://docs.libp2p.io/concepts/peer-id/), the networking library used by IPFS.
+[PeerIDs](https://docs.libp2p.io/concepts/peer-id/) are those of [libp2p](https://libp2p.io/), the networking library used by IPFS.
 
 We use a DHT to lookup two types of objects (both represented by a multihash):
 - [Content IDs](https://docs.ipfs.io/guides/concepts/cid/) of the data added to IPFS. A lookup of this value will give the peerIDs of the peers having this immutable content
 - [IPNS records](https://docs.ipfs.io/guides/concepts/ipns/). A lookup will give the last Content ID associated with this IPNS address, enabling routing mutable content
 
-Consequently, IPFS's DHT is one of the way of mutable and immutable [Content Routing]. It's currently the only one [implemented](https://libp2p.io/implementations/#peer-routing). 
+Consequently, IPFS's DHT is one of the way of mutable and immutable [Content Routing](https://docs.libp2p.io/concepts/content-routing/). It's currently the only one [implemented](https://libp2p.io/implementations/#peer-routing). 
 
 **(what is m and k for IPFS? Does it depends on specs? implementation? )**
