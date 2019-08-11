@@ -80,7 +80,7 @@ Per specification, the default bucket size k is 20 : each of the 255 lists of pe
 
 Adding a blob of data to IPFS is just advertizing that you have it. Since DHT is the only content routing implemented, you can just use
 ` ipfs add myData`
-IPFS will automatically chunk your data and add a mapping on the DHT between the Content ID and your PeerID. Note that there can be other Peer IDs already mapped to that value, so you will be added to the list. Also note that if the provided data is bigger than 124kb, it will be chunked and both chunks and overall blob of data will be mapped. 
+IPFS will automatically chunk your data and add a mapping on the DHT between the Content ID and your PeerID. Note that there can be other Peer IDs already mapped to that value, so you will be added to the list. Also note that if the provided data is bigger than 124kb, it will be chunked in "blocks" and both blocks and overall data will be mapped. 
 
 
 
