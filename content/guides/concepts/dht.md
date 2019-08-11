@@ -72,7 +72,7 @@ We use a DHT to lookup two types of objects (both represented by a SHA256):
 
 Consequently, IPFS's DHT is one of the way of mutable and immutable [Content Routing](https://docs.libp2p.io/concepts/content-routing/). It's currently the only one [implemented](https://libp2p.io/implementations/#peer-routing). 
 
-Per specification, the default bucket size k is 20 : each of the 255 lists of peers contain at most 20 peers. 
+Per specification, the default bucket size k is 20 meaning each of the 255 lists of peers contain at most 20 peers. 
 
 ## Usage
 
@@ -82,6 +82,4 @@ Adding a blob of data to IPFS is just advertizing that you have it. Since DHT is
 ` ipfs add myData`
 IPFS will automatically chunk your data and add a mapping on the DHT between the Content ID and your PeerID. Note that there can be other Peer IDs already mapped to that value, so you will be added to the list. Also note that if the provided data is bigger than 124kb, it will be chunked in "blocks" and both blocks and overall data will be mapped. 
 
-
-
-**(what is m and k for IPFS? Does it depends on specs? implementation? )**
+You can publish an IPNS record using [`ipfs.name.publish`](https://docs.ipfs.io/guides/concepts/ipns/).
