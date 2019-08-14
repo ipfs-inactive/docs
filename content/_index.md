@@ -13,7 +13,7 @@ Head over to the [introduction](/introduction) section to learn about the basics
 
 ## Guides
 
-IPFS is a complex system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), and guides for specific IPFS use cases. Some [basic examples](/guides/examples) of ways to use the IPFS ecosystem, including:
+IPFS is a complex system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), and guides for specific IPFS use cases. The examples section is home to a number of [basic examples](/guides/examples) of ways to use the IPFS ecosystem, including:
 
 * A simple [how-to on pinning](/guides/examples/pinning)
 * Instructions for [making your own IPFS service](/guides/examples/api/service/readme)
