@@ -14,7 +14,7 @@ Head over to the [introduction](/introduction) section to learn about the basics
 
 ## Guides
 
-IPFS is a complex system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), guides for specific IPFS use cases, and example projects demonstrating various ways to use the IPFS ecosystem.
+IPFS is a complex system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), guides for specific IPFS use cases, and [basic examples](/guides/examples) demonstrating various ways to use the IPFS ecosystem.
 
 If you prefer a hands-on approach, try out the interactive tutorials at [ProtoSchool](https://proto.school). You can learn about the decentralized web by solving code challenges.
 
