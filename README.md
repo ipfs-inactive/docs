@@ -57,7 +57,6 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 - [@ericronne](https://github.com/ericronne)
 - [@fsdiogo](https://github.com/fsdiogo)
 - [@jessicaschilling](https://github.com/jessicaschilling)
-- [@pkafei](https://github.com/pkafei)
 - [@terichadbourne](https://github.com/terichadbourne)
 
 
