@@ -44,7 +44,7 @@ Another great feature of a Merkle-DAG and breaking content into blocks is that i
 
 ### 3 \\ The DHT
 
-So, to recap, IPFS lets you to give CIDs to content, and link that content together in a Merkle-DAG using IPLD. Now let’s move on to the last piece: how you find and move that content around!
+So, to recap, IPFS lets you to give CIDs to content, and link that content together in a Merkle-DAG using IPLD. Now let’s move on to the last piece: how you find and move content.
 
 To find which peers are hosting the content you’re after (_discovery_), IPFS uses a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. A hash table is a database of keys to values. A _distributed_ hash table is one where the table is split across all the peers in a distributed network. To find content, you ask these peers.
 
