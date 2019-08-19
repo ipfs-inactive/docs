@@ -1,7 +1,6 @@
 // Quick and dirty bootstrap-style "alert" box from old website.
 // This supports markup in already-existing docs. We may want to change it.
 .alert {
-  border: 1px solid #f3f3f3;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
   margin: 1em 0;
   padding: 1em;
@@ -12,11 +11,13 @@
 .alert > *:last-child { margin-bottom: 0; }
 
 .alert-info {
-  border-left: 4px solid @colors-aqua-muted;
+  border: 1px solid @accent-teal;
+  border-left: 4px solid @accent-teal;
 }
 
 .alert-warning {
-  border-left: 4px solid @colors-yellow-muted;
+  border: 1px solid @accent-gold;
+  border-left: 4px solid @accent-gold;
 }
 
 .alert + p {

@@ -2,9 +2,18 @@
 @import (inline) "./inter-ui.css";
 @import "./constants";
 
-// TODO: figure out a good standard color for this?
-@link-color: #3f51b5;
-@link-highlight-color: #536dfe;
+@ipfs-green: #138dc8;
+@brand-blue: #083b54;
+@ipfs-dark-grey: #34373f;
+@brand-teal: #6acad1;
+@accent-teal: #469ea2;
+@accent-red: #f05135;
+@accent-gold: #f59223;
+
+@text-color: @ipfs-dark-grey;
+@heading-color: @brand-blue;
+@link-color: lighten(@brand-blue, 25%);
+@link-highlight-color: lighten(@brand-blue, 35%);
 
 @minimum-layout-width: 50rem;
 @narrow-layout-width: (@minimum-layout-width - 0.001rem);
@@ -14,12 +23,13 @@
 }
 
 body {
-  color: #333;
+  color: @text-color;
   font-family: @fonts-sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2 {
+  color: @heading-color;
   font-family: @fonts-montserrat;
   font-weight: 700;
 }
@@ -29,18 +39,20 @@ h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-code, kbd, pre, samp, var {
-  font-family: @fonts-monospace;
-}
-
-a {
+p a, h2 a, h3 a, h4 a, h5 a, h6 a, aside a, table a, li a {
   color: @link-color;
   text-decoration: none;
-  -webkit-text-decoration-skip: objects;
+  transition: color 0.125s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @link-highlight-color;
+    border-bottom: 1px solid @link-highlight-color;
   }
+}
+
+code, kbd, pre, samp, var {
+  font-family: @fonts-monospace;
 }
 
 a, button, input, label {
