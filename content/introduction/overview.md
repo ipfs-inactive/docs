@@ -38,7 +38,7 @@ Making it possible to download a file from many locations that aren’t managed 
 
 - **Can speed up the web when you’re far away or disconnected.** If you can retrieve a file from someone nearby instead of hundreds or thousands of miles away, you can get it faster. (Organizations with enough money and expertise can do this with CDNs ([content distribution networks](https://en.wikipedia.org/wiki/Content_delivery_network)) or multiple data centers, but IPFS aims to make this possible for everyone.) That’s especially valuable if your community is networked locally, but doesn’t have a good connection to the wider internet.
 
-That last point is actually where IPFS gets it’s name: **Inter-Planetary File System**! We’re striving to build a system that works across places as disconnected or far apart as other planets. That’s a pretty idealistic goal, but it keeps us working and thinking hard, and most everything we create in pursuit of that goal is also useful closer to home.
+That last point is actually where IPFS gets it’s name: **Inter-Planetary File System**. We’re striving to build a system that works across places as disconnected or far apart as other planets. While that's an idealistic goal, it keeps us working and thinking hard, and most everything we create in pursuit of that goal is also useful here at home.
 
 
 ## Links don’t change on IPFS.
@@ -64,14 +64,15 @@ Instead of being location-based, IPFS addresses a file by *what’s in it*, or b
 The hash is unique to the content that it came from, even though it’s [relatively] short . It also allows you to verify that you got what you asked for — bad actors can’t just hand you content that doesn’t match. (If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction.)
 
 <aside class="alert alert-info">
-  Why do we say “content” instead of “files” or “web pages” here? Because a content identifier can point to many different types of data, such as a single small file, a piece of a larger file, or metadata. (In case you don’t know, metadata is “data about the data.” You use metadata when you access the date, location, or file size of your digital pictures, for example.) So, an individual IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or any other kind of content. For more on this, check out the [_How IPFS Works_](/introduction/how-ipfs-works/) part of these docs!
+  Why do we say “content” instead of “files” or “web pages” here? Because a content identifier can point to many different types of data, such as a single small file, a piece of a larger file, or metadata. (In case you don’t know, metadata is “data about the data.” You use metadata when you access the date, location, or file size of your digital pictures, for example.) So, an individual IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or any other kind of content. For more on this, check out the [_How IPFS Works_](/introduction/how-ipfs-works/) part of these docs.
 </aside>
+
 Because the address of a file in IPFS is created from the content itself, links in IPFS can’t be changed. For example…
 
 - If the text on a web page is changed, the new version gets a new, different address.
 - Content can’t be moved to a different address. On today’s internet, a company could reorganize content on their website and move a page at `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same old content.
 
-Of course, people want to update and change content all the time, and don’t want to send new links every time they do it. This is entirely possible in an IPFS world, but explaining it requires a little more info than what’s within the scope of this guide. Check out the concept guides on [IPNS]({{<relref "guides/concepts/ipns.md">}}) and the [Mutable File System (MFS)]({{<relref "guides/concepts/mfs.md">}}) to learn more about how changing content can work in a content-addressed, distributed system.
+Of course, people want to update and change content all the time, and don’t want to send new links every time they do it. This is entirely possible in an IPFS world, but explaining it requires a little more info than what’s within the scope of this guide. Check out the concept guides on [IPNS]({{<relref "guides/concepts/ipns.md">}}), the [Mutable File System (MFS)]({{<relref "guides/concepts/mfs.md">}}), and [DNSLink](https://docs.ipfs.io/guides/concepts/dnslink/) to learn more about how changing content can work in a content-addressed, distributed system.
 
 It’s important to remember in all of these situations using IPFS is participatory and collaborative. If nobody using IPFS has the content identified by a given address available for others to access, you won’t be able to get it. On the other hand, content can’t be removed from IPFS as long as *someone* is interested enough to make it available, whether that person is the original author or not.
 
