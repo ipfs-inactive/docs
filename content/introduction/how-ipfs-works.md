@@ -67,8 +67,6 @@ This is useful because establishing connections is usually hard to set up and ex
 
 As you may have noticed from this discussion, the IPFS ecosystem is made up of many modular libraries that support specific parts of any distributed system. You can certainly use any part of the stack independently, or combine them in novel ways.
 
-**TODO: —> this first example isn't quite right yet, and we could use another.** For example, all of the exchange and routing parts of the stack will let you open a connection, and exchange that data with other peers. And _[insert another example here.]_
-
 
 ## Summary
 
