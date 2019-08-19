@@ -5,15 +5,11 @@ weight: 2
 
 IPFS is a peer-to-peer (p2p) network that links content-addressed data to other content-addressed data. Content is accessible through peers that might relay information or store it (or do both!), and those peers can be located anywhere in the world. IPFS knows how to find what you ask for by its content address, rather than where it is.
 
-<!-- <img alt="IPFS Stack" src="../assets/ipfs_stack.png" width="200px" /> -->
-
 ## There are three important things to understand about IPFS
 
 Let’s first dive in to _content addressing_ and how that content is _linked together_. This “middle” part of the IPFS stack is what connects the ecosystem together; everything is built on being able to find content via linked, unique identifiers.
 
 ### 1 \\ Content addressing and linked data
-
-<!-- <img alt="IPFS Stack - Data Structures" src="../assets/ipfs_stack-data.png" width="200px" /> -->
 
 IPFS uses _content addressing_ to identify content by what’s in it, rather than by where it’s located. Looking for an item by content is actually something you do all the time. For example, when you look for a book in the library, you ask for it by the title; that’s content addressing because you’re asking for **what** it is. If you were using location addressing to find that book, you’d ask for it by **where** it is: “I want the book that’s on the second floor, first stack, third shelf from the bottom, four books from the left.” If someone moved that book, you’d be out of luck!
 
@@ -34,9 +30,7 @@ The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IP
 
 **Everything else in the IPFS ecosystem builds on top of this core concept; linked, addressable content is the fundamental connecting element that makes the rest work.**
 
-### 2 \\ DAGs
-
-<!-- <img alt="IPFS Stack - Applications" src="../assets/ipfs_stack-apps.png" width="200px" /> -->
+### 2 \\ DAGs\
 
 IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. Specifically, they use _Merkle-DAGs_, which are DAGs where each node has an identifier that is a hash of the node’s contents. Sound familiar? Yup, this refers back to the _CID_ concept that we covered in the previous section. Another way to look the whole CID-linked-data thing: identifying a data object (like a Merkle-DAG node) by the value of its hash is _content addressing_. _(Check out [the concept guide on Merkle-DAGs]({{<relref "guides/concepts/merkle-DAG.md">}}) for a more in-depth treatment of this topic.)_
 
@@ -50,8 +44,6 @@ Another great feature of a Merkle-DAG and breaking content into blocks is that i
 
 
 ### 3 \\ The DHT
-
-<!-- <img alt="IPFS Stack - Routing and Exchange" src="../assets/ipfs_stack-exchange_routing.png" width="200px" /> -->
 
 So, to recap, IPFS lets you to give CIDs to content, and link that content together in a Merkle-DAG using IPLD. Now let’s move on to the last piece: how you find and move that content around!
 
