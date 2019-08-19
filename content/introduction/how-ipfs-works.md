@@ -52,7 +52,11 @@ The <a hrefm src="https://libp2p.io/">libp2p project</a> is the part of the IPFS
 
 Once you know where your content is (ie, which peer or peers are storing the various blocks that make up the content you’re after), you use the DHT **again** to find the current location of those peers (_routing_). So, in order to get to content, you use libp2p to query the DHT twice.
 
-**TODO: —> this description of exchange might not be right, and we perhaps need something about bootstrapping, Bitswap, or Graphsync.** You’ve discovered your content, and you’ve found the current location(s) of that content — now you need to connect to that content (_exchange_). libp2p again to the rescue! _[Maybe something here about bootstrapping, Bitswap, or Graphsync.]_
+You’ve discovered your content, and you’ve found the current location(s) of that content — now you need to connect to that content and get it (_exchange_). To request blocks from and send blocks to other peers, IPFS currently uses a module called [_Bitswap_](https://github.com/ipfs/specs/tree/master/bitswap). Bitswap allows you to connect to the peer or peers that have the content you want, send them your _wantlist_ (a list of all the blocks you're interested in), and have them send you the blocks you requested. Once those blocks arrive, you can verify them by hashing their content to get CIDs. (These CIDs also allow you to deduplicate blocks if needed.)
+
+There are [other content replication protocols under discussion](https://github.com/ipfs/camp/blob/master/DEEP_DIVES/24-replication-protocol.md) as well, the most developed of which is [_Graphsync_](https://github.com/ipld/specs/blob/master/block-layer/graphsync/graphsync.md).
+
+#### A note on libp2p
 
 What makes libp2p especially useful for peer to peer connections is _connection multiplexing_. Traditionally, every service in a system would open a different connection to remotely communicate with other services of the same kind. Using IPFS, you open just one connection, and you multiplex everything on that. For everything your peers need to talk to each other about, you send a little bit of each thing, and the other end knows how to sort those chunks where they belong.
 
