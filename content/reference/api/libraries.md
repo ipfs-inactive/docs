@@ -1,3 +1,3 @@
 ---
-title: "JS & Go Libraries"
+title: "JS Core API"
 ---

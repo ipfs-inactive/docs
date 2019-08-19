@@ -11,19 +11,17 @@ Here’s an overview of what you’ll find in our documentation:
 
 Head over to the [introduction](/introduction) section to learn about the basics of IPFS. There are also instructions on how to install IPFS, and tips on basic IPFS usage.
 
-
 ## Guides
 
 IPFS is a system that hopes to change how we use the internet, so it comes with many new concepts. The guides section has an overview of major [concepts](/guides/concepts) in IPFS (including terms and ideas associated with distributed file systems generally), guides for specific IPFS use cases, and example projects demonstrating various ways to use the IPFS ecosystem.
 
-If you prefer a hands-on approach, try out the interactive tutorials at [ProtoSchool](https://proto.school). You can learn about the decentralized web by solving code challenges.
+For detailed guidance on select topics, try out the interactive tutorials at [ProtoSchool](https://proto.school). You can learn about the decentralized web by solving code challenges.
 
 ## Reference
 
 ### Commands & API
 
 If you are using IPFS via the [command line](/reference/api/cli) or [interacting with a running IPFS node](/reference/api/http) programmatically, you’ll use IPFS’s commands API. It’s implemented in both the Go and JavaScript versions of IPFS.
-
 
 ### Go & JavaScript Implementations
 
