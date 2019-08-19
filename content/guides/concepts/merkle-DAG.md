@@ -19,7 +19,7 @@ For example, the previous linked list, assuming that the payload of eachnode  is
 
 Merkle-DAGs are _self-verified_ structures. The CID of a node is univocally linked to the contents of its payload and those of all its descendants. Thus two nodes with the same CID univocally represent exactly the same DAG. This will be a key property to efficiently sync Merkle-CRDTs without having to copy the full DAG, as exploited by systems like IPFS. Merkle-DAGs  are  very  widely  used. Source  control  systems  like  Git [11] and others [6] use them to efficiently store the repository history, in away that enables de-duplicating the objects and detecting conflicts between branches.
 
-_Excerpted from Markle-CRDT draft paper by @hsanjuan, @haadcode, and @pgte. Available: https://github.com/ipfs/research-CRDT/issues/45_
+_Excerpted from Markle-CRDT draft paper by @hsanjuan, @haadcode, and @pgte. Available: https://hector.link/presentations/merkle-crdts/merkle-crdts.pdf_
 
 
 ### Footnotes
