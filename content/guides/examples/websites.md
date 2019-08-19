@@ -4,11 +4,13 @@ title: IPFS for Websites
 
 ### A short guide to hosting your site on IPFS
 
+**Note:** [@agentofuser](https://github.com/agentofuser/)'s "Complete Beginner's Guide to Deploying Your First Static Website to IPFS" (see the [writeup](https://interplanetarygatsby.com/ipfs-deploy/) and [repo](https://github.com/agentofuser/ipfs-deploy)) is another useful resource for learning more about hosting your site on IPFS.
+
 #### Create your site
 
 Assume you have a static website in a directory `mysite`. 
 
-In order to publish it as a site, make sure your ipfs daemon is running:
+In order to publish it as a site, [install ipfs](https://docs.ipfs.io/guides/guides/install/) and make sure your ipfs daemon is running:
 
 ```bash
 $ ipfs daemon
@@ -55,6 +57,8 @@ your.domain.            60      IN      TXT     "dnslink=/ipfs/$SITE_CID"
 Now you can view your site at `http://localhost:8080/ipns/your.domain`. 
 
 You can also try this on the gateway at `http://gateway.ipfs.io/ipns/your.domain`.
+
+More questions about DNSLink? Check out the website for tutorials, examples, and FAQ: http://dnslink.io/
 
 #### Using the Interplanetary Naming System
 

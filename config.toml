@@ -86,7 +86,7 @@ name = "Commands & API"
 weight = 4
 [[menu.reference]]
 parent = "api"
-name = "JS & Go Libraries"
+name = "JS Core API"
 url = "https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"
 weight = 30
 
@@ -248,7 +248,7 @@ url = "https://awesome.ipfs.io/"
 parent = "community"
 name = "Public Archives on IPFS"
 title = "A community project to host archives of valuable public data."
-url = "https://archives.ipfs.io"
+url = "https://awesome.ipfs.io/datasets/"
 [[menu.community]]
 parent="community"
 name = "FAQ"
