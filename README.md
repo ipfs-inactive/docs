@@ -55,7 +55,6 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 ### Q3 2019 goals team
 - [@cwaring](https://github.com/cwaring)
 - [@ericronne](https://github.com/ericronne)
-- [@fsdiogo](https://github.com/fsdiogo)
 - [@jessicaschilling](https://github.com/jessicaschilling)
 - [@terichadbourne](https://github.com/terichadbourne)
 
