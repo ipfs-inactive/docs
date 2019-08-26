@@ -79,7 +79,7 @@ While we're making every effort to create a comprehensive plan for our overall d
 
 5. **Community.** The Community section of [docs.ipfs.io](https://docs.ipfs.io/) is a work in progress, and we welcome ideas for how best to structure this information going forward! Please [file an issue in this repo](https://github.com/ipfs/docs/issues) with your thoughts.
 
-6. **Any other issue in this repo with a ["help wanted"](https://github.com/ipfs/docs/labels/help%20wanted) label!**
+6. **Any other issue labeled "help wanted" in either [this docs repo](https://github.com/ipfs/docs/labels/help%20wanted) or [the IPFS website repo](https://github.com/ipfs/website/labels/help%20wanted)!** Why the main IPFS website in addition to just docs? Because at its most fundamental level, even the front page of ipfs.io is documentation, and we want to make that as great as possible, too.
 
 If you are able to contribute to any of the categories above, we thank you -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
