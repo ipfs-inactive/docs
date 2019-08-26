@@ -7,7 +7,7 @@
 ## Join our weekly sync (all welcome!)
 Mondays at 15:00-15:30 UTC / 4:00-4:30 pm BST / 7:00-7:30 am PST
 
-📞 Zoom: https://protocol.zoom.us/j/568955431
+📞 Zoom: https://protocol.zoom.us/j/614386160
 
  :orange_book: Notes from past calls can be found [here](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP).
  
