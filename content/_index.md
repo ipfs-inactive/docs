@@ -53,7 +53,7 @@ Both the Go and JavaScript implementations of IPFS are written to function as li
 
 ### Get Involved
 
-IPFS is an open-source community project. While [Protocol Labs](https://protocol.ai) is able to sponsor some of the work around it, much of the design, code, and effort is contributed by volunteers and community members like you. If you’re interested in helping improve IPFS, check the [how to help](/community/contribute/how_to_help) guide to get started.
+IPFS is an open-source community project. While [Protocol Labs](https://protocol.ai) is able to sponsor some of the work around it, much of the design, code, and effort is contributed by volunteers and community members like you. If you’re interested in helping improve IPFS, check the [how to help](/community/contribute/how-to-help) guide to get started.
 
 If you are diving in to contribute new code, make sure you check both the [contribution guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) and the style guide for your language ([Go](https://github.com/ipfs/community/blob/master/CONTRIBUTING_GO.md), [JavaScript](https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md)).
 
