@@ -24,7 +24,6 @@ For more technical information about building, debugging or using the API, see:
 - [Connecting with Websockets](https://github.com/ipfs/go-ipfs/blob/master/docs/transports.md)
 - Building on…
     - [Windows](https://github.com/ipfs/go-ipfs/blob/master/docs/windows.md)
-    - [OpenBSD](https://github.com/ipfs/go-ipfs/blob/master/docs/openbsd.md)
 - Additional guides at: https://github.com/ipfs/go-ipfs/blob/master/docs/
 
 If you plan to use `go-ipfs` as a package in your own Go application, you can take any of three main approaches:
