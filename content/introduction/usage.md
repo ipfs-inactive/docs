@@ -1,18 +1,18 @@
 ---
 title: Getting Started
-weight: 2
+weight: 3
 ---
 
 ## Install IPFS
 
-If you haven't done so already, your first step is to **install IPFS**! Most people prefer to install a prebuilt package, which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](https://docs.ipfs.io/guides/guides/install/#installing-from-a-prebuilt-package).
+If you haven’t done so already, your first step is to **install IPFS**! Most people prefer to install a prebuilt package, which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking “Install go-ipfs” (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](../install/#installing-from-a-prebuilt-package).
 
 <a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
   Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
 </a>
 
 <aside class="alert alert-info">
-  Don't want to use the command line right now? You can give the desktop-app implementation of IPFS a go! <a href="https://github.com/ipfs-shipyard/ipfs-desktop">Get started with that here <i class="fas fa-external-link-square-alt fa-sm"></i></a>
+  Don’t want to use the command line right now? You can give the desktop-app implementation of IPFS a go! <a href="https://github.com/ipfs-shipyard/ipfs-desktop">Get started with IPFS Desktop here <i class="fas fa-external-link-square-alt fa-sm"></i></a>
 </aside>
 
 For more install options, such as building from source, and toubleshooting tips, visit our [install guide]({{<relref "guides/guides/install.md">}}). If you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
@@ -103,7 +103,7 @@ Gateway server listening on /ip4/127.0.0.1/tcp/8080
 Make note of the tcp ports you receive. If they are different, use yours in the commands below.
 </div>
 
-Now, switch back to your original terminal. If you're connected to the network,
+Now, switch back to your original terminal. If you’re connected to the network,
 you should be able to see the ipfs addresses of your peers when you run:
 
 ```sh
