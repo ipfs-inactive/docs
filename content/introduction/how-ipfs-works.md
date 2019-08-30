@@ -9,7 +9,7 @@ IPFS is a peer-to-peer (p2p) storage network. Content is accessible through peer
 
 Let’s first look at _content addressing_ and how that content is _linked together_. This “middle” part of the IPFS stack is what connects the ecosystem together; everything is built on being able to find content via linked, unique identifiers.
 
-### 1 \\ Content addressing and linked data
+### 1. Content addressing and linked data
 
 IPFS uses _content addressing_ to identify content by what’s in it, rather than by where it’s located. Looking for an item by content is something you already do all the time. For example, when you look for a book in the library, you often ask for it by the title; that’s content addressing because you’re asking for **what** it is. If you were using location addressing to find that book, you’d ask for it by **where** it is: “I want the book that’s on the second floor, first stack, third shelf from the bottom, four books from the left.” If someone moved that book, you’d be out of luck!
 
@@ -29,7 +29,7 @@ The IPFS protocol uses IPLD to get from raw content to an IPFS address. IPFS has
 
 **Everything else in the IPFS ecosystem builds on top of this core concept: linked, addressable content is the fundamental connecting element that makes the rest work.**
 
-### 2 \\ IPFS turns files into DAGs
+### 2. IPFS turns files into DAGs
 
 IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. Specifically, they use _Merkle-DAGs_, which are DAGs where each node has an identifier that is a hash of the node’s contents. Sound familiar? This refers back to the _CID_ concept that we covered in the previous section. Another way to look the this CID-linked-data concept: identifying a data object (like a Merkle-DAG node) by the value of its hash is _content addressing_. _(Check out [the concept guide on Merkle-DAGs]({{<relref "guides/concepts/merkle-DAG.md">}}) for a more in-depth treatment of this topic.)_
 
@@ -42,13 +42,13 @@ Merkle-DAGs are a bit of a [“turtles all the way down”](https://ipfs.io/ipfs
 Another useful feature of Merkle-DAGs and breaking content into blocks is that if you have two similar files, they can share parts of the Merkle-DAG; ie, parts of different Merkle-DAGs can reference the same data. For example, if you update a website, only the files that changed will get new content addresses. Your old version and your new version can refer to the same blocks for everything else. This can make transferring versions of large datasets (such as genomics research or weather data) more efficient because you only need to transfer the parts that are new or have changed instead of creating entirely new files each time.
 
 
-### 3 \\ The DHT
+### 3. The DHT
 
 So, to recap, IPFS lets you give CIDs to content, and link that content together in a Merkle-DAG using IPLD. Now let’s move on to the last piece: how you find and move content.
 
 To find which peers are hosting the content you’re after (_discovery_), IPFS uses a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. A hash table is a database of keys to values. A _distributed_ hash table is one where the table is split across all the peers in a distributed network. To find content, you ask these peers.
 
-The <a hrefm src="https://libp2p.io/">libp2p project</a> is the part of the IPFS ecosystem that provides the DHT and handles peers connecting and talking to each other. (Note that, as with IPLD, libp2p can also be used as a tool for other distributed systems, not just IPFS.)
+The [libp2p project](https://libp2p.io/) is the part of the IPFS ecosystem that provides the DHT and handles peers connecting and talking to each other. (Note that, as with IPLD, libp2p can also be used as a tool for other distributed systems, not just IPFS.)
 
 Once you know where your content is (ie, which peer or peers are storing each of the blocks that make up the content you’re after), you use the DHT **again** to find the current location of those peers (_routing_). So, in order to get to content, you use libp2p to query the DHT twice.
 
