@@ -25,7 +25,7 @@ Content addressing through hashes has become a widely-used means of connecting d
 
 This is where the [IPLD project](https://ipld.io/) comes in. **Hashes identify content, and IPLD translates between data structures**. Since different distributed systems structure their data in different ways, IPLD provides libraries for combining pluggable modules (parsers for each possible type of IPLD node) to resolve a path, selector, or query across many linked nodes (allowing you explore data regardless of the underlying protocol). IPLD provides a way to translate between content-addressable data structures: “Oh you use Git-style, no worries, I can follow those links. Oh you use Ethereum, I got you, I can follow those links too!”
 
-The IPFS protocol uses “IPFS-flavored IPLD” to get from raw content to an IPFS address. IPFS has its own preferences and conventions about how data should be broken up into a DAG (more on DAGs below!); IPLD links content on the IPFS network together using those conventions.
+The IPFS protocol uses IPLD to get from raw content to an IPFS address. IPFS has its own preferences and conventions about how data should be broken up into a DAG (more on DAGs below!); IPLD links content on the IPFS network together using those conventions.
 
 **Everything else in the IPFS ecosystem builds on top of this core concept: linked, addressable content is the fundamental connecting element that makes the rest work.**
 
@@ -48,7 +48,7 @@ So, to recap, IPFS lets you to give CIDs to content, and link that content toget
 
 To find which peers are hosting the content you’re after (_discovery_), IPFS uses a [_distributed hash table_](https://en.wikipedia.org/wiki/Distributed_hash_table), or DHT. A hash table is a database of keys to values. A _distributed_ hash table is one where the table is split across all the peers in a distributed network. To find content, you ask these peers.
 
-The <a hrefm src="https://libp2p.io/">libp2p project</a> is the part of the IPFS ecosystem that provides the DHT and handles peers connecting and talking to each other. It can be used as a tool for other distributed systems as well; just as there is “IPFS-flavored IPLD,” there’s also “IPFS-flavored libp2p.”
+The <a hrefm src="https://libp2p.io/">libp2p project</a> is the part of the IPFS ecosystem that provides the DHT and handles peers connecting and talking to each other. (Note that, as with IPLD, libp2p can also be used as a tool for other distributed systems, not just IPFS.)
 
 Once you know where your content is (ie, which peer or peers are storing each of the blocks that make up the content you’re after), you use the DHT **again** to find the current location of those peers (_routing_). So, in order to get to content, you use libp2p to query the DHT twice.
 
