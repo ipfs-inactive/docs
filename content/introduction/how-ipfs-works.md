@@ -29,7 +29,7 @@ The IPFS protocol uses IPLD to get from raw content to an IPFS address. IPFS has
 
 **Everything else in the IPFS ecosystem builds on top of this core concept: linked, addressable content is the fundamental connecting element that makes the rest work.**
 
-### 2 \\ DAGs
+### 2 \\ IPFS turns files into DAGs
 
 IPFS and many other distributed systems take advantage of a data structure called [directed acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph), or DAGs. Specifically, they use _Merkle-DAGs_, which are DAGs where each node has an identifier that is a hash of the node’s contents. Sound familiar? This refers back to the _CID_ concept that we covered in the previous section. Another way to look the this CID-linked-data concept: identifying a data object (like a Merkle-DAG node) by the value of its hash is _content addressing_. _(Check out [the concept guide on Merkle-DAGs]({{<relref "guides/concepts/merkle-DAG.md">}}) for a more in-depth treatment of this topic.)_
 
