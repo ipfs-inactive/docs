@@ -70,6 +70,6 @@ As you may have noticed from this discussion, the IPFS ecosystem is made up of m
 
 ## Summary
 
-The IPFS ecosystem gives CIDs to content, and links that content together by generating IPLD-Merkle-DAGs. You can discover content using a DHT that's provided by libp2p, and open a connection to any provider of that content and move it around using a multiplexed connection. All of this is held together by the “middle” of stack, which is linked, unique identifiers; that's the essential part that the IPFS is built on.
+The IPFS ecosystem gives CIDs to content, and links that content together by generating IPLD-Merkle-DAGs. You can discover content using a DHT that's provided by libp2p, and open a connection to any provider of that content and download it using a multiplexed connection. All of this is held together by the “middle” of the stack, which is linked, unique identifiers; that's the essential part that the IPFS is built on.
 
 <!--Next, we’ll look at how IPFS is an interconnected network of equal peers, each with the same abilities (no client-server relationships), and what that means for system architectures. We’ll also touch on another useful project in the ecosystem -- IPFS Cluster -- that can help make sure your content is always available, even on a network like IPFS that supports peers dropping in and out at will.-->
