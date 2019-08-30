@@ -7,7 +7,7 @@ Welcome! If you’re new to IPFS, you’ve come to the right place. Here is a qu
 
 ## IPFS is a distributed system for storing and accessing files, websites, applications, and data.
 
-What does that mean, exactly? Let’s say you’re doing some research on aardvarks. (Just roll with it; aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the wikipedia page on aardvarks at:
+What does that mean, exactly? Let’s say you’re doing some research on aardvarks. (Just roll with it; aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the Wikipedia page on aardvarks at:
 
 ```
 https://en.wikipedia.org/wiki/Aardvark
@@ -15,7 +15,7 @@ https://en.wikipedia.org/wiki/Aardvark
 
 When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country (or even the planet), for the aardvark page.
 
-However, if you use IPFS, your computer asks to get that page like this:
+However, that's not the only option for meeting your aardvark needs! There's a mirror of Wikipedia stored on IPFS, and you could use that instead. If you use IPFS, your computer asks to get the aardvark page like this:
 
 ```
 /ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
