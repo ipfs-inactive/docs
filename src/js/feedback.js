@@ -4,7 +4,7 @@ module.exports = function () {
     window.ga('send', 'event', {
       eventCategory: el.title.toLowerCase(),
       eventAction: 'click',
-      eventLabel: window.location.pathname
+      eventLabel: window.location.href
     })
   }
   document.addEventListener('DOMContentLoaded', function () {
