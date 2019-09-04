@@ -8,6 +8,7 @@
 }
 
 .feedback {
+  margin: 2em 0;
   &--result {
     display: none;
   }
@@ -19,7 +20,7 @@
     display: none;
   }
   button {
-    border: 1px solid;
+    border: @link-highlight-color 1px solid;
     background-color: transparent;
     margin-right: 10px;
     min-width: 100px;
@@ -27,9 +28,11 @@
     font-family: @fonts-montserrat;
     font-weight: 700;
     font-size: 1.1em;
+    line-height: 2em;
     cursor: pointer;
     &:hover {
-      background-color: @accent-teal;
+      background-color: @link-highlight-color;
+      color: white;
     }
   }
 }
