@@ -1,0 +1,35 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feedback {
+  &--result {
+    display: none;
+  }
+  &--show {
+    display: block;
+    animation: fadein 1s;
+  }
+  &--hide {
+    display: none;
+  }
+  button {
+    border: 1px solid;
+    background-color: transparent;
+    margin-right: 10px;
+    min-width: 100px;
+    color: @heading-color;
+    font-family: @fonts-montserrat;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    &:hover {
+      background-color: @accent-teal;
+    }
+  }
+}
