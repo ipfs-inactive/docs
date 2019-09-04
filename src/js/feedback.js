@@ -1,10 +1,10 @@
 module.exports = function () {
-  function sendFeedback (event) {
+  function sendFeedback (el) {
     if (!window.ga) return
     window.ga('send', 'event', {
-      eventCategory: 'helpful',
+      eventCategory: el.title.toLowerCase(),
       eventAction: 'click',
-      eventLabel: window.location.href
+      eventLabel: window.location.pathname
     })
   }
   document.addEventListener('DOMContentLoaded', function () {
@@ -17,7 +17,7 @@ module.exports = function () {
         feedbackEl
           .querySelector('.feedback--result')
           .classList.add('feedback--show')
-        console.log(window.location.href)
+        sendFeedback(el)
       })
     })
   })
