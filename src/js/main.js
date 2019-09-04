@@ -1,4 +1,5 @@
 const Menu = require('./menu')
+const Feedback = require('./feedback')
 
 function setup () {
   document.documentElement.classList.add('interactive')
@@ -10,11 +11,14 @@ function setup () {
       button.addEventListener('click', event => menu.show())
     }
   }
+  const feedbackElement = document.querySelector('.feedback')
+  if (feedbackElement) {
+    Feedback()
+  }
 }
 
-const requiredFeatures = document.querySelector &&
-  document.body.classList &&
-  document.body.contains
+const requiredFeatures =
+  document.querySelector && document.body.classList && document.body.contains
 
 if (requiredFeatures) {
   setup()

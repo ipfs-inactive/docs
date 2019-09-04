@@ -1,0 +1,49 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feedback {
+  h3 {
+    color: @heading-color;
+  }
+  margin: 2em 0;
+  &--result {
+    display: none;
+  }
+  &--show {
+    display: block;
+    animation: fadein 1s;
+  }
+  &--hide {
+    display: none;
+  }
+  &--result.feedback--show {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    * {
+      margin: 0;
+    }
+  }
+  button {
+    border: @link-highlight-color 1px solid;
+    background-color: transparent;
+    margin-right: 10px;
+    min-width: 100px;
+    color: @heading-color;
+    font-family: @fonts-montserrat;
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 2em;
+    cursor: pointer;
+    &:hover {
+      background-color: @link-highlight-color;
+      color: white;
+    }
+  }
+}

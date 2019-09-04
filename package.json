@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "browserify": "^16.2.3",
-    "hugo-bin": "0.33.0",
+    "hugo-bin": "0.45.2",
     "less": "^3.9.0",
     "less-plugin-autoprefix": "^2.0.0",
     "less-plugin-clean-css": "^1.5.1",
