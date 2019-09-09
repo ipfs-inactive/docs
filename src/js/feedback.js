@@ -3,7 +3,7 @@ module.exports = function () {
   function sendFeedback (el) {
     if (!window.ga) return
     window.ga('send', 'event', {
-      eventCategory: el.title.toLowerCase(),
+      eventCategory: el.dataset && el.dataset.title,
       eventAction: 'click',
       eventLabel: window.location.href
     })
