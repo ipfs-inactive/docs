@@ -40,7 +40,7 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 
 1. **Evaluate existing IPFS documentation content and presentation platform and make decisions for future-proof improvement and alignment**
 - Complete a content audit of existing ipfs.io material and use to prioritize next steps		
-- Create prioritized features list for a best-in-breed IPFS docs platform based on competitive-landscape and analogous product/service research, as well as community feedback
+- Create [prioritized features list](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) for a best-in-breed IPFS docs platform based on competitive-landscape and analogous product/service research, as well as community feedback
 - Determine best-fit tech stack/framework for the IPFS docs site
 
 2. **Better understand our users and their needs, and use this knowledge to prioritize improvements**	
@@ -49,7 +49,7 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 
 3. **Improve existing docs content in the short term, with emphasis on collecting metrics**
 - Implement hotfixes for either content or metrics collection as they emerge from content audit, features list, or user suggestion
-- Add interactive "so you'd like to ..." content on the front of ipfs.io (including analytics) with appropriate guidance for users' next steps
+- Add interactive "so you'd like to ..." content [on the front of ipfs.io](https://www.ipfs.io) (including analytics) with appropriate guidance for users' next steps
 - [ProtoSchool](https://proto.school)-specific enhancements related to improved analytics and user feedback collection
 
 ### Q3 2019 goals team
