@@ -44,7 +44,7 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 - Determine best-fit tech stack/framework for the IPFS docs site
 
 2. **Better understand our users and their needs, and use this knowledge to prioritize improvements**	
-- Complete the creation of ranked, goal-based personae for key IPFS user segments			
+- Complete the creation of [ranked, goal-based personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) for key IPFS user segments			
 - Ensure appropriate resourcing in order to execute upon results of content audit, features list, user suggestion, or other asks
 
 3. **Improve existing docs content in the short term, with emphasis on collecting metrics**
