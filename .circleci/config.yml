@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ipfs/ci-websites
+      - image: ipfs/ci-websites:latest
         environment:
           DEBUG: "true"
     steps:

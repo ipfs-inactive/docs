@@ -32,12 +32,14 @@ ipfs-theme:
 
 packages:
 	# The JS packages don't actually generate useful docs right now, so skip them
-	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
+	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-http-client master $(PKGDIR) pkg
 	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api gx/v1.3.5 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.18 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.18 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.18 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v0.0.2 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-http-client v0.0.3 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core v0.1.0 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core/options v0.1.0 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core/path v0.1.0 $(PKGDIR) go/pkg
+	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core/options/namesys v0.1.0 $(PKGDIR) go/pkg
 
 resources: ipfs-theme packages
 
