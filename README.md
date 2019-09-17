@@ -20,6 +20,13 @@ This repo is used for two purposes:
 1. To organize overall documentation work across the IPFS project
 2. To host the documentation website for IPFS, available at https://docs.ipfs.io/
 
+## IPFS Documentation & Developer UX team
+- [@cwaring](https://github.com/cwaring)
+- [@ericronne](https://github.com/ericronne)
+- [@dominguesgm](https://github.com/dominguesgm)
+- [@jessicaschilling](https://github.com/jessicaschilling)
+- [@terichadbourne](https://github.com/terichadbourne)
+
 ## IPFS docs: Q3 2019 Update
 
 Based on feedback from the community via social media, forums, this repo, [IPFS Camp 2019](https://github.com/ipfs/camp/blob/master/DEEP_DIVES/30-ipfs-education-and-documentation.md), and a variety of other sources, we're placing increased emphasis on improvements to our overall documentation strategy (and its tactical implementation!) in Q3 2019.
@@ -51,12 +58,6 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 - Implement hotfixes for either content or metrics collection as they emerge from content audit, features list, or user suggestion
 - Add interactive "so you'd like to ..." content [on the front of ipfs.io](https://www.ipfs.io) (including analytics) with appropriate guidance for users' next steps
 - [ProtoSchool](https://proto.school)-specific enhancements related to improved analytics and user feedback collection
-
-### Q3 2019 goals team
-- [@cwaring](https://github.com/cwaring)
-- [@ericronne](https://github.com/ericronne)
-- [@jessicaschilling](https://github.com/jessicaschilling)
-- [@terichadbourne](https://github.com/terichadbourne)
 
 
 ## Want to get involved with IPFS documentation?
