@@ -59,6 +59,10 @@ We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9
 - Add interactive "so you'd like to ..." content [on the front of ipfs.io](https://www.ipfs.io) (including analytics) with appropriate guidance for users' next steps
 - [ProtoSchool](https://proto.school)-specific enhancements related to improved analytics and user feedback collection
 
+### Helpful artifacts from Q3 2019 work
+- [Prioritized features list for next-gen docs platform](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) (to be implemented in Q4)
+- [IPFS user/goal personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) illustrating the goals, motivations and potential frustrations of key current/potential IPFS users
+
 
 ## Want to get involved with IPFS documentation?
 
