@@ -30,18 +30,7 @@ ipfs-theme:
 	$(PREPEND)cp ./node_modules/ipfs-css/fonts/Inter-UI* ./build/assets/fonts/ $(APPEND)
 	$(PREPEND)node scripts/ipfs-css-constants.js $(APPEND)
 
-packages:
-	# The JS packages don't actually generate useful docs right now, so skip them
-	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-http-client master $(PKGDIR) pkg
-	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api v0.0.2 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-http-client v0.0.3 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core v0.1.0 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core/options v0.1.0 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core/path v0.1.0 $(PKGDIR) go/pkg
-	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/interface-go-ipfs-core/options/namesys v0.1.0 $(PKGDIR) go/pkg
-
-resources: ipfs-theme packages
+resources: ipfs-theme
 
 install: node_modules resources
 
@@ -86,4 +75,4 @@ clean:
 	$(PREPEND)[ ! -d $(PKGDIR) ] || rm -rf $(PKGDIR)/*/
 	$(PREPEND)[ ! -d build/assets ] || rm -rf build/assets/*
 
-.PHONY: packages build help deploy publish-to-domain clean
+.PHONY: build help deploy publish-to-domain clean
