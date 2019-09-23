@@ -147,7 +147,7 @@ url = "https://github.com/ipfs/specs"
 weight = 20
 [[menu.reference]]
 parent = "specs"
-name = "Roadmap to 1.0.0"
+name = "IPFS Project Roadmap"
 url = "https://github.com/ipfs/ipfs/blob/master/REQUIREMENTS.md"
 weight = 30
 [[menu.reference]]
