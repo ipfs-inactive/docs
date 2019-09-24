@@ -2,6 +2,13 @@
 title: Pinning Files
 ---
 
+<div class="alert alert-info">
+Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
+  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
+</a>
+</div>
+
 Pinning is a very important concept in ipfs. ipfs semantics try
 to make it feel like every single object is local, there is no "retrieve this
 file for me from a remote server", just `ipfs cat` or `ipfs get` which act
