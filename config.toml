@@ -74,10 +74,72 @@ weight = 5
 identifier = "examples"
 name = "Examples"
 weight = 4
+
+[[menu.guides]]
+parent = "examples"
+name = "Configuring Your Node"
+url = "foo"
+weight = 6
+
+[[menu.guides]]
+parent = "examples"
+name = "Dealing with Blocks"
+url = "foo"
+weight = 7
+
+[[menu.guides]]
+parent = "examples"
+name = "Git, Even More Distributed"
+url = "foo"
+weight = 8
+
+[[menu.guides]]
+parent = "examples"
+name = "IPFS for Websites"
+url = "foo"
+weight = 9
+
+[[menu.guides]]
+parent = "examples"
+name = "Making Your Own IPFS Service"
+url = "foo"
+weight = 10
+
+[[menu.guides]]
+parent = "examples"
+name = "Modifying the Bootstrap Peers List"
+url = "foo"
+weight = 11
+
+[[menu.guides]]
+parent = "examples"
+name = "Pinning Files"
+url = "foo"
+weight = 12
+
+[[menu.guides]]
+parent = "examples"
+name = "Playing Videos"
+url = "foo"
+weight = 13
+
+[[menu.guides]]
+parent = "examples"
+name = "Playing with the Network"
+url = "foo"
+weight = 14
+
+[[menu.guides]]
+parent = "examples"
+name = "Snapshots"
+url = "foo"
+weight = 15
+
 [[menu.guides]]
 parent = "examples"
 name = "js-ipfs Examples"
 url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
+weight = 16
 
 
 [[menu.reference]]
