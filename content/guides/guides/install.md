@@ -35,7 +35,7 @@ First, download the right version of IPFS for your platform:
   Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
 </a>
 
-### Mac OS X and Linux
+### macOS and Linux
 
 After downloading, untar the archive, and move the `ipfs` binary somewhere in your executables `$PATH` using the `install.sh` script:
 
@@ -135,8 +135,8 @@ to install, for example: `ipfs-update install v0.4.21`.
 ## Building from Source
 
 If you want, you can also build IPFS from source.
-If you are on Mac OS X or Linux take a look at [the readme](https://github.com/ipfs/go-ipfs#build-from-source) for install instructions.
-If you are on Windows take a look at [this document](https://github.com/ipfs/go-ipfs/blob/master/docs/windows.md) for instructions.
+If you are on macOS or Linux, take a look at [the readme](https://github.com/ipfs/go-ipfs#build-from-source) for install instructions.
+If you are on Windows, take a look at [this document](https://github.com/ipfs/go-ipfs/blob/master/docs/windows.md) for instructions.
 
 ---
 
