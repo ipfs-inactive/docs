@@ -2,6 +2,14 @@
 title: Snapshots
 ---
 
+<div class="alert alert-info">
+Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
+  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
+</a>
+</div>
+
+
 Lets take a quick look at how ipfs can be used to take basic snapshots.
 
 Save your directory:
