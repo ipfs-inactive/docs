@@ -2,9 +2,16 @@
 title: Making Your Own IPFS Service
 ---
 
-ipfs has a few default services that it runs by default, such as the dht,
+<div class="alert alert-info">
+Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
+  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
+</a>
+</div>
+
+IPFS has a few default services that it runs by default, such as the dht,
 bitswap, and the diagnostics service. Each of these simply registers a
-handler on the ipfs PeerHost, and listens on it for new connections.  The
+handler on the IPFS PeerHost, and listens on it for new connections.  The
 `corenet` package has a very clean interface to this functionality. So lets
 try building an easy demo service to try this out!
 
@@ -24,7 +31,7 @@ import (
 )
 ```
 
-We dont need too many imports for this.
+We don't need too many imports for this.
 Now, the only other thing we need is our main function:
 
 Set up an ipfsnode.
@@ -52,7 +59,7 @@ func main() {
 	}
 ```
 
-Thats just the basic template of code to initiate a default ipfsnode from
+That's just the basic template of code to initiate a default ipfsnode from
 the config in the users `~/.ipfs` directory.
 
 Next, we are going to build our service.
@@ -80,7 +87,7 @@ Next, we are going to build our service.
 }
 ```
 
-And thats really all you need to write a service on top of ipfs. When a client
+And thats really all you need to write a service on top of IPFS. When a client
 connects, we send them our greeting, print their peer ID to our log, and close
 the session. This is the simplest possible service, and you can really write
 anything you want to handle the connection.
@@ -145,7 +152,7 @@ func main() {
 }
 ```
 
-This client will set up their ipfs node (note: this is moderately expensive and
+This client will set up their IPFS node (note: this is moderately expensive and
 you normally wont just spin up an instance for a single connection) and dial the
 service we just created.
 
