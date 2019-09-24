@@ -14,7 +14,7 @@ For longer-lived discussions and for support, please use the discussion forums a
 If you’re new to IRC, there are *lots* of mobile and desktop clients for working with it. Here are a few to get you started:
 
 - [IRCCloud][irccloud] on the web and desktop
-- [Textual][textual] or [Adium][adium] on Mac OS X
+- [Textual][textual] or [Adium][adium] on macOS
 - [mIRC][mirc] or [HexChat][hexchat] on Windows
 - [XChat][xchat] or [Irssi][irssi] on Linux
 
