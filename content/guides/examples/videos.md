@@ -2,7 +2,14 @@
 title: Playing Videos
 ---
 
-ipfs can be used to store and play videos. Suppose we add a video:
+<div class="alert alert-info">
+Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
+  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
+</a>
+</div>
+
+IPFS can be used to store and play videos. Suppose we add a video:
 
 ```
 ipfs add -q sintel.mp4 | tail -n1
