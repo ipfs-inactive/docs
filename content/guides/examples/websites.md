@@ -4,6 +4,13 @@ title: IPFS for Websites
 
 ### A short guide to hosting your site on IPFS
 
+<div class="alert alert-info">
+Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
+  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
+</a>
+</div>
+
 **Note:** [@agentofuser](https://github.com/agentofuser/)'s "Complete Beginner's Guide to Deploying Your First Static Website to IPFS" (see the [writeup](https://interplanetarygatsby.com/ipfs-deploy/) and [repo](https://github.com/agentofuser/ipfs-deploy)) is another useful resource for learning more about hosting your site on IPFS.
 
 #### Create your site
