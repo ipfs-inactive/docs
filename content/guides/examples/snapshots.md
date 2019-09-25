@@ -11,8 +11,7 @@ Our interactive tutorials help you learn about the the decentralized web by writ
 <a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">Open Tutorials at ProtoSchool</a> &nbsp;<i class="fa fa-external-link-square-alt"></i>
 </div>
 
-
-Lets take a quick look at how ipfs can be used to take basic snapshots.
+Let's take a quick look at how IPFS can be used to take basic *snapshots* of files — an action that enables you to access those files later in the same state as they were when you "snapshotted" them.
 
 Save your directory:
 ```
@@ -29,8 +28,8 @@ Or all at once:
 ```
 $ echo `ipfs add -q -r ~/code/myproject | tail -n1` `date` >> snapshots
 ```
-(Note: the `-q` makes the output only contain the hashes, piping through
-`tail -n1` ensures only the hash of the top folder is output.)
+(Note: the `-q` makes the output only contain the hashes, and piping through
+`tail -n1` ensures that only the hash of the top folder is output.)
 
 Make sure to have the placeholders for the mount points:
 ```
@@ -38,10 +37,10 @@ $ sudo mkdir /ipfs /ipns
 $ sudo chown `whoami` /ipfs /ipns
 ```
 
-You will need to have `Fuse` installed on your machine in order to be able to `mount` directories from the ipfs. You can find instructions of how to [install `Fuse` in the `go-ipfs` docs](https://github.com/ipfs/go-ipfs/blob/master/docs/fuse.md)
+You will need to have `FUSE` (Filesystem in Userspace) installed on your machine in order to be able to `mount` directories from the ipfs. You can find instructions for how to install `FUSE` [in the `go-ipfs` docs](https://github.com/ipfs/go-ipfs/blob/master/docs/fuse.md).
 
 
-View the snapshots live:
+View your snapshots live:
 ```
 $ ipfs mount
 $ ls /ipfs/$hash/
@@ -52,7 +51,7 @@ $ cd /ipfs/$hash/
 $ ls
 ```
 
-Through the fuse interface, you'll be able to access your files exactly as
+Through the FUSE interface, you'll be able to access your files exactly as
 they were when you took the snapshot.
 
 By [whyrusleeping](http://github.com/whyrusleeping)
