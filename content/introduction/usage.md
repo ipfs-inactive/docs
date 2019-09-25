@@ -15,7 +15,7 @@ If you haven’t done so already, your first step is to **install IPFS**! Most p
   Don’t want to use the command line right now? You can give the desktop-app implementation of IPFS a go! <a href="https://github.com/ipfs-shipyard/ipfs-desktop">Get started with IPFS Desktop here <i class="fas fa-external-link-square-alt fa-sm"></i></a>
 </aside>
 
-For more install options, such as building from source, and toubleshooting tips, visit our [install guide]({{<relref "guides/guides/install.md">}}). If you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
+For more install options, such as building from source, and toubleshooting tips, visit our [install guide]({{<relref "guides/guides/install.md">}}). If you have any questions or get stuck, feel free to ask for help in [the Help section of the IPFS forums](https://discuss.ipfs.io/c/help) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
 
 ## Initialize the repository
 
