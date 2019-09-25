@@ -1,6 +1,15 @@
 ---
-title: Taking Snapshots Using IPFS
+title: Snapshots
+menu:
+    guides:
+        parent: examples
+weight: 10
 ---
+
+<div class="alert alert-info">
+Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">Open Tutorials at ProtoSchool</a> &nbsp;<i class="fa fa-external-link-square-alt"></i>
+</div>
 
 Let's take a quick look at how IPFS can be used to take basic *snapshots* of files — an action that enables you to access those files later in the same state as they were when you "snapshotted" them.
 

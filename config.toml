@@ -74,10 +74,12 @@ weight = 5
 identifier = "examples"
 name = "Examples"
 weight = 4
+
 [[menu.guides]]
 parent = "examples"
 name = "js-ipfs Examples"
 url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
+weight = 16
 
 
 [[menu.reference]]
