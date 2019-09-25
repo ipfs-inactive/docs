@@ -1,12 +1,14 @@
 ---
-title: Modifying the bootstrap peers list
+title: Modifying the Bootstrap Peers List
+menu:
+    guides:
+        parent: examples
+weight: 6
 ---
 
 <div class="alert alert-info">
 Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
-<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
-  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
-</a>
+<a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">Open Tutorials at ProtoSchool</a> &nbsp;<i class="fa fa-external-link-square-alt"></i>
 </div>
 
 The IPFS bootstrap list is a list of peers with which the IPFS daemon learns about other peers on the network. IPFS comes with a default list of trusted peers, but you are free to modify the list to suit your needs. One popular use for a custom bootstrap list is to create a personal IPFS network.
