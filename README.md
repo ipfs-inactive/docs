@@ -77,7 +77,7 @@ We're undergoing major renovation to our docs in Q4 2019, but we would still **l
 
 If you're able to contribute to any of the categories above, we thank you in advance -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
-## Just want to build the docs site?
+## Just want to run the docs site locally?
 
 ### One-time setup
 
@@ -109,9 +109,5 @@ To create a production build, run `make build` instead. You’ll find the final 
 
 ## License
 
-All software code is copyright (c) Protocol Labs, Inc. under the **MIT license**.
-
-Other written documentation and content is copyright (c) Protocol Labs, Inc. under the [**Creative Commons Attribution-Share-Alike License**](https://creativecommons.org/licenses/by/4.0/).
-
-See [LICENSE file](./LICENSE) for details.
+All software code is copyright (c) Protocol Labs, Inc. under the **MIT license**. Other written documentation and content is copyright (c) Protocol Labs, Inc. under the [**Creative Commons Attribution-Share-Alike License**](https://creativecommons.org/licenses/by/4.0/). See [LICENSE file](./LICENSE) for details.
 
