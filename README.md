@@ -37,7 +37,7 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 *You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1VeyiLvBdX_PrP394kU_lwkQZxfNwqMVX1f7K4ursSPM/edit#gid=1841105909), or [filter this repo's issues](https://github.com/ipfs/docs/issues) for ones with labels containing `OKR`.*
 
 1. **Launch beta docs platform in order to offer users an improved venue for learning**
-- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Launch beta of new docs.ipfs.io platform with content parity to existing site but next-gen IA 
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture 
 - <img src="https://img.shields.io/static/v1?label=Priority&message=P2&color=yellow">&nbsp;&nbsp;Define deprecation plan from old to new (non-beta) docs platform
 
 2. **Improve our understanding of user needs and map out improvements accordingly**	
