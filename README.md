@@ -17,77 +17,65 @@ Mondays at 15:00-15:30 UTC / 4:00-4:30 pm BST / 7:00-7:30 am PST
 
 This repo is used for two purposes:
 
-1. To organize overall documentation work across the IPFS project
+1. To organize overall documentation work across the IPFS project, as managed by the **IPFS Documentation and Developer UX Working Group** ("Docs WG")
 2. To host the documentation website for IPFS, available at https://docs.ipfs.io/
 
-## IPFS Documentation & Developer UX team
+## Docs WG Q4 2019 update
+
+After a busy but productive Q3 2019, the Docs WG is looking forward to putting into action a lot of the research and strategic work we accumulated over the summer and early autumn — as well as continue apace with more immediate/tactical improvements to the existing IPFS docs landscape. Our goals for Q4 2019 are below, and you'll notice that they include one major development: launching a new beta docs platform to eventually replace docs.ipfs.io. In parallel, we're also queuing up improvements to a variety of documentation items — and types of items.
+
+Want to be a beta tester for the new docs platform? We'd love to have you take part. [Let us know!](https://docs.google.com/forms/d/1LVaD1B2uyW6Ff0jfU_iQ5mCeyQcHfyQO6BDD99XAgK0)
+
+#### With thanks, from your Docs WG core members:
 - [@cwaring](https://github.com/cwaring)
 - [@ericronne](https://github.com/ericronne)
 - [@dominguesgm](https://github.com/dominguesgm)
 - [@jessicaschilling](https://github.com/jessicaschilling)
 - [@terichadbourne](https://github.com/terichadbourne)
 
-## IPFS docs: Q3 2019 Update
+### Our Q4 2019 goals
+*You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1VeyiLvBdX_PrP394kU_lwkQZxfNwqMVX1f7K4ursSPM/edit#gid=1841105909), or [filter this repo's issues](https://github.com/ipfs/docs/issues) for ones with labels containing `OKR`.*
 
-Based on feedback from the community via social media, forums, this repo, [IPFS Camp 2019](https://github.com/ipfs/camp/blob/master/DEEP_DIVES/30-ipfs-education-and-documentation.md), and a variety of other sources, we're placing increased emphasis on improvements to our overall documentation strategy (and its tactical implementation!) in Q3 2019.
+1. **Launch beta docs platform in order to offer users an improved venue for learning**
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Launch beta of new docs.ipfs.io platform with content parity to existing site but next-gen IA 
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P2&color=yellow">&nbsp;&nbsp;Define deprecation plan from old to new (non-beta) docs platform
 
-IPFS documentation currently has a number of acute problems:
+2. **Improve our understanding of user needs and map out improvements accordingly**	
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P2&color=yellow">&nbsp;&nbsp;Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P2&color=yellow">&nbsp;&nbsp;Define documentation’s and ProtoSchool’s place within the entire IPFS information ecosystem and draft a design-thinking-based strategy for future work ("content meta-audit")
 
-- There is **no clear introduction to the overall idea of what IPFS does, how it works or why it's useful** -- starting with "civilian" dweb basics and allowing users to dig deeper as they wish.
-- IPFS has **lots of new concepts** that are just very different from the web technologies people know today; even if you're well versed in some of technologies central to IPFS, chances are good that you don't know them all, or understand right off the bat how they need to work together.
-- **Developer docs are inconsistently located** and spread across a number of repos users have to hunt through.
-- Clear, **standard API docs** are not always available.
-- People are motivated to use IPFS for a variety of reasons, but **our docs don't yet offer clear goal-based pathways** for installing or learning more.
-- In our open-source world, *how to use IPFS* is not always clearly differentiated from *how to contribute to IPFS*; **we need to offer materials targeted for both users and contributors of varying degrees of expertise** as IPFS expands in scale, scope and maturity.
+3. **Improve docs content based on metrics, research, and community input**
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Identify and fix specific docs pages/items based on user feedback mechanism or other metrics
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Close high-value existing missing-content or inadequate-content issues
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P1&color=orange">&nbsp;&nbsp;Conduct a content-focused “close reading” audit of existing IPFS docs to identify and prioritize work on weak or incomplete docs
 
-We already have [some substantiative research](https://ipfs.io/ipfs/QmNj68gTzAs9QbfMKzMGurXP2WCmA6GTcKuUkWm4kBV1Qn/html/), including user interviews, that help us quantify the problems outlined above. In Q3 2019, we plan to use this body of knowledge, as well as additional work mentioned below, to formulate and begin execution upon an overall IPFS documentation approach that will benefit users in both the short and long term.
+4. **Enhance ProtoSchool and docs.ipfs.io content using IPFS Camp content**
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P0&color=red">&nbsp;&nbsp;Complete review of IPFS Camp content identifying how it can be applied to create new ProtoSchool tutorials, enhance existing ones, or improve the docs.ipfs.io site
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P1&color=orange">&nbsp;&nbsp;Create or improve ProtoSchool tutorials using content adapted from IPFS Camp
+- <img src="https://img.shields.io/static/v1?label=Priority&message=P2&color=yellow">&nbsp;&nbsp;Create or improve docs pages/entries using content adapted from IPFS Camp
 
-### Our Q3 2019 goals
-*You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1AiNUL7vK5Jp8aa839UaMaI_AlBU5r6Bor-A40179I2A/edit#gid=1841105909), or [filter this repo's issues](https://github.com/ipfs/docs/labels/Priority%3A%20OKR) for ones with the `OKR` label.*
-
-1. **Evaluate existing IPFS documentation content and presentation platform and make decisions for future-proof improvement and alignment**
-- Complete a content audit of existing ipfs.io material and use to prioritize next steps		
-- Create [prioritized features list](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) for a best-in-breed IPFS docs platform based on competitive-landscape and analogous product/service research, as well as community feedback
-- Determine best-fit tech stack/framework for the IPFS docs site
-
-2. **Better understand our users and their needs, and use this knowledge to prioritize improvements**	
-- Complete the creation of [ranked, goal-based personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) for key IPFS user segments			
-- Ensure appropriate resourcing in order to execute upon results of content audit, features list, user suggestion, or other asks
-
-3. **Improve existing docs content in the short term, with emphasis on collecting metrics**
-- Implement hotfixes for either content or metrics collection as they emerge from content audit, features list, or user suggestion
-- Add interactive "so you'd like to ..." content [on the front of ipfs.io](https://www.ipfs.io) (including analytics) with appropriate guidance for users' next steps
-- [ProtoSchool](https://proto.school)-specific enhancements related to improved analytics and user feedback collection
-
-### Helpful artifacts from Q3 2019 work
-- [Prioritized features list for next-gen docs platform](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) (to be implemented in Q4)
+### Helpful artifacts related to these goals
+- [Prioritized features list for next-gen docs platform](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) to be implemented beginning in Q4
 - [IPFS user/goal personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) illustrating the goals, motivations and potential frustrations of key current/potential IPFS users
 - [Research/test plan and summaries](https://docs.google.com/document/d/1c2TFeXLFW29a8HYwUq6K9-n8fDg2WhERRIi1CWHMC-8/edit?usp=sharing) for Q3 2019 OKR research efforts 
 
 
 ## Want to get involved with IPFS documentation?
 
-While we're making every effort to create a comprehensive plan for our overall documentation strategy in Q3 2019, that doesn't mean any pause in overall work in IPFS docs -- and to that end, we would love ❤️ **your** help with any of the types of content currently on the IPFS docs site:
+We're undergoing major renovation to our docs in Q4 2019, but we would still **love ❤️ your help** to improve existing items or make new ones even better! Here are some ideas to get you started:
 
-1. **Introductory overview.** This lives in `content/introduction`. If you spot any problems, or have ideas for improvements, please post an [issue](https://github.com/ipfs/docs/issues) or PR. We're also in the midst of a [complete rework](https://github.com/ipfs/docs/pull/170) of the overall IPFS explainer, so please check its progress!
+1. **Join us on our weekly call!** See the top of this readme for full details on how and when.
 
-2. **Examples and tutorials.** At present, most examples currently live in other repos, like [js-ipfs examples](https://github.com/ipfs/js-ipfs/tree/master/examples). We're working on how to better integrate these, but if you have thoughts on how to best address this, please [file an issue here](https://github.com/ipfs/docs/issues). If you have feedback on an existing example, please file an issue or PR in that example's relevant repo. However, if you have ideas for new guides or tutorials, please [file an issue in this repo](https://github.com/ipfs/docs/issues)!
+2. **Claim an issue labeled "help wanted" in either [this docs repo](https://github.com/ipfs/docs/labels/help%20wanted) or [the IPFS website repo](https://github.com/ipfs/website/labels/help%20wanted)!** All our issues are T-shirt sized and roughly difficulty-graded (both using labels), so have a look for something that interests you in the time you have available, and dive on in! Leave your thoughts and questions in issue comments, and we'll get back to you as soon as possible.
 
-3. **Concept guides.** Concept guides (which live in the `content/guides/concepts` folder) are intended to present brief overviews of IPFS-related concepts that might be new to the average user. To see which concepts still need guides, please visit [this list](https://github.com/ipfs/docs/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+concept+doc). All concept guides should focus on the following key points:
+3. **Create (or improve) an example, tutorial or concept guide!** At present, we have a variety of how-tos and concept guides either living in this docs repo, or linked to from the nav menu at [docs.ipfs.io](https://docs.ipfs.io). However, every new item we can offer makes it easier for the world's community to use and build on IPFS. If you'd like to write a new example/tutorial or concept guide, [take a look in our open issues](https://github.com/ipfs/docs/issues?q=is%3Aissue+is%3Aopen+label%3A%22OKR%3A+Content+Improvement%22) for items with the `OKR: Content Improvement` label and see if any already-identified needs appeal to you. If you'd like to write something entirely new, feel free — PRs are welcome! Or, if you'd just like to improve existing docs content, feel free to fork it and add your suggestions.
 
-    1. **What** is this concept?
-    2. How does it **relate** to the rest of IPFS?
-    3. How can (or should?) you **use** it? 
-    4. **Where** do you go to learn more?
-    5. What is the **current state** of work on this concept?
+4. **Help us improve how we present reference and API documentation.** As part of our beta docs platform launch, we're investigating the best way to improve how we present reference materials like API documentation and command-line dictionaries. Got thoughts? [Please discuss them!](https://github.com/ipfs/docs/issues/69)
 
-4. **Reference/API Documentation.** Please see the [open issues in this repo](https://github.com/ipfs/docs/issues) for current activity around reference and API documentation.
-
-5. **Community.** The Community section of [docs.ipfs.io](https://docs.ipfs.io/) is a work in progress, and we welcome ideas for how best to structure this information going forward! Please [file an issue in this repo](https://github.com/ipfs/docs/issues) with your thoughts.
-
-6. **Any other issue labeled "help wanted" in either [this docs repo](https://github.com/ipfs/docs/labels/help%20wanted) or [the IPFS website repo](https://github.com/ipfs/website/labels/help%20wanted)!** Why the main IPFS website in addition to just docs? Because at its most fundamental level, even the front page of ipfs.io is documentation, and we want to make that as great as possible, too.
-
-If you are able to contribute to any of the categories above, we thank you -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+If you're able to contribute to any of the categories above, we thank you in advance -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
 ## Just want to build the docs site?
 
