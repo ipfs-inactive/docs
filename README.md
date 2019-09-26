@@ -22,7 +22,7 @@ This repo is used for two purposes:
 
 ## Docs WG Q4 2019 update
 
-After a busy but productive Q3 2019, the Docs WG is looking forward to putting into action a lot of the research and strategic work we accumulated over the summer and early autumn — as well as continue apace with more immediate/tactical improvements to the existing IPFS docs landscape. Our goals for Q4 2019 are below, and you'll notice that they include one major development: launching a new beta docs platform to eventually replace docs.ipfs.io. In parallel, we're also queuing up improvements to a variety of documentation items — and types of items.
+After a busy and productive Q3 2019, the Docs WG is looking forward to putting into action a lot of the research and strategic work we accumulated over the summer and early autumn — as well as continue apace with more immediate/tactical improvements to the existing IPFS docs landscape. Our goals for Q4 2019 are below, and you'll notice that they include (among other things) execution and support work for one major development: launching a new beta docs platform to eventually replace docs.ipfs.io. In parallel, we're also queuing up improvements to a variety of documentation items — and types of items.
 
 Want to be a beta tester for the new docs platform? We'd love to have you take part. [Let us know!](https://docs.google.com/forms/d/1LVaD1B2uyW6Ff0jfU_iQ5mCeyQcHfyQO6BDD99XAgK0)
 
