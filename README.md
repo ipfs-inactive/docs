@@ -107,11 +107,6 @@ If you're able to contribute to any of the categories above, we thank you in adv
 To create a production build, run `make build` instead. You’ll find the final static site in the `public` directory.
 
 
-### Why is this is a static site?
-
-We believe in hosting IPFS’s documentation on IPFS, and that’s much easier when the content is static.
-
-
 ## License
 
 All software code is copyright (c) Protocol Labs, Inc. under the **MIT license**.
