@@ -39,27 +39,28 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 | OBJECTIVES & KEY RESULTS | RANK | MID-Q | PROJECTED | FINAL |
 |-|-|-|-|-|
 | **1 - Launch beta docs platform in order to offer users an improved venue for learning**
-| Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Define deprecation plan from old to new (non-beta) docs platform |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | | 
+| A. Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| B. Define deprecation plan from old to new (non-beta) docs platform |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | | 
 | **2 - Improve our understanding of user needs and map out improvements accordingly** | | | |
-| Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | | 
-| Define documentation’s and ProtoSchool’s place within the entire IPFS information ecosystem and draft a design-thinking-based strategy for future work ("content meta-audit") |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
+| A. Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| B. Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| C. Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| D. Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | | 
+| E. Define documentation’s and ProtoSchool’s place within the entire IPFS information ecosystem and draft a design-thinking-based strategy for future work ("content meta-audit") |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
 | **3 - Improve docs content based on metrics, research, and community input**
-| Identify and fix specific docs pages/items based on user feedback mechanism or other metrics | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Close high-value existing missing-content or inadequate-content issues | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Conduct a content-focused “close reading” audit of existing IPFS docs to identify and prioritize work on weak or incomplete docs | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | | | |
+| A. Identify and fix specific docs pages/items based on user feedback mechanism or other metrics | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| B. Close high-value existing missing-content or inadequate-content issues | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| C. Conduct a content-focused “close reading” audit of existing IPFS docs to identify and prioritize work on weak or incomplete docs | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | | | |
 | **4 - Enhance ProtoSchool and docs.ipfs.io content using IPFS Camp content** | | | | |
-| Complete review of IPFS Camp content identifying how it can be applied to create new ProtoSchool tutorials, enhance existing ones, or improve the docs.ipfs.io site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
-| Create or improve ProtoSchool tutorials using content adapted from IPFS Camp | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | | | |
-| Create or improve docs pages/entries using content adapted from IPFS Camp |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
+| A. Complete review of IPFS Camp content identifying how it can be applied to create new ProtoSchool tutorials, enhance existing ones, or improve the docs.ipfs.io site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | | | |
+| B. Create or improve ProtoSchool tutorials using content adapted from IPFS Camp | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | | | |
+| C. Create or improve docs pages/entries using content adapted from IPFS Camp |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
 
 ### Helpful artifacts related to these goals
 - [Prioritized features list for next-gen docs platform](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) to be implemented beginning in Q4
 - [IPFS user/goal personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) illustrating the goals, motivations and potential frustrations of key current/potential IPFS users
 - [Research/test plan and summaries](https://docs.google.com/document/d/1c2TFeXLFW29a8HYwUq6K9-n8fDg2WhERRIi1CWHMC-8/edit?usp=sharing) for Q3 2019 OKR research efforts 
+- [Documentation platform evaluation](https://hackmd.io/PqvZP8z1QU2QzKs9i-BsHw) elaborating upon our decision to build docs beta on VuePress
 
 
 ## Want to get involved with IPFS documentation?
