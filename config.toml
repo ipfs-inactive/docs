@@ -55,9 +55,14 @@ url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
 weight = 2
 [[menu.guides]]
 parent = "guides"
+name = "Setting Up an IPFS Gateway"
+url = "https://github.com/ipfs/go-ipfs/blob/master/docs/gateway.md"
+weight = 3
+[[menu.guides]]
+parent = "guides"
 name = "Replicating Large Datasets"
 url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
-weight = 3
+weight = 4
 [[menu.guides]]
 parent = "guides"
 name = "Interactive Tutorials"
