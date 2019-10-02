@@ -60,11 +60,6 @@ url = "https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-
 weight = 3
 [[menu.guides]]
 parent = "guides"
-name = "Addressing in Browsers"
-url = "https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
-weight = 4
-[[menu.guides]]
-parent = "guides"
 name = "Interactive Tutorials"
 url = "https://proto.school/#/tutorials"
 weight = 5
