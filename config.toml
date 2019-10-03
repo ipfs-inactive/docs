@@ -55,7 +55,7 @@ url = "https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
 weight = 2
 [[menu.guides]]
 parent = "guides"
-name = "Setting Up an IPFS Gateway"
+name = "Setting Up a Gateway"
 url = "https://github.com/ipfs/go-ipfs/blob/master/docs/gateway.md"
 weight = 3
 [[menu.guides]]
