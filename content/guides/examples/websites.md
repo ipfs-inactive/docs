@@ -119,13 +119,16 @@ you plan to use, you can find it using the command like:
 ```bash
 $ nslookup gateway.ipfs.io
 ```
-And noting the IPv4 addresses returned. You should create an A record for each address.
+1. Note the IP addresses returned.
+1. Create an A record for each IPv4 address (all results that look like 192.0.2.71).
+1. Create an AAAA record for each IPv6 address (all results that look like 2001:DB8:324A::A1).
+1. Periodically check if one of these addresses changed and update the record.
 
 Visitors' browsers will send `your.domain` in the Host header of their requests.
 The ipfs gateway will recognize `your.domain`, look up the value of the DNS TXT for your domain,
 then serve the files in `/ipns/your.domain/` instead of `/`.
 
-If you point `your.domain`'s A record to the IPv4 addreses of `gateway.ipfs.io`, and
+If you point `your.domain`'s A and AAAA record to the IP addreses of `gateway.ipfs.io`, and
 then wait for the DNS to propagate, then anyone should be able to access your
 ipfs-hosted site without any extra configuration at `http://your.domain`.
 
