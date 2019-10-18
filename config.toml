@@ -245,15 +245,18 @@ weight = 90
 parent = "community"
 name = "Awesome IPFS"
 url = "https://awesome.ipfs.io/"
+weight = 91
 [[menu.community]]
 parent = "community"
 name = "Public Archives on IPFS"
 title = "A community project to host archives of valuable public data."
 url = "https://awesome.ipfs.io/datasets/"
+weight = 93
 [[menu.community]]
 parent="community"
-name = "FAQ"
+name = "Forum FAQ Archive"
 url = "https://discuss.ipfs.io/c/help/Old-FAQ"
+weight = 95
 
 [[menu.community]]
 identifier = "contribute"
