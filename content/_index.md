@@ -37,7 +37,7 @@ While IPFS has two reference implementations (in Go and JavaScript), it is funda
 
 Get in touch with other members of the IPFS community who are building tools on top of IPFS or even helping to build IPFS itself! You can ask questions, discuss new ideas, or get support for problems at https://discuss.ipfs.io, but you can also [hop on IRC](/community/irc) for a quick chat.
 
-See the other links in the community section for more information about meetings, events, apps people are building, and more.
+See the other links in the community section of the navigation panel at left for more information about meetings, events, apps people are building, and more.
 
 Information about contributing to IPFS and about other software projects in the community are also hosted here.
 
