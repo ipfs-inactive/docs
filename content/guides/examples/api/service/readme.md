@@ -1,9 +1,9 @@
 ---
 title: Making Your Own IPFS Service
-menu:
+<!-- menu:
     guides:
         parent: examples
-weight: 5
+weight: 5 -->
 ---
 
 <div class="alert alert-info">
