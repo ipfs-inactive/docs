@@ -4,15 +4,13 @@ headless: true
 opened: true
 ---
 
-## [Install IPFS](https://docs.ipfs.io/guides/guides/install/)
+## Just want to install IPFS?
 
-Instructions for installing a copy of IPFS on your system via your choice of the following options:
+<div class="alert alert-info">
+<strong><a class="button button-primary" href="https://docs.ipfs.io/guides/guides/install/" role="button">Get all the info you need to install a copy of IPFS on your system</a>,</strong> whether you're looking to install from a prebuilt package, upgrade using <code>ipfs-update</code>, or building from source.
+</div>
 
-- Installing from a prebuilt ackage
-- Installing from `ipfs-update`
-- Building from source
-
-Also includes information on how to upgrade IPFS, and general troubleshooting instructions.
+## Other guides
 
 ## [Transferring a File](https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md)
 
@@ -21,10 +19,6 @@ A guide to help troubleshoot file transfers between two machines.
 ## [Replicating Large Datasets](https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets)
 
 Find out how to efficiently copy and provide (or mirror) large amounts of data.
-
-## [Addressing in Browsers](https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md)
-
-An overview of methods for browser-based content access.
 
 ## [Interactive Tutorials](https://proto.school/#/tutorials)
 
