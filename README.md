@@ -58,6 +58,8 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 
 ### Helpful artifacts related to these goals
 - [Prioritized features list for next-gen docs platform](https://docs.google.com/spreadsheets/d/1YJ8yuzoNeunVr3ftvm7x2nIKsj7IlTrsfuy71ZnGg6Y/edit?usp=sharing) to be implemented beginning in Q4
+    - [Vote on your priorities](https://ipfs.canny.io/docs-features) for the next-gen docs platform!
+- [Docs beta repo](https://github.com/ipfs/ipfs-docs-v2) — WIP in rapid evolution
 - [IPFS user/goal personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) illustrating the goals, motivations and potential frustrations of key current/potential IPFS users
 - [Research/test summaries](https://github.com/ipfs/docs/issues/288) for Q4 2019 (note: work in progress as the quarter continues!)
 - [Research/test plan and summaries](https://docs.google.com/document/d/1c2TFeXLFW29a8HYwUq6K9-n8fDg2WhERRIi1CWHMC-8/edit?usp=sharing) for Q3 2019 OKR research efforts 
