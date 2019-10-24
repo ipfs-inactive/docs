@@ -4,7 +4,7 @@ headless: true
 opened: true
 ---
 
-The IPFS community is as decentralized and distributed as IPFS itself — our community members are globally located, active online and in person, and using and building on IPFS in a virtually endless number of ways. You can get more information about meetings, events, apps people are building, and more using the resources listed here.
+The IPFS community is as decentralized and distributed as IPFS itself. Our community members are globally located, active both online and in person, and use IPFS in countless different ways. You can learn about meetings, events, apps people are building, and more with the resources listed here.
 
 ## Discussion/Support Forum
 
