@@ -20,7 +20,7 @@ Find all of the open community video calls for the IPFS project in the [IPFS Com
 
 ## Community Tools
 
-Join the discussion and documentation on IPFS community practices in the [community tools repo](https://github.com/ipfs/community/). If you're interested in starting, helping with or expanding IPFS awareness in your local geographical or online community, you can find tools and info here.
+Join the discussion and documentation on IPFS community practices in the [community tools repo](https://github.com/ipfs/community/). If you want to start or get involved with a community chapter to help expand IPFS awareness in your local geographical or online community, here's where to look.
 
 ## Project Management
 
