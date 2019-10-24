@@ -44,7 +44,7 @@ Get your IPFS news in tweet-sized bites. Follow these accounts for the latest:
 
 ## Community projects on Awesome IPFS
 
-Get inspired by [Awesome IPFS](https://awesome.ipfs.io/), a catalog of community-built projects using IPFS for everything from image sharing to decentralized archiving. Have a project of your own to add to Awesome IPFS? Make a PR in the [repo](https://github.com/ipfs/awesome-ipfs)!
+Get inspired by [Awesome IPFS](https://awesome.ipfs.io/), a catalog of community-built projects using IPFS for everything from image sharing to decentralized archiving. Have a project of your own to add to Awesome IPFS? [Make a PR](https://github.com/ipfs/awesome-ipfs) in the repo!
 
 ## Public archives on IPFS
 
