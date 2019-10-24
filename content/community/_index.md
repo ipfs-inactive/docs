@@ -24,7 +24,7 @@ Join the discussion and documentation on IPFS community practices in the [commun
 
 ## Project Management
 
-Keep abreast on IPFS team planning, management and coordination issues in the [IPFS team management repo](https://github.com/ipfs/team-mgmt).
+Keep abreast of IPFS team planning, management and coordination issues in the [IPFS team management repo](https://github.com/ipfs/team-mgmt).
 
 ## Blog
 
