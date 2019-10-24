@@ -28,7 +28,7 @@ Keep abreast of IPFS team planning, management and coordination issues in the [I
 
 ## Blog
 
-Explore the latest news, events and other happenings in the IPFS multiverse in the official [https://ipfs.io/blog/](IPFS Blog).
+Explore the latest news, events and other happenings in the IPFS multiverse on the official [https://ipfs.io/blog/](IPFS Blog).
 
 ## IPFS YouTube channel
 
