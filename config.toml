@@ -77,6 +77,11 @@ weight = 4
 
 [[menu.guides]]
 parent = "examples"
+name = "Using go-ipfs as a Library"
+url = "https://github.com/ipfs/go-ipfs/tree/master/docs/examples/go-ipfs-as-a-library/README.md"
+weight = 1
+[[menu.guides]]
+parent = "examples"
 name = "js-ipfs Examples"
 url = "https://github.com/ipfs/js-ipfs/tree/master/examples"
 weight = 16
