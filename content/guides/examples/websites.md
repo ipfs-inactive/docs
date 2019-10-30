@@ -120,9 +120,10 @@ you plan to use, you can find it using the command like:
 $ nslookup gateway.ipfs.io
 ```
 1. Note the IP addresses returned.
-1. Create an A record for each IPv4 address (all results that look like 192.0.2.71).
-1. Create an AAAA record for each IPv6 address (all results that look like 2001:DB8:324A::A1).
-1. Periodically check if one of these addresses changed and update the record.
+2. Create an A record for each IPv4 address (e.g `209.94.90.1` for ipfs.io).
+3. Create an AAAA record for each IPv6 address (e.g use `2602:fea2:2::1` for ipfs.io).
+
+Note: The ipfs.io gateway IP addresses wont change, so you can set them and forget them. If you use a custom gateway where you don't control the IP address and they could change you may need to re-check them periodically and update your DNS records if they do.
 
 Visitors' browsers will send `your.domain` in the Host header of their requests.
 The ipfs gateway will recognize `your.domain`, look up the value of the DNS TXT for your domain,
