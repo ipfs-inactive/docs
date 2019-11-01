@@ -43,6 +43,16 @@ identifier = "community"
 name = "Community"
 weight = 4
 
+[[menu.guides]]
+parent = "concepts"
+name = "The IPFS Data Lifecycle"
+url = "https://github.com/ipfs/camp/tree/master/CORE_AND_ELECTIVE_COURSES/CORE_COURSE_D"
+weight = 2
+[[menu.guides]]
+parent = "concepts"
+name = "Primer: Files & IPFS"
+url = "https://github.com/ipfs/camp/tree/master/CORE_AND_ELECTIVE_COURSES/CORE_COURSE_A"
+weight = 3
 
 [[menu.guides]]
 identifier = "guides"
@@ -80,6 +90,16 @@ parent = "examples"
 name = "Using go-ipfs as a Library"
 url = "https://github.com/ipfs/go-ipfs/tree/master/docs/examples/go-ipfs-as-a-library/README.md"
 weight = 1
+[[menu.guides]]
+parent = "examples"
+name = "Make a Basic libp2p App"
+url = "https://github.com/ipfs/camp/tree/master/CORE_AND_ELECTIVE_COURSES/CORE_COURSE_B"
+weight = 14
+[[menu.guides]]
+parent = "examples"
+name = "Build with the IPFS API"
+url = "https://github.com/ipfs/camp/tree/master/CORE_AND_ELECTIVE_COURSES/CORE_COURSE_C"
+weight = 15
 [[menu.guides]]
 parent = "examples"
 name = "js-ipfs Examples"
