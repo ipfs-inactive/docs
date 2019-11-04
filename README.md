@@ -6,6 +6,7 @@
 
 ## Join our weekly sync (all welcome!)
 Mondays at 16:00-16:30 UTC / 4:00-4:30 pm GMT / 8:00-8:30 am PT
+**Note! No calls on Monday 11 Nov or Monday 18 Nov. We'll see you again on Monday 25 Nov!**
 
 📞 Zoom: https://protocol.zoom.us/j/614386160
 
