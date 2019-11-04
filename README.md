@@ -27,11 +27,12 @@ After a busy and productive Q3 2019, the Docs WG is looking forward to putting i
 Want to be a beta tester for the new docs platform? We'd love to have you take part. [Let us know!](https://docs.google.com/forms/d/1LVaD1B2uyW6Ff0jfU_iQ5mCeyQcHfyQO6BDD99XAgK0)
 
 #### With thanks, from your Docs WG core members:
-- [@cwaring](https://github.com/cwaring)
-- [@ericronne](https://github.com/ericronne)
-- [@dominguesgm](https://github.com/dominguesgm)
-- [@jessicaschilling](https://github.com/jessicaschilling)
 - [@terichadbourne](https://github.com/terichadbourne)
+- [@dominguesgm](https://github.com/dominguesgm)
+- [@mohnjatthews](https://github.com/mohnjatthews)
+- [@ericronne](https://github.com/ericronne)
+- [@jessicaschilling](https://github.com/jessicaschilling)
+- [@cwaring](https://github.com/cwaring)
 
 ### Our Q4 2019 goals
 *You can also view our progress against these in the [IPFS-wide OKR (Objectives and Key Results) tracking document](https://docs.google.com/spreadsheets/d/1VeyiLvBdX_PrP394kU_lwkQZxfNwqMVX1f7K4ursSPM/edit#gid=1841105909), or [filter this repo's issues](https://github.com/ipfs/docs/issues) for ones with labels containing `OKR`.*
