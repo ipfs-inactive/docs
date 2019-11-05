@@ -28,7 +28,7 @@ CLI commands use this API when operating in [online mode]({{< relref
   the <a href="https://github.com/ipfs/ipfs-http-api-docs" target="_blank">ipfs-http-api-docs&nbsp;<i class="fas fa-external-link-square-alt fa-sm"></i></a> repository on GitHub.
 </aside>
 
-## Getting Started
+## Getting started
 
 ### Alignment with CLI Commands
 
