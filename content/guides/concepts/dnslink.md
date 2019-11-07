@@ -37,7 +37,7 @@ _dnslink.docs.ipfs.io.  34  IN  TXT "dnslink=/ipfs/QmVMxjouRQCA2QykL5Rc77DvjfaX6
 
 ### Resolving using DNSLink
 
-When an IPFS client or node attempts to resolve an address, it looks for a `TXT` record for the domain or subdomain in question with content like:
+When an IPFS client or node attempts to resolve an address, it looks for a `TXT` record that is prefixed with `dnslink=`. The rest can be an `/ipfs/` link (as in the example below), or `/ipns/`, or even a link to another DNSLink.
 
 ```
 dnslink=/ipfs/<CID for your content here>
