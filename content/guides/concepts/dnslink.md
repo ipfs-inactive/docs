@@ -17,7 +17,7 @@ A DNSLink address looks like an [IPNS](/guides/concepts/ipns) address, but it us
 /ipns/myexampledomain.org
 ```
 
-Just like normal IPFS addresses, they can include links to other files:
+Just like normal IPFS addresses, they can include links to other files — or other types of resources that IPFS/UnivFS supports, like directories and symlinks:
 
 ```
 /ipns/myexampledomain.org/media/
