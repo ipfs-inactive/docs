@@ -25,7 +25,7 @@ Just like normal IPFS addresses, they can include links to other files — or ot
 
 ### Publishing using a subdomain
 
-While you can publish the TXT record to the exact domain (as in the example above) if you so wish, it can be more advantageous to publish DNSLink records using a special subdomain called `_dnslink`. This enables you to improve the security of an automated setup, or delegate control over your DNSLink records to a third party without giving away full control over the original DNS zone.
+While you can publish the TXT record to the exact domain if you so wish, it can be more advantageous to publish DNSLink records using a special subdomain called `_dnslink`. This enables you to improve the security of an automated setup, or delegate control over your DNSLink records to a third party without giving away full control over the original DNS zone.
 
 For example, [`docs.ipfs.io`](https://docs.ipfs.io) does not have a TXT record, but the page still loads
 because a TXT record exists for `_dnslink.docs.ipfs.io`. If you look up the DNS records for `_dnslink.docs.ipfs.io`, you'll see its DNSLink entry:
