@@ -9,7 +9,7 @@ menu:
 
 ## What is DNSLink?
 
-DNSLink uses [DNS TXT](https://en.wikipedia.org/wiki/TXT_record) records to map a domain name (like `ipfs.io`) to an IPFS address. Because you can edit your DNS records, you can use them to always point to the latest version of an object in IPFS (remember that an IPFS object’s address changes if you modify the object). Because DNSLink uses DNS records, the names it produces are also usually easy to type and read.
+DNSLink uses [DNS TXT](https://en.wikipedia.org/wiki/TXT_record) records to map a domain name (like `ipfs.io`) to an IPFS address. Because you can edit your DNS records, you can use them to always point to the latest version of an object in IPFS (remember that an IPFS object’s address changes if you modify the object). Since DNSLink uses DNS records, you can assign names/paths/(sub)domains/whatever that are easy to type, read, and remember.
 
 A DNSLink address looks like an [IPNS](/guides/concepts/ipns) address, but it uses a domain name in place of a hashed public key:
 
