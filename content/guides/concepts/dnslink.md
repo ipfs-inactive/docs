@@ -53,7 +53,7 @@ _dnslink.docs.ipfs.io.  34  IN  TXT "dnslink=/ipfs/QmVMxjouRQCA2QykL5Rc77DvjfaX6
 Based on that, this address:
 
 ```
-/ipns/_dnslink.docs.ipfs.io/introduction/
+/ipns/docs.ipfs.io/introduction/
 ```
 
 Will get you this block:
