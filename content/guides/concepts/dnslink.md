@@ -7,70 +7,57 @@ menu:
 
 **NOTE: The info below is a quick guide to DNSLink. For a more complete guide, including tutorials, usage examples and FAQs, check out [dnslink.io](http://dnslink.io/).**
 
-## About DNSLink
+## What is DNSLink?
 
-DNSLink uses [DNS TXT](https://en.wikipedia.org/wiki/TXT_record) records to map
-a domain name (like `ipfs.io`) to an IPFS address. Because you can edit your
-DNS records, you can use them to always point to the latest version of an
-object in IPFS (remember that an IPFS object’s address changes if you modify
-the object). Because DNSLink uses DNS records, the names it produces are also
-usually easy to type and read.
+DNSLink uses [DNS TXT](https://en.wikipedia.org/wiki/TXT_record) records to map a domain name (like `ipfs.io`) to an IPFS address. Because you can edit your DNS records, you can use them to always point to the latest version of an object in IPFS (remember that an IPFS object’s address changes if you modify the object). Since DNSLink uses DNS records, you can assign names/paths/(sub)domains/whatever that are easy to type, read, and remember.
 
-A DNSLink address looks like an [IPNS](/guides/concepts/ipns) address, but it
-uses a domain name in place of a hashed public key:
+A DNSLink address looks like an [IPNS](/guides/concepts/ipns) address, but it uses a domain name in place of a hashed public key:
 
 ```
-/ipns/ipfs.io
+/ipns/myexampledomain.org
 ```
 
-Just like normal IPFS addresses, they can include links to other files:
+Just like normal IPFS addresses, they can include links to other files — or other types of resources that IPFS supports, like directories and symlinks:
 
 ```
-/ipns/ipfs.io/media/
+/ipns/myexampledomain.org/media/
 ```
 
-When an IPFS client or node attempts to resolve that address, it looks for a `TXT` record for `ipfs.io` with content like:
+### Publishing using a subdomain
+
+While you can publish the TXT record to the exact domain if you so wish, it can be more advantageous to publish DNSLink records using a special subdomain called `_dnslink`. This enables you to improve the security of an automated setup, or delegate control over your DNSLink records to a third party without giving away full control over the original DNS zone.
+
+For example, [`docs.ipfs.io`](https://docs.ipfs.io) does not have a TXT record, but the page still loads
+because a TXT record exists for `_dnslink.docs.ipfs.io`. If you look up the DNS records for `_dnslink.docs.ipfs.io`, you'll see its DNSLink entry:
+
+```sh
+$ dig +noall +answer TXT _dnslink.docs.ipfs.io
+_dnslink.docs.ipfs.io.  34  IN  TXT "dnslink=/ipfs/QmVMxjouRQCA2QykL5Rc77DvjfaX6m8NL6RyHXRTaZ9iya"
+```
+
+### Resolving using DNSLink
+
+When an IPFS client or node attempts to resolve an address, it looks for a `TXT` record that is prefixed with `dnslink=`. The rest can be an `/ipfs/` link (as in the example below), or `/ipns/`, or even a link to another DNSLink.
 
 ```
 dnslink=/ipfs/<CID for your content here>
 ```
 
-For example, if you look up `ipfs.io`’s DNS records, you’ll see its DNSLink entry:
+For example, let's go back to when we looked up the DNS records for `_dnslink.docs.ipfs.io` and saw its DNSLink entry:
 
 ```sh
-$ dig +noall +answer TXT ipfs.io
-ipfs.io.		59	IN	TXT	"dnslink=/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao"
+$ dig +noall +answer TXT _dnslink.docs.ipfs.io
+_dnslink.docs.ipfs.io.  34  IN  TXT "dnslink=/ipfs/QmVMxjouRQCA2QykL5Rc77DvjfaX6m8NL6RyHXRTaZ9iya"
 ```
 
 Based on that, this address:
 
 ```
-/ipns/ipfs.io/media/
+/ipns/docs.ipfs.io/introduction/
 ```
 
 Will get you this block:
 
 ```
-/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao/media/
+/ipfs/QmVMxjouRQCA2QykL5Rc77DvjfaX6m8NL6RyHXRTaZ9iya/introduction/
 ```
-
-
-## Publishing via a Subdomain
-
-You can also publish DNSLink records using a special subdomain named `_dnslink`. This is useful when you want to improve the security of an automated setup or delegate control over your DNSLink records to a third-party without giving away full control over the original DNS zone.
-
-For example, [`docs.ipfs.io`](https://docs.ipfs.io) does not have a TXT record, but the page still loads
-because a TXT record exists for `_dnslink.docs.ipfs.io`:
-
-```sh
-$ dig +noall +answer TXT _dnslink.docs.ipfs.io
-_dnslink.docs.ipfs.io.  34  IN  TXT "dnslink=/ipfs/QmeveuwF5wWBSgUXLG6p1oxF3GKkgjEnhA6AAwHUoVsx6E"
-```
-
-<!-- TODO: Once IPNS is more reliable, describe combining it with DNSLink.
-### Linking to IPNS
-
-DNSLink can point at [IPNS](/guides/concepts/ipns) paths as well. IPNS path is
-a mutable pointer which  enables you to update your website by publishing
-to a PeerID without the need for updating TXT record every time hash changes.
--->
