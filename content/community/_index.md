@@ -8,7 +8,7 @@ The IPFS community is as decentralized and distributed as IPFS itself. Our commu
 
 ## Discussion/Support Forum
 
-Join the conversation on the [https://discuss.ipfs.io/](IPFS Forums) for everything from technical questions, project brainstorming, talk on IPFS use cases and more.
+Join the conversation on the [IPFS Forums](https://discuss.ipfs.io/) for everything from technical questions, project brainstorming, talk on IPFS use cases and more.
 
 ## Research Discussion
 
