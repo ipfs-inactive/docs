@@ -9,8 +9,8 @@ A *content identifier*, or CID, is a label used to point to material in IPFS. It
 
 CIDs are based on the content’s [cryptographic hash]({{< relref "./hashes.md" >}}). That means:
 
-* Any difference in content will produce a different CID and
-* The same piece of content added to two different IPFS nodes using the same settings will produce _exactly the same CID_.
+* Any difference in content should produce a different CID and
+* The same piece of content added to two different IPFS nodes using the same settings should produce _exactly the same CID_.
 
 ## CID formats
 
