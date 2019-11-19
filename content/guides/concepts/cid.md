@@ -26,7 +26,7 @@ If a CID is 46 characters starting with "Qm", it's a CIDv0 (for more details, ch
 
 CID v1 contains some leading identifiers that clarify exactly which representation is used, along with the content-hash itself. These include:
 
-* A [multibase (WIP)](https://github.com/multiformats/multibase) prefix, specifying the encoding used for the remainder of the CID
+* A [multibase](https://github.com/multiformats/multibase) prefix, specifying the encoding used for the remainder of the CID
 * A CID version identifier, which indicates which version of CID this is
 * A [multicodec](https://github.com/multiformats/multicodec) identifier, indicating the format of the target content — it helps people and software to know how to interpret that content after the content is fetched
 
@@ -38,4 +38,3 @@ You can use the first few bytes of the CID to interpret the remainder of the con
 ## Explore CIDs for yourself
 
 Want to pull apart a specific CID's multibase, multicodec, or multihash info? You can use the [CID Inspector](https://cid.ipfs.io/#QmY7Yh4UquoXHLPFo2XbhXkhBvFoPwmQUSa92pxnxjQuPU) or the [CID Info panel in IPLD Explorer](https://explore.ipld.io/#/explore/QmY7Yh4UquoXHLPFo2XbhXkhBvFoPwmQUSa92pxnxjQuPU) (both links launch using a sample CID) for an interactive breakdown of differently-formatted CIDs.
-
