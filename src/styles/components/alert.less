@@ -19,6 +19,33 @@
   border-left: 4px solid @accent-gold;
 }
 
+.alert-beta {
+  background-color: @background-beta;
+  border: 0px;
+  border-left: 4px solid @accent-beta;
+  display: flex;
+  h4 {
+    color: @accent-beta;
+    margin-top: 0.2em;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  .beta-icon {
+    margin-left: 1em;
+    margin-top:0.25em;
+  }
+}
+
+@media (max-width: 450px) {
+  .alert-beta {
+    flex-direction: column-reverse;
+    .beta-icon {
+      margin: 0.25em auto;
+    }
+  }
+}
+
 .alert + p {
   margin-top: 1.5em;
 }

@@ -3,6 +3,7 @@ title: "DNSLink"
 menu:
     guides:
         parent: concepts
+beta_equivalent: foo/bar
 ---
 
 **NOTE: The info below is a quick guide to DNSLink. For a more complete guide, including tutorials, usage examples and FAQs, check out [dnslink.io](http://dnslink.io/).**

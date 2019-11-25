@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ range where .Site.Pages "Type" "index" }}
   <h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+  {{ partial "betalink" . }}
   {{ .Content }}
   {{ end }}
 {{ end }}

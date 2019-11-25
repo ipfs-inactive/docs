@@ -1,6 +1,7 @@
 ---
 title: Getting Started
 weight: 3
+beta_equivalent: foo/bar
 ---
 
 ## Install IPFS

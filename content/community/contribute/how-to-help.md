@@ -4,6 +4,7 @@ menu:
     community:
         parent: contribute
         weight: 1
+beta_equivalent: foo/bar
 ---
 
 So you want to contribute to IPFS and the ecosystem? Here is a quick listing
@@ -144,4 +145,3 @@ technologies that have a real impact on the world. If you're interested in
 contributing to our research, please reach out to research@ipfs.io or
 research@protocol.ai for more information. Include what your interests are so
 we can make sure you get to work on something fun and valuable.
-

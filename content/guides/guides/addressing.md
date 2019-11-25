@@ -4,6 +4,7 @@ menu:
     guides:
         parent: guides
 weight: 2
+beta_equivalent: foo/bar
 ---
 
 <!--

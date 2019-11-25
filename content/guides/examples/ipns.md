@@ -1,5 +1,6 @@
 ---
 title: The Inter-Planetary Naming System
+beta_equivalent: foo/bar
 ---
 
 ipns is a way to add a small amount of mutability to the permanent immutability

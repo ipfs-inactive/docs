@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 1
+beta_equivalent: foo/bar
 ---
 
 <div class="alert alert-info">

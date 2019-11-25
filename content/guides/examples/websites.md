@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 4
+beta_equivalent: foo/bar
 ---
 
 ### A short guide to hosting your site on IPFS

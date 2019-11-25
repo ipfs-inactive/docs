@@ -1,5 +1,6 @@
 ---
 title: Examples
+beta_equivalent: foo/bar
 ---
 
 <div class="alert alert-info">

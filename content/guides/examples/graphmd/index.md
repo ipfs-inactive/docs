@@ -1,5 +1,6 @@
 ---
 title: Visualizing objects with graphmd
+beta_equivalent: foo/bar
 ---
 
 ![](output/graph.png)
