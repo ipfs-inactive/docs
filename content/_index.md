@@ -1,7 +1,7 @@
 ---
 type: index
 title: IPFS Documentation
-beta_equivalent: foo/bar
+beta_equivalent: 
 ---
 
 Welcome to the IPFS documentation portal! Whether you’re just learning about IPFS or are looking for detailed reference information, this is the place to start. You might have noticed that IPFS is a project with a big scope — and a *lot* of different tools, sites, and code.

@@ -1,7 +1,7 @@
 ---
 title: What is IPFS?
 weight: 1
-beta_equivalent: foo/bar
+beta_equivalent: essentials/what-is-ipfs
 ---
 
 Welcome! If you’re new to IPFS, you’ve come to the right place. Here is a quick overview of what IPFS is, how it works, and how to use it.
