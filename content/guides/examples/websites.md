@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 4
-beta_equivalent: foo/bar
+beta_equivalent: how-to/host-single-page-site
 ---
 
 ### A short guide to hosting your site on IPFS

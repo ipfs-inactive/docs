@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 1
-beta_equivalent: foo/bar
+beta_equivalent: how-to/configure-node
 ---
 
 <div class="alert alert-info">

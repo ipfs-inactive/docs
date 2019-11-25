@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 2
-beta_equivalent: foo/bar
+beta_equivalent: how-to/work-with-blocks
 ---
 
 <div class="alert alert-info">

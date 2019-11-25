@@ -4,7 +4,7 @@ menu:
     community:
         parent: contribute
         weight: 1
-beta_equivalent: foo/bar
+beta_equivalent: project/contribute
 ---
 
 So you want to contribute to IPFS and the ecosystem? Here is a quick listing

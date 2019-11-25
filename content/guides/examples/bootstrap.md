@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 6
-beta_equivalent: foo/bar
+beta_equivalent: how-to/modify-bootstrap-list
 ---
 
 <div class="alert alert-info">

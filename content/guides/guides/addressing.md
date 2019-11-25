@@ -4,7 +4,7 @@ menu:
     guides:
         parent: guides
 weight: 2
-beta_equivalent: foo/bar
+beta_equivalent: how-to/address-ipfs-on-web
 ---
 
 <!--

@@ -4,7 +4,7 @@ weight: 20
 menu:
     reference:
         parent: api
-beta_equivalent: foo/bar
+beta_equivalent: reference/http/api
 ---
 
 <!-- TODO: Describe how to change ports and configure the API server -->

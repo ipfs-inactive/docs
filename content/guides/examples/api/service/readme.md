@@ -1,6 +1,6 @@
 ---
 title: Making Your Own IPFS Service
-beta_equivalent: foo/bar
+beta_equivalent: how-to/make-service
 <!-- menu:
     guides:
         parent: examples

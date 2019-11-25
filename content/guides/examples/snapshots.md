@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 10
-beta_equivalent: foo/bar
+beta_equivalent: how-to/take-snapshot
 ---
 
 <div class="alert alert-info">

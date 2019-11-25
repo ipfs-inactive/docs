@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 8
-beta_equivalent: foo/bar
+beta_equivalent: how-to/store-play-videos
 ---
 
 <div class="alert alert-info">

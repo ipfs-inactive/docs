@@ -3,7 +3,7 @@ title: "Content Identifiers (CIDs)"
 menu:
     guides:
         parent: concepts
-beta_equivalent: foo/bar
+beta_equivalent: essentials/content-addressing
 ---
 
 A *content identifier*, or CID, is a label used to point to material in IPFS. It doesn't indicate _where_ the content is stored, but it forms a kind of address based on the content itself. CIDs are short, regardless of the size of their underlying content.

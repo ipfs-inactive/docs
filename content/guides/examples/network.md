@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 9
-beta_equivalent: foo/bar
+beta_equivalent: how-to/observe-peers
 ---
 
 <div class="alert alert-info">

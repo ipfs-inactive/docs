@@ -1,5 +1,5 @@
 ---
 title: "JS Implementation"
 headless: true
-beta_equivalent: foo/bar
+beta_equivalent: reference/js/api
 ---

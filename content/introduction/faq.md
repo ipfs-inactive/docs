@@ -1,6 +1,6 @@
 ---
 title: FAQ
-beta_equivalent: foo/bar
+beta_equivalent: essentials/faq
 ---
 
 

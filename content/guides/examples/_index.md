@@ -1,6 +1,6 @@
 ---
 title: Examples
-beta_equivalent: foo/bar
+beta_equivalent: how-to
 ---
 
 <div class="alert alert-info">

@@ -4,7 +4,7 @@ title: "Distributed Hash Tables (DHT)"
 menu:
     guides:
         parent: concepts
-beta_equivalent: foo/bar
+beta_equivalent: essentials/dht
 ---
 
 # DHTs

@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 7
-beta_equivalent: foo/bar
+beta_equivalent: how-to/pin-files
 ---
 
 <div class="alert alert-info">

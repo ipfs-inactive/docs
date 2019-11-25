@@ -10,7 +10,7 @@ weight: 10
 menu:
     reference:
         parent: api
-beta_equivalent: foo/bar
+beta_equivalent: reference/cli
 ---
 
 <!-- TODO: Remove index since it's handled by the TOC in the menu? -->

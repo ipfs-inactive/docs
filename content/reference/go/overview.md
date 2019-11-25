@@ -4,7 +4,7 @@ menu:
     reference:
         parent: go_implementation
         weight: 1
-beta_equivalent: foo/bar
+beta_equivalent: reference/go/api
 ---
 
 `go-ipfs` is the primary reference implementation of IPFS. It is a command-line application, but can also be used as a library in other Go programs.

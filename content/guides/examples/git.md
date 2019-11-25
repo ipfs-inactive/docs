@@ -4,7 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 3
-beta_equivalent: foo/bar
+beta_equivalent: how-to/host-git-style-repo
 ---
 
 <div class="alert alert-info">

@@ -2,7 +2,7 @@
 title: "Community"
 headless: true
 opened: true
-beta_equivalent: foo/bar
+beta_equivalent: support-community
 ---
 
 The IPFS community is as decentralized and distributed as IPFS itself. Our community members are globally located, active both online and in person, and use IPFS in countless different ways. You can learn about meetings, events, apps people are building, and more with the resources listed here.

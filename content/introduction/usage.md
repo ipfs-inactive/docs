@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 weight: 3
-beta_equivalent: foo/bar
+beta_equivalent: how-to/command-line-quick-start
 ---
 
 ## Install IPFS
