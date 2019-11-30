@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 7
+summary: Pinning is a very important concept in ipfs. ipfs semantics try to make it feel like every single object is local, there is no "retrieve this file for me from a remote server", just `ipfs cat` or `ipfs get` which act the same way no matter where the actual object is located. While this is nice, sometimes you want to be able to control what you keep around…
 ---
 
 <div class="alert alert-info">

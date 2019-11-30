@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 10
+summary: Let's take a quick look at how IPFS can be used to take basic *snapshots* of files — an action that enables you to access those files later in the same state as they were when you "snapshotted" them…
 ---
 
 <div class="alert alert-info">

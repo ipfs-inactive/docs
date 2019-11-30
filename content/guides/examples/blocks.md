@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 2
+summary: The `ipfs add` command will create a Merkle DAG out of the data in the files you specify. It follows the [unixfs data format](https://github.com/ipfs/go-unixfs/blob/master/pb/unixfs.proto) when doing this. This means that your files are broken down into blocks, and then arranged in a tree-like structure using 'link nodes' to tie them together…
 ---
 
 <div class="alert alert-info">

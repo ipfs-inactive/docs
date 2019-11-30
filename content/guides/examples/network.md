@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 9
+summary: IPFS is all about networking! Included are a useful set of commands to aid in observing the network. See who you're directly connected to&colon; `ipfs swarm peers`…
 ---
 
 <div class="alert alert-info">
