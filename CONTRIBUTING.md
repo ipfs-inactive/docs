@@ -38,7 +38,7 @@ By following these guidelines, you're helping to keep the IPFS docs consistent.
 
 ### Formatting
 
-Write everything in using the [GitHub Flavored Markdown] (https://github.github.com/gfm/) syntax. Here are a few guidelines that help to keep everything nice and tidy.
+Write everything in using the [GitHub Flavored Markdown](https://github.github.com/gfm/) syntax. Here are a few guidelines that help to keep everything nice and tidy.
 
 - Write file names, folders, addresses, and variables between code tags.
 
