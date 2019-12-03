@@ -4,6 +4,7 @@ title: Making Your Own IPFS Service
     guides:
         parent: examples
 weight: 5 -->
+summary: IPFS has a few default services that it runs by default, such as the dht, bitswap, and the diagnostics service. Each of these simply registers a handler on the IPFS PeerHost, and listens on it for new connections. The `corenet` package has a very clean interface to this functionality. So lets try building an easy demo service to try this out…
 ---
 
 <div class="alert alert-info">

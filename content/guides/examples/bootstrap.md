@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 6
+summary: The IPFS bootstrap list is a list of peers with which the IPFS daemon learns about other peers on the network. IPFS comes with a default list of trusted peers, but you are free to modify the list to suit your needs. One popular use for a custom bootstrap list is to create a personal IPFS network…
 ---
 
 <div class="alert alert-info">

@@ -4,6 +4,7 @@ menu:
     guides:
         parent: examples
 weight: 3
+summary: Have you ever said to yourself&colon; "Man, my git server isn't distributed enough" or" I wish I had an easy way to serve a static git repository worldwide". Well wish no more, I have the solution for you! In this article, I will be discussing how to serve a git repository through the ipfs network…
 ---
 
 <div class="alert alert-info">
