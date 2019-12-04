@@ -45,13 +45,13 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 | **2 - Improve our understanding of user needs and map out improvements accordingly** | | | |
 | 2A. Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0 | 0.9 | |
 | 2B. Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | |
-| 2C. Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | |
-| 2D. Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.5 | 0.9 | | 
+| 2C. Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | 1 |
+| 2D. Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.5 | 0.9 | 1 | 
 | ~~2E. Define documentation’s and ProtoSchool’s place within the entire IPFS information ecosystem and draft a design-thinking-based strategy for future work ("content meta-audit")~~ *postponed to Q1* |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
 | **3 - Improve docs content based on metrics, research, and community input**
-| 3A. Identify and fix specific docs pages/items based on user feedback mechanism or other metrics | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | |
-| 3B. Close high-value existing missing-content or inadequate-content issues | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | |
-| 3C. Conduct a content-focused “close reading” audit of existing IPFS docs to identify and prioritize work on weak or incomplete docs | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | 0.2 | 1 | |
+| 3A. Identify and fix specific docs pages/items based on user feedback mechanism or other metrics | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | 1 |
+| 3B. Close high-value existing missing-content or inadequate-content issues | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | 1 |
+| 3C. Conduct a content-focused “close reading” audit of existing IPFS docs to identify and prioritize work on weak or incomplete docs | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | 0.2 | 1 | 1 |
 | **4 - Enhance ProtoSchool and docs.ipfs.io content using IPFS Camp content** | | | | |
 | 4A. Complete review of IPFS Camp content identifying how it can be applied to create new ProtoSchool tutorials, enhance existing ones, or improve the docs.ipfs.io site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.2 | 1 | |
 | 4B. Create or improve ProtoSchool tutorials using content adapted from IPFS Camp | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | 0 | 1 | |
