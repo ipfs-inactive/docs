@@ -1,6 +1,6 @@
 ---
 title: FAQ
-beta_equivalent: essentials/faq
+beta_equivalent: concepts/faq
 ---
 
 

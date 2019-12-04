@@ -1,7 +1,7 @@
 ---
 title: How IPFS Works
 weight: 2
-beta_equivalent: essentials/how-ipfs-works
+beta_equivalent: concepts/how-ipfs-works
 ---
 
 IPFS is a peer-to-peer (p2p) storage network. Content is accessible through peers that might relay information or store it (or do both), and those peers can be located anywhere in the world. IPFS knows how to find what you ask for by its content address, rather than where it is.

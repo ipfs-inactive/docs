@@ -1,6 +1,6 @@
 ---
 title: The Inter-Planetary Naming System
-beta_equivalent: essentials/ipns
+beta_equivalent: concepts/ipns
 ---
 
 ipns is a way to add a small amount of mutability to the permanent immutability

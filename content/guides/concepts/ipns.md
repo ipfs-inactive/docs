@@ -3,7 +3,7 @@ title: "IPNS"
 menu:
     guides:
         parent: concepts
-beta_equivalent: essentials/ipns
+beta_equivalent: concepts/ipns
 ---
 
 Inter-Planetary Name System (IPNS) is a system for creating and updating mutable links to IPFS content. Since objects in IPFS are content-addressed, their address changes every time their content does. That’s useful for a variety of things, but it makes it hard to get the latest version of something.

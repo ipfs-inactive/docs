@@ -1,6 +1,6 @@
 ---
 title: "IRC"
-beta_equivalent: support-community/irc
+beta_equivalent: community/irc
 ---
 
 There are several IRC channels on Freenode dedicated to IPFS, and it’s a great place for live chat:
