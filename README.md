@@ -7,6 +7,8 @@
 ## Join our weekly sync (all welcome!)
 Mondays at 16:00-16:30 UTC / 4:00-4:30 pm GMT / 8:00-8:30 am PT
 
+**NOTE: No meetings on 23 or 30 December 2019. See you in the new year!**
+
 📞 Zoom: https://protocol.zoom.us/j/614386160
 
  :orange_book: Notes from current and past calls can be found [here](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP).
