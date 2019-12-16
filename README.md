@@ -42,11 +42,11 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 | OBJECTIVES & KEY RESULTS | RANK | MID-Q | PROJECTED | FINAL |
 |-|-|-|-|-|
 | **1 - Launch beta docs platform in order to offer users an improved venue for learning**
-| 1A. Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | |
-| 1B. Define deprecation plan from old to new (non-beta) docs platform |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.2 | 1.0 | | 
+| 1A. Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | 0.9 |
+| 1B. Define deprecation plan from old to new (non-beta) docs platform |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.2 | 1.0 | 1.0 | 
 | **2 - Improve our understanding of user needs and map out improvements accordingly** | | | |
-| 2A. Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0 | 0.9 | |
-| 2B. Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | |
+| 2A. Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0 | 0.9 | 1.0 |
+| 2B. Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | 1.0 |
 | 2C. Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | 1 |
 | 2D. Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.5 | 0.9 | 1 | 
 | ~~2E. Define documentation’s and ProtoSchool’s place within the entire IPFS information ecosystem and draft a design-thinking-based strategy for future work ("content meta-audit")~~ *postponed to Q1* |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
@@ -55,8 +55,8 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 | 3B. Close high-value existing missing-content or inadequate-content issues | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | 1 |
 | 3C. Conduct a content-focused “close reading” audit of existing IPFS docs to identify and prioritize work on weak or incomplete docs | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | 0.2 | 1 | 1 |
 | **4 - Enhance ProtoSchool and docs.ipfs.io content using IPFS Camp content** | | | | |
-| 4A. Complete review of IPFS Camp content identifying how it can be applied to create new ProtoSchool tutorials, enhance existing ones, or improve the docs.ipfs.io site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.2 | 1 | |
-| 4B. Create or improve ProtoSchool tutorials using content adapted from IPFS Camp | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | 0 | 1 | |
+| 4A. Complete review of IPFS Camp content identifying how it can be applied to create new ProtoSchool tutorials, enhance existing ones, or improve the docs.ipfs.io site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.2 | 1 | 1 |
+| 4B. Create or improve ProtoSchool tutorials using content adapted from IPFS Camp | ![p1](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p1.svg) | 0 | 1 | 1 |
 | ~~4C. Create or improve docs pages/entries using content adapted from IPFS Camp~~ *postponed to Q1* |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
 
 ### Helpful artifacts related to these goals
@@ -64,14 +64,14 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
     - [Vote on your priorities](https://ipfs.canny.io/docs-features) for the next-gen docs platform!
 - [Docs beta repo](https://github.com/ipfs/ipfs-docs-v2) — WIP in rapid evolution
 - [IPFS user/goal personae](https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1564779785852/cf7669f3c1773508a811a3fa0eadfb99efb310bf) illustrating the goals, motivations and potential frustrations of key current/potential IPFS users
-- [Research/test summaries](https://github.com/ipfs/docs/issues/288) for Q4 2019 (note: work in progress as the quarter continues!)
-- [Research/test plan and summaries](https://docs.google.com/document/d/1c2TFeXLFW29a8HYwUq6K9-n8fDg2WhERRIi1CWHMC-8/edit?usp=sharing) for Q3 2019 OKR research efforts 
+- [Research/test plans and summaries](https://github.com/ipfs/docs/issues/288) for Q4 2019 OKR research efforts
+- [Research/test plans and summaries](https://docs.google.com/document/d/1c2TFeXLFW29a8HYwUq6K9-n8fDg2WhERRIi1CWHMC-8/edit?usp=sharing) for Q3 2019 OKR research efforts 
 - [Documentation platform evaluation](https://github.com/ipfs/docs/issues/302) elaborating upon our decision to build docs beta on VuePress
 
 
 ## Want to get involved with IPFS documentation?
 
-We're undergoing major renovation to our docs in Q4 2019, but we would still **love ❤️ your help** to improve existing items or make new ones even better! Here are some ideas to get you started:
+We would **love ❤️ your help** to improve existing items or make new ones even better! Here are some ideas to get you started:
 
 1. **Join us on our weekly call!** See the top of this readme for full details on how and when.
 
@@ -79,7 +79,7 @@ We're undergoing major renovation to our docs in Q4 2019, but we would still **l
 
 3. **Create (or improve) an example, tutorial or concept guide!** At present, we have a variety of how-tos and concept guides either living in this docs repo, or linked to from the nav menu at [docs.ipfs.io](https://docs.ipfs.io). However, every new item we can offer makes it easier for the world's community to use and build on IPFS. If you'd like to write a new example/tutorial or concept guide, [take a look in our open issues](https://github.com/ipfs/docs/issues?q=is%3Aissue+is%3Aopen+label%3A%22OKR%3A+Content+Improvement%22) for items with the `OKR: Content Improvement` label and see if any already-identified needs appeal to you. If you'd like to write something entirely new, feel free — PRs are welcome! Or, if you'd just like to improve existing docs content, feel free to fork it and add your suggestions.
 
-4. **Help us improve how we present reference and API documentation.** As part of our beta docs platform launch, we're investigating the best way to improve how we present reference materials like API documentation and command-line dictionaries. Got thoughts? [Please discuss them!](https://github.com/ipfs/docs/issues/69)
+4. **Help us improve how we present reference and API documentation.** In Q1 2020, we're investigating the best way to improve how we present reference materials like API documentation and command-line dictionaries. Got thoughts? [Please discuss them!](https://github.com/ipfs/docs/issues/393)
 
 If you're able to contribute to any of the categories above, we thank you in advance -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
