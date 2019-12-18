@@ -32,14 +32,14 @@ ipfs pin rm -r <foo hash>
 ipfs pin ls --type=all
 ```
 
-As you may have noticed, the first `ipfs pin rm` command didnt work, it should
+As you may have noticed, the first `ipfs pin rm` command didn't work, it should
 have warned you that the given hash was "pinned recursively". There are three
 types of pins in the ipfs world; direct pins, which pin just a single block, and
 no others in relation to it. recursive pins, which pin a given block and all of
 its children, and indirect pins, which are the result of a given blocks parent
 being pinned recursively.
 
-A pinned object cannot be garbage collected, if you dont believe me try this:
+A pinned object cannot be garbage collected, if you don't believe me try this:
 ```
 ipfs add foo
 ipfs repo gc
@@ -53,4 +53,4 @@ ipfs repo gc
 ipfs cat <foo hash>
 ```
 
-By [whyrusleeping](http://github.com/whyrusleeping)
+By [whyrusleeping](https://github.com/whyrusleeping), apostrophes fixed by [Noisytoot](https://noisytoot.org)
