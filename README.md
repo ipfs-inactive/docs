@@ -42,11 +42,11 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 | OBJECTIVES & KEY RESULTS | RANK | MID-Q | PROJECTED | FINAL |
 |-|-|-|-|-|
 | **1 - Launch beta docs platform in order to offer users an improved venue for learning**
-| 1A. Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | 0.9 |
-| 1B. Define deprecation plan from old to new (non-beta) docs platform |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.2 | 1.0 | 1.0 | 
+| 1A. Launch beta of new docs.ipfs.io platform; content initially at parity with existing site, but with next-gen information architecture (work complete, live launch tentatively 10 Jan) | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | 1 |
+| 1B. Define deprecation plan from old to new (non-beta) docs platform |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.2 | 1 | 1 | 
 | **2 - Improve our understanding of user needs and map out improvements accordingly** | | | |
-| 2A. Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0 | 0.9 | 1.0 |
-| 2B. Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 | 1.0 |
+| 2A. Define metrics collection for docs beta site in order to effectively define KPI-based success of docs beta site | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0 | 0.9 | 1 |
+| 2B. Augment “is this helpful” feedback mechanism in docs beta to get more actionable info from users at point of feedback | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 0.9 |  |
 | 2C. Conduct mid-stream usability testing of docs beta platform and revise beta deployment plans as necessary | ![p0](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p0.svg) | 0.5 | 1 | 1 |
 | 2D. Conduct quantitative voting-based testing to confirm direction of docs beta, and revise deployment plans as necessary |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | 0.5 | 0.9 | 1 | 
 | ~~2E. Define documentation’s and ProtoSchool’s place within the entire IPFS information ecosystem and draft a design-thinking-based strategy for future work ("content meta-audit")~~ *postponed to Q1* |![p2](https://ipfs.io/ipfs/QmV88khHDJEXi7wo6o972MZWY661R9PhrZW6dvpFP6jnMn/p2.svg) | | | |
