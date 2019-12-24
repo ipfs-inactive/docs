@@ -13,12 +13,12 @@ Our interactive tutorials help you learn about the the decentralized web by writ
 </div>
 
 IPFS is configured through a json formatted text file, located by default at
-`~/.ipfs/config`. Implementation specific information can be found within the [go-ipfs](https://github.com/ipfs/go-ipfs/blob/master/docs/config.md) and [js-ipfs](https://github.com/ipfs/js-ipfs/blob/master/docs/config.md) repositories.
+`~/.ipfs/config`. Implementation-specific information can be found within the [go-ipfs](https://github.com/ipfs/go-ipfs/blob/master/docs/config.md) and [js-ipfs](https://github.com/ipfs/js-ipfs/blob/master/docs/config.md) repositories.
 
 ### Addresses
 
 The config file stores a few different address types, all of which use the
-multiaddr addressing format. Lets go over what each address type means.
+multiaddr addressing format. Let's go over what each address type means.
 
 ```json
 "Addresses": {
