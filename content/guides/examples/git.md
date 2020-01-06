@@ -5,6 +5,7 @@ menu:
         parent: examples
 weight: 3
 beta_equivalent: how-to/host-git-style-repo
+summary: How to serve a git repository through IPFS
 ---
 
 <div class="alert alert-info">

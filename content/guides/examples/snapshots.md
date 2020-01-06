@@ -5,6 +5,7 @@ menu:
         parent: examples
 weight: 10
 beta_equivalent: how-to/take-snapshot
+summary: A quick look at how IPFS can be used to take basic snapshots of files
 ---
 
 <div class="alert alert-info">

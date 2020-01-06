@@ -5,6 +5,7 @@ menu:
         parent: examples
 weight: 2
 beta_equivalent: how-to/work-with-blocks
+summary: A quick guide to working with blocks in IPFS
 ---
 
 <div class="alert alert-info">
@@ -39,7 +40,7 @@ qmwk51jygpchgwr3srdnmhyerheqd22qw3vvyamb3emhuw 5244129
 This shows all of the immediate sub-blocks of your file, as well as the
 size of them and their children on the disk.
 
-### What to do with Blocks?
+### What to do with blocks?
 If you feel adventurous, you can get a lot of different information out of these
 different blocks. You can use the sub-block hashes as input to `ipfs cat` to
 see only the data in any given sub-tree (the data of that block and its
@@ -53,14 +54,14 @@ Similarly, `ipfs ls` or `ipfs object links` will show you all children and
 their sizes. `ipfs refs` is a more suitable command for scripting something
 to run on each child block of a given object.
 
-### Blocks vs Objects
+### Blocks vs objects
 In IPFS, a block refers to a single unit of data, identified by its key (hash).
 A block can be any sort of data, and does not necessarily have any sort of
 format associated with it. An object, on the other hand, refers to a block that
 follows the Merkle DAG protobuf data format. It can be parsed and manipulated
 via the `ipfs object` command. Any given hash may represent an object or a block.
 
-### Creating a Block from scratch
+### Creating a block from scratch
 Creating your own blocks is easy! Simply put your data in a file and run
 `ipfs block put <yourfile>` on it. Or, you can pipe your filedata into
 `ipfs block put`, like so:

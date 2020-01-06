@@ -5,6 +5,7 @@ menu:
         parent: examples
 weight: 8
 beta_equivalent: how-to/store-play-videos
+summary: IPFS can be used to store and play videos. 
 ---
 
 <div class="alert alert-info">

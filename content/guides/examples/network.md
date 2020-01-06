@@ -5,6 +5,7 @@ menu:
         parent: examples
 weight: 9
 beta_equivalent: how-to/observe-peers
+summary: Learn about observing peers and the network
 ---
 
 <div class="alert alert-info">
