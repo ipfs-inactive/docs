@@ -4,7 +4,8 @@ menu:
     guides:
         parent: examples
 weight: 1
-summary: IPFS is configured through a json formatted text file, located by default at `~/.ipfs/config`. The config file stores a few different address types, all of which use the multiaddr addressing format. Lets go over what each address type means…
+beta_equivalent: how-to/configure-node
+summary: A quick guide to configuring your IPFS node
 ---
 
 <div class="alert alert-info">

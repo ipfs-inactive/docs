@@ -3,6 +3,7 @@ title: "Hashes"
 menu:
     guides:
         parent: concepts
+beta_equivalent: concepts/hashing
 ---
 
 Hashes are functions that take some arbitrary input and return a fixed-length value. The particular value depends on the given hash algorithm in use, such as [SHA-1](https://en.wikipedia.org/wiki/SHA-1) (used by Git), [SHA-256](https://en.wikipedia.org/wiki/SHA-2), or [BLAKE2](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2), but a given hash algorithm always returns the same value for a given input. Have a look at the [full list of hash functions](https://en.wikipedia.org/wiki/List_of_hash_functions) for more.
@@ -47,4 +48,3 @@ Cryptographic hashes come with a couple of very important characteristics:
 It turns out these features also mean we can use a cryptographic hash to identify any piece of data: the hash is unique to the data we calculated it from and it’s not too long (a hash is a fixed length, so the SHA-256 hash of a 1 Gigabyte video file is still only 32 bytes), so sending it around the network doesn't take up a lot of resources.
 
 That's critical for a distributed system like IPFS, where we want to be able to store and retrieve data from many places. A computer running IPFS can ask all the peers it's connected to  whether they have a file with a particular hash and, if one of them does, they send back the whole file. Without a short, unique identifier like a cryptographic hash, that wouldn't be possible. This technique is called “content addressing” — because the content itself is used to form an address, rather than information about the computer and disk location it's stored at.
-

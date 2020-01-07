@@ -4,7 +4,8 @@ menu:
     guides:
         parent: examples
 weight: 4
-summary: Assume you have a static website in a directory `mysite`. In order to publish it as a site, [install ipfs](https://docs.ipfs.io/guides/guides/install/) and make sure your ipfs daemon is running…
+beta_equivalent: how-to/host-single-page-site
+summary: A short guide to hosting your site on IPFS
 ---
 
 ### A short guide to hosting your site on IPFS

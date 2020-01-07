@@ -4,6 +4,7 @@ menu:
     reference:
         parent: js_implementation
         weight: 1
+beta_equivalent: reference/js/api
 ---
 
 There are two main JavaScript libraries for working with IPFS. Both work in Node.js and in modern web browsers:

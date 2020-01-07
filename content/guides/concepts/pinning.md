@@ -3,6 +3,7 @@ title: "Pinning"
 menu:
     guides:
         parent: concepts
+beta_equivalent: concepts/persistence
 ---
 
 IPFS nodes treat the data they store like a cache, meaning that there is no guarantee that the data will continue to be stored. Pinning a CID tells an IPFS server that the data is important and mustn't be thrown away.

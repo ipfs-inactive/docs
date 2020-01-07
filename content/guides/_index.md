@@ -2,6 +2,7 @@
 title: IPFS Guides
 headless: true
 opened: true
+beta_equivalent: how-to
 ---
 
 ## Just want to install IPFS?

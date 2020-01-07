@@ -3,6 +3,7 @@ title: "Mutable File System (MFS)"
 menu:
     guides:
         parent: concepts
+beta_equivalent: concepts/file-systems
 ---
 
 Because files in IPFS are content-addressed and immutable, they can be complicated to edit. Mutable File System (MFS) is a tool built into IPFS that lets you treat files like you would a normal name-based filesystem — you can add, remove, move, and edit MFS files and have all the work of updating links and hashes taken care of for you.

@@ -3,6 +3,7 @@ title: "Merkle-DAGs"
 menu:
     guides:
         parent: concepts
+beta_equivalent: concepts/merkle-dag
 ---
 
 <div class="alert alert-info">

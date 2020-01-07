@@ -1,4 +1,5 @@
 {{ define "main" }}
 <h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+{{ partial "betalink" . }}
 {{ .Content }}
 {{ end }}

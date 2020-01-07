@@ -1,8 +1,10 @@
 ---
 title: "Distributed Hash Tables (DHT)"
+
 menu:
     guides:
         parent: concepts
+beta_equivalent: concepts/dht
 ---
 
 # DHTs
@@ -80,6 +82,6 @@ You can learn more in the [libp2p Kademlia DHT specification](https://github.com
 
 Adding a blob of data to IPFS is the equivalent of advertising that you have it. Since DHT is the only content routing implemented, you can just use:
 ` ipfs add myData`
-IPFS will automatically chunk your data and add a mapping on the DHT between the Content ID and your `peerID`. Note that there can be other `peerID`s already mapped to that value, so you will be added to the list. Also note that if the provided data is bigger than 124KB, it will be chunked into "blocks", and both those blocks and the overall data will be mapped. 
+IPFS will automatically chunk your data and add a mapping on the DHT between the Content ID and your `peerID`. Note that there can be other `peerID`s already mapped to that value, so you will be added to the list. Also note that if the provided data is bigger than 124KB, it will be chunked into "blocks", and both those blocks and the overall data will be mapped.
 
 You can publish an IPNS record using [`ipfs.name.publish`](https://docs.ipfs.io/guides/concepts/ipns/).

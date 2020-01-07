@@ -4,6 +4,7 @@ weight: 20
 menu:
     reference:
         parent: api
+beta_equivalent: reference/http/api
 ---
 
 <!-- TODO: Describe how to change ports and configure the API server -->
@@ -4068,4 +4069,3 @@ On success, the call to this endpoint will return with 200 and the following bod
 `curl "http://localhost:5001/api/v0/version/deps"`
 
 ***
-

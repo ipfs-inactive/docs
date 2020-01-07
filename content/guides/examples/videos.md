@@ -4,7 +4,8 @@ menu:
     guides:
         parent: examples
 weight: 8
-summary: IPFS can be used to store and play videos. Suppose we add a video&colon; `ipfs add -q sintel.mp4 | tail -n1` Take the resulting hash, You can view it a couple different ways…
+beta_equivalent: how-to/store-play-videos
+summary: IPFS can be used to store and play videos. 
 ---
 
 <div class="alert alert-info">
