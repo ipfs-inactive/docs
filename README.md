@@ -18,7 +18,7 @@ Mondays at 16:00-16:30 UTC / 4:00-4:30 pm GMT / 8:00-8:30 am PT
 This repo is used for two purposes:
 
 1. To organize overall documentation work across the IPFS project, as managed by the **IPFS Documentation and Developer UX Working Group** ("Docs WG")
-2. To host the documentation website for IPFS, available at https://docs.ipfs.io/
+2. To host the **legacy** documentation website for IPFS, available at https://docs.ipfs.io/. Note that the [IPFS Docs Beta](https://docs-beta.ipfs.io/) is now the canonical reference for IPFS info, and changes and enhancements should be made to the [files in that repo](https://github.com/ipfs/ipfs-docs-v2) instead of to this legacy site. The legacy site is scheduled to be deprecated in Q2 or Q3 of 2020.
 
 ## Docs WG Q4 2019 update
 
@@ -81,7 +81,9 @@ We would **love ❤️ your help** to improve existing items or make new ones ev
 
 If you're able to contribute to any of the categories above, we thank you in advance -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
-## Just want to run the docs site locally?
+## Local instructions for the legacy docs site
+
+As noted above, this is a legacy site not intended for active development, and is scheduled to be deprecated later in 2020. If you're looking to develop on the IPFS Docs beta, please [follow the instructions for running locally in that repo](https://github.com/ipfs/ipfs-docs-v2). However, if you're needing to spin up a local copy of the legacy site for some reason, instructions are below.
 
 ### One-time setup
 
