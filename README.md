@@ -28,7 +28,7 @@ Want to be a beta tester for the new docs platform? We'd love to have you take p
 
 #### With thanks, from your Docs WG core members:
 - [@terichadbourne](https://github.com/terichadbourne)
-- [@dominguesgm](https://github.com/dominguesgm)
+- [@zebateira](https://github.com/zebateira)
 - [@johnnymatthews](https://github.com/johnnymatthews)
 - [@ericronne](https://github.com/ericronne)
 - [@jessicaschilling](https://github.com/jessicaschilling)
