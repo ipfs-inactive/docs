@@ -66,7 +66,15 @@ Example:
 
 
 <aside class="alert alert-info">
-  Right now, this type of gateway requires additional configuration (<a href="https://github.com/ipfs/infra/issues/81#issuecomment-461045160" target="_blank">example for Nginx&nbsp;<i class="fas fa-external-link-square-alt fa-sm"></i></a>); however, there is ongoing work to <a href="https://github.com/ipfs/go-ipfs/issues/5982" target="_blank">add native support in the IPFS daemon&nbsp;<i class="fas fa-external-link-square-alt fa-sm"></i></a>.
+  <p>There is ongoing work to <a href="https://github.com/ipfs/go-ipfs/issues/6498" target="_blank">add native subdomain support to the IPFS daemon&nbsp;<i class="fas fa-external-link-square-alt fa-sm"></i></a>.</p>
+
+  <p>For now, this type of gateway requires additional reverse proxy configuration.<br/>
+  As a reference, Nginx config for subdomain gateway at <code>dweb.link</code> is:
+<code><pre>if ($http_host ~ ^(.+)\.(ipfs|ipns)\.dweb\.link$) {
+  set $ipfspath /$2/$1;
+  rewrite "^(.*)$" $ipfspath$1 last;
+}</pre></code>
+  </p>
 </aside>
 
 #### DNSLink Gateway
