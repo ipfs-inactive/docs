@@ -10,7 +10,7 @@ This repository organizes overall documentation issues across the IPFS project. 
 - [Get involved](#get-involved)
 - [Project organization](#project-organization)
   - [Objectives for 2020 Q1](#objectives-for-2020-q1)
-  - [IPFS docs core members for this quarter](#ipfs-docs-core-members-for-this-quarter)
+  - [IPFS docs core members](#ipfs-docs-core-members)
 - [Suggestions](#suggestions)
 - [Legacy code details](#legacy-code-details)
 - [License](#license)
