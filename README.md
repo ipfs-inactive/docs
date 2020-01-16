@@ -1,22 +1,18 @@
----
-title: IPFS Documentation
----
+![IPFS Documentation](https://raw.githubusercontent.com/ipfs/docs/master/ipfs-docs-header.png "IPFS Documentation")
 
 [![Build status icon.](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
 [![Made by icon.](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai/)
 [![Project icon.](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
 
-This repository organizes the overall documentation work across the IPFS project, as managed by the IPFS Documentation working group. It also hosts and maintains the [docs.ipfs.io](https://docs.ipfs.io/) website.
+This repository organizes overall documentation issues across the IPFS project. It's also home to the codebase for the **legacy** IPFS documentation site (available at [docs.ipfs.io](https://docs.ipfs.io/)). **The code for the current (beta) version of IPFS documentation is available at [github.com/ipfs/ipfs-docs-v2](https://github.com/ipfs/ipfs-docs-v2), and all work on IPFS docs features OR content should be done there.** Once we fully deprecate the legacy site, we'll move the beta codebase into this repo.
 
 - [Join our weekly sync](#join-our-weekly-sync)
 - [Get involved](#get-involved)
 - [Project organization](#project-organization)
   - [Objectives for 2020 Q1](#objectives-for-2020-q1)
   - [IPFS docs core members for this quarter](#ipfs-docs-core-members-for-this-quarter)
-- [Run the docs locally](#run-the-docs-locally)
-  - [One-time setup](#one-time-setup)
-  - [Build and run the site](#build-and-run-the-site)
 - [Suggestions](#suggestions)
+- [Legacy code details](#legacy-code-details)
 - [License](#license)
 
 ## Join our weekly sync
@@ -39,7 +35,7 @@ We would **love ❤️ your help** to improve existing items or make new ones ev
 
 2. **Claim an issue labeled "help wanted" in either [this docs repo](https://github.com/ipfs/docs/labels/help%20wanted) or [the IPFS website repo](https://github.com/ipfs/website/labels/help%20wanted)!** All our issues are T-shirt sized and roughly difficulty-graded (both using labels), so have a look for something that interests you in the time you have available, and dive on in! Leave your thoughts and questions in issue comments, and we'll get back to you as soon as possible.
 
-3. **Create (or improve) an example, tutorial or concept guide!** At present, we have a variety of how-tos and concept guides either living in this docs repo or linked to from the nav menu at [docs.ipfs.io](https://docs.ipfs.io). However, every new item we can offer makes it easier for the world's community to use and build on IPFS. If you'd like to write a new example/tutorial or concept guide, [take a look in our open issues](https://github.com/ipfs/docs/issues?q=is%3Aissue+is%3Aopen+label%3A%22OKR%3A+Content+Improvement%22) for items with the `OKR: Content Improvement` label and see if any already-identified needs appeal to you. If you'd like to write something entirely new, feel free — PRs are welcome! Or, if you'd just like to improve existing docs content, feel free to fork it and add your suggestions.
+3. **Create (or improve) an example, tutorial or concept guide!** At present, we have a variety of how-tos and concept guides available at [docs-beta.ipfs.io](https://docs-beta.ipfs.io). However, every new item we can offer makes it easier for the world's community to use and build on IPFS. If you'd like to write a new example/tutorial or concept guide, [take a look in our open issues](https://github.com/ipfs/docs/issues?q=is%3Aissue+is%3Aopen+label%3A%22Category%3A+Content%22) for items with the `Category: Content` label and see if any already-identified needs appeal to you. **Note that some issues may have bounties!** If you'd like to write something entirely new, feel free — PRs are welcome! Or, if you'd just like to improve existing docs content, feel free to fork it and add your suggestions.
 
 4. **Help us improve how we present reference and API documentation.** In Q2 2020, we're investigating the best way to improve how we present reference materials like API documentation and command-line dictionaries. Got thoughts? [Please discuss them!](https://github.com/ipfs/docs/issues/393)
 
@@ -51,27 +47,27 @@ If you're able to contribute to any of the categories above, we thank you in adv
 
 Here's a summary of this our objectives for the first three months of 2020:
 
-1. Launch the [beta IPFS documentation](https://docs-beta.ipfs.io/) site on the IPFS network.
-2. Improve documentation by:
-   1. Creating new content based on [existing issues](https://github.com/ipfs/docs/issues).
-   2. Improve and update existing pages.
-3. Resolve or address new GitHub issues created this quarter.
-4. Set up a community of writers and content creators.
+1. ✅ Launch the [beta IPFS documentation](https://docs-beta.ipfs.io/) site on the IPFS network.
+2. Improve documentation by creating new and/or enhancing existing content based on [issues in this repo](https://github.com/ipfs/docs/issues).
+3. Resolving or addressing any new GitHub issues created in this repo this quarter.
+4. Setting up and enabling a community of writers and content creators.
 
-For more information regarding these objectives, check out the [IPFS-wide objectives and key-results tracking document](https://docs.google.com/spreadsheets/d/1VeyiLvBdX_PrP394kU_lwkQZxfNwqMVX1f7K4ursSPM/edit#gid=1841105909).
+For more information regarding these objectives, check out the [IPFS-wide Objectives and Key Results (OKRs) tracking document](https://docs.google.com/spreadsheets/d/1VeyiLvBdX_PrP394kU_lwkQZxfNwqMVX1f7K4ursSPM/edit#gid=1841105909).
 
-### IPFS docs core members for this quarter
+## Suggestions
 
-- [@terichadbourne](https://github.com/terichadbourne)
-- [@johnnymatthews](https://github.com/johnnymatthews)
-- [@jessicaschilling](https://github.com/jessicaschilling)
-- [@cwaring](https://github.com/cwaring)
+Do you have suggestsions on future improvments to IPFS docs? You can [vote](https://ipfs.canny.io/docs-features) on what you think the IPFS docs site should contain, along with features that you'd like to see over at [canny.io/docs-features](https://ipfs.canny.io/docs-features).
 
-## Run the docs locally
+### IPFS docs core members
 
-If you want to spin up a local version of the docs site, follow these steps:
+- [@johnnymatthews](https://github.com/johnnymatthews): Project leadership, organization and primary contact
+- [@cwaring](https://github.com/cwaring): Development support
 
-### One-time setup
+## Legacy code details
+
+**IMPORTANT! As noted above, this repo is home to the LEGACY docs site; if you want to make changes to IPFS docs, please visit [github.com/ipfs/ipfs-docs-v2](https://github.com/ipfs/ipfs-docs-v2) and use the codebase there.** However, if for some reason you need to run the legacy code locally, instructions are below.
+
+#### One-time setup
 
 1. Install [AEgir](https://www.npmjs.com/package/aegir)
 
@@ -87,17 +83,13 @@ If you want to spin up a local version of the docs site, follow these steps:
 
  This installs dependencies and generates source files from other projects (e.g. API documentation, theme resources from the `ipfs-css`, etc). When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
 
-### Build and run the site
+#### Build and run
 
 1. In the root directory, run `make dev`.
 2. Load [localhost:1313](http://localhost:1313) in your web browser.
 3. Edit and add things!
 
 To create a production build, run `make build` instead. You’ll find the final static site in the `public` directory.
-
-## Suggestions
-
-You can [vote](https://ipfs.canny.io/docs-features) on what you think the IPFS docs site should contain, along with features that you'd like to see over at [canny.io/docsd-features](https://ipfs.canny.io/docs-features).
 
 ## License
 
