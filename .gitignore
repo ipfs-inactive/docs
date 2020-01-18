@@ -10,3 +10,12 @@ tmp/
 content/reference/pkg/*/
 src/styles/constants.less
 build
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
