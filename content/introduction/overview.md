@@ -8,7 +8,7 @@ Welcome! If you’re new to IPFS, you’ve come to the right place. Here is a qu
 
 ## IPFS is a distributed system for storing and accessing files, websites, applications, and data.
 
-What does that mean, exactly? Let’s say you’re doing some research on aardvarks. (Just roll with it; aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the Wikipedia page on aardvarks at:
+Let’s say you’re doing some research on aardvarks, you might start by visiting the Wikipedia page on aardvarks at:
 
 ```
 https://en.wikipedia.org/wiki/Aardvark
