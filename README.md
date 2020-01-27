@@ -29,7 +29,7 @@ Notes from current and past calls can be found [here](https://www.google.com/url
 
 ## Get involved
 
-We would **love ❤️ your help** to improve existing items or make new ones even better! Here are some ideas to get you started:
+We would **love ❤️ your help** to improve existing items or make new ones even better! [We also have bounties available!](https://github.com/ipfs/devgrants/projects/1) Here are some ideas to get you started:
 
 1. **Join us on our weekly call!** See the top of this readme for full details on how and when.
 
