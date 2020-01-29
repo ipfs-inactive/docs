@@ -1,5 +1,4 @@
 ![IPFS Documentation](https://raw.githubusercontent.com/ipfs/docs/master/ipfs-docs-header.png "IPFS Documentation")
-
 [![Build status icon.](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
 [![Made by icon.](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai/)
 [![Project icon.](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
@@ -40,6 +39,14 @@ We would **love ❤️ your help** to improve existing items or make new ones ev
 4. **Help us improve how we present reference and API documentation.** In Q2 2020, we're investigating the best way to improve how we present reference materials like API documentation and command-line dictionaries. Got thoughts? [Please discuss them!](https://github.com/ipfs/docs/issues/393)
 
 If you're able to contribute to any of the categories above, we thank you in advance -- your work directly improves the future of IPFS for the global community! Before posting a PR with your changes, please be sure to check [our documentation style guide](https://github.com/ipfs/community/blob/master/DOCS_STYLEGUIDE.md) and the overall [IPFS contributor guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md) so we can ensure that docs are clear, consistent, and simple to read. Finally, please make sure to follow the [IPFS code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+
+### Issues
+
+If you find something wrong within this repository, please raise an [issue here](https://github.com/ipfs/docs/issues).
+
+#### IPFS Docs beta
+
+Issues regarding the new IPFS Docs beta website should be raised in [this repository's issue tracker](https://github.com/ipfs/docs/issues). The **Issues** tab has been disabled in the `ipfs/ipfs-docs-v2` repository to stop issues being posted there. The content of `ipfs/ipfs-docs-v2` will be merged with the content of this repository in quarter 2 of 2020. We could completely delete the `ipfs/docs` repository and replace it with `ipfs/ipfs-docs-v2`. However, we still want to be able to view the git commit history and issues previously raised within this repository.
 
 ## Project organization
 
