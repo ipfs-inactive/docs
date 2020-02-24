@@ -94,7 +94,7 @@ Once an issue has been created, it can be discussed by the community and IPFS pr
 
 Follow these steps to learn how to file an issue with the IPFS project.
 
-1. Go to the [Issues](https://github.com/ipfs/docs/issues/) tab in the [`ipfs/docs`](https://github.com/ipfs/docs) repository. (Note: docs *issues* are tracked in `ipfs/docs`, but the *code and content* that power the docs beta site are in the `ipfs/ipfs-docs-v2` repo until the legacy docs site is deprecated -- currently slated for mid-2020.)
+1. Go to the [Issues](https://github.com/ipfs/docs/issues/) tab in the [`ipfs/docs`](https://github.com/ipfs/docs) repository. Note: docs *issues* are tracked in `ipfs/docs`, but the *code and content* that power the docs beta site are in the `ipfs/ipfs-docs-v2` repo until the legacy docs site is deprecated -- currently slated for mid-2020.
 2. Search for the issue you want to raise. It may already exist. Make sure to also search _closed_ issues by including `is:closed` in your search query.
 3. If the issue doesn't already exist, click **New issue**.
 4. Select either the **Content request** or **Documentation issue** issue template. These templates auto-fill some of the issues for you, and direct you to fill out the required information.
@@ -105,7 +105,7 @@ Shortly after your issue is submitted, an internal project lead from the IPFS pr
 
 ### Create a pull request
 
-If you have created some changes to a post, article, or entire section, you can submit a pull request to have it merged into the `ipfs/ipfs-docs-v2` repository. (Note: docs *issues* are tracked in `ipfs/docs`, but the *code and content* that power the docs beta site are in the `ipfs/ipfs-docs-v2` repo until the legacy docs site is deprecated -- currently slated for mid-2020.)
+If you have created some changes to a post, article, or entire section, you can submit a pull request to have it merged into the `ipfs/ipfs-docs-v2` repository. Note: docs *issues* are tracked in `ipfs/docs`, but the *code and content* that power the docs beta site are in the `ipfs/ipfs-docs-v2` repo until the legacy docs site is deprecated -- currently slated for mid-2020.
 
 If you only need to change a single file, the easiest way to create a pull request is to edit the file directly within the GitHub editor. Within each markdown file in the `ipfs/ipfs-docs-v2` repository is a pencil icon. When you click on that icon, the GitHub editor will open, and you'll be able to change the file. Once you have finished your edits, you can create a new branch for this commit and start a pull request.
 
