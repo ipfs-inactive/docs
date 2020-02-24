@@ -1,6 +1,10 @@
 # Contribution guidelines
 
-This article serves as the guideline for contributing to the [IPFS Docs](https://github.com/ipfs/docs) repository. It also contains some general tips, tools, and workflows for creating helpful docs.
+This article serves as summary guidance for contributing to the [IPFS Docs Beta](https://github.com/ipfs/ipfs-docs-v2/). You'll also want to view the following more detailed resources as guidance for contributing:
+- [Grammar, formatting and style guide](https://docs-beta.ipfs.io/community/contribute/grammar-formatting-and-style/)
+- [Writing guide](https://docs-beta.ipfs.io/community/contribute/writing-guide/)
+- [Code persona](https://docs-beta.ipfs.io/community/contribute/code-persona/)
+- [Contribution tutorial](https://docs-beta.ipfs.io/community/contribute/contribution-tutorial/)
 
 ## Writing content
 
@@ -38,7 +42,7 @@ By following these guidelines, you're helping to keep the IPFS docs consistent.
 
 ### Formatting
 
-Write everything in using the [GitHub Flavored Markdown](https://github.github.com/gfm/) syntax. Here are a few guidelines that help to keep everything nice and tidy.
+Write everything using [GitHub Flavored Markdown](https://github.github.com/gfm/) syntax. Here are a few guidelines that help to keep everything nice and tidy.
 
 - Write file names, folders, addresses, and variables between code tags.
 
@@ -82,7 +86,7 @@ Sometimes small mistakes fall through through the cracks. So if you see an error
 
 #### New articles or pages
 
-Have an idea for a new page or article, or even a series of articles? The first step is to create an issue with your suggestions. The article you are suggesting may have been discussed before, or somebody else could already be working on it.
+Have an idea for a new page or article, or even a series of articles? The first step is to [create an issue](https://github.com/ipfs/docs/issues/new/choose) with your suggestions. The article you are suggesting may have been discussed before, or somebody else could already be working on it.
 
 Once an issue has been created, it can be discussed by the community and IPFS project leads. Once approved, you are free to start writing and implementing your documentation into the repository. Internal IPFS project leads from Protocol Labs review all pull-requests.
 
@@ -90,26 +94,26 @@ Once an issue has been created, it can be discussed by the community and IPFS pr
 
 Follow these steps to learn how to file an issue with the IPFS project.
 
-1. Go to the [Issues](https://github.com/ipfs/docs/issues/) tab in the [`ipfs/docs`](https://github.com/ipfs/docs) repository.
+1. Go to the [Issues](https://github.com/ipfs/docs/issues/) tab in the [`ipfs/docs`](https://github.com/ipfs/docs) repository. (Note: docs *issues* are tracked in `ipfs/docs`, but the *code and content* that power the docs beta site are in the `ipfs/ipfs-docs-v2` repo until the legacy docs site is deprecated -- currently slated for mid-2020.)
 2. Search for the issue you want to raise. It may already exist. Make sure to also search _closed_ issues by including `is:closed` in your search query.
 3. If the issue doesn't already exist, click **New issue**.
 4. Select either the **Content request** or **Documentation issue** issue template. These templates auto-fill some of the issues for you, and direct you to fill out the required information.
-5. Answer the questions listed in the issue form. Issues are created using Github Flavoured Markdown.
+5. Answer the questions listed in the issue form. Issues are created using Github Flavored Markdown.
 6. Once you have finished describing your issue, click **Submit new issue**.
 
 Shortly after your issue is submitted, an internal project lead from the IPFS project evaluates your issue. Further questions or requests-for-comment may be asked within the issue.
 
 ### Create a pull request
 
-If you have created some changes to a post, article, or entire section, you can submit a pull request to have it merged into the `ipfs/docs` repository.
+If you have created some changes to a post, article, or entire section, you can submit a pull request to have it merged into the `ipfs/ipfs-docs-v2` repository. (Note: docs *issues* are tracked in `ipfs/docs`, but the *code and content* that power the docs beta site are in the `ipfs/ipfs-docs-v2` repo until the legacy docs site is deprecated -- currently slated for mid-2020.)
 
-If you only need to change a single file, the easiest way to create a pull request is to edit the file directly within the GitHub editor. Within each markdown file in the `ipfs/docs` repository is a pencil icon. When you click on that icon, the GitHub editor will open, and you'll be able to change the file. Once you have finished your edits, you can create a new branch for this commit and start a pull request.
+If you only need to change a single file, the easiest way to create a pull request is to edit the file directly within the GitHub editor. Within each markdown file in the `ipfs/ipfs-docs-v2` repository is a pencil icon. When you click on that icon, the GitHub editor will open, and you'll be able to change the file. Once you have finished your edits, you can create a new branch for this commit and start a pull request.
 
 You can learn more about [pull requests on GitHub](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 
 ### Discuss
 
-You can also contribute to the project without specifically writing content for the site. Many discussions are happening all around the project. Protocol Labs, and by extension, IPFS, is a collaborative company that relies heavily on the community. We need your opinions and input! If you have an idea about a topic or want to weigh in on a discussion, feel free to have your say either on [GitHub](https://github.com/ipfs/docs/issues) or on the [IPFS forums](https://discuss.ipfs.io/).
+You can also contribute to the project without specifically writing content for the site. Many discussions are happening all around the project. Protocol Labs, and by extension, IPFS, is a collaborative open-source organization that relies heavily on the community. We need your opinions and input! If you have an idea about a topic or want to weigh in on a discussion, feel free to have your say either on [GitHub](https://github.com/ipfs/docs/issues) or on the [IPFS forums](https://discuss.ipfs.io/).
 
 ## Tools
 
