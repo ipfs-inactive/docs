@@ -14,13 +14,15 @@ This repository organizes overall documentation issues across the IPFS project. 
 - [Legacy code details](#legacy-code-details)
 - [License](#license)
 
-## Join our weekly sync
+## Join our bi-weekly sync
 
-Every Monday, the team gets together to discuss our plans for the coming week. Feel free to [join us](https://protocol.zoom.us/j/614386160) using `614386160` as the Zoom meeting ID!
+Every two weeks the team gets together to discuss our plans for the coming fortnight. Feel free to [join us](https://protocol.zoom.us/j/614386160) using `614386160` as the Zoom meeting ID!
 
-| UTC | Eastern Standard Time (EST) | Pacific Standard Time (PST)|
-| --- | --- | --- |
-| 16:00-16:30 | 11:00 - 11:30 | 08:00 - 08:30 |
+| Date | Time |
+| --- | --- |
+| Monday 2nd March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
+| Monday 16th March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
+| Monday 30th March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
 
 If you can't make the meeting, don't worry. We post a recording of each meeting in our [YouTube playlist](https://www.youtube.com/playlist?list=PLuhRWgmPaHtRnfsVYI2LbVS03BRX7TcXq).
 
