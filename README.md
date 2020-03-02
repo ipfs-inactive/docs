@@ -5,7 +5,7 @@
 
 This repository organizes overall documentation issues across the IPFS project. It's also home to the codebase for the **legacy** IPFS documentation site (available at [docs.ipfs.io](https://docs.ipfs.io/)). **The code for the current (beta) version of IPFS documentation is available at [github.com/ipfs/ipfs-docs-v2](https://github.com/ipfs/ipfs-docs-v2), and all work on IPFS docs features OR content should be done there.** Once we fully deprecate the legacy site, we'll move the beta codebase into this repo.
 
-- [Join our weekly sync](#join-our-weekly-sync)
+- [Join our bi-weekly sync](#join-our-bi-weekly-sync)
 - [Get involved](#get-involved)
 - [Project organization](#project-organization)
   - [Objectives for 2020 Q1](#objectives-for-2020-q1)
@@ -21,7 +21,7 @@ Every two weeks the team gets together to discuss our plans for the coming fortn
 | Date | Time |
 | --- | --- |
 | Monday 2nd March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
-| Monday 16th March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
+| Monday 16th March | **UTC**: 15:00 - 15:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
 | Monday 30th March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
 
 If you can't make the meeting, don't worry. We post a recording of each meeting in our [YouTube playlist](https://www.youtube.com/playlist?list=PLuhRWgmPaHtRnfsVYI2LbVS03BRX7TcXq).
