@@ -20,9 +20,11 @@ Every two weeks the team gets together to discuss our plans for the coming fortn
 
 | Date | Time |
 | --- | --- |
-| Monday 2nd March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
-| Monday 16th March | **UTC**: 15:00 - 15:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
-| Monday 30th March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30 |
+| Monday 2nd March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30<br> **Unix**: 1583164800 |
+| Monday 16th March | **UTC**: 15:00 - 15:30<br>**EDT**: 11:00 - 11:30<br>**PDT** 08:00-08:30<br> **Unix**: 1584370800 |
+| Monday 30th March | **UTC**: 16:00 - 16:30<br>**EDT**: 11:00 - 11:30<br>**PDT** 08:00-08:30<br> **Unix**: 1585584000 |
+
+Keep in mind that different timezones around the world change to daylight savings time (DST) on different days. You can use [TimeAndDate.com's Time Zone Converter](https://www.timeanddate.com/worldclock/converter.html?iso=20200330T150000&p1=tz_gmt&p2=136&p3=250&p4=137) to figure out when the meeting will happen in your timezone.
 
 If you can't make the meeting, don't worry. We post a recording of each meeting in our [YouTube playlist](https://www.youtube.com/playlist?list=PLuhRWgmPaHtRnfsVYI2LbVS03BRX7TcXq).
 
