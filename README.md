@@ -63,7 +63,7 @@ Here's a summary of this our objectives for the first three months of 2020:
 3. Resolving or addressing any new GitHub issues created in this repo this quarter.
 4. Setting up and enabling a community of writers and content creators.
 
-For more information regarding these objectives, check out the [IPFS-wide Objectives and Key Results (OKRs) tracking document](https://docs.google.com/spreadsheets/d/1VeyiLvBdX_PrP394kU_lwkQZxfNwqMVX1f7K4ursSPM/edit#gid=1841105909).
+For more information regarding these objectives, check out the [IPFS-wide Objectives and Key Results (OKRs) tracking document](https://docs.google.com/spreadsheets/d/1vOSCIufWfU2CpG63rOTGVQ6tWNYcbnYvR2k_kN84jQU/edit#gid=1562851442).
 
 ## Suggestions
 
