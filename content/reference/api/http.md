@@ -43,7 +43,7 @@ the HTTP API. For example:
 /ip4/104.236.151.122/tcp/4001/ipfs/QmSoLju6m7xTh3DuokvT3886QRYqxAzb1kShaanJgW36yx
 /ip4/104.236.176.52/tcp/4001/ipfs/QmSoLnSGccFuZQJzRadHn95W2CrSFmZuTdDWP8HXaHca9z
 
-> curl http://127.0.0.1:5001/api/v0/swarm/peers
+> curl -X POST http://127.0.0.1:5001/api/v0/swarm/peers
 {
   "Strings": [
     "/ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ",
@@ -58,7 +58,7 @@ the HTTP API. For example:
 Arguments are added through the special query string key "arg":
 
 ```
-> curl "http://127.0.0.1:5001/api/v0/swarm/disconnect?arg=/ip4/54.93.113.247/tcp/48131/ipfs/QmUDS3nsBD1X4XK5Jo836fed7SErTyTuQzRqWaiQAyBYMP"
+> curl -X POST "http://127.0.0.1:5001/api/v0/swarm/disconnect?arg=/ip4/54.93.113.247/tcp/48131/ipfs/QmUDS3nsBD1X4XK5Jo836fed7SErTyTuQzRqWaiQAyBYMP"
 {
   "Strings": [
     "disconnect QmUDS3nsBD1X4XK5Jo836fed7SErTyTuQzRqWaiQAyBYMP success",
@@ -74,7 +74,7 @@ Flags are added through the query string. For example, the `--encoding=json`
 flag is the `&encoding=json` query parameter below:
 
 ```
-> curl "http://127.0.0.1:5001/api/v0/object/get?arg=QmaaqrHyAQm7gALkRW8DcfGX3u8q9rWKnxEMmf7m9z515w&encoding=json"
+> curl -X POST "http://127.0.0.1:5001/api/v0/object/get?arg=QmaaqrHyAQm7gALkRW8DcfGX3u8q9rWKnxEMmf7m9z515w&encoding=json"
 {
   "Links": [
     {
@@ -156,7 +156,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/add?recursive=<value>&dereference-args=<value>&stdin-name=<value>&hidden=<value>&quiet=<value>&quieter=<value>&silent=<value>&progress=<value>&trickle=<value>&only-hash=<value>&wrap-with-directory=<value>&chunker=size-262144&pin=true&raw-leaves=<value>&nocopy=<value>&fscache=<value>&cid-version=<value>&hash=sha2-256&inline=<value>&inline-limit=32"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/add?recursive=<value>&dereference-args=<value>&stdin-name=<value>&hidden=<value>&quiet=<value>&quieter=<value>&silent=<value>&progress=<value>&trickle=<value>&only-hash=<value>&wrap-with-directory=<value>&chunker=size-262144&pin=true&raw-leaves=<value>&nocopy=<value>&fscache=<value>&cid-version=<value>&hash=sha2-256&inline=<value>&inline-limit=32"`
 
 ***
 
@@ -187,7 +187,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bitswap/ledger?arg=<peer>"`
+`curl -X POST "http://localhost:5001/api/v0/bitswap/ledger?arg=<peer>"`
 
 ***
 
@@ -211,7 +211,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bitswap/reprovide"`
+`curl -X POST "http://localhost:5001/api/v0/bitswap/reprovide"`
 
 ***
 
@@ -254,7 +254,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bitswap/stat?verbose=<value>&human=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/bitswap/stat?verbose=<value>&human=<value>"`
 
 ***
 
@@ -285,7 +285,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bitswap/wantlist?peer=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/bitswap/wantlist?peer=<value>"`
 
 ***
 
@@ -309,7 +309,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/block/get?arg=<key>"`
+`curl -X POST "http://localhost:5001/api/v0/block/get?arg=<key>"`
 
 ***
 
@@ -346,7 +346,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/block/put?format=<value>&mhtype=sha2-256&mhlen=-1&pin=false"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/block/put?format=<value>&mhtype=sha2-256&mhlen=-1&pin=false"`
 
 ***
 
@@ -376,7 +376,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/block/rm?arg=<hash>&force=<value>&quiet=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/block/rm?arg=<hash>&force=<value>&quiet=<value>"`
 
 ***
 
@@ -404,7 +404,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/block/stat?arg=<key>"`
+`curl -X POST "http://localhost:5001/api/v0/block/stat?arg=<key>"`
 
 ***
 
@@ -433,7 +433,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bootstrap"`
+`curl -X POST "http://localhost:5001/api/v0/bootstrap"`
 
 ***
 
@@ -463,7 +463,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bootstrap/add?arg=<peer>&default=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/bootstrap/add?arg=<peer>&default=<value>"`
 
 ***
 
@@ -492,7 +492,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bootstrap/add/default"`
+`curl -X POST "http://localhost:5001/api/v0/bootstrap/add/default"`
 
 ***
 
@@ -521,7 +521,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bootstrap/list"`
+`curl -X POST "http://localhost:5001/api/v0/bootstrap/list"`
 
 ***
 
@@ -551,7 +551,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bootstrap/rm?arg=<peer>&all=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/bootstrap/rm?arg=<peer>&all=<value>"`
 
 ***
 
@@ -580,7 +580,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/bootstrap/rm/all"`
+`curl -X POST "http://localhost:5001/api/v0/bootstrap/rm/all"`
 
 ***
 
@@ -606,7 +606,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/cat?arg=<ipfs-path>&offset=<value>&length=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/cat?arg=<ipfs-path>&offset=<value>&length=<value>"`
 
 ***
 
@@ -635,7 +635,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/cid/base32?arg=<cid>"`
+`curl -X POST "http://localhost:5001/api/v0/cid/base32?arg=<cid>"`
 
 ***
 
@@ -666,7 +666,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/cid/bases?prefix=<value>&numeric=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/cid/bases?prefix=<value>&numeric=<value>"`
 
 ***
 
@@ -696,7 +696,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/cid/codecs?numeric=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/cid/codecs?numeric=<value>"`
 
 ***
 
@@ -728,7 +728,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/cid/format?arg=<cid>&f=%s&v=<value>&b=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/cid/format?arg=<cid>&f=%s&v=<value>&b=<value>"`
 
 ***
 
@@ -758,7 +758,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/cid/hashes?numeric=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/cid/hashes?numeric=<value>"`
 
 ***
 
@@ -807,7 +807,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/commands?flags=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/commands?flags=<value>"`
 
 ***
 
@@ -838,7 +838,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/config?arg=<key>&arg=<value>&bool=<value>&json=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/config?arg=<key>&arg=<value>&bool=<value>&json=<value>"`
 
 ***
 
@@ -862,7 +862,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/config/edit"`
+`curl -X POST "http://localhost:5001/api/v0/config/edit"`
 
 ***
 
@@ -895,7 +895,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/config/profile/apply?arg=<profile>&dry-run=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/config/profile/apply?arg=<profile>&dry-run=<value>"`
 
 ***
 
@@ -924,7 +924,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/config/replace"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/config/replace"`
 
 ***
 
@@ -951,7 +951,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/config/show"`
+`curl -X POST "http://localhost:5001/api/v0/config/show"`
 
 ***
 
@@ -975,7 +975,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dag/get?arg=<ref>"`
+`curl -X POST "http://localhost:5001/api/v0/dag/get?arg=<ref>"`
 
 ***
 
@@ -1013,7 +1013,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/dag/put?format=cbor&input-enc=json&pin=<value>&hash=<value>"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/dag/put?format=cbor&input-enc=json&pin=<value>&hash=<value>"`
 
 ***
 
@@ -1043,7 +1043,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dag/resolve?arg=<ref>"`
+`curl -X POST "http://localhost:5001/api/v0/dag/resolve?arg=<ref>"`
 
 ***
 
@@ -1081,7 +1081,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dht/findpeer?arg=<peerID>&verbose=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/dht/findpeer?arg=<peerID>&verbose=<value>"`
 
 ***
 
@@ -1120,7 +1120,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dht/findprovs?arg=<key>&verbose=<value>&num-providers=20"`
+`curl -X POST "http://localhost:5001/api/v0/dht/findprovs?arg=<key>&verbose=<value>&num-providers=20"`
 
 ***
 
@@ -1158,7 +1158,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dht/get?arg=<key>&verbose=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/dht/get?arg=<key>&verbose=<value>"`
 
 ***
 
@@ -1197,7 +1197,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dht/provide?arg=<key>&verbose=<value>&recursive=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/dht/provide?arg=<key>&verbose=<value>&recursive=<value>"`
 
 ***
 
@@ -1236,7 +1236,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dht/put?arg=<key>&arg=<value>&verbose=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/dht/put?arg=<key>&arg=<value>&verbose=<value>"`
 
 ***
 
@@ -1274,7 +1274,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dht/query?arg=<peerID>&verbose=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/dht/query?arg=<peerID>&verbose=<value>"`
 
 ***
 
@@ -1313,7 +1313,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/diag/cmds?verbose=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/diag/cmds?verbose=<value>"`
 
 ***
 
@@ -1337,7 +1337,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/diag/cmds/clear"`
+`curl -X POST "http://localhost:5001/api/v0/diag/cmds/clear"`
 
 ***
 
@@ -1361,7 +1361,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/diag/cmds/set-time?arg=<time>"`
+`curl -X POST "http://localhost:5001/api/v0/diag/cmds/set-time?arg=<time>"`
 
 ***
 
@@ -1385,7 +1385,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/diag/sys"`
+`curl -X POST "http://localhost:5001/api/v0/diag/sys"`
 
 ***
 
@@ -1413,7 +1413,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/dns?arg=<domain-name>&recursive=true"`
+`curl -X POST "http://localhost:5001/api/v0/dns?arg=<domain-name>&recursive=true"`
 
 ***
 
@@ -1457,7 +1457,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/file/ls?arg=<ipfs-path>"`
+`curl -X POST "http://localhost:5001/api/v0/file/ls?arg=<ipfs-path>"`
 
 ***
 
@@ -1483,7 +1483,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/chcid?arg=<path>&cid-version=<value>&hash=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/files/chcid?arg=<path>&cid-version=<value>&hash=<value>"`
 
 ***
 
@@ -1508,7 +1508,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/cp?arg=<source>&arg=<dest>"`
+`curl -X POST "http://localhost:5001/api/v0/files/cp?arg=<source>&arg=<dest>"`
 
 ***
 
@@ -1535,7 +1535,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/flush?arg=<path>"`
+`curl -X POST "http://localhost:5001/api/v0/files/flush?arg=<path>"`
 
 ***
 
@@ -1571,7 +1571,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/ls?arg=<path>&l=<value>&U=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/files/ls?arg=<path>&l=<value>&U=<value>"`
 
 ***
 
@@ -1598,7 +1598,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/mkdir?arg=<path>&parents=<value>&cid-version=<value>&hash=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/files/mkdir?arg=<path>&parents=<value>&cid-version=<value>&hash=<value>"`
 
 ***
 
@@ -1623,7 +1623,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/mv?arg=<source>&arg=<dest>"`
+`curl -X POST "http://localhost:5001/api/v0/files/mv?arg=<source>&arg=<dest>"`
 
 ***
 
@@ -1649,7 +1649,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/read?arg=<path>&offset=<value>&count=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/files/read?arg=<path>&offset=<value>&count=<value>"`
 
 ***
 
@@ -1675,7 +1675,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/rm?arg=<path>&recursive=<value>&force=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/files/rm?arg=<path>&recursive=<value>&force=<value>"`
 
 ***
 
@@ -1721,7 +1721,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/files/stat?arg=<path>&format=<hash>
+`curl -X POST "http://localhost:5001/api/v0/files/stat?arg=<path>&format=<hash>
 Size: <size>
 CumulativeSize: <cumulsize>
 ChildBlocks: <childs>
@@ -1763,7 +1763,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/files/write?arg=<path>&offset=<value>&create=<value>&parents=<value>&truncate=<value>&count=<value>&raw-leaves=<value>&cid-version=<value>&hash=<value>"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/files/write?arg=<path>&offset=<value>&create=<value>&parents=<value>&truncate=<value>&count=<value>&raw-leaves=<value>&cid-version=<value>&hash=<value>"`
 
 ***
 
@@ -1791,7 +1791,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/filestore/dups"`
+`curl -X POST "http://localhost:5001/api/v0/filestore/dups"`
 
 ***
 
@@ -1826,7 +1826,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/filestore/ls?arg=<obj>&file-order=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/filestore/ls?arg=<obj>&file-order=<value>"`
 
 ***
 
@@ -1861,7 +1861,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/filestore/verify?arg=<obj>&file-order=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/filestore/verify?arg=<obj>&file-order=<value>"`
 
 ***
 
@@ -1889,7 +1889,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/get?arg=<ipfs-path>&output=<value>&archive=<value>&compress=<value>&compression-level=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/get?arg=<ipfs-path>&output=<value>&archive=<value>&compress=<value>&compression-level=<value>"`
 
 ***
 
@@ -1923,7 +1923,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/id?arg=<peerid>&format=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/id?arg=<peerid>&format=<value>"`
 
 ***
 
@@ -1953,7 +1953,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/key/gen?arg=<name>&type=<value>&size=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/key/gen?arg=<name>&type=<value>&size=<value>"`
 
 ***
 
@@ -1985,7 +1985,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/key/list?l=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/key/list?l=<value>"`
 
 ***
 
@@ -2017,7 +2017,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/key/rename?arg=<name>&arg=<newName>&force=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/key/rename?arg=<name>&arg=<newName>&force=<value>"`
 
 ***
 
@@ -2050,7 +2050,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/key/rm?arg=<name>&l=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/key/rm?arg=<name>&l=<value>"`
 
 ***
 
@@ -2080,7 +2080,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/log/level?arg=<subsystem>&arg=<level>"`
+`curl -X POST "http://localhost:5001/api/v0/log/level?arg=<subsystem>&arg=<level>"`
 
 ***
 
@@ -2109,7 +2109,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/log/ls"`
+`curl -X POST "http://localhost:5001/api/v0/log/ls"`
 
 ***
 
@@ -2133,7 +2133,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/log/tail"`
+`curl -X POST "http://localhost:5001/api/v0/log/tail"`
 
 ***
 
@@ -2177,7 +2177,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/ls?arg=<ipfs-path>&headers=<value>&resolve-type=true&size=true&stream=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/ls?arg=<ipfs-path>&headers=<value>&resolve-type=true&size=true&stream=<value>"`
 
 ***
 
@@ -2207,7 +2207,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/mount?ipfs-path=<value>&ipns-path=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/mount?ipfs-path=<value>&ipns-path=<value>"`
 
 ***
 
@@ -2243,7 +2243,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/name/publish?arg=<ipfs-path>&resolve=true&lifetime=24h&allow-offline=<value>&ttl=<value>&key=self&quieter=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/name/publish?arg=<ipfs-path>&resolve=true&lifetime=24h&allow-offline=<value>&ttl=<value>&key=self&quieter=<value>"`
 
 ***
 
@@ -2270,7 +2270,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/name/pubsub/cancel?arg=<name>"`
+`curl -X POST "http://localhost:5001/api/v0/name/pubsub/cancel?arg=<name>"`
 
 ***
 
@@ -2297,7 +2297,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/name/pubsub/state"`
+`curl -X POST "http://localhost:5001/api/v0/name/pubsub/state"`
 
 ***
 
@@ -2326,7 +2326,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/name/pubsub/subs"`
+`curl -X POST "http://localhost:5001/api/v0/name/pubsub/subs"`
 
 ***
 
@@ -2358,7 +2358,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/name/resolve?arg=<name>&recursive=true&nocache=<value>&dht-record-count=<value>&dht-timeout=<value>&stream=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/name/resolve?arg=<name>&recursive=true&nocache=<value>&dht-record-count=<value>&dht-timeout=<value>&stream=<value>"`
 
 ***
 
@@ -2382,7 +2382,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/data?arg=<key>"`
+`curl -X POST "http://localhost:5001/api/v0/object/data?arg=<key>"`
 
 ***
 
@@ -2422,7 +2422,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/diff?arg=<obj_a>&arg=<obj_b>&verbose=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/object/diff?arg=<obj_a>&arg=<obj_b>&verbose=<value>"`
 
 ***
 
@@ -2457,7 +2457,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/get?arg=<key>&data-encoding=text"`
+`curl -X POST "http://localhost:5001/api/v0/object/get?arg=<key>&data-encoding=text"`
 
 ***
 
@@ -2492,7 +2492,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/links?arg=<key>&headers=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/object/links?arg=<key>&headers=<value>"`
 
 ***
 
@@ -2526,7 +2526,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/new?arg=<template>"`
+`curl -X POST "http://localhost:5001/api/v0/object/new?arg=<template>"`
 
 ***
 
@@ -2563,7 +2563,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/patch/add-link?arg=<root>&arg=<name>&arg=<ref>&create=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/object/patch/add-link?arg=<root>&arg=<name>&arg=<ref>&create=<value>"`
 
 ***
 
@@ -2603,7 +2603,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/object/patch/append-data?arg=<root>"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/object/patch/append-data?arg=<root>"`
 
 ***
 
@@ -2638,7 +2638,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/patch/rm-link?arg=<root>&arg=<name>"`
+`curl -X POST "http://localhost:5001/api/v0/object/patch/rm-link?arg=<root>&arg=<name>"`
 
 ***
 
@@ -2678,7 +2678,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/object/patch/set-data?arg=<root>"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/object/patch/set-data?arg=<root>"`
 
 ***
 
@@ -2721,7 +2721,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/object/put?inputenc=json&datafieldenc=text&pin=<value>&quiet=<value>"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/object/put?inputenc=json&datafieldenc=text&pin=<value>&quiet=<value>"`
 
 ***
 
@@ -2754,7 +2754,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/object/stat?arg=<key>&human=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/object/stat?arg=<key>&human=<value>"`
 
 ***
 
@@ -2782,7 +2782,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/close?all=<value>&protocol=<value>&listen-address=<value>&target-address=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/p2p/close?all=<value>&protocol=<value>&listen-address=<value>&target-address=<value>"`
 
 ***
 
@@ -2809,7 +2809,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/forward?arg=<protocol>&arg=<listen-address>&arg=<target-address>&allow-custom-protocol=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/p2p/forward?arg=<protocol>&arg=<listen-address>&arg=<target-address>&allow-custom-protocol=<value>"`
 
 ***
 
@@ -2836,7 +2836,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/listen?arg=<protocol>&arg=<target-address>&allow-custom-protocol=<value>&report-peer-id=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/p2p/listen?arg=<protocol>&arg=<target-address>&allow-custom-protocol=<value>&report-peer-id=<value>"`
 
 ***
 
@@ -2869,7 +2869,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/ls?headers=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/p2p/ls?headers=<value>"`
 
 ***
 
@@ -2894,7 +2894,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/stream/close?arg=<id>&all=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/p2p/stream/close?arg=<id>&all=<value>"`
 
 ***
 
@@ -2928,7 +2928,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/p2p/stream/ls?headers=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/p2p/stream/ls?headers=<value>"`
 
 ***
 
@@ -2960,7 +2960,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pin/add?arg=<ipfs-path>&recursive=true&progress=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/pin/add?arg=<ipfs-path>&recursive=true&progress=<value>"`
 
 ***
 
@@ -2993,7 +2993,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pin/ls?arg=<ipfs-path>&type=all&quiet=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/pin/ls?arg=<ipfs-path>&type=all&quiet=<value>"`
 
 ***
 
@@ -3023,7 +3023,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pin/rm?arg=<ipfs-path>&recursive=true"`
+`curl -X POST "http://localhost:5001/api/v0/pin/rm?arg=<ipfs-path>&recursive=true"`
 
 ***
 
@@ -3054,7 +3054,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pin/update?arg=<from-path>&arg=<to-path>&unpin=true"`
+`curl -X POST "http://localhost:5001/api/v0/pin/update?arg=<from-path>&arg=<to-path>&unpin=true"`
 
 ***
 
@@ -3091,7 +3091,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pin/verify?verbose=<value>&quiet=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/pin/verify?verbose=<value>&quiet=<value>"`
 
 ***
 
@@ -3121,7 +3121,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/ping?arg=<peer ID>&count=10"`
+`curl -X POST "http://localhost:5001/api/v0/ping?arg=<peer ID>&count=10"`
 
 ***
 
@@ -3150,7 +3150,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pubsub/ls"`
+`curl -X POST "http://localhost:5001/api/v0/pubsub/ls"`
 
 ***
 
@@ -3179,7 +3179,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pubsub/peers?arg=<topic>"`
+`curl -X POST "http://localhost:5001/api/v0/pubsub/peers?arg=<topic>"`
 
 ***
 
@@ -3204,7 +3204,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pubsub/pub?arg=<topic>&arg=<data>"`
+`curl -X POST "http://localhost:5001/api/v0/pubsub/pub?arg=<topic>&arg=<data>"`
 
 ***
 
@@ -3237,7 +3237,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/pubsub/sub?arg=<topic>&discover=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/pubsub/sub?arg=<topic>&discover=<value>"`
 
 ***
 
@@ -3270,7 +3270,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/refs?arg=<ipfs-path>&format=<dst>&edges=<value>&unique=<value>&recursive=<value>&max-depth=-1"`
+`curl -X POST "http://localhost:5001/api/v0/refs?arg=<ipfs-path>&format=<dst>&edges=<value>&unique=<value>&recursive=<value>&max-depth=-1"`
 
 ***
 
@@ -3298,7 +3298,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/refs/local"`
+`curl -X POST "http://localhost:5001/api/v0/refs/local"`
 
 ***
 
@@ -3325,7 +3325,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/repo/fsck"`
+`curl -X POST "http://localhost:5001/api/v0/repo/fsck"`
 
 ***
 
@@ -3356,7 +3356,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/repo/gc?stream-errors=<value>&quiet=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/repo/gc?stream-errors=<value>&quiet=<value>"`
 
 ***
 
@@ -3390,7 +3390,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/repo/stat?size-only=<value>&human=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/repo/stat?size-only=<value>&human=<value>"`
 
 ***
 
@@ -3418,7 +3418,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/repo/verify"`
+`curl -X POST "http://localhost:5001/api/v0/repo/verify"`
 
 ***
 
@@ -3445,7 +3445,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/repo/version?quiet=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/repo/version?quiet=<value>"`
 
 ***
 
@@ -3475,7 +3475,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/resolve?arg=<name>&recursive=true&dht-record-count=<value>&dht-timeout=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/resolve?arg=<name>&recursive=true&dht-record-count=<value>&dht-timeout=<value>"`
 
 ***
 
@@ -3499,7 +3499,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/shutdown"`
+`curl -X POST "http://localhost:5001/api/v0/shutdown"`
 
 ***
 
@@ -3542,7 +3542,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/stats/bitswap?verbose=<value>&human=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/stats/bitswap?verbose=<value>&human=<value>"`
 
 ***
 
@@ -3578,7 +3578,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/stats/bw?peer=<value>&proto=<value>&poll=<value>&interval=1s"`
+`curl -X POST "http://localhost:5001/api/v0/stats/bw?peer=<value>&proto=<value>&poll=<value>&interval=1s"`
 
 ***
 
@@ -3612,7 +3612,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/stats/repo?size-only=<value>&human=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/stats/repo?size-only=<value>&human=<value>"`
 
 ***
 
@@ -3643,7 +3643,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/addrs"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/addrs"`
 
 ***
 
@@ -3672,7 +3672,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/addrs/listen"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/addrs/listen"`
 
 ***
 
@@ -3701,7 +3701,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/addrs/local?id=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/addrs/local?id=<value>"`
 
 ***
 
@@ -3730,7 +3730,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/connect?arg=<address>"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/connect?arg=<address>"`
 
 ***
 
@@ -3759,7 +3759,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/disconnect?arg=<address>"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/disconnect?arg=<address>"`
 
 ***
 
@@ -3788,7 +3788,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/filters"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/filters"`
 
 ***
 
@@ -3817,7 +3817,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/filters/add?arg=<address>"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/filters/add?arg=<address>"`
 
 ***
 
@@ -3846,7 +3846,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/filters/rm?arg=<address>"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/filters/rm?arg=<address>"`
 
 ***
 
@@ -3889,7 +3889,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/swarm/peers?verbose=<value>&streams=<value>&latency=<value>&direction=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/swarm/peers?verbose=<value>&streams=<value>&latency=<value>&direction=<value>"`
 
 ***
 
@@ -3924,7 +3924,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -F file=@myfile "http://localhost:5001/api/v0/tar/add"`
+`curl -X POST -F file=@myfile "http://localhost:5001/api/v0/tar/add"`
 
 ***
 
@@ -3948,7 +3948,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/tar/cat?arg=<path>"`
+`curl -X POST "http://localhost:5001/api/v0/tar/cat?arg=<path>"`
 
 ***
 
@@ -3972,7 +3972,7 @@ This endpoint returns a `text/plain` response body.
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/update?arg=<args>"`
+`curl -X POST "http://localhost:5001/api/v0/update?arg=<args>"`
 
 ***
 
@@ -4002,7 +4002,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/urlstore/add?arg=<url>&trickle=<value>&pin=true"`
+`curl -X POST "http://localhost:5001/api/v0/urlstore/add?arg=<url>&trickle=<value>&pin=true"`
 
 ***
 
@@ -4036,7 +4036,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/version?number=<value>&commit=<value>&repo=<value>&all=<value>"`
+`curl -X POST "http://localhost:5001/api/v0/version?number=<value>&commit=<value>&repo=<value>&all=<value>"`
 
 ***
 
@@ -4066,6 +4066,6 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl "http://localhost:5001/api/v0/version/deps"`
+`curl -X POST "http://localhost:5001/api/v0/version/deps"`
 
 ***
