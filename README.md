@@ -61,7 +61,7 @@ For more information regarding these objectives, check out the [IPFS-wide Object
 
 ## Suggestions
 
-Do you have suggestsions on future improvments to IPFS docs? You can [vote](https://ipfs.canny.io/docs-features) on what you think the IPFS docs site should contain, along with features that you'd like to see over at [canny.io/docs-features](https://ipfs.canny.io/docs-features).
+Do you have suggestions on future improvements to IPFS docs? You can [vote](https://ipfs.canny.io/docs-features) on what you think the IPFS docs site should contain, along with features that you'd like to see over at [canny.io/docs-features](https://ipfs.canny.io/docs-features).
 
 ### IPFS docs core members
 
@@ -78,15 +78,15 @@ Do you have suggestsions on future improvments to IPFS docs? You can [vote](http
 
     ```sh
     npm install -g aegir
-    ```
+    `"
 
-2. Download dependencies and IPFS libraries (e.g. go-ipfs, js-ipfs) and generate their documentation:
+2. Download dependencies and IPFS libraries (e.g., go-ipfs, js-ipfs) and generate their documentation:
 
     ```sh
     make install
-    ```
+    `"
 
- This installs dependencies and generates source files from other projects (e.g. API documentation, theme resources from the `ipfs-css`, etc). When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
+ This installs dependencies and generates source files from other projects (e.g., API documentation, theme resources from the `ipfs-css`, etc). When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
 
 #### Build and run
 
@@ -94,7 +94,7 @@ Do you have suggestsions on future improvments to IPFS docs? You can [vote](http
 2. Load [localhost:1313](http://localhost:1313) in your web browser.
 3. Edit and add things!
 
-To create a production build, run `make build` instead. You’ll find the final static site in the `public` directory.
+To create a production build, run `make build` instead. You'll find the final static site in the `public` directory.
 
 ## License
 
