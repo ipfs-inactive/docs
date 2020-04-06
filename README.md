@@ -5,7 +5,7 @@
 
 This repository organizes overall documentation issues across the IPFS project. It's also home to the codebase for the **legacy** IPFS documentation site (available at [docs.ipfs.io](https://docs.ipfs.io/)). **The code for the current (beta) version of IPFS documentation is available at [github.com/ipfs/ipfs-docs-v2](https://github.com/ipfs/ipfs-docs-v2), and all work on IPFS docs features OR content should be done there.** Once we fully deprecate the legacy site, we'll move the beta codebase into this repo.
 
-- [Join our bi-weekly sync](#join-our-bi-weekly-sync)
+- [Join our monthly sync](#join-our-monthly-sync)
 - [Get involved](#get-involved)
 - [Project organization](#project-organization)
   - [Objectives for 2020 Q1](#objectives-for-2020-q1)
@@ -14,21 +14,15 @@ This repository organizes overall documentation issues across the IPFS project. 
 - [Legacy code details](#legacy-code-details)
 - [License](#license)
 
-## Join our bi-weekly sync
+## Join our monthly sync
 
-Every two weeks the team gets together to discuss our plans for the coming fortnight. Feel free to [join us](https://protocol.zoom.us/j/614386160) using `614386160` as the Zoom meeting ID!
+Every month the team gets together to discuss plans for the coming four-ish weeks. This meeting usually happens on the last Monday of each month. Feel free to [join us](https://protocol.zoom.us/j/614386160) using `614386160` as the Zoom meeting ID! Here are the details for the next meeting:
 
-| Date | Time |
-| --- | --- |
-| Monday 2nd March | **UTC**: 16:00 - 16:30<br>**EST**: 11:00 - 11:30<br>**PST** 08:00-08:30<br> **Unix**: 1583164800 |
-| Monday 16th March | **UTC**: 15:00 - 15:30<br>**EDT**: 11:00 - 11:30<br>**PDT** 08:00-08:30<br> **Unix**: 1584370800 |
-| Monday 30th March | **UTC**: 16:00 - 16:30<br>**EDT**: 11:00 - 11:30<br>**PDT** 08:00-08:30<br> **Unix**: 1585584000 |
+| Date | Time | Zoom ID | Link | Notes |
+| ---- | ---- | ------- | ---- | ----- |
+| Monday 27th April 2020 | UTC: 16:00 - 16:30<br>EST: 11:00 - 11:30<br>PST 08:00-08:30<br>Unix: 1588003200 | `614386160` | [protocol.zoom.us/j/614386160](https://protocol.zoom.us/j/614386160) | [Meeting notes](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP) |
 
-Keep in mind that different timezones around the world change to daylight savings time (DST) on different days. You can use [TimeAndDate.com's Time Zone Converter](https://www.timeanddate.com/worldclock/converter.html?iso=20200330T150000&p1=tz_gmt&p2=136&p3=250&p4=137) to figure out when the meeting will happen in your timezone.
-
-If you can't make the meeting, don't worry. We post a recording of each meeting in our [YouTube playlist](https://www.youtube.com/playlist?list=PLuhRWgmPaHtRnfsVYI2LbVS03BRX7TcXq).
-
-Notes from current and past calls can be found [here](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP).
+If you can't make the meeting, don't worry. We post a recording of each meeting in our [YouTube playlist](https://www.youtube.com/playlist?list=PLuhRWgmPaHtRnfsVYI2LbVS03BRX7TcXq). Notes from current and past calls can be found [here](https://www.google.com/url?q=https://docs.google.com/document/d/1EOD-pJi4GvRmGi9HHocgVV8uVHMFIZlyVgJDkvC3DQ4/edit&sa=D&ust=1563045367944000&usg=AOvVaw1PXuFUmNdcfz8M0oJjv1dP).
 
 ## Get involved
 
@@ -67,7 +61,7 @@ For more information regarding these objectives, check out the [IPFS-wide Object
 
 ## Suggestions
 
-Do you have suggestsions on future improvments to IPFS docs? You can [vote](https://ipfs.canny.io/docs-features) on what you think the IPFS docs site should contain, along with features that you'd like to see over at [canny.io/docs-features](https://ipfs.canny.io/docs-features).
+Do you have suggestions on future improvements to IPFS docs? You can [vote](https://ipfs.canny.io/docs-features) on what you think the IPFS docs site should contain, along with features that you'd like to see over at [canny.io/docs-features](https://ipfs.canny.io/docs-features).
 
 ### IPFS docs core members
 
@@ -84,15 +78,15 @@ Do you have suggestsions on future improvments to IPFS docs? You can [vote](http
 
     ```sh
     npm install -g aegir
-    ```
+    `"
 
-2. Download dependencies and IPFS libraries (e.g. go-ipfs, js-ipfs) and generate their documentation:
+2. Download dependencies and IPFS libraries (e.g., go-ipfs, js-ipfs) and generate their documentation:
 
     ```sh
     make install
-    ```
+    `"
 
- This installs dependencies and generates source files from other projects (e.g. API documentation, theme resources from the `ipfs-css`, etc). When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
+ This installs dependencies and generates source files from other projects (e.g., API documentation, theme resources from the `ipfs-css`, etc). When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
 
 #### Build and run
 
@@ -100,7 +94,7 @@ Do you have suggestsions on future improvments to IPFS docs? You can [vote](http
 2. Load [localhost:1313](http://localhost:1313) in your web browser.
 3. Edit and add things!
 
-To create a production build, run `make build` instead. You’ll find the final static site in the `public` directory.
+To create a production build, run `make build` instead. You'll find the final static site in the `public` directory.
 
 ## License
 
