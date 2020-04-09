@@ -181,7 +181,7 @@ Abspath: /absolute/path/to/file.txt
 Content-Disposition: form-data; name=&#34;file&#34;; filename=&#34;folderName%2Ffile.txt&#34;
 Content-Type: application/octet-stream
 
-&lt;contents...&gt;
+...contents...
 ```
 
 The above file includes its path in the &#34;folderName/file.txt&#34; hierarchy and
