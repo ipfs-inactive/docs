@@ -34,9 +34,10 @@ ipfs://{contentID}
 Other tools that rely solely on HTTP(S) (e.g., curl) encounter similar errors in accessing IPFS content in canonical form.
 
 The end stage of IPFS deployment includes native support of IPFS in all popular browsers and tools.
-In the interim, upgrading the browser/tool to support IPFS (e.g., through a browser extension) would resolve IPFS content access errors.
+In the interim, upgrading the browser/tool to support IPFS (e.g., through a browser extension such as [IPFS Companion for Firefox](https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/) or [IPFS Companion for Chrome](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch)) would resolve IPFS content access errors.
 
-However not every user may be permitted to alter, or be capable of altering, their browser/tool configuration. IPFS gateways provide an HTTP(S)-based service for such browsers and tools to access IPFS content.
+However, not every user may be permitted to alter — or be capable of altering — their browser/tool configuration.
+IPFS gateways provide an HTTP(S)-based service for such browsers and tools to access IPFS content.
 
 The canonical form of access to such IPFS gateways is:
 ```
