@@ -25,7 +25,7 @@ You should read this document if you want to:
 *   decide whether and what type of gateways to deploy for your use case;
 *   understand how to develop and deploy gateways for your use case.
 
-## What is an IPFS gateway?
+## 1. What is an IPFS gateway?
 
 Errors occur when a browser that does not support IPFS attempts access to IPFS content in the canonical form of
 ```
@@ -43,7 +43,7 @@ The canonical form of access to such IPFS gateways is:
 https://{gatewayURL}/ipfs/{contentID}
 ```
 
-## Who provides IPFS gateways?
+## 2. Who provides IPFS gateways?
 
 IPFS gateway providers include:
 *   Protocol Labs, which deploys the public gateway ipfs.io;
@@ -52,7 +52,7 @@ IPFS gateway providers include:
 
 Regardless of who deploys it and where, any IPFS gateway resolves access to any IPFS content ID requested via the canonical HTTP form described above.
 
-## What types of IPFS gateways exist?
+## 3. What types of IPFS gateways exist?
 
 The discussion above illustrated the use of read-only HTTP(S) gateways to fetch content. Other types of gateways exist as well:
 
@@ -71,13 +71,13 @@ The discussion above illustrated the use of read-only HTTP(S) gateways to fetch 
 <!-- How does it relate to the rest of IPFS -->
 
 
-## When should a gateway be provided, where, and which type of gateway?
+## 4. When should a gateway be provided, where, and which type of gateway?
 <!-- Generic use cases -->
 <!-- Which kind of gateway should be used when -->
 
-## When not to provide a gateway
+## 5. When not to provide a gateway
 
-### Delay-sensitive applications
+### 5.1 Delay-sensitive applications
 Any gateway introduces delay in completing desired actions.
 Faster execution occurs when using methods at the top of the following list:
 *   native IPFS node embedded within the app.
@@ -86,15 +86,16 @@ Faster execution occurs when using methods at the top of the following list:
 from app to the local service.
 *   public/private gateways.
 
-## Limitations
+## 6. Limitations
 
 
-## Implementation status
+## 7. Implementation status
 <!-- current state of technology -->
 <!-- roadmap? -->
-## Use cases
 
-## Further details
+## 8. Use cases
+
+## 9. Further details
 <!-- where to learn more -->
 
 
