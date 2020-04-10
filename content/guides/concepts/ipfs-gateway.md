@@ -54,10 +54,13 @@ Regardless of who deploys it and where, any IPFS gateway resolves access to any 
 
 ## What types of IPFS gateways exist?
 
+The discussion above illustrated the use of read-only HTTP(S) gateways to fetch content. Other types of gateways exist as well:
+
 | gateway type  | sub-type  | functional description    |
 | -----------:  | :-------  | :--                       |
 | HTTP          | readable  | Only retrieves content (HTTP GET method) |
 |               | writeable | Allows data to be added to IPFS (HTTP POST, PUT, DELETE methods) |
+
 
 <!-- Explain exceptions in Limitations section -->
 
@@ -74,6 +77,14 @@ Regardless of who deploys it and where, any IPFS gateway resolves access to any 
 
 ## When not to provide a gateway
 
+### Delay-sensitive applications
+Any gateway introduces delay in completing desired actions.
+Faster execution occurs when using methods at the top of the following list:
+*   native IPFS node embedded within the app.
+*   IPFS extension to app.
+*   gateway installed as a local service on the app's machine, with redirection of requests
+from app to the local service.
+*   public/private gateways.
 
 ## Limitations
 
