@@ -61,25 +61,16 @@ The discussion above illustrated the use of read-only HTTP(S) gateways to fetch 
 | -----------:  | :-------  | :--                       |
 | HTTP          | readable  | Retrieve ipfs:// content (HTTP GET method) |
 |               | writeable | Write ipfs:// content (HTTP POST, PUT, DELETE methods) |
-| IPNS          |           |  Read/write ipns:// content                         |
+| IPLD          |           |  Read/write ipld:// content                         |
+| IPNS  |   | Read/write ipns:// content  |
 | DWEB   |   | Read/write dweb:// content  |
-
-
-<!-- Explain exceptions in Limitations section -->
-
-
-
-<!-- So far the above only describes HTTP gateways. Add material for custom URL protocols; e.g., ipns://{peerID}/{path} and dweb://{ipfs address}. See https://docs-beta.ipfs.io/how-to/address-ipfs-on-web/#dweb-addressing-in-brief -->
-
-<!-- How does it relate to the rest of IPFS -->
-
 
 ## 4. When should a gateway be provided, where, and which type of gateway?
 
 ### 4.1 Firewalled networks
 Running [IPFS Desktop](https://github.com/ipfs-shipyard/ipfs-desktop#ipfs-desktop) or a standalone IPFS node within a browser/tool triggers connection attempts to other IPFS peers.
 Private network administrators may treat such connection attempts as potential security vulnerabilities.
-IPFS gateway servers inside the private network and running a trusted code base provide an alternative architecture for read/write access to externally-hosted IPFS content.
+IPFS gateway servers located inside the private network and running a trusted code base provide an alternative architecture for read/write access to externally-hosted IPFS content.
 
 ## 5. When not to employ a gateway
 
@@ -106,15 +97,10 @@ The public gateway ipfs.io serves as an independent reference for returned conte
 
 Similarly, guarantee of proper behavior when writing content via a third-party HTTP(S) writable gateway requires a fetch of written content via a native IPFS node or the ipfs.io public gateway.
 
-
 ## 7. Implementation status
-<!-- current state of technology -->
-<!-- roadmap? -->
 
 ## 8. Use cases
 
 ## 9. Further details
-<!-- where to learn more -->
-
 
 <ContentStatus />
