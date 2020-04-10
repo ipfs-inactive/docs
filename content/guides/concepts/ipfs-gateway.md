@@ -59,8 +59,10 @@ The discussion above illustrated the use of read-only HTTP(S) gateways to fetch 
 
 | gateway type  | sub-type  | functional description    |
 | -----------:  | :-------  | :--                       |
-| HTTP          | readable  | Only retrieves content (HTTP GET method) |
-|               | writeable | Allows data to be added to IPFS (HTTP POST, PUT, DELETE methods) |
+| HTTP          | readable  | Retrieve ipfs:// content (HTTP GET method) |
+|               | writeable | Write ipfs:// content (HTTP POST, PUT, DELETE methods) |
+| IPNS          |           |  Read/write ipns:// content                         |
+| DWEB   |   | Read/write dweb:// content  |
 
 
 <!-- Explain exceptions in Limitations section -->
@@ -76,7 +78,7 @@ The discussion above illustrated the use of read-only HTTP(S) gateways to fetch 
 
 ### 4.1 Firewalled networks
 Running [IPFS Desktop](https://github.com/ipfs-shipyard/ipfs-desktop#ipfs-desktop) or a standalone IPFS node within a browser/tool triggers connection attempts to other IPFS peers.
-Private network administrations may treat such connection attempts as potential security vulnerabilities.
+Private network administrators may treat such connection attempts as potential security vulnerabilities.
 IPFS gateway servers inside the private network and running a trusted code base provide an alternative architecture for read/write access to externally-hosted IPFS content.
 
 ## 5. When not to employ a gateway
@@ -86,7 +88,7 @@ Any gateway introduces delay in completing desired actions.
 Faster execution occurs when using methods at the top of the following list:
 *   native IPFS node embedded within the app.
 *   IPFS extension to app.
-*   gateway installed as a local service on the app's machine, with redirection of requests
+*   gateway installed as a local server on the app's machine, with redirection of requests
 from app to the local service.
 *   public/private gateways.
 
