@@ -75,7 +75,7 @@ The discussion above illustrated the use of read-only HTTP(S) gateways to fetch 
 <!-- Generic use cases -->
 <!-- Which kind of gateway should be used when -->
 
-## 5. When not to provide a gateway
+## 5. When not to employ a gateway
 
 ### 5.1 Delay-sensitive applications
 Any gateway introduces delay in completing desired actions.
@@ -86,7 +86,19 @@ Faster execution occurs when using methods at the top of the following list:
 from app to the local service.
 *   public/private gateways.
 
+### 5.2 End-to-end cyptographic validation required
+Because of third-party gateway vulnerabilities outlined in §6.1 below, apps requiring end-to-end validation of content read/write should avoid gateways when possible.
+If the app must employ an extenal gateway, such apps should use ipfs.io or a trusted third-party.
+
 ## 6. Limitations
+
+### 6.1 Third-party gateway security vulnerabilities
+An IPFS node cryptographically validates content it fetches.
+Employing a third-party public or private HTTP(S) gateway sacrifices end-to-end cryptographic validation of delivery of the correct content.
+An inability to guarantee the proper behavior of such gateways undermines trust in fetched content.
+The public gateway ipfs.io serves as an independent reference for returned content.
+
+Similarly, guarantee of proper behavior when writing content via a third-party HTTP(S) writable gateway requires a fetch of written content via a native IPFS node or the ipfs.io public gateway.
 
 
 ## 7. Implementation status
