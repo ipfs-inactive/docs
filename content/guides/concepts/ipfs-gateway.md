@@ -54,9 +54,14 @@ Regardless of who deploys it and where, any IPFS gateway resolves access to any 
 
 ## What types of IPFS gateways exist?
 
+| gateway type  | sub-type  | functional description    |
+| -----------:  | :-------  | :--                       |
+| HTTP          | readable  | Only retrieves content (HTTP GET method) |
+|               | writeable | Allows data to be added to IPFS (HTTP POST, PUT, DELETE methods) |
+
 <!-- Explain exceptions in Limitations section -->
 
-<!-- Introduce concept of writable gateways; see https://discuss.ipfs.io/t/writeable-http-gateways/210 -->
+
 
 <!-- So far the above only describes HTTP gateways. Add material for custom URL protocols; e.g., ipns://{peerID}/{path} and dweb://{ipfs address}. See https://docs-beta.ipfs.io/how-to/address-ipfs-on-web/#dweb-addressing-in-brief -->
 
