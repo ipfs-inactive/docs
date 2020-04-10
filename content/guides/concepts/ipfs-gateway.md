@@ -73,8 +73,11 @@ The discussion above illustrated the use of read-only HTTP(S) gateways to fetch 
 
 
 ## 4. When should a gateway be provided, where, and which type of gateway?
-<!-- Generic use cases -->
-<!-- Which kind of gateway should be used when -->
+
+### 4.1 Firewalled networks
+Running [IPFS Desktop](https://github.com/ipfs-shipyard/ipfs-desktop#ipfs-desktop) or a standalone IPFS node within a browser/tool triggers connection attempts to other IPFS peers.
+Private network administrations may treat such connection attempts as potential security vulnerabilities.
+IPFS gateway servers inside the private network and running a trusted code base provide an alternative architecture for read/write access to externally-hosted IPFS content.
 
 ## 5. When not to employ a gateway
 
