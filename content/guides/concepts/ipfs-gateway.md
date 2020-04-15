@@ -55,7 +55,12 @@ Regardless of who deploys it and where, any IPFS gateway resolves access to any 
 
 ## 3. What types of IPFS gateways exist?
 
-The discussion above illustrated the use of read-only HTTP(S) gateways to fetch content. Other types of gateways exist as well:
+### 3.1 Read-only and writeable gateways
+The discussion above illustrated the use of read-only HTTP(S) gateways to fetch content; i.e., supports HTTP(S) GET.
+
+_Writeable_ HTTP(S) gateways also support POST, PUT and DELETE methods to manage content in IPFS.
+
+### 3.2 Gateway types
 
 | gateway type  | sub-type  | functional description    |
 | -----------:  | :-------  | :--                       |
@@ -79,7 +84,7 @@ Any gateway introduces delay in completing desired actions.
 Faster execution occurs when using methods close to the top of the following list instead of those toward the bottom:
 *   native IPFS node embedded within the app.
 *   IPFS extension to app.
-*   gateway installed as a local server on the app's machine, with redirection of requests
+*   gateway installed as a local daemon, with redirection of requests
 from app to the local service.
 *   public/private gateways.
 
@@ -89,7 +94,10 @@ If the app must employ an extenal gateway, such apps should use ipfs.io or a tru
 
 ## 6. Limitations
 
-### 6.1 Gateway man-in-the-middle (MIM) vulnerability
+### 6.1 Centralization
+
+
+### 6.2 Gateway man-in-the-middle (MIM) vulnerability
 Employing a public or private HTTP(S) gateway sacrifices end-to-end cryptographic validation of delivery of the correct content.
 Consider the case of a browser fetching content with the URL `https://anipfsgateway.org/ipfs/{cid}`.
 A compromised `anipfsgateway.org` provides man-in-the-middle vulnerabilities, including:
