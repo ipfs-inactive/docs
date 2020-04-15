@@ -76,7 +76,7 @@ IPFS gateway servers located inside the private network and running a trusted co
 
 ### 5.1 Delay-sensitive applications
 Any gateway introduces delay in completing desired actions.
-Faster execution occurs when using methods at the top of the following list:
+Faster execution occurs when using methods close to the top of the following list instead of those toward the bottom:
 *   native IPFS node embedded within the app.
 *   IPFS extension to app.
 *   gateway installed as a local server on the app's machine, with redirection of requests
