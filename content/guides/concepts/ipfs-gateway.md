@@ -89,10 +89,18 @@ If the app must employ an extenal gateway, such apps should use ipfs.io or a tru
 
 ## 6. Limitations
 
-### 6.1 Third-party gateway security vulnerabilities
-An IPFS node cryptographically validates content it fetches.
-Employing a third-party public or private HTTP(S) gateway sacrifices end-to-end cryptographic validation of delivery of the correct content.
-An inability to guarantee the proper behavior of such gateways undermines trust in fetched content.
+### 6.1 Gateway man-in-the-middle (MIM) vulnerability
+Employing a public or private HTTP(S) gateway sacrifices end-to-end cryptographic validation of delivery of the correct content.
+Consider the case of a browser fetching content with the URL `https://anipfsgateway.org/ipfs/{cid}`.
+A compromised `anipfsgateway.org` provides man-in-the-middle vulnerabilities, including:
+*   Substituting false content in place of the actual content retrieved via the CID;
+*   Diverting a copy of the query and response, as well as the IP address of the querying browser, to a third party.
+
+Similarly, a compromised writeable gateway may inject falsified content into the IPFS network, returning a CID which the user believes (incorrectly) to refer to the true content.
+For example, a compromised writeable gateway user Alice POSTs `balance: 123.45`, but the gateway stores `balance: 0.00` and returns to Alice a CID for the falsified content.
+Alice gives Bob this CID.
+Bob fetches the content with this CID and cryptographically validates `balance: 0.00`.
+
 The public gateway ipfs.io serves as an independent reference for returned content.
 
 Similarly, guarantee of proper behavior when writing content via a third-party HTTP(S) writable gateway requires a fetch of written content via a native IPFS node or the ipfs.io public gateway.
