@@ -101,9 +101,7 @@ For example, a compromised writeable gateway user Alice POSTs `balance: 123.45`,
 Alice gives Bob this CID.
 Bob fetches the content with this CID and cryptographically validates `balance: 0.00`.
 
-The public gateway ipfs.io serves as an independent reference for returned content.
-
-Similarly, guarantee of proper behavior when writing content via a third-party HTTP(S) writable gateway requires a fetch of written content via a native IPFS node or the ipfs.io public gateway.
+To partially address this exposure you may wish to use the public gateway ipfs.io as an independent, trusted reference.
 
 ## 7. Implementation status
 
