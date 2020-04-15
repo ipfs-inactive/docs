@@ -64,9 +64,8 @@ _Writeable_ HTTP(S) gateways also support POST, PUT and DELETE methods to manage
 
 | gateway type  | sub-type  | functional description    |
 | -----------:  | :-------  | :--                       |
-| HTTP          | readable  | Retrieve ipfs:// content (HTTP GET method) |
-|               | writeable | Write ipfs:// content (HTTP POST, PUT, DELETE methods) |
-| IPLD          |           |  Read/write ipld:// content                         |
+| HTTP          |           | Read/write ipfs:// content (HTTP GET method) |
+| IPLD          |           |  Read/write ipld:// content                  |
 | IPNS  |   | Read/write ipns:// content  |
 | DWEB   |   | Read/write dweb:// content  |
 
@@ -94,8 +93,10 @@ If the app must employ an extenal gateway, such apps should use ipfs.io or a tru
 
 ## 6. Limitations
 
-### 6.1 Centralization
-
+### 6.1 Centralization and trust
+Using a gateway employs location-based addressing.
+Trusting a specific addressed gateway in turn requires trust of the gateway's issuing Certificate Authorities and the security of public key infrastructure.
+Therefore, the gateway represents an undesirable point of centralization for an otherwise decentralized service.
 
 ### 6.2 Gateway man-in-the-middle (MIM) vulnerability
 Employing a public or private HTTP(S) gateway sacrifices end-to-end cryptographic validation of delivery of the correct content.
