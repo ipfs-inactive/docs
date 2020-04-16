@@ -11,25 +11,26 @@ related:
   'Tutorial: Setting up an IPFS gateway on Google Cloud Platform (Stacktical)': https://blog.stacktical.com/ipfs/gateway/dapp/2019/09/21/ipfs-server-google-cloud-platform.html
 ---
 
-# IPFS Gateway
+# IPFS Gateways
 
 This document discusses:
-*   the several types of IPFS gateways;
+*   the several types of gateways;
 *   their roles in use of IPFS;
-*   appropriate situations for use of each type of gateway;
+*   appropriate situations for use of gateways;
 *   situations when you should avoid use of gateways;
 *   implementation guidelines.
 
 You should read this document if you want to:
 *   understand, at a conceptual level, how gateways fit into the overall use of IPFS;
-*   decide whether and what type of gateways to deploy for your use case;
-*   understand how to develop and deploy gateways for your use case.
+*   decide whether and what type of gateways to employ for your use case;
+*   understand, at a conceptual level, how to deploy gateways for your use case.
 
 ## 1. What is an IPFS gateway?
+Gateways provide workarounds for applications that do not support IPFS natively.
 
-Errors occur when a browser that does not support IPFS attempts access to IPFS content in the canonical form of
+For example, errors occur when a browser that does not support IPFS attempts access to IPFS content in the canonical form of
 ```
-ipfs://{contentID}
+ipfs://{contentID}/{optional path to resource}
 ```
 Other tools that rely solely on HTTP(S) (e.g., curl) encounter similar errors in accessing IPFS content in canonical form.
 
@@ -39,9 +40,9 @@ In the interim, upgrading the browser/tool to support IPFS (e.g., through a brow
 However, not every user may be permitted to alter — or be capable of altering — their browser/tool configuration.
 IPFS gateways provide an HTTP(S)-based service for such browsers and tools to access IPFS content.
 
-The canonical form of access to such IPFS gateways is:
+The canonical form of access to such HTTP(S) IPFS gateways is:
 ```
-https://{gatewayURL}/ipfs/{contentID}
+https://{gatewayURL}/ipfs/{contentID}/{optional path to resource}
 ```
 
 ## 2. Who provides IPFS gateways?
@@ -53,20 +54,32 @@ IPFS gateway providers include:
 
 Regardless of who deploys it and where, any IPFS gateway resolves access to any IPFS content ID requested via the canonical HTTP form described above.
 
-## 3. What types of IPFS gateways exist?
+## 3. What types of gateways exist?
+Categorizing gateways involves several dimension:
+*   read/write support
+*   <needs a descriptor>
+*   service
 
 ### 3.1 Read-only and writeable gateways
-The discussion above illustrated the use of read-only HTTP(S) gateways to fetch content; i.e., supports HTTP(S) GET.
+The examples discussed in the earlier sections above illustrated the use of read-only HTTP(S) gateways to fetch content from IPFS via an HTTP(S) GET method.
 
-_Writeable_ HTTP(S) gateways also support POST, PUT and DELETE methods to manage content in IPFS.
+_Writeable_ HTTP(S) gateways also support POST, PUT and DELETE methods; e.g., to create and manage content in IPFS.
 
-### 3.2 Gateway types
+### 3.2
 
-| gateway type  | sub-type  | functional description    |
-| -----------:  | :-------  | :--                       |
-| HTTP          |           | Read/write ipfs:// content (HTTP GET method) |
-| IPLD          |           |  Read/write ipld:// content                  |
-| IPNS  |   | Read/write ipns:// content  |
+Subdomain gateway support began with go-ipfs release 0.5.0.7109.
+
+### 3.3 Gateway services
+
+In addition to IPFS content, HTTP(S) gateway access may reach other related services:
+
+| service  | style | canonical form of access |
+| ------:  | :---- | :----------------------- |
+| IPFS | path | `https://{gateway URL}/ipfs/{content ID}/{optional path to resource}` |
+|   | DNSLink | `<something>` |
+|   | subdomain  | `https://{contentID}.ipfs.{gatewayURL}/{optional path to resource}` |
+| IPLD |  |  |
+| IPNS  | path | `https://{gateway URL}/ipns/{IPNS ID}/{optional path to resource}` |
 | DWEB   |   | Read/write dweb:// content  |
 
 ## 4. When should a gateway be provided, where, and which type of gateway?
