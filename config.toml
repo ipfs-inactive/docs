@@ -118,6 +118,11 @@ url = "https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"
 weight = 30
 
 [[menu.reference]]
+parent = "go_implementation"
+name = "Recent Releases"
+url = "https://docs-beta.ipfs.io/recent-releases/"
+weight = 2
+[[menu.reference]]
 identifier = "go_implementation"
 name = "Go Implementation"
 weight = 5
