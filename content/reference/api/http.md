@@ -10,7 +10,7 @@ beta_equivalent: reference/http/api
 <!-- TODO: Describe how to change ports and configure the API server -->
 <!-- TODO: Structure this around command groups (dag, object, files, etc.) -->
 
-_Generated on 2020-04-09, from go-ipfs v0.4.23._
+_Generated on 2020-04-28, from go-ipfs v0.5.0
 
 When an IPFS node is running as a daemon, it exposes an HTTP API that allows
 you to control the node and run the same commands you can from the command
@@ -141,7 +141,7 @@ Add a file or directory to ipfs.
 - `trickle` [bool]: Use trickle-dag format for dag generation. Required: no.
 - `only-hash` [bool]: Only chunk and hash - do not write to disk. Required: no.
 - `wrap-with-directory` [bool]: Wrap files with a directory object. Required: no.
-- `chunker` [string]: Chunking algorithm, size-[bytes] or rabin-[min]-[avg]-[max]. Default: `size-262144`. Required: no.
+- `chunker` [string]: Chunking algorithm, size-[bytes], rabin-[min]-[avg]-[max] or buzhash. Default: `size-262144`. Required: no.
 - `pin` [bool]: Pin this object when adding. Default: `true`. Required: no.
 - `raw-leaves` [bool]: Use raw blocks for leaf nodes. (experimental). Required: no.
 - `nocopy` [bool]: Add the file using filestore. Implies raw-leaves. (experimental). Required: no.
@@ -701,7 +701,7 @@ List available multibase encodings.
 
 #### Arguments
 
-- `prefix` [bool]: also include the single leter prefixes in addition to the code. Required: no.
+- `prefix` [bool]: also include the single letter prefixes in addition to the code. Required: no.
 - `numeric` [bool]: also include numeric codes. Required: no.
 
 
@@ -765,6 +765,7 @@ Format and convert a CID in various useful ways.
 - `arg` [string]: Cids to format. Required: **yes**.
 - `f` [string]: Printf style format string. Default: %!s(MISSING). Default: `%!s(MISSING)`. Required: no.
 - `v` [string]: CID version to convert to. Required: no.
+- `codec` [string]: CID codec to convert to. Required: no.
 - `b` [string]: Multibase to display CID in. Required: no.
 
 
@@ -783,7 +784,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -X POST "http://127.0.0.1:5001/api/v0/cid/format?arg=<cid>&f=%s&v=<value>&b=<value>"`
+`curl -X POST "http://127.0.0.1:5001/api/v0/cid/format?arg=<cid>&f=%s&v=<value>&codec=<value>&b=<value>"`
 
 ---
 
@@ -1012,6 +1013,31 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ---
 
+### /api/v0/dag/export
+
+Streams the selected DAG as a .car stream on stdout.
+
+
+#### Arguments
+
+- `arg` [string]: CID of a root to recursively export Required: **yes**.
+- `progress` [bool]: Display progress on CLI. Defaults to true when STDERR is a TTY. Required: no.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```json
+This endpoint returns a `text/plain` response body.
+```
+
+#### cURL Example
+
+`curl -X POST "http://127.0.0.1:5001/api/v0/dag/export?arg=<root>&progress=<value>"`
+
+---
+
 ### /api/v0/dag/get
 
 Get a dag node from ipfs.
@@ -1033,6 +1059,47 @@ This endpoint returns a `text/plain` response body.
 #### cURL Example
 
 `curl -X POST "http://127.0.0.1:5001/api/v0/dag/get?arg=<ref>"`
+
+---
+
+### /api/v0/dag/import
+
+Import the contents of .car files
+
+
+#### Arguments
+
+
+- `silent` [bool]: No output. Required: no.
+- `pin-roots` [bool]: Pin optional roots listed in the .car headers after importing. Default: `true`. Required: no.
+
+
+#### Request Body
+
+Argument `path` is of file type. This endpoint expects one or several files
+(depending on the command) in the body of the request as
+'multipart/form-data'.
+
+
+#### Response
+
+On success, the call to this endpoint will return with 200 and the following body:
+
+```json
+{
+  "Root": {
+    "Cid": {
+      "/": "<cid-string>"
+    },
+    "PinErrorMsg": "<string>"
+  }
+}
+
+```
+
+#### cURL Example
+
+`curl -X POST -F file=@myfile "http://127.0.0.1:5001/api/v0/dag/import?silent=<value>&pin-roots=true"`
 
 ---
 
@@ -1267,8 +1334,15 @@ Write a key/value pair to the routing system.
 #### Arguments
 
 - `arg` [string]: The key to store the value at. Required: **yes**.
-- `arg` [string]: The value to store. Required: **yes**.
+
 - `verbose` [bool]: Print extra information. Required: no.
+
+
+#### Request Body
+
+Argument `value-file` is of file type. This endpoint expects one or several files
+(depending on the command) in the body of the request as
+'multipart/form-data'.
 
 
 #### Response
@@ -1294,7 +1368,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -X POST "http://127.0.0.1:5001/api/v0/dht/put?arg=<key>&arg=<value>&verbose=<value>"`
+`curl -X POST -F file=@myfile "http://127.0.0.1:5001/api/v0/dht/put?arg=<key>&verbose=<value>"`
 
 ---
 
@@ -1546,13 +1620,13 @@ This endpoint returns a `text/plain` response body.
 
 ### /api/v0/files/cp
 
-Copy files into mfs.
+Copy any IPFS files and directories into MFS (or copy within MFS).
 
 
 #### Arguments
 
-- `arg` [string]: Source object to copy. Required: **yes**.
-- `arg` [string]: Destination to copy object to. Required: **yes**.
+- `arg` [string]: Source IPFS or MFS path to copy. Required: **yes**.
+- `arg` [string]: Destination within MFS. Required: **yes**.
 
 
 #### Response
@@ -1604,7 +1678,7 @@ List directories in the local mutable namespace.
 #### Arguments
 
 - `arg` [string]: Path to show listing for. Defaults to &#39;/&#39;. Required: no.
-- `l` [bool]: Use long listing format. Required: no.
+- `long` [bool]: Use long listing format. Required: no.
 - `U` [bool]: Do not sort; list entries in directory order. Required: no.
 
 
@@ -1628,7 +1702,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -X POST "http://127.0.0.1:5001/api/v0/files/ls?arg=<path>&l=<value>&U=<value>"`
+`curl -X POST "http://127.0.0.1:5001/api/v0/files/ls?arg=<path>&long=<value>&U=<value>"`
 
 ---
 
@@ -1686,7 +1760,7 @@ This endpoint returns a `text/plain` response body.
 
 ### /api/v0/files/read
 
-Read a file in a given mfs.
+Read a file in a given MFS.
 
 
 #### Arguments
@@ -1993,7 +2067,7 @@ Create a new keypair
 #### Arguments
 
 - `arg` [string]: name of key to create Required: **yes**.
-- `type` [string]: type of the key to create [rsa, ed25519]. Required: no.
+- `type` [string]: type of the key to create: rsa, ed25519. Default: `rsa`. Required: no.
 - `size` [int]: size of the key to generate. Required: no.
 
 
@@ -2011,7 +2085,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -X POST "http://127.0.0.1:5001/api/v0/key/gen?arg=<name>&type=<value>&size=<value>"`
+`curl -X POST "http://127.0.0.1:5001/api/v0/key/gen?arg=<name>&type=rsa&size=<value>"`
 
 ---
 
@@ -2120,8 +2194,8 @@ Change the logging level.
 #### Arguments
 
 - `arg` [string]: The subsystem logging identifier. Use &#39;all&#39; for all subsystems. Required: **yes**.
-- `arg` [string]: The log level, with &#39;debug&#39; the most verbose and &#39;critical&#39; the least verbose.
-			One of: debug, info, warning, error, critical.
+- `arg` [string]: The log level, with &#39;debug&#39; the most verbose and &#39;fatal&#39; the least verbose.
+			One of: debug, info, warn, error, dpanic, panic, fatal.
 		 Required: **yes**.
 
 
@@ -2206,7 +2280,7 @@ List directory contents for Unix filesystem objects.
 - `headers` [bool]: Print table headers (Hash, Size, Name). Required: no.
 - `resolve-type` [bool]: Resolve linked objects to find out their types. Default: `true`. Required: no.
 - `size` [bool]: Resolve linked objects to find out their file size. Default: `true`. Required: no.
-- `stream` [bool]: Enable exprimental streaming of directory entries as they are traversed. Required: no.
+- `stream` [bool]: Enable experimental streaming of directory entries as they are traversed. Required: no.
 
 
 #### Response
@@ -3036,6 +3110,7 @@ List objects pinned to local storage.
 - `arg` [string]: Path to object(s) to be listed. Required: no.
 - `type` [string]: The type of pinned keys to list. Can be &#34;direct&#34;, &#34;indirect&#34;, &#34;recursive&#34;, or &#34;all&#34;. Default: `all`. Required: no.
 - `quiet` [bool]: Write just hashes of objects. Required: no.
+- `stream` [bool]: Enable streaming of pins as they are discovered. Required: no.
 
 
 #### Response
@@ -3044,10 +3119,16 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 ```json
 {
-  "Keys": {
-    "<string>": {
-      "Type": "<string>"
+  "PinLsList": {
+    "Keys": {
+      "<string>": {
+        "Type": "<string>"
+      }
     }
+  },
+  "PinLsObject": {
+    "Cid": "<string>",
+    "Type": "<string>"
   }
 }
 
@@ -3055,7 +3136,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 
 #### cURL Example
 
-`curl -X POST "http://127.0.0.1:5001/api/v0/pin/ls?arg=<ipfs-path>&type=all&quiet=<value>"`
+`curl -X POST "http://127.0.0.1:5001/api/v0/pin/ls?arg=<ipfs-path>&type=all&quiet=<value>&stream=<value>"`
 
 ---
 
@@ -3096,7 +3177,7 @@ Update a recursive pin
 #### Arguments
 
 - `arg` [string]: Path to old object. Required: **yes**.
-- `arg` [string]: Path to new object to be pinned. Required: **yes**.
+- `arg` [string]: Path to a new object to be pinned. Required: **yes**.
 - `unpin` [bool]: Remove the old pin. Default: `true`. Required: no.
 
 
