@@ -72,23 +72,23 @@ Do you have suggestions on future improvements to IPFS docs? You can [vote](http
 
 **IMPORTANT! As noted above, this repo is home to the LEGACY docs site; if you want to make changes to IPFS docs, please visit [github.com/ipfs/ipfs-docs-v2](https://github.com/ipfs/ipfs-docs-v2) and use the codebase there.** However, if for some reason you need to run the legacy code locally, instructions are below.
 
-#### One-time setup
+### One-time setup
 
 1. Install [AEgir](https://www.npmjs.com/package/aegir)
 
     ```sh
     npm install -g aegir
-    `"
+    ```
 
 2. Download dependencies and IPFS libraries (e.g., go-ipfs, js-ipfs) and generate their documentation:
 
     ```sh
     make install
-    `"
+    ```
 
  This installs dependencies and generates source files from other projects (e.g., API documentation, theme resources from the `ipfs-css`, etc). When dependencies or external packages (like `go-ipfs`) have new releases, you should regenerate files based on them by running `make resources`.
 
-#### Build and run
+### Build and run
 
 1. In the root directory, run `make dev`.
 2. Load [localhost:1313](http://localhost:1313) in your web browser.
