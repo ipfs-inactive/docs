@@ -1,10 +1,9 @@
 ---
 name: Content Request
 about: Suggest a new item for the IPFS docs
-title: "[CONTENT REQUEST] (add your title here!)"
-labels: 'OKR 3: Content Improvement, docs-ipfs'
+title: "Title of the what you want to create."
+labels: 'need/triage'
 assignees: ''
-
 ---
 
 Is there an item missing from IPFS documentation that would be helpful to you? Please use this template to let us know!
