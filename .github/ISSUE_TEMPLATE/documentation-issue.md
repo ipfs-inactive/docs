@@ -1,10 +1,9 @@
 ---
 name: Documentation Issue
 about: Report a problem with existing documentation
-title: "[DOCS ISSUE] (add your title here!)"
-labels: 'OKR 3: Content Improvement, docs-ipfs'
+title: "Found something wrong that needs fixing?"
+labels: 'need/triage'
 assignees: ''
-
 ---
 
 Did you find a bug, typo or other issue in an item of IPFS documentation? Please use this template to let us know!
