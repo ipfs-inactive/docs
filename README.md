@@ -68,6 +68,10 @@ Do you have suggestions on future improvements to IPFS docs? You can [vote](http
 - [@johnnymatthews](https://github.com/johnnymatthews): Project leadership, organization and primary contact
 - [@cwaring](https://github.com/cwaring): Development support
 
+## Bounties
+
+Successfully closing an issue with the [`bounty` tag](https://github.com/ipfs/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abounty) by producing a production-ready piece of documentation can earn you not only the undying love of the IPFS community — it can net you a financial reward. Check out the [current list of bounty issues →](https://github.com/ipfs/devgrants/projects/1)
+
 ## Legacy code details
 
 **IMPORTANT! As noted above, this repo is home to the LEGACY docs site; if you want to make changes to IPFS docs, please visit [github.com/ipfs/ipfs-docs-v2](https://github.com/ipfs/ipfs-docs-v2) and use the codebase there.** However, if for some reason you need to run the legacy code locally, instructions are below.
