@@ -11,6 +11,7 @@ This repository organizes overall documentation issues across the IPFS project. 
   - [Objectives for 2020 Q1](#objectives-for-2020-q1)
   - [IPFS docs core members](#ipfs-docs-core-members)
 - [Suggestions](#suggestions)
+- [Bounties](#bounties)
 - [Legacy code details](#legacy-code-details)
 - [License](#license)
 
@@ -70,7 +71,7 @@ Do you have suggestions on future improvements to IPFS docs? You can [vote](http
 
 ## Bounties
 
-Successfully closing an issue with the [`bounty` tag](https://github.com/ipfs/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abounty) by producing a production-ready piece of documentation can earn you not only the undying love of the IPFS community — it can net you a financial reward. Check out the [current list of bounty issues →](https://github.com/ipfs/devgrants/projects/1)
+You can earn the undying love of the IPFS community *and* make some money by closing an issue with the [`bounty` tag](https://github.com/ipfs/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abounty)! Submissions must be production-ready and meet all the specifications listed on the issue page. Check out the [current list of open bounties →](https://github.com/ipfs/devgrants/projects/1)
 
 ## Legacy code details
 
