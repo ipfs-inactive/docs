@@ -1,3 +1,9 @@
+# THIS REPOSITORY IS BEING DEPRECATED
+
+**Heads up! On May 27th, this repository will be deprecated and replaced with [`ipfs/ipfs-docs`](https://github.com/ipfs/ipfs-docs). This repository will not be receiving any updates. It is here for historical purposes.**
+
+---
+
 ![IPFS Documentation](https://raw.githubusercontent.com/ipfs/docs/master/ipfs-docs-header.png "IPFS Documentation")
 [![Build status icon.](https://img.shields.io/circleci/project/github/ipfs/docs/master.svg?style=flat-square)](https://circleci.com/gh/ipfs/docs)
 [![Made by icon.](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai/)
