@@ -21,7 +21,7 @@ actually the hash of the root (uppermost) node in the DAG. For a given DAG, you
 can easily view the sub-blocks under it with `ipfs ls`.
 
 For example:
-```
+```sh
 # ensure this file is larger than 256k
 ipfs add alargefile
 ipfs ls thathash
@@ -66,7 +66,7 @@ Creating your own blocks is easy! Simply put your data in a file and run
 `ipfs block put <yourfile>` on it. Or, you can pipe your filedata into
 `ipfs block put`, like so:
 
-```
+```console
 $ echo "This is some data" | ipfs block put
 QmfQ5QAjvg4GtA3wg3adpnDJug8ktA1BxurVqBD8rtgVjM
 $ ipfs block get QmfQ5QAjvg4GtA3wg3adpnDJug8ktA1BxurVqBD8rtgVjM
