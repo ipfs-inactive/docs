@@ -24,7 +24,7 @@ for a short time after you perform any ipfs operation on it, but these objects
 may get garbage collected fairly regularly. To prevent that garbage collection
 simply pin the hash you care about. Objects added through `ipfs add` are pinned
 recursively by default.
-```
+```sh
 echo "ipfs rocks" > foo
 ipfs add foo
 ipfs pin ls --type=all
@@ -41,14 +41,14 @@ its children, and indirect pins, which are the result of a given blocks parent
 being pinned recursively.
 
 A pinned object cannot be garbage collected, if you don't believe me try this:
-```
+```sh
 ipfs add foo
 ipfs repo gc
 ipfs cat <foo hash>
 ```
 
 But if foo were to somehow become unpinned...
-```
+```sh
 ipfs pin rm -r <foo hash>
 ipfs repo gc
 ipfs cat <foo hash>
