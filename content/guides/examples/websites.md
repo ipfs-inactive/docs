@@ -23,13 +23,13 @@ Assume you have a static website in a directory `mysite`.
 
 In order to publish it as a site, [install ipfs](https://docs.ipfs.io/guides/guides/install/) and make sure your ipfs daemon is running:
 
-```bash
+```console
 $ ipfs daemon
 ```
 
 Then add the directory with your website:
 
-```bash
+```console
 $ ls mysite
 img index.html
 $ ipfs add -r mysite
@@ -61,7 +61,7 @@ Create a DNS TXT record ([DNSLink](https://docs.ipfs.io/guides/concepts/dnslink/
 
 Once you've created that record, and it has propagated you should be able to find it.
 
-```bash
+```console
 $ dig +noall +answer TXT your.domain
 your.domain.            60      IN      TXT     "dnslink=/ipfs/$SITE_CID"
 ```
@@ -87,7 +87,7 @@ and will allow you to change your website without updating the dns record every 
 To enable the IPNS for your content run the following command where `$SITE_CID` is the
 hash value from the first step.
 
-```bash
+```console
 $ ipfs name publish $SITE_CID
 Published to $PEER_ID: /ipfs/$SITE_CID
 ```
@@ -118,7 +118,7 @@ and value of the IP address of an ipfs daemon that listens on port 80 for HTTP r
 (such as `gateway.ipfs.io`). If you don't know the IP address of the daemon
 you plan to use, you can find it using the command like:
 
-```bash
+```console
 $ nslookup gateway.ipfs.io
 ```
 1. Note the IP addresses returned.
@@ -131,7 +131,7 @@ Visitors' browsers will send `your.domain` in the Host header of their requests.
 The ipfs gateway will recognize `your.domain`, look up the value of the DNS TXT for your domain,
 then serve the files in `/ipns/your.domain/` instead of `/`.
 
-If you point `your.domain`'s A and AAAA record to the IP addreses of `gateway.ipfs.io`, and
+If you point `your.domain`'s A and AAAA record to the IP addresses of `gateway.ipfs.io`, and
 then wait for the DNS to propagate, then anyone should be able to access your
 ipfs-hosted site without any extra configuration at `http://your.domain`.
 
