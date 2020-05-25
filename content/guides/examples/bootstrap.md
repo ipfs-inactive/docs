@@ -17,7 +17,7 @@ The IPFS bootstrap list is a list of peers with which the IPFS daemon learns abo
 
 First, let's list your node's bootstrap list:
 
-```
+```console
 > ipfs bootstrap list
 /dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 /dnsaddr/bootstrap.libp2p.io/ipfs/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa
@@ -31,32 +31,32 @@ The lines listed above are the addresses of the default IPFS bootstrap nodes -- 
 Don't change this list unless you understand what it means to do so. Bootstrapping is an important security point of failure in distributed systems: malicious bootstrap peers could only introduce you to other malicious peers. It is recommended to keep the default list provided by the IPFS dev team, or -- in the case of setting up private networks -- a list of nodes you control. Don't add peers to this list that you don't trust.
 
 Here we add a new peer to the bootstrap list:
-```
+```console
 > ipfs bootstrap add /ip4/25.196.147.100/tcp/4001/p2p/QmaMqSwWShsPg2RbredZtoneFjXhim7AQkqbLxib45Lx4S
 ```
 
 Here we remove a node from the bootstrap list:
-```
+```console
 > ipfs bootstrap rm /ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
 ```
 
 Let's say we want to create a backup of our new bootstrap list. We can easily do this by redirecting stdout of `ipfs bootstrap list` to a file:
-```
-> ipfs bootstrap list >save
+```console
+> ipfs bootstrap list > save
 ```
 
 If we ever want to start from scratch, we can delete the entire bootstrap list at once:
-```
+```console
 > ipfs bootstrap rm --all
 ```
 
 With an empty list, we can restore the default bootstrap list:
-```
+```console
 > ipfs bootstrap add --default
 ```
 
 Remove the entire bootstrap list again, and restore our saved one by piping the contents of the saved file to `ipfs bootstrap add`:
-```
+```console
 > ipfs bootstrap rm --all
 > cat save | ipfs bootstrap add
 ```
