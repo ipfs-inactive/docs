@@ -51,7 +51,7 @@ parties may be able to send commands to your IPFS daemon.
 The Gateway address is the address that the daemon will serve the gateway
 interface from. The gateway may be used to view files through IPFS, and serve
 static web content. This port may or may not be dialable from outside of your
-machine, thats entirely up to you. The gateway address is optional, if you
+machine, that's entirely up to you. The gateway address is optional, if you
 leave it blank, the gateway server will not start.
 
 ### Mounts
