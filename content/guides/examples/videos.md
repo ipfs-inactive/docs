@@ -15,19 +15,19 @@ Our interactive tutorials help you learn about the the decentralized web by writ
 
 IPFS can be used to store and play videos. Suppose we add a video:
 
-```
+```sh
 ipfs add -q sintel.mp4 | tail -n1
 ```
 
 Take the resulting hash, You can view it a couple different ways:
 
 On the command line:
-```
+```sh
 ipfs cat $vidhash | mplayer -vo xv -
 ```
 
 Via local gateway:
-```
+```sh
 mplayer http://localhost:8080/ipfs/$vidhash
 
 # or open it up in a tab in chrome (or firefox)
