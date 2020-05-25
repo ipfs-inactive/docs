@@ -10,20 +10,20 @@ are quite simple.
 
 First, you'll need some content to publish:
 
-```
+```console
 $ echo 'Let us have some mutable fun!' | ipfs add
 ```
 
 Note the hash that was printed out, and use it here to publish it to the network:
 
-```
+```console
 $ ipfs name publish <that hash>
 Published to <your peer ID>: <that hash>
 ```
 
 Now, to test that it worked, you could try a couple of different things:
 
-```
+```console
 $ ipfs name resolve <your peer ID>
 <that hash>
 ```
@@ -39,12 +39,12 @@ https://ipfs.io/ipns/<your peer ID>
 
 So, now comes the fun part: Lets change things.
 
-```
+```console
 $ echo 'Look! Things have changed!' | ipfs add
 ```
 
 Next, take the hash from there and...
-```
+```console
 $ ipfs name publish <the new hash>
 Published to <your peer ID>: <the new hash>
 ```
