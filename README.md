@@ -1,6 +1,6 @@
 # THIS REPOSITORY IS BEING DEPRECATED
 
-**Heads up! This repository been deprecated and replaced with [`ipfs/ipfs-docs`](https://github.com/ipfs/ipfs-docs). This repository will not be receiving any updates. It is here for historical purposes.**
+**Heads up! This repository has been deprecated and replaced with [`ipfs/ipfs-docs`](https://github.com/ipfs/ipfs-docs). This repository will not be receiving any updates. It is here for historical purposes.**
 
 ---
 
